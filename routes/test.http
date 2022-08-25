@@ -1,0 +1,53 @@
+POST http://localhost:8000/api/login HTTP/1.1
+content-type: application/json
+
+{
+    "phone": "0940678725",
+    "password": "password"
+}
+###
+
+POST http://localhost:8000/api/customer/add-to-cart HTTP/1.1
+Authorization: Bearer 20|cP99Pbj24hPIg8trm2gg8dr5NcAQuEbwqWDwSjGU
+content-type: application/json
+
+{
+    "product_id": "1",
+    "quantity":3
+}
+###
+GET http://localhost:8000/api/customer/cart-list HTTP/1.1
+Authorization: Bearer 20|cP99Pbj24hPIg8trm2gg8dr5NcAQuEbwqWDwSjGU
+content-type: application/json
+
+###
+GET http://localhost:8000/api/customer/remove-cart/2 HTTP/1.1
+Authorization: Bearer 20|cP99Pbj24hPIg8trm2gg8dr5NcAQuEbwqWDwSjGU
+content-type: application/json
+###
+GET http://localhost:8000/api/customer/remove-cart-all HTTP/1.1
+Authorization: Bearer 20|cP99Pbj24hPIg8trm2gg8dr5NcAQuEbwqWDwSjGU
+content-type: application/json
+### Test for products
+get http://localhost:8000/api/shop/product-group-supplier HTTP/1.1
+
+### Test adresses
+GET http://localhost:8000/api/adress/get-supplier-adress HTTP/1.1
+Authorization: Bearer 20|cP99Pbj24hPIg8trm2gg8dr5NcAQuEbwqWDwSjGU
+content-type: application/json
+
+### Test adresses
+POST http://localhost:8000/api/adress/store-shippment-adress HTTP/1.1
+Authorization: Bearer 20|cP99Pbj24hPIg8trm2gg8dr5NcAQuEbwqWDwSjGU
+content-type: application/json
+
+{
+    "fullname": "Nesru Sadik",
+    "phone": "094545454",
+    "email": "abc@gmail.com",
+    "country_id": 1,
+    "postal_code": "56",
+    "posta_number": "77",
+    "city_name": "Addis",
+    "addressLine1": "XXXX"
+}
