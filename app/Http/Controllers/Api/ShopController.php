@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\User;
 use App\Models\Product;
+use App\Models\Slider;
 
 class ShopController extends Controller
 {
@@ -43,5 +44,10 @@ class ShopController extends Controller
     {
         $products = Product::where('id', $id)->first();
         return ['products' => $products];
+    }
+    public function getSliders()
+    {
+        $sliders = Slider::all();
+        return ['sliders' => $sliders];
     }
 }

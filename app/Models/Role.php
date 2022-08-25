@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Role extends Model
 {
-    use HasFactory;
+    // use HasFactory;
+    protected $guarded = [];
+    public function users()
+    {
+        return $this->belongsToMany(\App\Models\User::class);
+    }
 }

@@ -15,15 +15,10 @@ return new class extends Migration
     {
         Schema::create('suppliers', function (Blueprint $table) {
             $table->id();
-            $table->string('fullname');
-            $table->string('phone')->unique();
+            $table->unsignedBigInteger('user_id');
             $table->string('tin_number');
             $table->string('document_url');
-            $table->string('role')->default('supplier');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

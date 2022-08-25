@@ -27,6 +27,7 @@ Route::prefix('shop')->group(function(){
     Route::get('/product-group-category', [ShopController::class, 'productGroupByCategory']);
     Route::get('/product-group-supplier', [ShopController::class, 'productGroupBySupplier']);
     Route::get('/product-single/{id}', [ShopController::class, 'singleProduct']);
+    Route::get('/get-sliders', [ShopController::class, 'getSliders']);
 });
 
 Route::prefix('adress')->group(function(){

@@ -27,7 +27,6 @@ Route::get('admin/product/add-category', [CategoryController::class, 'index'])->
 Route::get('index/{locale}', [App\Http\Controllers\HomeController::class, 'lang']);
 
 Route::get('/', function(){
-    // dd(auth()->user());
     return view('customer.new');
 })->name('welcome');
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'root'])->name('root');

@@ -29,7 +29,29 @@ GET http://localhost:8000/api/customer/remove-cart-all HTTP/1.1
 Authorization: Bearer 20|cP99Pbj24hPIg8trm2gg8dr5NcAQuEbwqWDwSjGU
 content-type: application/json
 ### Test for products
+get http://localhost:8000/api/shop/categories HTTP/1.1
+
+###
+get http://localhost:8000/api/shop/all-products HTTP/1.1
+
+###
+get http://localhost:8000/api/shop/product-by-category/1 HTTP/1.1
+
+###
+get http://localhost:8000/api/shop/product-by-supplier/1 HTTP/1.1
+
+###
+get http://localhost:8000/api/shop/product-group-category HTTP/1.1
+
+###
 get http://localhost:8000/api/shop/product-group-supplier HTTP/1.1
+
+###
+get http://localhost:8000/api/shop/product-single/1 HTTP/1.1
+
+###
+get http://localhost:8000/api/shop/get-sliders HTTP/1.1
+
 
 ### Test adresses
 GET http://localhost:8000/api/adress/get-supplier-adress HTTP/1.1

@@ -17,9 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description')->nullabl();
-            $table->string('main_photo');
             $table->string('visibility')->default('public');
-            $table->string('photos', 2000)->nullable();
             $table->timestamps();
         });
     }
