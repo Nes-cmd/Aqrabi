@@ -5,12 +5,12 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "https:\/\/aqrabi.com"
+            "value": "http:\/\/localhost:8000"
         }
     ],
     "info": {
         "name": "Aqrabi",
-        "_postman_id": "0e60cccc-3485-4d4b-95fa-02c3d2624a7c",
+        "_postman_id": "a1766aea-69fc-425b-a09b-3912e4f91ad1",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -163,7 +163,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "maiores",
+                                    "value": "totam",
                                     "description": "The ID of the remove cart."
                                 }
                             ]
@@ -379,7 +379,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "qui",
+                                    "value": "ex",
                                     "description": "The ID of the product by category."
                                 }
                             ]
@@ -443,7 +443,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "et",
+                                    "value": "similique",
                                     "description": "The ID of the product by supplier."
                                 }
                             ]
@@ -619,7 +619,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "non",
+                                    "value": "iste",
                                     "description": "The ID of the product single."
                                 }
                             ]

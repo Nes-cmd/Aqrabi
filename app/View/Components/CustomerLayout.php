@@ -23,6 +23,6 @@ class CustomerLayout extends Component
      */
     public function render()
     {
-        return view('layouts.customer.newapp');
+        return view('layouts.customer.app');
     }
 }

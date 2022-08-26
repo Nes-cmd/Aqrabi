@@ -5,7 +5,7 @@ info:
   version: 1.0.0
 servers:
   -
-    url: 'https://aqrabi.com'
+    url: 'http://localhost:8000'
 paths:
   /api/login:
     post:
@@ -151,7 +151,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the remove cart.'
-        example: maiores
+        example: totam
         required: true
         schema:
           type: string
@@ -396,7 +396,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product by category.'
-        example: qui
+        example: ex
         required: true
         schema:
           type: string
@@ -440,7 +440,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product by supplier.'
-        example: et
+        example: similique
         required: true
         schema:
           type: string
@@ -790,7 +790,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product single.'
-        example: non
+        example: iste
         required: true
         schema:
           type: string

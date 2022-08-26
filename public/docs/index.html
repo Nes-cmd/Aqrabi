@@ -26,7 +26,7 @@
             </style>
 
     <script>
-        var baseUrl = "https://aqrabi.com";
+        var baseUrl = "http://localhost:8000";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -154,7 +154,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 <blockquote>
 <p>Base URL</p>
 </blockquote>
-<pre><code class="language-yaml">https://aqrabi.com</code></pre>
+<pre><code class="language-yaml">http://localhost:8000</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
 <p>This API is not authenticated.</p>
@@ -176,14 +176,14 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://aqrabi.com/api/login" \
+    "http://localhost:8000/api/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/login"
+    "http://localhost:8000/api/login"
 );
 
 const headers = {
@@ -254,14 +254,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://aqrabi.com/api/register" \
+    "http://localhost:8000/api/register" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/register"
+    "http://localhost:8000/api/register"
 );
 
 const headers = {
@@ -332,14 +332,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://aqrabi.com/api/customer/add-to-cart" \
+    "http://localhost:8000/api/customer/add-to-cart" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/customer/add-to-cart"
+    "http://localhost:8000/api/customer/add-to-cart"
 );
 
 const headers = {
@@ -410,14 +410,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/customer/cart-list" \
+    --get "http://localhost:8000/api/customer/cart-list" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/customer/cart-list"
+    "http://localhost:8000/api/customer/cart-list"
 );
 
 const headers = {
@@ -505,14 +505,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/customer/remove-cart/maiores" \
+    --get "http://localhost:8000/api/customer/remove-cart/totam" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/customer/remove-cart/maiores"
+    "http://localhost:8000/api/customer/remove-cart/totam"
 );
 
 const headers = {
@@ -591,7 +591,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-customer-remove-cart--id-"
-               value="maiores"
+               value="totam"
                data-component="url" hidden>
     <br>
 <p>The ID of the remove cart.</p>
@@ -611,14 +611,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/customer/remove-cart-all" \
+    --get "http://localhost:8000/api/customer/remove-cart-all" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/customer/remove-cart-all"
+    "http://localhost:8000/api/customer/remove-cart-all"
 );
 
 const headers = {
@@ -706,14 +706,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/categories" \
+    --get "http://localhost:8000/api/shop/categories" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/categories"
+    "http://localhost:8000/api/shop/categories"
 );
 
 const headers = {
@@ -820,14 +820,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/all-products" \
+    --get "http://localhost:8000/api/shop/all-products" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/all-products"
+    "http://localhost:8000/api/shop/all-products"
 );
 
 const headers = {
@@ -952,14 +952,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/product-by-category/qui" \
+    --get "http://localhost:8000/api/shop/product-by-category/ex" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/product-by-category/qui"
+    "http://localhost:8000/api/shop/product-by-category/ex"
 );
 
 const headers = {
@@ -1040,7 +1040,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-shop-product-by-category--id-"
-               value="qui"
+               value="ex"
                data-component="url" hidden>
     <br>
 <p>The ID of the product by category.</p>
@@ -1060,14 +1060,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/product-by-supplier/et" \
+    --get "http://localhost:8000/api/shop/product-by-supplier/similique" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/product-by-supplier/et"
+    "http://localhost:8000/api/shop/product-by-supplier/similique"
 );
 
 const headers = {
@@ -1148,7 +1148,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-shop-product-by-supplier--id-"
-               value="et"
+               value="similique"
                data-component="url" hidden>
     <br>
 <p>The ID of the product by supplier.</p>
@@ -1168,14 +1168,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/product-group-category" \
+    --get "http://localhost:8000/api/shop/product-group-category" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/product-group-category"
+    "http://localhost:8000/api/shop/product-group-category"
 );
 
 const headers = {
@@ -1320,14 +1320,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/product-group-supplier" \
+    --get "http://localhost:8000/api/shop/product-group-supplier" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/product-group-supplier"
+    "http://localhost:8000/api/shop/product-group-supplier"
 );
 
 const headers = {
@@ -1492,14 +1492,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/product-single/non" \
+    --get "http://localhost:8000/api/shop/product-single/iste" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/product-single/non"
+    "http://localhost:8000/api/shop/product-single/iste"
 );
 
 const headers = {
@@ -1580,7 +1580,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-shop-product-single--id-"
-               value="non"
+               value="iste"
                data-component="url" hidden>
     <br>
 <p>The ID of the product single.</p>
@@ -1600,14 +1600,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/adress/get-countries" \
+    --get "http://localhost:8000/api/adress/get-countries" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/adress/get-countries"
+    "http://localhost:8000/api/adress/get-countries"
 );
 
 const headers = {
@@ -1697,14 +1697,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/adress/get-shippment-adress" \
+    --get "http://localhost:8000/api/adress/get-shippment-adress" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/adress/get-shippment-adress"
+    "http://localhost:8000/api/adress/get-shippment-adress"
 );
 
 const headers = {
@@ -1792,14 +1792,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/adress/get-supplier-adress" \
+    --get "http://localhost:8000/api/adress/get-supplier-adress" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/adress/get-supplier-adress"
+    "http://localhost:8000/api/adress/get-supplier-adress"
 );
 
 const headers = {
@@ -1887,14 +1887,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://aqrabi.com/api/adress/store-shippment-adress" \
+    "http://localhost:8000/api/adress/store-shippment-adress" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/adress/store-shippment-adress"
+    "http://localhost:8000/api/adress/store-shippment-adress"
 );
 
 const headers = {
@@ -1965,14 +1965,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/get-sliders" \
+    --get "http://localhost:8000/api/shop/get-sliders" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/get-sliders"
+    "http://localhost:8000/api/shop/get-sliders"
 );
 
 const headers = {

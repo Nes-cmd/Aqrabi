@@ -96,7 +96,7 @@ endpoints:
         name: id
         description: 'The ID of the remove cart.'
         required: true
-        example: maiores
+        example: totam
         type: string
         custom: []
     queryParameters: []
@@ -207,7 +207,7 @@ endpoints:
         name: id
         description: 'The ID of the product by category.'
         required: true
-        example: qui
+        example: ex
         type: string
         custom: []
     queryParameters: []
@@ -241,7 +241,7 @@ endpoints:
         name: id
         description: 'The ID of the product by supplier.'
         required: true
-        example: et
+        example: similique
         type: string
         custom: []
     queryParameters: []
@@ -329,7 +329,7 @@ endpoints:
         name: id
         description: 'The ID of the product single.'
         required: true
-        example: non
+        example: iste
         type: string
         custom: []
     queryParameters: []

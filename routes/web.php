@@ -2,22 +2,19 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-// use App\Http\Livewire\Admin\NewProductComponent;
-// use App\Http\Livewire\Admin\NewCategoryComponent;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
+use App\Http\Livewire\SingleProduct;
+use App\Http\Livewire\ShopComponent;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
+Route::get('shop/single-product/{id}', SingleProduct::class)->name('shop.single-product');
+Route::get('shop/producs', ShopComponent::class)->name('shop.list');
+
+Route::view('shop/contact', 'customer.contact')->name('shop.contact');
+
+
 Route::get('admin/product/add-product', [ProductController::class ,'addProduct'])->name('admin.add-product');
 Route::post('admin/product/store-product', [ProductController::class ,'storeProduct'])->name('admin.store-product');
 Route::post('admin/product/store-category', [CategoryController::class ,'storeCategory'])->name('admin.store-category');
@@ -27,8 +24,8 @@ Route::get('admin/product/add-category', [CategoryController::class, 'index'])->
 Route::get('index/{locale}', [App\Http\Controllers\HomeController::class, 'lang']);
 
 Route::get('/', function(){
-    return view('customer.new');
-})->name('welcome');
+    return view('customer.index');
+})->name('shop.index');
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'root'])->name('root');
 
 Route::get('supplier/login', function(){
