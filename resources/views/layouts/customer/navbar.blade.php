@@ -17,7 +17,6 @@
       <li class="nav-item">
         <a class="nav-link" href="{{ url('about')}}">About Us</a>
       </li>
-     
       <li class="nav-item">
         <a class="nav-link" href="{{ route('shop.contact')}}">Contact Us</a>
       </li>
@@ -32,10 +31,6 @@
           @livewire('search-component')
         </div>
       </div>
-      <!-- cart -->
-      @auth
-      @livewire('wishlist')
-      @endauth
       @livewire('cart')
     </div>
   </div>

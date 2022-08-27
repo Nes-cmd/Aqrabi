@@ -83,12 +83,12 @@ h6, .h6 {
 }
 
 .btn-primary {
-  background: #ff4135;
+  background: #F4C803;
   color: #fff;
 }
 
 .btn-primary:active {
-  background: #ff4135 !important;
+  background: #F4C803 !important;
 }
 
 .btn-primary:hover {
@@ -106,21 +106,21 @@ h6, .h6 {
 }
 
 .btn-light:hover {
-  background: #ff4135;
+  background: #F4C803;
   color: #fff;
 }
 
 .btn-dark {
-  background: #212329;
+  background: #162A3C;
   color: #fff;
 }
 
 .btn-dark:active {
-  background: #212329 !important;
+  background: #162A3C !important;
 }
 
 .btn-dark:hover {
-  background: #ff4135;
+  background: #F4C803;
 }
 
 .btn-outline-primary {
@@ -130,15 +130,15 @@ h6, .h6 {
 }
 
 .btn-outline-primary:hover {
-  border-color: #ff4135;
-  color: #ff4135;
+  border-color: #F4C803;
+  color: #F4C803;
   background: transparent;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show > .btn-outline-primary.dropdown-toggle {
-  color: #ff4135;
+  color: #F4C803;
   background-color: transparent;
-  border-color: #ff4135;
+  border-color: #F4C803;
 }
 
 .btn-sm {
@@ -216,7 +216,7 @@ label:focus {
 }
 
 a:hover {
-  color: #ff4135;
+  color: #F4C803;
 }
 
 .slick-slide {
@@ -291,7 +291,7 @@ a:hover {
 }
 
 .bg-primary {
-  background: #ff4135 !important;
+  background: #F4C803 !important;
 }
 
 .bg-gray {
@@ -299,7 +299,7 @@ a:hover {
 }
 
 .text-primary {
-  color: #ff4135 !important;
+  color: #F4C803 !important;
 }
 
 .text-dark {
@@ -339,7 +339,7 @@ a:hover {
 }
 
 .border-primary {
-  border-color: #ff4135 !important;
+  border-color: #F4C803 !important;
 }
 
 .mb-10 {
@@ -402,8 +402,8 @@ a:hover {
   vertical-align: .255em;
   content: "";
   border: 0;
-  border-bottom: 1px solid #212329;
-  border-right: 1px solid #212329;
+  border-bottom: 1px solid #162A3C;
+  border-right: 1px solid #162A3C;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -417,7 +417,7 @@ a:hover {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  background: #212329;
+  background: #162A3C;
   font-size: 16px;
   line-height: 40px;
   text-align: center;
@@ -426,13 +426,13 @@ a:hover {
 }
 
 .social-icons li a:hover {
-  background: #ff4135;
+  background: #F4C803;
   text-decoration: none;
 }
 
 .top-header {
   padding: 5px 40px;
-  background: #212329;
+  background: #162A3C;
 }
 
 @media (max-width: 575px) {
@@ -464,7 +464,7 @@ a:hover {
 }
 
 .top-header ul li a:hover, .top-header ul li a.active {
-  color: #ff4135;
+  color: #F4C803;
 }
 
 .top-header ul li:last-child {
@@ -487,7 +487,7 @@ a:hover {
 }
 
 .country ul {
-  background: #212329 !important;
+  background: #162A3C !important;
 }
 
 .country ul li {
@@ -540,7 +540,7 @@ a:hover {
   top: 100%;
   width: 100%;
   height: 80px;
-  background: #212329;
+  background: #162A3C;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
   -webkit-transform-origin: top;
@@ -688,7 +688,7 @@ a:hover {
 }
 
 .cart-wrapper li i:hover {
-  color: #ff4135;
+  color: #F4C803;
 }
 
 .cart-close {
@@ -701,7 +701,7 @@ a:hover {
 }
 
 .cart-close:hover {
-  color: #ff4135;
+  color: #F4C803;
 }
 
 .navbar {
@@ -798,7 +798,7 @@ a:hover {
   padding: 0 15px;
   border: 0;
   border-radius: 0;
-  background: #212329;
+  background: #162A3C;
   top: 95%;
   left: 0;
   display: block;
@@ -953,7 +953,7 @@ a:hover {
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #ff4135;
+  color: #F4C803;
 }
 
 .bg-letter {
@@ -1048,7 +1048,7 @@ a:hover {
 }
 
 .hero-slider .prevArrow:hover {
-  background: #ff4135;
+  background: #F4C803;
 }
 
 .hero-slider .prevArrow:hover::before {
@@ -1109,7 +1109,7 @@ a:hover {
 }
 
 .hero-slider .nextArrow:hover {
-  background: #ff4135;
+  background: #F4C803;
 }
 
 .hero-slider .nextArrow:hover::before {
@@ -1239,7 +1239,7 @@ a:hover {
 }
 
 .product-icon:hover i {
-  color: #ff4135;
+  color: #F4C803;
 }
 
 .product-icon.favorite {
@@ -1421,7 +1421,7 @@ a:hover {
 
 .form-control:focus {
   box-shadow: none;
-  border-color: #ff4135;
+  border-color: #F4C803;
 }
 
 select.form-control {
@@ -1478,7 +1478,7 @@ select.form-control {
 }
 
 .instagram-post ul a:hover {
-  color: #ff4135 !important;
+  color: #F4C803 !important;
 }
 
 .instagram-post:hover::before {
@@ -1517,7 +1517,7 @@ select.form-control {
 }
 
 .social-icon-alt li a:hover {
-  color: #ff4135;
+  color: #F4C803;
 }
 
 footer a:hover {
@@ -1678,7 +1678,7 @@ footer a:hover {
   content: "";
   height: 8px;
   width: 8px;
-  background: #ff4135;
+  background: #F4C803;
   border-radius: 50%;
   top: 8px;
   left: -25px;
@@ -1859,7 +1859,7 @@ footer a:hover {
 }
 
 .slider-selection {
-  background: #212329;
+  background: #162A3C;
   box-shadow: none;
   border-radius: 0;
 }
@@ -1868,7 +1868,7 @@ footer a:hover {
   background: #fff;
   height: 13px;
   width: 13px;
-  border: 3px solid #212329;
+  border: 3px solid #162A3C;
   margin-top: -7px;
 }
 
@@ -1986,9 +1986,9 @@ textarea.form-control {
 }
 
 .dashboard-menu .active {
-  background: #ff4135;
+  background: #F4C803;
   color: #fff;
-  border: 1px solid #ff4135;
+  border: 1px solid #F4C803;
 }
 
 .dashboard-menu li {
@@ -2404,7 +2404,7 @@ textarea.form-control {
 }
 
 .post-title a:hover {
-  color: #ff4135;
+  color: #F4C803;
 }
 
 .post-thumb {
@@ -2433,12 +2433,12 @@ textarea.form-control {
 }
 
 .post-meta ul li a:hover {
-  color: #ff4135;
+  color: #F4C803;
 }
 
 blockquote {
   padding: 20px;
-  border-left: 3px solid #ff4135;
+  border-left: 3px solid #F4C803;
 }
 
 .pagination .page-item .page-link {
@@ -2459,7 +2459,7 @@ blockquote {
 }
 
 .pagination .page-item.active .page-link {
-  background: #ff4135;
+  background: #F4C803;
   color: #fff;
 }
 
@@ -2504,7 +2504,7 @@ blockquote {
 }
 
 .inner-wrapper .nav {
-  border-bottom: 2px solid #ff4135;
+  border-bottom: 2px solid #F4C803;
 }
 
 .inner-wrapper .nav-item {
@@ -2514,11 +2514,11 @@ blockquote {
 
 .inner-wrapper .nav-item i {
   font-size: 20px;
-  color: #ff4135;
+  color: #F4C803;
 }
 
 .inner-wrapper .nav-item.active {
-  background: #ff4135;
+  background: #F4C803;
 }
 
 .inner-wrapper .nav-item.active i,

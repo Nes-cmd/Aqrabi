@@ -16,6 +16,6 @@ class SingleProduct extends Component
     public function render()
     {
         return view('livewire.single-product')
-                        ->layout('layouts.customer.newapp');
+                        ->layout('layouts.customer.app');
     }
 }

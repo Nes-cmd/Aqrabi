@@ -21,6 +21,6 @@ class ShopComponent extends Component
         $products = $this->products;
         $categories = $this->categories;
         return view('livewire.shop-component', compact('products', 'categories'))
-                    ->layout('layouts.customer.newapp');
+                    ->layout('layouts.customer.app');
     }
 }

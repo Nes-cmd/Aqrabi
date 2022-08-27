@@ -8,22 +8,22 @@
       
         <?php $__currentLoopData = $carts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $cart): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <li class="d-flex border-bottom">
-            <img width="70px" src="<?php echo e(asset('storage/'.json_decode($cart['photos'])[0])); ?>" alt="product-img">
+            <img width="70px" src="<?php echo e(asset('storage/'.$cart->product->main_photo )); ?>" alt="product-img">
             <div class="mx-3">
-            <h6><?php echo e($cart['name']); ?></h6>
-            <span><?php echo e($cart['quantity']); ?></span> X <span>$<?php echo e($cart['price']); ?></span>
+            <h6><?php echo e($cart->product->prductname); ?></h6>
+            <span><?php echo e($cart->quantity); ?></span> X <span>$<?php echo e($cart->product->price); ?></span>
             </div>
-            <i wire:click="remove(<?php echo e($cart['id']); ?>)" class="ti-close"></i>
+            <i wire:click="remove(<?php echo e($cart->id); ?>)" class="ti-close"></i>
         </li>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </ul>
         <div class="mb-3">
         <span>Cart Total</span>
-        <span class="float-right">$<?php echo e(cartTotal()['discounted']); ?></span>
+        <span class="float-right">$<?php echo e('433'); ?></span>
         </div>
         <div class="text-center">
-        <a href="<?php echo e(route('shop.cart')); ?>" class="btn btn-dark btn-mobile rounded-0">view cart</a>
-        <a href="<?php echo e(route('shop.checkout')); ?>" class="btn btn-dark btn-mobile rounded-0">check out</a>
+        <a href="<?php echo e(route('shop.cart-detail')); ?>" class="btn btn-dark btn-mobile rounded-0">view cart</a>
+        <a href="<?php echo e('#'); ?>" class="btn btn-dark btn-mobile rounded-0">check out</a>
         </div>
         <?php else: ?>
         <h4>Your cart is empty!</h4>
