@@ -8,10 +8,14 @@ use Livewire\Component;
 class SingleProduct extends Component
 {
     public $product;
+    public $quantity = 1;
     public function mount($id)
     {
         $this->product = Product::where('id', $id)->first();
-        // dd($this->product);
+    }
+    public function toCart()
+    {
+        $this->emit('toCart', $this->product->id, $this->quantity);
     }
     public function render()
     {

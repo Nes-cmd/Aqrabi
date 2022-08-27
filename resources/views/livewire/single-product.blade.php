@@ -68,7 +68,7 @@
                     @endif
                     <div class="d-flex flex-column flex-sm-row justify-content-between mb-4">
                         <div>
-                            <input wire:model="specific.quantity"  class="quantity mr-sm-2 mb-3 mb-sm-0" type="text" name="quantity">
+                            <input wire:model="quantity"  class="quantity mr-sm-2 mb-3 mb-sm-0" type="text" name="quantity">
                            
                         </div>
                         
@@ -83,7 +83,7 @@
                             <option value="large">Large Size</option>
                         </select>
                     </div>
-                    <button wire:click="toCart" class="btn btn-primary mb-4">Add to cart</button>
+                    <button wire:click="toCart" class="btn btn-dark mb-4">Add to cart</button>
                     <h4 class="mb-3"><span class="text-primary">Harry up!</span> Sale ends in</h4>
                     <!-- syo-timer -->
                     

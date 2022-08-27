@@ -48,7 +48,7 @@
                                                     <div class="input-group bootstrap-touchspin bootstrap-touchspin-injected"> 
                                                         <span class="input-group-btn input-group-prepend"><button wire:click="decrement(<?php echo e($cart->id); ?>)" class="btn btn-primary bootstrap-touchspin-down" type="button">-</button></span>
                                                         <input wire:model.lazy="carts.<?php echo e($loop->index); ?>.quantity"  type="text" class="form-control" value="<?php echo e($cart->quantity); ?>" >
-                                                        <span class="input-group-btn input-group-append"><button wire:click="increment(<?php echo e($cart['id']); ?>)" class="btn btn-primary bootstrap-touchspin-up" type="button">+</button></span>    
+                                                        <span class="input-group-btn input-group-append"><button wire:click="increment(<?php echo e($cart->id); ?>)" class="btn btn-primary bootstrap-touchspin-up" type="button">+</button></span>    
                                                     </div>
                                                 </td>
                                                 <td>
@@ -80,7 +80,10 @@
             </div>
         </div>
     </div>
+<!-- F4C803 yellow -->
+<!-- F4C803 red -->
+<!-- 162A3C black req -->
+<!-- 162A3C black remove -->
 </div>
 
-<!-- F4C803 yellow -->
-<!-- F4C803 red --><?php /**PATH /home/nesren/Project/web/laravel/Aqrabi-Ecommerce/resources/views/livewire/cart-detail.blade.php ENDPATH**/ ?>
+<?php /**PATH /home/nesren/Project/web/laravel/Aqrabi-Ecommerce/resources/views/livewire/cart-detail.blade.php ENDPATH**/ ?>
