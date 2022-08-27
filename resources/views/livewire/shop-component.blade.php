@@ -2,28 +2,16 @@
     <!-- /shop -->
     <section class="section">
     <div class="container">
-        <div class="row">
-            <!-- top bar -->
-            <div class="col-lg-12 mb-50">
-                <div class="d-flex border">
-                    <div class="flex-basis-15 p-2 p-sm-4 border-right text-center">
-                        <button wire:click="$set('viewType', 'grid')" class="text-gray d-inline-block px-1" href="shop.html"><i class="ti-layout-grid3-alt"></i></button>
-                        <button wire:click="$set('viewType', 'list')" class="text-color d-inline-block px-1" href="shop-list.html"><i class="ti-view-list-alt"></i></button>
-                    </div>
-                    <div class="flex-basis-55 p-2 p-sm-4 align-self-sm-center">
-                        <p class="text-gray mb-0">Showing <span class="text-color">1-9 of 20</span> Results</p>
-                    </div>
-                </div>
-            </div>
-            <!-- sidebar -->
-            <div class="col-lg-3 mb-lg-0 mb-5">
+        
+        <div class="row">  
+            <div class="col-lg-3 mb-lg-0">
                 <!-- search product -->
                 <div class="position-relative mb-5">
                     <form action="#">
                         <input type="search" class="form-control rounded-0" id="search-product" placeholder="Search...">
                         <button type="submit" class="search-icon pr-3 r-0"><i class="ti-search text-color"></i></button>
                     </form>
-                </div>
+                </div> 
                 <!-- categories -->
                 <div class="mb-30">
                     <h4 class="mb-3">Shop by Categories</h4>
@@ -48,7 +36,7 @@
                             <div class="col-sm-4">
                                 <div class="product-thumb position-relative text-center">
                                     <div class="overflow-hidden position-relative">
-                                        <a href="#">
+                                        <a href="{{route('shop.single-product', $product->id)}}">
                                             <img class="img-fluid w-100 mb-3 img-first" src="{{ asset('storage/'.$product->main_photo)}}" alt="product-img">
                                             @if(count($product->photos) > 0)
                                             <img class="img-fluid w-100 mb-3 img-second" src="{{ asset('storage/'.$product->photos[0])}}" alt="product-img">
@@ -59,9 +47,7 @@
                                         <button wire:click="wishlit({{$product->id}})" class="product-icon favorite" data-toggle="tooltip" data-placement="left"
                                             title="Wishlist"><i class="ti-heart"></i></button>
                                         <a href="#" class="product-icon cart" data-toggle="tooltip" data-placement="left"
-                                            title="Compare"><i class="ti-direction-alt"></i></a>
-                                        <a data-vbtype="inline" href="#quickView" class="product-icon view venobox"
-                                            data-toggle="tooltip" data-placement="left" title="Quick View"><i class="ti-search"></i></a>
+                                            title="View detail"><i class="ti-search"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -72,9 +58,7 @@
                                         <p class="mb-md-4 mb-3">{{ $product->description }}</p>
                                         <span class="h4">${{ $product->price }}</span>
                                         <ul class="list-inline mt-3">
-                                            <li class="list-inline-item"><button wire:click="wishlit({{$product->id}})" class="btn btn-dark btn-sm">Add To
-                                                Favorite</button></li>
-                                            <li class="list-inline-item"><button wire:click="$emit('toCart' , {{$product->id}} )" class="btn btn-primary btn-sm">Add To cart</button></li>
+                                            <li class="list-inline-item"><button wire:click="$emit('toCart' , {{$product->id}} )" class="btn btn-dark btn-sm">Add To Cart</button></li>
                                         </ul>
                                     </div>
                                 </div>

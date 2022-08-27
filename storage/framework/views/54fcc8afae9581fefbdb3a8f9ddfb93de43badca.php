@@ -1,6 +1,5 @@
 <section>
     <div class="main-wrapper">
-
     <!-- breadcrumb -->
     <nav class="bg-gray py-3">
         <div class="container">
@@ -11,20 +10,18 @@
         </div>
     </nav>
     <!-- /breadcrumb -->
-
     <div id="quickView" class="quickview">
         <div class="row w-100">
             <div class="col-lg-6 col-md-6 mb-5 mb-md-0 pl-5 pt-4 pt-lg-0 pl-lg-0">
                 <img src="customer/images/feature/product.png" alt="product-img" class="img-fluid">
             </div>
             <div class="col-lg-5 col-md-6 text-center text-md-left align-self-center pl-5">
-                <h3 class="mb-lg-2 mb-2"><?php echo e($product->name); ?></h3>
+                <h3 class="mb-lg-2 mb-2"><?php echo e($product->productname); ?></h3>
                 <span class="mb-lg-4 mb-3 h5">$<?php echo e($product->price); ?></span>
                 <p class="mb-lg-4 mb-3 text-gray">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. sed ut perspic atis unde omnis iste natus</p>
             </div> 
         </div>
     </div>
-
     <!-- product-single -->
     <section class="section">
         <div class="container">
@@ -33,28 +30,28 @@
                     <!-- product image slider -->
                     <div class="product-slider">
                         <div data-image="<?php echo e(asset($product->main_photo)); ?>">
-                            <img class="img-fluid w-100 image-zoom" src="<?php echo e(asset('storage/'.$product->main_photo)); ?>" alt="product-img" data-zoom="<?php echo e(asset('storage/'.$product->main_photo)); ?>">
+                            <img class="img-fluid w-100 h-50 image-zoom" src="<?php echo e(asset('storage/'.$product->main_photo)); ?>" alt="product-img" data-zoom="<?php echo e(asset('storage/'.$product->main_photo)); ?>">
                         </div>
-                        <?php if(count($product->photos) >=2 ): ?>
+                        <?php if(count($product->photos) > 0 ): ?>
+                        <div data-image="<?php echo e(asset($product->photos[0])); ?>">
+                            <img class="img-fluid w-100 image-zoom" src="<?php echo e(asset('storage/'.$product->photos[0])); ?>" alt="product-img" data-zoom="<?php echo e(asset('storage/'.$product->photos[0])); ?>">
+                        </div>
+                        <?php endif; ?>
+                        <?php if(count($product->photos) > 1 ): ?>
                         <div data-image="<?php echo e(asset($product->photos[1])); ?>">
                             <img class="img-fluid w-100 image-zoom" src="<?php echo e(asset('storage/'.$product->photos[1])); ?>" alt="product-img" data-zoom="<?php echo e(asset('storage/'.$product->photos[1])); ?>">
                         </div>
                         <?php endif; ?>
-                        <?php if(count($product->photos) >=3 ): ?>
+                        <?php if(count($product->photos) > 2 ): ?>
                         <div data-image="<?php echo e(asset($product->photos[2])); ?>">
                             <img class="img-fluid w-100 image-zoom" src="<?php echo e(asset('storage/'.$product->photos[2])); ?>" alt="product-img" data-zoom="<?php echo e(asset('storage/'.$product->photos[2])); ?>">
-                        </div>
-                        <?php endif; ?>
-                        <?php if(count($product->photos) >= 4 ): ?>
-                        <div data-image="<?php echo e(asset($product->photos[3])); ?>">
-                            <img class="img-fluid w-100 image-zoom" src="<?php echo e(asset('storage/'.$product->photos[3])); ?>" alt="product-img" data-zoom="<?php echo e(asset('storage/'.$product->photos[3])); ?>">
                         </div>
                         <?php endif; ?>
                     </div>
                 </div>
                 <!-- produt details -->
                 <div class="col-lg-6 mb-100">
-                    <h2><?php echo e($product->name); ?></h2>
+                    <h2><?php echo e($product->productname); ?></h2>
                     <i class="ti-check-box text-<?php echo e($product->instock?'success':'danger'); ?>"></i>
                     <span class="text-<?php echo e($product->instock?'success':'danger'); ?>"><?php echo e($product->instock?'Instock':'Outofstock'); ?></span>
                     <ul class="list-inline mb-4">
@@ -89,53 +86,8 @@
                     <button wire:click="toCart" class="btn btn-primary mb-4">Add to cart</button>
                     <h4 class="mb-3"><span class="text-primary">Harry up!</span> Sale ends in</h4>
                     <!-- syo-timer -->
-                    <div class="syotimer dark">
-                        <div id="sale-timer" data-year="2019" data-month="5" data-day="1" data-hour="1"></div>
-                    </div>
-                    <hr>
-                    <div class="payment-option border border-primary mt-5 mb-4">
-                        <h5 class="bg-white">Guaranted Safe Checkout</h5>
-                        <img class="img-fluid w-100 p-3" src="<?php echo e(asset('customer/images/payment-card/all-card.png')); ?>" alt="payment-card">
-                    </div>
-                    <h5 class="mb-3">4 Great Reason to Buy From Us</h5>
-                    <div class="row">
-                        <!-- service item -->
-                        <div class="col-lg-3 col-6 mb-4 mb-lg-0">
-                            <div class="d-flex">
-                                <i class="ti-truck icon-md mr-3"></i>
-                                <div class="align-items-center">
-                                    <h6>Free Shipping</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- service item -->
-                        <div class="col-lg-3 col-6 mb-4 mb-lg-0">
-                            <div class="d-flex">
-                                <i class="ti-shield icon-md mr-3"></i>
-                                <div class="align-items-center">
-                                    <h6>Secure Payment</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- service item -->
-                        <div class="col-lg-3 col-6 mb-4 mb-lg-0">
-                            <div class="d-flex">
-                                <i class="ti-money icon-md mr-3"></i>
-                                <div class="align-items-center">
-                                    <h6>Lowest Price</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- service item -->
-                        <div class="col-lg-3 col-6 mb-4 mb-lg-0">
-                            <div class="d-flex">
-                                <i class="ti-reload icon-md mr-3"></i>
-                                <div class="align-items-center">
-                                    <h6>30 Days Return</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
+                   
                 </div>
                 <div class="col-lg-12">
                     <h3 class="mb-3">Product Description</h3>

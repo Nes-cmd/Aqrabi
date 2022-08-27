@@ -30,7 +30,7 @@ class CartController extends Controller
     }
     public function getCart()
     {
-        $cart = Cart::where('user_id', auth()->user()->id)->get();
+        $cart = Cart::with('product')->where('user_id', auth()->user()->id)->get();
         return ['cart' => $cart];
     }
     public function removeCart($id)
