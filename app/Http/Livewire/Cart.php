@@ -21,13 +21,14 @@ class Cart extends Component
     {
         $this->cart_size = count($this->cart);
     }
-    public function toCart($id, $specific = null)
+    public function toCart($id, $quantity = 1, $specific = null)
     {
         if(auth()->user()){
             MyCart::create([
                 'user_id' => auth()->user()->id,
                 'product_id' => $id,
-                'specifications' => $specific
+                'specifications' => $specific,
+                'quantity' => $quantity
             ]);
             $this->updateCart();
         }

@@ -47,7 +47,7 @@
                                                     <div class="input-group bootstrap-touchspin bootstrap-touchspin-injected"> 
                                                         <span class="input-group-btn input-group-prepend"><button wire:click="decrement({{$cart->id }})" class="btn btn-primary bootstrap-touchspin-down" type="button">-</button></span>
                                                         <input wire:model.lazy="carts.{{$loop->index}}.quantity"  type="text" class="form-control" value="{{$cart->quantity}}" >
-                                                        <span class="input-group-btn input-group-append"><button wire:click="increment({{$cart['id']}})" class="btn btn-primary bootstrap-touchspin-up" type="button">+</button></span>    
+                                                        <span class="input-group-btn input-group-append"><button wire:click="increment({{$cart->id}})" class="btn btn-primary bootstrap-touchspin-up" type="button">+</button></span>    
                                                     </div>
                                                 </td>
                                                 <td>
