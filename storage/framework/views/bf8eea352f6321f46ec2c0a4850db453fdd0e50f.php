@@ -10,7 +10,7 @@
                 <div class="product text-center">
                     <div class="product-thumb">
                         <div class="overflow-hidden position-relative">
-                            <a href="product-single.html">
+                            <a href="<?php echo e(route('shop.single-product', $product->id)); ?>">
                                 <img class="img-fluid w-100 mb-3 img-first" src="<?php echo e(asset('storage/'.$product->main_photo)); ?>" alt="product-img">
                                 <?php if(count($product->photos)): ?>
                                 <img class="img-fluid w-100 mb-3 img-second" src="<?php echo e(asset('storage/'.$product->photos[0])); ?>" alt="product-img">
