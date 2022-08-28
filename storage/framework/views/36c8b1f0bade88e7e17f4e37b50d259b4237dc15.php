@@ -27,10 +27,9 @@
         </a>
       </li>
      <?php endif; ?>
-
     </ul>
   </div>
-  <div class="order-3 navbar-right-elements row">
+  <div class="order-3 navbar-right-elements">
     <div class="search-cart">
       <!-- search -->
       <div class="search">
@@ -39,15 +38,15 @@
           <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('search-component')->html();
-} elseif ($_instance->childHasBeenRendered('A8kkv2R')) {
-    $componentId = $_instance->getRenderedChildComponentId('A8kkv2R');
-    $componentTag = $_instance->getRenderedChildComponentTagName('A8kkv2R');
+} elseif ($_instance->childHasBeenRendered('ZtMwXZR')) {
+    $componentId = $_instance->getRenderedChildComponentId('ZtMwXZR');
+    $componentTag = $_instance->getRenderedChildComponentTagName('ZtMwXZR');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('A8kkv2R');
+    $_instance->preserveRenderedChild('ZtMwXZR');
 } else {
     $response = \Livewire\Livewire::mount('search-component');
     $html = $response->html();
-    $_instance->logRenderedChild('A8kkv2R', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('ZtMwXZR', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
@@ -56,25 +55,21 @@ echo $html;
       <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('cart')->html();
-} elseif ($_instance->childHasBeenRendered('ipD6v7B')) {
-    $componentId = $_instance->getRenderedChildComponentId('ipD6v7B');
-    $componentTag = $_instance->getRenderedChildComponentTagName('ipD6v7B');
+} elseif ($_instance->childHasBeenRendered('t5MRi6z')) {
+    $componentId = $_instance->getRenderedChildComponentId('t5MRi6z');
+    $componentTag = $_instance->getRenderedChildComponentTagName('t5MRi6z');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('ipD6v7B');
+    $_instance->preserveRenderedChild('t5MRi6z');
 } else {
     $response = \Livewire\Livewire::mount('cart');
     $html = $response->html();
-    $_instance->logRenderedChild('ipD6v7B', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('t5MRi6z', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
-    </div>
-     <!-- Right elements -->
-     <div class="d-flex align-items-center">
-      <!-- Avatar -->
-      <div class="dropdown">
-        <a class="d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="40"alt="Black and White Portrait of a Man"loading="lazy"/>
+      <div class="search dropdown">
+        <a class="hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="40"alt="Img"loading="lazy"/>
         </a>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
           <?php if(auth()->guard()->check()): ?>
@@ -93,10 +88,8 @@ echo $html;
             <a class="dropdown-item" href="<?php echo e(route('login')); ?>">Login</a>
           </li>
           <?php endif; ?>
-          
         </ul>
       </div>
     </div>
-    <!-- Right elements -->
   </div>
 </nav><?php /**PATH /home/nesren/Project/web/laravel/Aqrabi-Ecommerce/resources/views/layouts/customer/navbar.blade.php ENDPATH**/ ?>
