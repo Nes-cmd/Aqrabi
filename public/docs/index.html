@@ -26,7 +26,7 @@
             </style>
 
     <script>
-        var baseUrl = "http://localhost:8000";
+        var baseUrl = "https://aqrabi.com";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -140,7 +140,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: August 25 2022</li>
+        <li>Last updated: August 28 2022</li>
     </ul>
 </div>
 
@@ -154,7 +154,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 <blockquote>
 <p>Base URL</p>
 </blockquote>
-<pre><code class="language-yaml">http://localhost:8000</code></pre>
+<pre><code class="language-yaml">https://aqrabi.com</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
 <p>This API is not authenticated.</p>
@@ -176,14 +176,14 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/login" \
+    "https://aqrabi.com/api/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/login"
+    "https://aqrabi.com/api/login"
 );
 
 const headers = {
@@ -254,14 +254,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/register" \
+    "https://aqrabi.com/api/register" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/register"
+    "https://aqrabi.com/api/register"
 );
 
 const headers = {
@@ -332,14 +332,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/customer/add-to-cart" \
+    "https://aqrabi.com/api/customer/add-to-cart" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/customer/add-to-cart"
+    "https://aqrabi.com/api/customer/add-to-cart"
 );
 
 const headers = {
@@ -410,14 +410,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/customer/cart-list" \
+    --get "https://aqrabi.com/api/customer/cart-list" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/customer/cart-list"
+    "https://aqrabi.com/api/customer/cart-list"
 );
 
 const headers = {
@@ -505,14 +505,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/customer/remove-cart/totam" \
+    --get "https://aqrabi.com/api/customer/remove-cart/eos" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/customer/remove-cart/totam"
+    "https://aqrabi.com/api/customer/remove-cart/eos"
 );
 
 const headers = {
@@ -591,7 +591,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-customer-remove-cart--id-"
-               value="totam"
+               value="eos"
                data-component="url" hidden>
     <br>
 <p>The ID of the remove cart.</p>
@@ -611,14 +611,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/customer/remove-cart-all" \
+    --get "https://aqrabi.com/api/customer/remove-cart-all" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/customer/remove-cart-all"
+    "https://aqrabi.com/api/customer/remove-cart-all"
 );
 
 const headers = {
@@ -706,14 +706,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/shop/categories" \
+    --get "https://aqrabi.com/api/shop/categories" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/shop/categories"
+    "https://aqrabi.com/api/shop/categories"
 );
 
 const headers = {
@@ -820,14 +820,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/shop/all-products" \
+    --get "https://aqrabi.com/api/shop/all-products" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/shop/all-products"
+    "https://aqrabi.com/api/shop/all-products"
 );
 
 const headers = {
@@ -861,23 +861,6 @@ access-control-allow-origin: *
 <code class="language-json">{
     &quot;products&quot;: [
         {
-            &quot;id&quot;: 1,
-            &quot;supplier_id&quot;: 2,
-            &quot;category_id&quot;: 2,
-            &quot;productname&quot;: &quot;Kathleen Sargent&quot;,
-            &quot;price&quot;: 288,
-            &quot;count&quot;: 56,
-            &quot;description&quot;: &quot;ss&quot;,
-            &quot;status&quot;: &quot;published&quot;,
-            &quot;visiblity&quot;: &quot;0&quot;,
-            &quot;tag&quot;: null,
-            &quot;discount&quot;: null,
-            &quot;main_photo&quot;: &quot;pr84YuWS8as6KL8RtnQumWZl1YEYtg-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg&quot;,
-            &quot;photos&quot;: [],
-            &quot;created_at&quot;: &quot;2022-08-25T17:34:12.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-08-25T17:39:22.000000Z&quot;
-        },
-        {
             &quot;id&quot;: 2,
             &quot;supplier_id&quot;: 2,
             &quot;category_id&quot;: 1,
@@ -886,13 +869,106 @@ access-control-allow-origin: *
             &quot;count&quot;: 9,
             &quot;description&quot;: &quot;Veritatis nostrud ei&quot;,
             &quot;status&quot;: &quot;published&quot;,
-            &quot;visiblity&quot;: &quot;public&quot;,
+            &quot;ordered_counter&quot;: 43,
+            &quot;visiblity&quot;: &quot;1&quot;,
             &quot;tag&quot;: null,
             &quot;discount&quot;: null,
-            &quot;main_photo&quot;: &quot;aVthCZOPU7CNanruZ0byplhelB5pJV-metadG55TmJMaDRHRHdNeTBQM3F3YlA1T2NGVTBucjlnOWowemhOeUZpQS5qcGVn-.jpg&quot;,
-            &quot;photos&quot;: [],
+            &quot;main_photo&quot;: &quot;fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg&quot;,
+            &quot;photos&quot;: [
+                &quot;8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg&quot;,
+                &quot;cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg&quot;,
+                &quot;2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg&quot;
+            ],
             &quot;created_at&quot;: &quot;2022-08-25T17:34:36.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-08-25T17:34:36.000000Z&quot;
+            &quot;updated_at&quot;: &quot;2022-08-27T10:29:52.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;supplier_id&quot;: 2,
+            &quot;category_id&quot;: 2,
+            &quot;productname&quot;: &quot;Shana Owens&quot;,
+            &quot;price&quot;: 154,
+            &quot;count&quot;: 43,
+            &quot;description&quot;: &quot;description goes here&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;ordered_counter&quot;: 32,
+            &quot;visiblity&quot;: &quot;1&quot;,
+            &quot;tag&quot;: null,
+            &quot;discount&quot;: null,
+            &quot;main_photo&quot;: &quot;KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
+            &quot;photos&quot;: [
+                &quot;rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg&quot;,
+                &quot;V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
+                &quot;DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
+            ],
+            &quot;created_at&quot;: &quot;2022-08-26T18:23:48.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-27T10:28:08.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;supplier_id&quot;: 3,
+            &quot;category_id&quot;: 2,
+            &quot;productname&quot;: &quot;Hoyt White&quot;,
+            &quot;price&quot;: 963,
+            &quot;count&quot;: 63,
+            &quot;description&quot;: &quot;Aspernatur ad exerci&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;ordered_counter&quot;: 21,
+            &quot;visiblity&quot;: &quot;1&quot;,
+            &quot;tag&quot;: null,
+            &quot;discount&quot;: null,
+            &quot;main_photo&quot;: &quot;hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg&quot;,
+            &quot;photos&quot;: [
+                &quot;a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg&quot;,
+                &quot;0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg&quot;,
+                &quot;xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg&quot;
+            ],
+            &quot;created_at&quot;: &quot;2022-08-28T03:14:48.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-28T03:14:48.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;supplier_id&quot;: 3,
+            &quot;category_id&quot;: 2,
+            &quot;productname&quot;: &quot;Melvin Riley&quot;,
+            &quot;price&quot;: 912,
+            &quot;count&quot;: 59,
+            &quot;description&quot;: &quot;Suscipit doloribus e&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;ordered_counter&quot;: 34,
+            &quot;visiblity&quot;: &quot;1&quot;,
+            &quot;tag&quot;: null,
+            &quot;discount&quot;: null,
+            &quot;main_photo&quot;: &quot;6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg&quot;,
+            &quot;photos&quot;: [
+                &quot;oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
+                &quot;FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;,
+                &quot;pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg&quot;
+            ],
+            &quot;created_at&quot;: &quot;2022-08-28T03:17:12.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-28T03:17:12.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;supplier_id&quot;: 2,
+            &quot;category_id&quot;: 2,
+            &quot;productname&quot;: &quot;Theodore Delacruz&quot;,
+            &quot;price&quot;: 283,
+            &quot;count&quot;: 55,
+            &quot;description&quot;: &quot;hgf&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;ordered_counter&quot;: 55,
+            &quot;visiblity&quot;: &quot;0&quot;,
+            &quot;tag&quot;: null,
+            &quot;discount&quot;: null,
+            &quot;main_photo&quot;: &quot;yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg&quot;,
+            &quot;photos&quot;: [
+                &quot;dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg&quot;,
+                &quot;lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg&quot;,
+                &quot;U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
+            ],
+            &quot;created_at&quot;: &quot;2022-08-28T03:18:33.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-28T03:18:33.000000Z&quot;
         }
     ]
 }</code>
@@ -952,14 +1028,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/shop/product-by-category/ex" \
+    --get "https://aqrabi.com/api/shop/product-by-category/et" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/shop/product-by-category/ex"
+    "https://aqrabi.com/api/shop/product-by-category/et"
 );
 
 const headers = {
@@ -1040,7 +1116,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-shop-product-by-category--id-"
-               value="ex"
+               value="et"
                data-component="url" hidden>
     <br>
 <p>The ID of the product by category.</p>
@@ -1060,14 +1136,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/shop/product-by-supplier/similique" \
+    --get "https://aqrabi.com/api/shop/product-by-supplier/mollitia" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/shop/product-by-supplier/similique"
+    "https://aqrabi.com/api/shop/product-by-supplier/mollitia"
 );
 
 const headers = {
@@ -1148,7 +1224,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-shop-product-by-supplier--id-"
-               value="similique"
+               value="mollitia"
                data-component="url" hidden>
     <br>
 <p>The ID of the product by supplier.</p>
@@ -1168,14 +1244,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/shop/product-group-category" \
+    --get "https://aqrabi.com/api/shop/product-group-category" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/shop/product-group-category"
+    "https://aqrabi.com/api/shop/product-group-category"
 );
 
 const headers = {
@@ -1225,13 +1301,18 @@ access-control-allow-origin: *
                     &quot;count&quot;: 9,
                     &quot;description&quot;: &quot;Veritatis nostrud ei&quot;,
                     &quot;status&quot;: &quot;published&quot;,
-                    &quot;visiblity&quot;: &quot;public&quot;,
+                    &quot;ordered_counter&quot;: 43,
+                    &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
-                    &quot;main_photo&quot;: &quot;aVthCZOPU7CNanruZ0byplhelB5pJV-metadG55TmJMaDRHRHdNeTBQM3F3YlA1T2NGVTBucjlnOWowemhOeUZpQS5qcGVn-.jpg&quot;,
-                    &quot;photos&quot;: [],
+                    &quot;main_photo&quot;: &quot;fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg&quot;,
+                    &quot;photos&quot;: [
+                        &quot;8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg&quot;,
+                        &quot;cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg&quot;,
+                        &quot;2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg&quot;
+                    ],
                     &quot;created_at&quot;: &quot;2022-08-25T17:34:36.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-08-25T17:34:36.000000Z&quot;
+                    &quot;updated_at&quot;: &quot;2022-08-27T10:29:52.000000Z&quot;
                 }
             ]
         },
@@ -1244,21 +1325,92 @@ access-control-allow-origin: *
             &quot;updated_at&quot;: &quot;2022-08-25T17:32:42.000000Z&quot;,
             &quot;products&quot;: [
                 {
-                    &quot;id&quot;: 1,
+                    &quot;id&quot;: 3,
                     &quot;supplier_id&quot;: 2,
                     &quot;category_id&quot;: 2,
-                    &quot;productname&quot;: &quot;Kathleen Sargent&quot;,
-                    &quot;price&quot;: 288,
-                    &quot;count&quot;: 56,
-                    &quot;description&quot;: &quot;ss&quot;,
+                    &quot;productname&quot;: &quot;Shana Owens&quot;,
+                    &quot;price&quot;: 154,
+                    &quot;count&quot;: 43,
+                    &quot;description&quot;: &quot;description goes here&quot;,
                     &quot;status&quot;: &quot;published&quot;,
+                    &quot;ordered_counter&quot;: 32,
+                    &quot;visiblity&quot;: &quot;1&quot;,
+                    &quot;tag&quot;: null,
+                    &quot;discount&quot;: null,
+                    &quot;main_photo&quot;: &quot;KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
+                    &quot;photos&quot;: [
+                        &quot;rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg&quot;,
+                        &quot;V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
+                        &quot;DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
+                    ],
+                    &quot;created_at&quot;: &quot;2022-08-26T18:23:48.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-08-27T10:28:08.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 4,
+                    &quot;supplier_id&quot;: 3,
+                    &quot;category_id&quot;: 2,
+                    &quot;productname&quot;: &quot;Hoyt White&quot;,
+                    &quot;price&quot;: 963,
+                    &quot;count&quot;: 63,
+                    &quot;description&quot;: &quot;Aspernatur ad exerci&quot;,
+                    &quot;status&quot;: &quot;published&quot;,
+                    &quot;ordered_counter&quot;: 21,
+                    &quot;visiblity&quot;: &quot;1&quot;,
+                    &quot;tag&quot;: null,
+                    &quot;discount&quot;: null,
+                    &quot;main_photo&quot;: &quot;hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg&quot;,
+                    &quot;photos&quot;: [
+                        &quot;a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg&quot;,
+                        &quot;0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg&quot;,
+                        &quot;xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg&quot;
+                    ],
+                    &quot;created_at&quot;: &quot;2022-08-28T03:14:48.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-08-28T03:14:48.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 5,
+                    &quot;supplier_id&quot;: 3,
+                    &quot;category_id&quot;: 2,
+                    &quot;productname&quot;: &quot;Melvin Riley&quot;,
+                    &quot;price&quot;: 912,
+                    &quot;count&quot;: 59,
+                    &quot;description&quot;: &quot;Suscipit doloribus e&quot;,
+                    &quot;status&quot;: &quot;published&quot;,
+                    &quot;ordered_counter&quot;: 34,
+                    &quot;visiblity&quot;: &quot;1&quot;,
+                    &quot;tag&quot;: null,
+                    &quot;discount&quot;: null,
+                    &quot;main_photo&quot;: &quot;6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg&quot;,
+                    &quot;photos&quot;: [
+                        &quot;oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
+                        &quot;FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;,
+                        &quot;pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg&quot;
+                    ],
+                    &quot;created_at&quot;: &quot;2022-08-28T03:17:12.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-08-28T03:17:12.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 6,
+                    &quot;supplier_id&quot;: 2,
+                    &quot;category_id&quot;: 2,
+                    &quot;productname&quot;: &quot;Theodore Delacruz&quot;,
+                    &quot;price&quot;: 283,
+                    &quot;count&quot;: 55,
+                    &quot;description&quot;: &quot;hgf&quot;,
+                    &quot;status&quot;: &quot;published&quot;,
+                    &quot;ordered_counter&quot;: 55,
                     &quot;visiblity&quot;: &quot;0&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
-                    &quot;main_photo&quot;: &quot;pr84YuWS8as6KL8RtnQumWZl1YEYtg-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg&quot;,
-                    &quot;photos&quot;: [],
-                    &quot;created_at&quot;: &quot;2022-08-25T17:34:12.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-08-25T17:39:22.000000Z&quot;
+                    &quot;main_photo&quot;: &quot;yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg&quot;,
+                    &quot;photos&quot;: [
+                        &quot;dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg&quot;,
+                        &quot;lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg&quot;,
+                        &quot;U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
+                    ],
+                    &quot;created_at&quot;: &quot;2022-08-28T03:18:33.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-08-28T03:18:33.000000Z&quot;
                 }
             ]
         }
@@ -1320,14 +1472,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/shop/product-group-supplier" \
+    --get "https://aqrabi.com/api/shop/product-group-supplier" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/shop/product-group-supplier"
+    "https://aqrabi.com/api/shop/product-group-supplier"
 );
 
 const headers = {
@@ -1386,23 +1538,6 @@ access-control-allow-origin: *
             &quot;updated_at&quot;: &quot;2022-08-25T16:59:48.000000Z&quot;,
             &quot;products&quot;: [
                 {
-                    &quot;id&quot;: 1,
-                    &quot;supplier_id&quot;: 2,
-                    &quot;category_id&quot;: 2,
-                    &quot;productname&quot;: &quot;Kathleen Sargent&quot;,
-                    &quot;price&quot;: 288,
-                    &quot;count&quot;: 56,
-                    &quot;description&quot;: &quot;ss&quot;,
-                    &quot;status&quot;: &quot;published&quot;,
-                    &quot;visiblity&quot;: &quot;0&quot;,
-                    &quot;tag&quot;: null,
-                    &quot;discount&quot;: null,
-                    &quot;main_photo&quot;: &quot;pr84YuWS8as6KL8RtnQumWZl1YEYtg-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg&quot;,
-                    &quot;photos&quot;: [],
-                    &quot;created_at&quot;: &quot;2022-08-25T17:34:12.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-08-25T17:39:22.000000Z&quot;
-                },
-                {
                     &quot;id&quot;: 2,
                     &quot;supplier_id&quot;: 2,
                     &quot;category_id&quot;: 1,
@@ -1411,13 +1546,62 @@ access-control-allow-origin: *
                     &quot;count&quot;: 9,
                     &quot;description&quot;: &quot;Veritatis nostrud ei&quot;,
                     &quot;status&quot;: &quot;published&quot;,
-                    &quot;visiblity&quot;: &quot;public&quot;,
+                    &quot;ordered_counter&quot;: 43,
+                    &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
-                    &quot;main_photo&quot;: &quot;aVthCZOPU7CNanruZ0byplhelB5pJV-metadG55TmJMaDRHRHdNeTBQM3F3YlA1T2NGVTBucjlnOWowemhOeUZpQS5qcGVn-.jpg&quot;,
-                    &quot;photos&quot;: [],
+                    &quot;main_photo&quot;: &quot;fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg&quot;,
+                    &quot;photos&quot;: [
+                        &quot;8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg&quot;,
+                        &quot;cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg&quot;,
+                        &quot;2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg&quot;
+                    ],
                     &quot;created_at&quot;: &quot;2022-08-25T17:34:36.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-08-25T17:34:36.000000Z&quot;
+                    &quot;updated_at&quot;: &quot;2022-08-27T10:29:52.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 3,
+                    &quot;supplier_id&quot;: 2,
+                    &quot;category_id&quot;: 2,
+                    &quot;productname&quot;: &quot;Shana Owens&quot;,
+                    &quot;price&quot;: 154,
+                    &quot;count&quot;: 43,
+                    &quot;description&quot;: &quot;description goes here&quot;,
+                    &quot;status&quot;: &quot;published&quot;,
+                    &quot;ordered_counter&quot;: 32,
+                    &quot;visiblity&quot;: &quot;1&quot;,
+                    &quot;tag&quot;: null,
+                    &quot;discount&quot;: null,
+                    &quot;main_photo&quot;: &quot;KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
+                    &quot;photos&quot;: [
+                        &quot;rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg&quot;,
+                        &quot;V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
+                        &quot;DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
+                    ],
+                    &quot;created_at&quot;: &quot;2022-08-26T18:23:48.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-08-27T10:28:08.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 6,
+                    &quot;supplier_id&quot;: 2,
+                    &quot;category_id&quot;: 2,
+                    &quot;productname&quot;: &quot;Theodore Delacruz&quot;,
+                    &quot;price&quot;: 283,
+                    &quot;count&quot;: 55,
+                    &quot;description&quot;: &quot;hgf&quot;,
+                    &quot;status&quot;: &quot;published&quot;,
+                    &quot;ordered_counter&quot;: 55,
+                    &quot;visiblity&quot;: &quot;0&quot;,
+                    &quot;tag&quot;: null,
+                    &quot;discount&quot;: null,
+                    &quot;main_photo&quot;: &quot;yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg&quot;,
+                    &quot;photos&quot;: [
+                        &quot;dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg&quot;,
+                        &quot;lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg&quot;,
+                        &quot;U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
+                    ],
+                    &quot;created_at&quot;: &quot;2022-08-28T03:18:33.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-08-28T03:18:33.000000Z&quot;
                 }
             ]
         },
@@ -1432,7 +1616,52 @@ access-control-allow-origin: *
             &quot;two_factor_recovery_codes&quot;: null,
             &quot;created_at&quot;: &quot;2022-08-25T16:59:49.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2022-08-25T16:59:49.000000Z&quot;,
-            &quot;products&quot;: []
+            &quot;products&quot;: [
+                {
+                    &quot;id&quot;: 4,
+                    &quot;supplier_id&quot;: 3,
+                    &quot;category_id&quot;: 2,
+                    &quot;productname&quot;: &quot;Hoyt White&quot;,
+                    &quot;price&quot;: 963,
+                    &quot;count&quot;: 63,
+                    &quot;description&quot;: &quot;Aspernatur ad exerci&quot;,
+                    &quot;status&quot;: &quot;published&quot;,
+                    &quot;ordered_counter&quot;: 21,
+                    &quot;visiblity&quot;: &quot;1&quot;,
+                    &quot;tag&quot;: null,
+                    &quot;discount&quot;: null,
+                    &quot;main_photo&quot;: &quot;hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg&quot;,
+                    &quot;photos&quot;: [
+                        &quot;a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg&quot;,
+                        &quot;0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg&quot;,
+                        &quot;xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg&quot;
+                    ],
+                    &quot;created_at&quot;: &quot;2022-08-28T03:14:48.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-08-28T03:14:48.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 5,
+                    &quot;supplier_id&quot;: 3,
+                    &quot;category_id&quot;: 2,
+                    &quot;productname&quot;: &quot;Melvin Riley&quot;,
+                    &quot;price&quot;: 912,
+                    &quot;count&quot;: 59,
+                    &quot;description&quot;: &quot;Suscipit doloribus e&quot;,
+                    &quot;status&quot;: &quot;published&quot;,
+                    &quot;ordered_counter&quot;: 34,
+                    &quot;visiblity&quot;: &quot;1&quot;,
+                    &quot;tag&quot;: null,
+                    &quot;discount&quot;: null,
+                    &quot;main_photo&quot;: &quot;6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg&quot;,
+                    &quot;photos&quot;: [
+                        &quot;oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
+                        &quot;FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;,
+                        &quot;pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg&quot;
+                    ],
+                    &quot;created_at&quot;: &quot;2022-08-28T03:17:12.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-08-28T03:17:12.000000Z&quot;
+                }
+            ]
         }
     ]
 }</code>
@@ -1492,14 +1721,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/shop/product-single/iste" \
+    --get "https://aqrabi.com/api/shop/product-single/et" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/shop/product-single/iste"
+    "https://aqrabi.com/api/shop/product-single/et"
 );
 
 const headers = {
@@ -1580,7 +1809,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-shop-product-single--id-"
-               value="iste"
+               value="et"
                data-component="url" hidden>
     <br>
 <p>The ID of the product single.</p>
@@ -1600,14 +1829,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/adress/get-countries" \
+    --get "https://aqrabi.com/api/adress/get-countries" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/adress/get-countries"
+    "https://aqrabi.com/api/adress/get-countries"
 );
 
 const headers = {
@@ -1639,7 +1868,24 @@ access-control-allow-origin: *
         </details>         <pre>
 
 <code class="language-json">{
-    &quot;countries&quot;: []
+    &quot;countries&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;Ethiopia&quot;,
+            &quot;country_code&quot;: &quot;ET&quot;,
+            &quot;dial_code&quot;: &quot;+251&quot;,
+            &quot;created_at&quot;: null,
+            &quot;updated_at&quot;: null
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;name&quot;: &quot;Dubai&quot;,
+            &quot;country_code&quot;: &quot;DF&quot;,
+            &quot;dial_code&quot;: &quot;+853&quot;,
+            &quot;created_at&quot;: null,
+            &quot;updated_at&quot;: null
+        }
+    ]
 }</code>
  </pre>
     </span>
@@ -1697,14 +1943,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/adress/get-shippment-adress" \
+    --get "https://aqrabi.com/api/adress/get-shippment-adress" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/adress/get-shippment-adress"
+    "https://aqrabi.com/api/adress/get-shippment-adress"
 );
 
 const headers = {
@@ -1792,14 +2038,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/adress/get-supplier-adress" \
+    --get "https://aqrabi.com/api/adress/get-supplier-adress" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/adress/get-supplier-adress"
+    "https://aqrabi.com/api/adress/get-supplier-adress"
 );
 
 const headers = {
@@ -1887,14 +2133,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/adress/store-shippment-adress" \
+    "https://aqrabi.com/api/adress/store-shippment-adress" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/adress/store-shippment-adress"
+    "https://aqrabi.com/api/adress/store-shippment-adress"
 );
 
 const headers = {
@@ -1965,14 +2211,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/shop/get-sliders" \
+    --get "https://aqrabi.com/api/shop/get-sliders" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/shop/get-sliders"
+    "https://aqrabi.com/api/shop/get-sliders"
 );
 
 const headers = {
@@ -2006,11 +2252,25 @@ access-control-allow-origin: *
 <code class="language-json">{
     &quot;sliders&quot;: [
         {
-            &quot;id&quot;: 1,
-            &quot;information&quot;: &quot;Dolorum ab id in eni&quot;,
-            &quot;photo_url&quot;: &quot;qp4Do3zS9pElpcoxl5kJJ1w4xv9U8P-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg&quot;,
-            &quot;created_at&quot;: &quot;2022-08-25T18:04:34.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-08-25T18:04:34.000000Z&quot;
+            &quot;id&quot;: 2,
+            &quot;information&quot;: &quot;Laudantium nisi ad &quot;,
+            &quot;photo_url&quot;: &quot;rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg&quot;,
+            &quot;created_at&quot;: &quot;2022-08-27T21:20:12.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-27T21:20:12.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;information&quot;: &quot;Rerum voluptatem pe&quot;,
+            &quot;photo_url&quot;: &quot;VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg&quot;,
+            &quot;created_at&quot;: &quot;2022-08-27T21:20:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-27T21:20:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;information&quot;: &quot;Aliqua Aliqua Debi&quot;,
+            &quot;photo_url&quot;: &quot;3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg&quot;,
+            &quot;created_at&quot;: &quot;2022-08-27T21:20:54.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-27T21:20:54.000000Z&quot;
         }
     ]
 }</code>
