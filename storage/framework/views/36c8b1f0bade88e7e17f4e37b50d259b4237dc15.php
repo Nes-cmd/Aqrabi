@@ -39,15 +39,15 @@
           <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('search-component')->html();
-} elseif ($_instance->childHasBeenRendered('SMY6SMn')) {
-    $componentId = $_instance->getRenderedChildComponentId('SMY6SMn');
-    $componentTag = $_instance->getRenderedChildComponentTagName('SMY6SMn');
+} elseif ($_instance->childHasBeenRendered('A8kkv2R')) {
+    $componentId = $_instance->getRenderedChildComponentId('A8kkv2R');
+    $componentTag = $_instance->getRenderedChildComponentTagName('A8kkv2R');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('SMY6SMn');
+    $_instance->preserveRenderedChild('A8kkv2R');
 } else {
     $response = \Livewire\Livewire::mount('search-component');
     $html = $response->html();
-    $_instance->logRenderedChild('SMY6SMn', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('A8kkv2R', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
@@ -56,26 +56,21 @@ echo $html;
       <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('cart')->html();
-} elseif ($_instance->childHasBeenRendered('dqc7Xmo')) {
-    $componentId = $_instance->getRenderedChildComponentId('dqc7Xmo');
-    $componentTag = $_instance->getRenderedChildComponentTagName('dqc7Xmo');
+} elseif ($_instance->childHasBeenRendered('ipD6v7B')) {
+    $componentId = $_instance->getRenderedChildComponentId('ipD6v7B');
+    $componentTag = $_instance->getRenderedChildComponentTagName('ipD6v7B');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('dqc7Xmo');
+    $_instance->preserveRenderedChild('ipD6v7B');
 } else {
     $response = \Livewire\Livewire::mount('cart');
     $html = $response->html();
-    $_instance->logRenderedChild('dqc7Xmo', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('ipD6v7B', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
     </div>
      <!-- Right elements -->
      <div class="d-flex align-items-center">
-      <!-- Icon -->
-      <a class="text-reset me-3" href="#">
-        <i class="fas fa-shopping-cart"></i>
-      </a>
-
       <!-- Avatar -->
       <div class="dropdown">
         <a class="d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">

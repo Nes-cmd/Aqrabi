@@ -16,7 +16,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-@livewire('blocks.collections-slide', 'top-product')
+@livewire('blocks.collections-slide', ['type' => 'top-collections'])
 
 @livewire('blocks.collections', ['type' => 'top-products'])
 
