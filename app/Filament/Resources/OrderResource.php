@@ -23,7 +23,10 @@ class OrderResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\Card::make()->schema([
+                    Forms\Components\Select::make('status')
+                                                ->options(['received' => 'Received','approved' => 'Approved', 'processing' => 'Processing','shipped' => 'Shipped','canceled' => 'Canceled']),
+                ])->columns(2)
             ]);
     }
 
@@ -31,23 +34,26 @@ class OrderResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('orderId')->label('Order id'),
+                Tables\Columns\TextColumn::make('status'),
+                Tables\Columns\TextColumn::make('created_at')->label('Ordered at'),
             ])
             ->filters([
-                //
+                
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
+                // Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
     
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\OrderDetailsRelationManager::class,
+            RelationManagers\ShippmentAdressRelationManager::class,
         ];
     }
     
@@ -55,8 +61,24 @@ class OrderResource extends Resource
     {
         return [
             'index' => Pages\ListOrders::route('/'),
-            'create' => Pages\CreateOrder::route('/create'),
+            // 'create' => Pages\CreateOrder::route('/create'),
             'edit' => Pages\EditOrder::route('/{record}/edit'),
         ];
     }    
+    public static function getWidgets(): array
+    {
+        return [
+            \App\Filament\Resources\OrderResource\Widgets\OrdersChart::class,
+        ];
+    }
+    protected function getHeaderWidgets(): array
+    {
+        return [
+            \App\Filament\Resources\OrderResource\Widgets\OrdersChart::class,
+        ];
+    }
+    public static function createEnabled():bool
+    {
+        return false;
+    }
 }

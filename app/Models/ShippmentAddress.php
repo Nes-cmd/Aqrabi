@@ -9,4 +9,8 @@ class ShippmentAddress extends Model
 {
     use HasFactory;
     protected $guarded = [];
+    public function country()
+    {
+        return $this->belongsTo(\App\Models\Country::class);
+    }
 }

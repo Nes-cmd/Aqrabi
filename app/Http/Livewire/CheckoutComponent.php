@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Models\Cart;
 use App\Models\Order;
 use App\Models\OrderDetail;
+use App\Models\Product;
 use Faker\Core\Uuid;
 
 class CheckoutComponent extends Component
@@ -36,6 +37,10 @@ class CheckoutComponent extends Component
                 'quantity' => $cart->quantity,
                 'specifications' => $cart->specifications
             ]);
+            $product = Product::where('id', $cart->product_id)->first();
+            $product->count = $product->count - $cart->quantity;
+            $product->ordered_counter = $product->ordered_counter + $cart->quantity;
+            $product->save();
             $cart->delete();
         }
         return redirect('/shop/order-success/'.$order->orderId);
