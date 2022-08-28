@@ -25,5 +25,5 @@ Route::get('/shop/order-success/{id}', function ($id)
 });
 
 Route::get('/', [ShopController::class, 'index'])->name('shop.index');
-Route::get('supplier/login', function(){return view('auth.supplier-login');});
-Route::post('/supplier/login', [AuthenticatedSessionController::class, 'store'])->name('supplier-login');
+// Route::get('supplier/login', function(){return view('auth.supplier-login');});
+// Route::post('/supplier/login', [AuthenticatedSessionController::class, 'store'])->name('supplier-login');

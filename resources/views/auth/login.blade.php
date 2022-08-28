@@ -1,26 +1,30 @@
 <x-customer-layout>
-    <div>
+    <section class="signin-page account">
         <div class="container">
-            <div class="mx-auto py-16 sm:w-2/3 md:w-3/5 md:py-20 lg:w-1/2 lg:py-24 xl:w-2/5">
-                <form method="post" action="{{route('login')}}" class="rounded border border-grey-dark py-8 px-10 shadow">
-                    @csrf
-                    <label class="block pb-3 font-hk text-secondary" for="first_name">Phone number</label>
-                    <input type="text" placeholder="Enter your Phone" name="phone" id="phone" value="{{old('phone')}}" class="form-input mb-6" />
-                    @error('email')
-                        <span class="text-danger" style="color:red">{{ $message }}</span>
-                    @enderror
-                    <label class="block pb-3 font-hk text-secondary" for="password">Password</label>
-                    <input name="password" type="password" placeholder="Enter your password" name="password" class="form-input mb-6" id="password" />
-                    <button type="submit" class="btn btn-primary mb-4 w-full" aria-label="Create account button">
-                        Login
-                    </button>
-
-                    <a href="{{ route('register')}}" class="mt-2 flex items-center justify-center">
-                        <i class="bx bx-chevron-left -mb-1 text-2xl leading-none text-secondary"></i>
-                        <span class="ml-1 font-hk leading-none text-secondary">Don' have account?</span>
-                    </a>
-                </form>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="block text-center">
+                        
+                        <h2 class="text-center">Welcome Back</h2>
+                        <form class="text-left clearfix" method="post" action="{{ route('login')}}">
+                            @csrf
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="phone" value="{{ old('phone')}}" placeholder="Phone">
+                                @error('phone')
+                                <span style="color:red;padding-left:3px">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" class="form-control" placeholder="Password">
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </div>
+                        </form>
+                        <p class="mt-3">New in this site ?<a href="{{ route('register')}}"> Create New Account</a></p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 </x-customer-layout>
