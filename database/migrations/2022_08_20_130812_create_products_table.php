@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('productname');
             $table->double('price');
             $table->integer('count');
+            $table->integer('ordered_counter')->default(0);
             $table->string('description');
             $table->string('status')->default('published');
             $table->string('visiblity')->default('public');
