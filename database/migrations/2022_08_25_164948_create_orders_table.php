@@ -18,9 +18,9 @@ return new class extends Migration
             $table->uuid('orderId');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('shippment_adress_id');
-            $table->unsignedBigInteger('transaction_id');
+            $table->unsignedBigInteger('transaction_id')->nullable();
             $table->string('status')->default('received');
-            $table->string('traking_number');
+            $table->string('traking_number')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('transaction_id')->references('id')->on('transactions');
             $table->foreign('shippment_adress_id')->references('id')->on('shippment_addresses');

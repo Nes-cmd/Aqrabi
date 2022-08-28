@@ -23,7 +23,7 @@
         </div>
         <div class="text-center">
         <a href="<?php echo e(route('shop.cart-detail')); ?>" class="btn btn-dark btn-mobile rounded-0">view cart</a>
-        <a href="<?php echo e('#'); ?>" class="btn btn-dark btn-mobile rounded-0">check out</a>
+        <a href="<?php echo e(route('shop.checkout')); ?>" class="btn btn-dark btn-mobile rounded-0">check out</a>
         </div>
         <?php else: ?>
         <h4>Your cart is empty!</h4>

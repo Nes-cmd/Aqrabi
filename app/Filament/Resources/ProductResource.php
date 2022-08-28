@@ -19,8 +19,9 @@ use Filament\Forms\Components\Tabs\Tab;
 class ProductResource extends Resource
 {
     protected static ?string $model = Product::class;
-
+    protected static bool $shouldRegisterNavigation = true;
     protected static ?string $navigationIcon = 'heroicon-o-folder-open';
+    protected static ?string $recordTitleAttribute = 'productname';
 
     public static function form(Form $form): Form
     { 

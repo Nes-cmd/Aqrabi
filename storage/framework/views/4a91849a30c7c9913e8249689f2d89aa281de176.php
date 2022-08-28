@@ -10,16 +10,11 @@
 <?php $component->withAttributes([]); ?>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" height="50%" src="<?php echo e(asset('customer/images/slider/img4.jpeg')); ?>" alt="First slide">
+  <?php $__currentLoopData = $sliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slider): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+    <div class="carousel-item <?php echo e(!$loop->index?'active':''); ?>">
+      <img class="d-block w-100" height="70%" src="<?php echo e(asset('storage/'.$slider->photo_url)); ?>">
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" height="50%" src="<?php echo e(asset('customer/images/slider/img2.jpeg')); ?>" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" height="50%" src="<?php echo e(asset('customer/images/slider/img3.jpeg')); ?>" alt="Third slide">
-    </div>
-  </div>
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>  
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -29,11 +24,38 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<?php echo $__env->make('customer.bloks.collection', ['title' => 'TOP PRODUCTS'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+<?php
+if (! isset($_instance)) {
+    $html = \Livewire\Livewire::mount('blocks.collections-slide', 'top-product')->html();
+} elseif ($_instance->childHasBeenRendered('Ks0961l')) {
+    $componentId = $_instance->getRenderedChildComponentId('Ks0961l');
+    $componentTag = $_instance->getRenderedChildComponentTagName('Ks0961l');
+    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
+    $_instance->preserveRenderedChild('Ks0961l');
+} else {
+    $response = \Livewire\Livewire::mount('blocks.collections-slide', 'top-product');
+    $html = $response->html();
+    $_instance->logRenderedChild('Ks0961l', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+}
+echo $html;
+?>
 
-<?php echo $__env->make('customer.bloks.collection', ['title' => 'TOP PRODUCTS'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+<?php
+if (! isset($_instance)) {
+    $html = \Livewire\Livewire::mount('blocks.collections', ['type' => 'top-products'])->html();
+} elseif ($_instance->childHasBeenRendered('6fukYbo')) {
+    $componentId = $_instance->getRenderedChildComponentId('6fukYbo');
+    $componentTag = $_instance->getRenderedChildComponentTagName('6fukYbo');
+    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
+    $_instance->preserveRenderedChild('6fukYbo');
+} else {
+    $response = \Livewire\Livewire::mount('blocks.collections', ['type' => 'top-products']);
+    $html = $response->html();
+    $_instance->logRenderedChild('6fukYbo', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+}
+echo $html;
+?>
 
-<?php echo $__env->make('customer.bloks.collection', ['title' => 'TOP PRODUCTS'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginal9bf5f254b2098a37a58c641b2483bb17f45f92d2)): ?>

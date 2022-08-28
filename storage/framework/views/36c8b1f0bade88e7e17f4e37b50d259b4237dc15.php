@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white w-100" id="navbar">
-  <a class="navbar-brand order-2 order-lg-1" href="<?php echo e(route('shop.index')); ?>"><img  src="<?php echo e(asset('logo.svg')); ?>" alt="logo"></a>
+  <a class="navbar-brand order-2 order-lg-1 col-md-2 text-center text-md-left" href="<?php echo e(route('shop.index')); ?>"><img src="<?php echo e(asset('logo.svg')); ?>" alt="logo"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -20,6 +20,14 @@
       <li class="nav-item">
         <a class="nav-link" href="<?php echo e(route('shop.contact')); ?>">Contact Us</a>
       </li>
+      <?php if(auth()->guard()->check()): ?>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo e(route('shop.wishlist')); ?>">
+          <i class="ti-heart"></i> Wishlist
+        </a>
+      </li>
+     <?php endif; ?>
+
     </ul>
   </div>
   <div class="order-3 navbar-right-elements">
@@ -31,15 +39,15 @@
           <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('search-component')->html();
-} elseif ($_instance->childHasBeenRendered('BmwiBFI')) {
-    $componentId = $_instance->getRenderedChildComponentId('BmwiBFI');
-    $componentTag = $_instance->getRenderedChildComponentTagName('BmwiBFI');
+} elseif ($_instance->childHasBeenRendered('tY4G1Ak')) {
+    $componentId = $_instance->getRenderedChildComponentId('tY4G1Ak');
+    $componentTag = $_instance->getRenderedChildComponentTagName('tY4G1Ak');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('BmwiBFI');
+    $_instance->preserveRenderedChild('tY4G1Ak');
 } else {
     $response = \Livewire\Livewire::mount('search-component');
     $html = $response->html();
-    $_instance->logRenderedChild('BmwiBFI', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('tY4G1Ak', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
@@ -48,15 +56,15 @@ echo $html;
       <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('cart')->html();
-} elseif ($_instance->childHasBeenRendered('l5LBAws')) {
-    $componentId = $_instance->getRenderedChildComponentId('l5LBAws');
-    $componentTag = $_instance->getRenderedChildComponentTagName('l5LBAws');
+} elseif ($_instance->childHasBeenRendered('WSyYl8z')) {
+    $componentId = $_instance->getRenderedChildComponentId('WSyYl8z');
+    $componentTag = $_instance->getRenderedChildComponentTagName('WSyYl8z');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('l5LBAws');
+    $_instance->preserveRenderedChild('WSyYl8z');
 } else {
     $response = \Livewire\Livewire::mount('cart');
     $html = $response->html();
-    $_instance->logRenderedChild('l5LBAws', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('WSyYl8z', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>

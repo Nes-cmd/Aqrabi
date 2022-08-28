@@ -23,7 +23,7 @@
         </div>
         <div class="text-center">
         <a href="{{ route('shop.cart-detail') }}" class="btn btn-dark btn-mobile rounded-0">view cart</a>
-        <a href="{{ '#' }}" class="btn btn-dark btn-mobile rounded-0">check out</a>
+        <a href="{{ route('shop.checkout') }}" class="btn btn-dark btn-mobile rounded-0">check out</a>
         </div>
         @else
         <h4>Your cart is empty!</h4>
