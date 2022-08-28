@@ -13,4 +13,8 @@ class ShopController extends Controller
         $sliders = Slider::all();
         return view('customer.index', compact('sliders'));
     }
+    public function test()
+    {
+        return '<h1 style="text-center">On development</h1>';
+    }
 }
