@@ -27,10 +27,9 @@
         </a>
       </li>
      @endauth
-
     </ul>
   </div>
-  <div class="order-3 navbar-right-elements row">
+  <div class="order-3 navbar-right-elements">
     <div class="search-cart">
       <!-- search -->
       <div class="search">
@@ -40,13 +39,9 @@
         </div>
       </div>
       @livewire('cart')
-    </div>
-     <!-- Right elements -->
-     <div class="d-flex align-items-center">
-      <!-- Avatar -->
-      <div class="dropdown">
-        <a class="d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="40"alt="Black and White Portrait of a Man"loading="lazy"/>
+      <div class="search dropdown">
+        <a class="hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="40"alt="Img"loading="lazy"/>
         </a>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
           @auth
@@ -65,10 +60,8 @@
             <a class="dropdown-item" href="{{route('login')}}">Login</a>
           </li>
           @endguest
-          
         </ul>
       </div>
     </div>
-    <!-- Right elements -->
   </div>
 </nav>

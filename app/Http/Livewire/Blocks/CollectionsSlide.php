@@ -10,7 +10,7 @@ class CollectionsSlide extends Component
     public function mount($type = null)
     {
         if ($type == 'top-collections') {
-            $this->values = Product::all()->take(4);
+            $this->values = Product::all()->take(6);
             $this->title = 'TOP COLLECTIONS';
         }
     }
