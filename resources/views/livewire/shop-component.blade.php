@@ -44,7 +44,7 @@
                                         </a>
                                     </div>
                                     <div class="product-hover-overlay">
-                                        <button wire:click="wishlit({{$product->id}})" class="product-icon favorite" data-toggle="tooltip" data-placement="left"
+                                        <button wire:click="wishlist({{$product->id}})" class="product-icon favorite" data-toggle="tooltip" data-placement="left"
                                             title="Wishlist"><i class="ti-heart"></i></button>
                                         <a href="#" class="product-icon cart" data-toggle="tooltip" data-placement="left"
                                             title="View detail"><i class="ti-search"></i></a>

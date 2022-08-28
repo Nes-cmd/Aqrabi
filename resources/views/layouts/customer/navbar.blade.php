@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white w-100" id="navbar">
-  <a class="navbar-brand order-2 order-lg-1" href="{{ route('shop.index') }}"><img  src="{{ asset('logo.svg')}}" alt="logo"></a>
+  <a class="navbar-brand order-2 order-lg-1 col-md-2 text-center text-md-left" href="{{ route('shop.index') }}"><img src="{{ asset('logo.svg')}}" alt="logo"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -20,6 +20,14 @@
       <li class="nav-item">
         <a class="nav-link" href="{{ route('shop.contact')}}">Contact Us</a>
       </li>
+      @auth
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('shop.wishlist')}}">
+          <i class="ti-heart"></i> Wishlist
+        </a>
+      </li>
+     @endauth
+
     </ul>
   </div>
   <div class="order-3 navbar-right-elements">

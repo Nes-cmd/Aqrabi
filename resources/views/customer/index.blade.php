@@ -2,16 +2,11 @@
 <x-customer-layout>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" height="50%" src="{{ asset('customer/images/slider/img4.jpeg')}}" alt="First slide">
+  @foreach ($sliders as $slider)
+    <div class="carousel-item {{ !$loop->index?'active':''}}">
+      <img class="d-block w-100" height="70%" src="{{ asset('storage/'.$slider->photo_url)}}">
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" height="50%" src="{{ asset('customer/images/slider/img2.jpeg')}}" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" height="50%" src="{{ asset('customer/images/slider/img3.jpeg')}}" alt="Third slide">
-    </div>
-  </div>
+    @endforeach  
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -21,11 +16,10 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-@include('customer.bloks.collection', ['title' => 'TOP PRODUCTS'])
+@livewire('blocks.collections-slide', 'top-product')
 
-@include('customer.bloks.collection', ['title' => 'TOP PRODUCTS'])
+@livewire('blocks.collections', ['type' => 'top-products'])
 
-@include('customer.bloks.collection', ['title' => 'TOP PRODUCTS'])
 </x-customer-layout>
 <script>
     $('.carousel').carousel()

@@ -23,7 +23,7 @@
                                             <tr>
                                                 <th></th>
                                                 <th>Product Name</th>
-                                                <th>Price</th>
+                                                <th>Price( ETB )</th>
                                                 <th>Quantity</th>
                                                 <th>Sub Total</th>
                                             </tr>
@@ -40,7 +40,7 @@
                                                         <a href="#">{{ $cart->product->productname }}</a>
                                                     </div>
                                                 </td>
-                                                <td>${{$cart->product->price }}
+                                                <td>{{$cart->product->price }}
                                                     
                                                 </td>
                                                 <td >
@@ -52,7 +52,7 @@
                                                 </td>
                                                 <td>
                                                     
-                                                    ${{$cart->product->price * $cart->quantity}}
+                                                    {{$cart->product->price * $cart->quantity .' birr'}}
                                                     
                                                 </td>
                                             </tr>
@@ -60,16 +60,23 @@
                                         </tbody>
                                     </table>
                                 </div>
-                               
+                                <div class="d-flex flex-column flex-md-row align-items-center mb-2">
+                                    <input wire:model="promocode" type="text" class="form-control text-md-left text-center mb-3 mb-md-0" name="coupon" id="coupon" placeholder="I have a discout coupon">
+                                    
+                                    <button wire:click="applyCupon" class="btn btn-outline-primary ml-md-3 w-100 mb-3 mb-md-0">Apply Coupon</button>
+                                </div>
+                                @error('promocode')
+                                        <span style="color:red">{{ $message }}</span>
+                                @enderror
                                 <div class="row">
                                     <div class="col-12">
                                         <ul class="list-unstyled text-right">
-                                            <li>Total <span class="d-inline-block w-100px">${{ cartTotal()['total'] }}</span></li>
+                                            <li>Total <span class="d-inline-block w-100px">{{ cartTotal()['total'] .'  ETB' }}</span></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <hr>
-                                <a href="{{ '#' }}" class="btn btn-dark float-right">Checkout</a>
+                                <a href="{{ route('shop.checkout') }}" class="btn btn-dark float-right">Checkout</a>
                                 
                             </div>
                         </div>

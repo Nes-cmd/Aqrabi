@@ -39,11 +39,7 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
-        ],
-        'supplier' => [
-            'driver' => 'session',
-            'provider' => 'suppliers',
-        ],
+        ]
     ],
 
     /*
@@ -67,10 +63,6 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
-        ],
-       'suppliers' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Supplier::class,
         ]
 
         // 'users' => [

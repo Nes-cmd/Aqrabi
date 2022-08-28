@@ -23,7 +23,7 @@
                                             <tr>
                                                 <th></th>
                                                 <th>Product Name</th>
-                                                <th>Price</th>
+                                                <th>Price( ETB )</th>
                                                 <th>Quantity</th>
                                                 <th>Sub Total</th>
                                             </tr>
@@ -40,7 +40,7 @@
                                                         <a href="#"><?php echo e($cart->product->productname); ?></a>
                                                     </div>
                                                 </td>
-                                                <td>$<?php echo e($cart->product->price); ?>
+                                                <td><?php echo e($cart->product->price); ?>
 
                                                     
                                                 </td>
@@ -53,7 +53,7 @@
                                                 </td>
                                                 <td>
                                                     
-                                                    $<?php echo e($cart->product->price * $cart->quantity); ?>
+                                                    <?php echo e($cart->product->price * $cart->quantity .' birr'); ?>
 
                                                     
                                                 </td>
@@ -62,16 +62,30 @@
                                         </tbody>
                                     </table>
                                 </div>
-                               
+                                <div class="d-flex flex-column flex-md-row align-items-center mb-2">
+                                    <input wire:model="promocode" type="text" class="form-control text-md-left text-center mb-3 mb-md-0" name="coupon" id="coupon" placeholder="I have a discout coupon">
+                                    
+                                    <button wire:click="applyCupon" class="btn btn-outline-primary ml-md-3 w-100 mb-3 mb-md-0">Apply Coupon</button>
+                                </div>
+                                <?php $__errorArgs = ['promocode'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                                        <span style="color:red"><?php echo e($message); ?></span>
+                                <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
                                 <div class="row">
                                     <div class="col-12">
                                         <ul class="list-unstyled text-right">
-                                            <li>Total <span class="d-inline-block w-100px">$<?php echo e(cartTotal()['total']); ?></span></li>
+                                            <li>Total <span class="d-inline-block w-100px"><?php echo e(cartTotal()['total'] .'  ETB'); ?></span></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <hr>
-                                <a href="<?php echo e('#'); ?>" class="btn btn-dark float-right">Checkout</a>
+                                <a href="<?php echo e(route('shop.checkout')); ?>" class="btn btn-dark float-right">Checkout</a>
                                 
                             </div>
                         </div>

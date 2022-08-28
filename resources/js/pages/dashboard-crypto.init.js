@@ -67,7 +67,7 @@ if (donutchartportfolioColors) {
             value: {
               show: true,
               fontSize: "20px",
-              color: "#343a40",
+              color: "#E7E4F8",
               fontWeight: 500,
               offsetY: 5,
               formatter: function (val) {
