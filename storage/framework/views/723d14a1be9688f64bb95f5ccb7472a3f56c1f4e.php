@@ -26,7 +26,7 @@
 } ?>
 <?php unset($__defined_vars); ?>
 
-<label <?php echo e($attributes->class(['inline-flex items-center space-x-3 rtl:space-x-reverse filament-forms-field-wrapper-label'])); ?>>
+<label <?php echo e($attributes->class(['filament-forms-field-wrapper-label inline-flex items-center space-x-3 rtl:space-x-reverse'])); ?>>
     <?php echo e($prefix); ?>
 
 

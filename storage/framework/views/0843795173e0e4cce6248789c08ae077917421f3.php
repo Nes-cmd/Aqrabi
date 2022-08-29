@@ -1,4 +1,4 @@
-<div <?php echo e($attributes->merge($getExtraAttributes())->class(['px-4 py-3 filament-tables-image-column'])); ?>>
+<div <?php echo e($attributes->merge($getExtraAttributes())->class(['filament-tables-image-column px-4 py-3'])); ?>>
     <?php
         $height = $getHeight();
         $width = $getWidth() ?? ($isRounded() ? $height : null);
@@ -22,8 +22,9 @@
                     <?php echo $width !== null ? "width: {$width};" : null; ?>
 
                 "
-                class="<?php echo \Illuminate\Support\Arr::toCssClasses(['object-cover object-center' => $isRounded()]) ?>"
-                <?php echo e($getExtraImgAttributeBag()); ?>
+                <?php echo e($getExtraImgAttributeBag()->class([
+                    'object-cover object-center' => $isRounded(),
+                ])); ?>
 
             >
        <?php endif; ?>

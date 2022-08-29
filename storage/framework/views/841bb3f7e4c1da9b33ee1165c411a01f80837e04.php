@@ -20,7 +20,7 @@
 <div
     x-data="{}"
     x-cloak
-    <?php echo e($attributes->class(['relative filament-tables-bulk-actions'])); ?>
+    <?php echo e($attributes->class(['filament-tables-bulk-actions relative'])); ?>
 
 >
     <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>

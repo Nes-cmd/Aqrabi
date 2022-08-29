@@ -1,4 +1,4 @@
-<td <?php echo e($attributes->class(['w-4 px-4 whitespace-nowrap filament-tables-checkbox-cell'])); ?>>
+<td <?php echo e($attributes->class(['filament-tables-checkbox-cell w-4 px-4 whitespace-nowrap'])); ?>>
     <input
         <?php echo e($checkbox->attributes->class([
             'block border-gray-300 rounded shadow-sm text-primary-600 focus:border-primary-600 focus:ring focus:ring-primary-200 focus:ring-opacity-50',

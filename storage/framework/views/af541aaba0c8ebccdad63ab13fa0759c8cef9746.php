@@ -23,7 +23,7 @@
 <td
     wire:loading.remove.delay
     wire:target="<?php echo e(implode(',', \Filament\Tables\Table::LOADING_TARGETS)); ?>"
-    <?php echo e($attributes->class(['px-4 py-3 whitespace-nowrap filament-tables-actions-cell'])); ?>
+    <?php echo e($attributes->class(['filament-tables-actions-cell px-4 py-3 whitespace-nowrap'])); ?>
 
 >
     <div

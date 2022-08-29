@@ -13,7 +13,7 @@
     };
 ?>
 
-<div <?php echo e($attributes->merge($getExtraAttributes())->class(['px-4 py-3 filament-tables-boolean-column'])); ?>>
+<div <?php echo e($attributes->merge($getExtraAttributes())->class(['filament-tables-boolean-column px-4 py-3'])); ?>>
     <?php if($state !== null): ?>
         <?php if (isset($component)) { $__componentOriginal3bf0a20793be3eca9a779778cf74145887b021b9 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\DynamicComponent::class, ['component' => $stateIcon] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>

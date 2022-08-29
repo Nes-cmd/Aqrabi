@@ -4,6 +4,7 @@
 
     $actions = $getActions();
     $actionsPosition = $getActionsPosition();
+    $actionsColumnLabel = $getActionsColumnLabel();
     $columns = $getColumns();
     $content = $getContent();
     $contentFooter = $getContentFooter();
@@ -12,13 +13,16 @@
     $heading = $getHeading();
     $isReorderable = $isReorderable();
     $isReordering = $isReordering();
-    $isSearchVisible = $isSearchable();
+    $isColumnSearchVisible = $isSearchableByColumn();
+    $isGlobalSearchVisible = $isSearchable();
     $isSelectionEnabled = $isSelectionEnabled();
     $isStriped = $isStriped();
     $hasFilters = $isFilterable();
     $hasFiltersPopover = $hasFilters && ($getFiltersLayout() === Layout::Popover);
     $hasFiltersAboveContent = $hasFilters && ($getFiltersLayout() === Layout::AboveContent);
+    $hasFiltersBelowContent = $hasFilters && ($getFiltersLayout() === Layout::BelowContent);
     $isColumnToggleFormVisible = $hasToggleableColumns();
+    $records = $getRecords();
 
     $columnsCount = count($columns);
     if (count($actions) && (! $isReordering)) $columnsCount++;
@@ -234,7 +238,7 @@
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
         <div
-            x-show="hasHeader = (<?php echo \Illuminate\Support\Js::from($renderHeader = ($header || $heading || ($headerActions && (! $isReordering)) || $isReorderable || $isSearchVisible || $hasFilters || $isColumnToggleFormVisible))->toHtml() ?> || selectedRecords.length)"
+            x-show="hasHeader = (<?php echo \Illuminate\Support\Js::from($renderHeader = ($header || $heading || ($headerActions && (! $isReordering)) || $isReorderable || $isGlobalSearchVisible || $hasFilters || $isColumnToggleFormVisible))->toHtml() ?> || selectedRecords.length)"
             <?php echo ! $renderHeader ? 'x-cloak' : null; ?>
 
         >
@@ -269,14 +273,14 @@
 <?php endif; ?>
 
                     <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.hr','data' => ['xShow' => \Illuminate\Support\Js::from($isReorderable || $isSearchVisible || $hasFilters || $isColumnToggleFormVisible) . ' || selectedRecords.length']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.hr','data' => ['xShow' => \Illuminate\Support\Js::from($isReorderable || $isGlobalSearchVisible || $hasFilters || $isColumnToggleFormVisible) . ' || selectedRecords.length']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('tables::hr'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['x-show' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(\Illuminate\Support\Js::from($isReorderable || $isSearchVisible || $hasFilters || $isColumnToggleFormVisible) . ' || selectedRecords.length')]); ?>
+<?php $component->withAttributes(['x-show' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(\Illuminate\Support\Js::from($isReorderable || $isGlobalSearchVisible || $hasFilters || $isColumnToggleFormVisible) . ' || selectedRecords.length')]); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
@@ -307,14 +311,14 @@
                     </div>
 
                     <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.hr','data' => ['xShow' => \Illuminate\Support\Js::from($isReorderable || $isSearchVisible || $isColumnToggleFormVisible) . ' || selectedRecords.length']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.hr','data' => ['xShow' => \Illuminate\Support\Js::from($isReorderable || $isGlobalSearchVisible || $isColumnToggleFormVisible) . ' || selectedRecords.length']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('tables::hr'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes(['x-show' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(\Illuminate\Support\Js::from($isReorderable || $isSearchVisible || $isColumnToggleFormVisible) . ' || selectedRecords.length')]); ?>
+<?php $component->withAttributes(['x-show' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(\Illuminate\Support\Js::from($isReorderable || $isGlobalSearchVisible || $isColumnToggleFormVisible) . ' || selectedRecords.length')]); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
@@ -325,7 +329,7 @@
             <?php endif; ?>
 
             <div
-                x-show="<?php echo \Illuminate\Support\Js::from($shouldRenderHeaderDiv = ($isReorderable || $isSearchVisible || $hasFiltersPopover || $isColumnToggleFormVisible))->toHtml() ?> || selectedRecords.length"
+                x-show="<?php echo \Illuminate\Support\Js::from($shouldRenderHeaderDiv = ($isReorderable || $isGlobalSearchVisible || $hasFiltersPopover || $isColumnToggleFormVisible))->toHtml() ?> || selectedRecords.length"
                 <?php echo ! $shouldRenderHeaderDiv ? 'x-cloak' : null; ?>
 
                 class="flex items-center justify-between p-2 h-14"
@@ -371,9 +375,9 @@
                     <?php endif; ?>
                 </div>
 
-                <?php if($isSearchVisible || $hasFiltersPopover || $isColumnToggleFormVisible): ?>
+                <?php if($isGlobalSearchVisible || $hasFiltersPopover || $isColumnToggleFormVisible): ?>
                     <div class="w-full flex items-center justify-end gap-2 md:max-w-md">
-                        <?php if($isSearchVisible): ?>
+                        <?php if($isGlobalSearchVisible): ?>
                             <div class="flex-1">
                                 <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.search-input','data' => []] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
@@ -393,24 +397,6 @@
                             </div>
                         <?php endif; ?>
 
-                        <?php if($isColumnToggleFormVisible): ?>
-                            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.toggleable.index','data' => ['form' => $getColumnToggleForm(),'width' => $getColumnToggleFormWidth(),'class' => 'shrink-0']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
-<?php $component->withName('tables::toggleable'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
-<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
-<?php endif; ?>
-<?php $component->withAttributes(['form' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($getColumnToggleForm()),'width' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($getColumnToggleFormWidth()),'class' => 'shrink-0']); ?>
-<?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
-<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
-<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
-<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
-<?php endif; ?>
-                        <?php endif; ?>
-
                         <?php if($hasFiltersPopover): ?>
                             <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.filters.popover','data' => ['form' => $getFiltersForm(),'width' => $getFiltersFormWidth(),'class' => 'shrink-0']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
@@ -428,10 +414,99 @@
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
                         <?php endif; ?>
+
+                        <?php if($isColumnToggleFormVisible): ?>
+                            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.toggleable.index','data' => ['form' => $getColumnToggleForm(),'width' => $getColumnToggleFormWidth(),'class' => 'shrink-0']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('tables::toggleable'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['form' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($getColumnToggleForm()),'width' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($getColumnToggleFormWidth()),'class' => 'shrink-0']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
+                        <?php endif; ?>
                     </div>
                 <?php endif; ?>
             </div>
         </div>
+
+        <?php if($isReordering): ?>
+            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.reorder.indicator','data' => ['colspan' => $columnsCount,'class' => \Illuminate\Support\Arr::toCssClasses([
+                    'border-t',
+                    'dark:border-gray-700' => config('tables.dark_mode'),
+                ])]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('tables::reorder.indicator'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['colspan' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($columnsCount),'class' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(\Illuminate\Support\Arr::toCssClasses([
+                    'border-t',
+                    'dark:border-gray-700' => config('tables.dark_mode'),
+                ]))]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
+        <?php elseif($isSelectionEnabled): ?>
+            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.selection-indicator','data' => ['allRecordsCount' => $getAllRecordsCount(),'colspan' => $columnsCount,'xShow' => 'selectedRecords.length','class' => \Illuminate\Support\Arr::toCssClasses([
+                    'border-t',
+                    'dark:border-gray-700' => config('tables.dark_mode'),
+                ])]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('tables::selection-indicator'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['all-records-count' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($getAllRecordsCount()),'colspan' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($columnsCount),'x-show' => 'selectedRecords.length','class' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(\Illuminate\Support\Arr::toCssClasses([
+                    'border-t',
+                    'dark:border-gray-700' => config('tables.dark_mode'),
+                ]))]); ?>
+                 <?php $__env->slot('selectedRecordsCount', null, []); ?> 
+                    <span x-text="selectedRecords.length"></span>
+                 <?php $__env->endSlot(); ?>
+             <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
+        <?php endif; ?>
+
+        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.filters.indicators','data' => ['indicators' => collect($getFilters())->mapWithKeys(fn (\Filament\Tables\Filters\BaseFilter $filter): array => [$filter->getName() => $filter->getIndicators()])->filter(fn (array $indicators): bool => count($indicators))->all(),'class' => \Illuminate\Support\Arr::toCssClasses([
+                'border-t',
+                'dark:border-gray-700' => config('tables.dark_mode'),
+            ])]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('tables::filters.indicators'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['indicators' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(collect($getFilters())->mapWithKeys(fn (\Filament\Tables\Filters\BaseFilter $filter): array => [$filter->getName() => $filter->getIndicators()])->filter(fn (array $indicators): bool => count($indicators))->all()),'class' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(\Illuminate\Support\Arr::toCssClasses([
+                'border-t',
+                'dark:border-gray-700' => config('tables.dark_mode'),
+            ]))]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
 
         <div
             class="<?php echo \Illuminate\Support\Arr::toCssClasses([
@@ -445,30 +520,49 @@
                 'border-t': hasHeader,
             }"
         >
-            <?php if(($records = $getRecords())->count()): ?>
-                <?php if($content): ?>
-                    <?php echo e($content->with(['records' => $records])); ?>
+            <?php if($content): ?>
+                <?php echo e($content->with(['records' => $records])); ?>
 
-                <?php else: ?>
-                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.table','data' => []] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+            <?php else: ?>
+                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.table','data' => ['poll' => $getPollingInterval()]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('tables::table'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
-<?php $component->withAttributes([]); ?>
-                         <?php $__env->slot('header', null, []); ?> 
-                            <?php if($isReordering): ?>
-                                <th></th>
-                            <?php else: ?>
-                                <?php if(count($actions) && $actionsPosition === Position::BeforeCells): ?>
+<?php $component->withAttributes(['poll' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($getPollingInterval())]); ?>
+                     <?php $__env->slot('header', null, []); ?> 
+                        <?php if($isReordering): ?>
+                            <th></th>
+                        <?php else: ?>
+                            <?php if(count($actions) && $actionsPosition === Position::BeforeCells): ?>
+                                <?php if($actionsColumnLabel): ?>
+                                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.header-cell','data' => ['alignment' => 'right']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('tables::header-cell'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['alignment' => 'right']); ?>
+                                        <?php echo e($actionsColumnLabel); ?>
+
+                                     <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
+                                <?php else: ?>
                                     <th class="w-5"></th>
                                 <?php endif; ?>
+                            <?php endif; ?>
 
-                                <?php if($isSelectionEnabled): ?>
-                                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                            <?php if($isSelectionEnabled): ?>
+                                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.checkbox-cell','data' => []] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('tables::checkbox-cell'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -477,32 +571,54 @@
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
-                                         <?php $__env->slot('checkbox', null, ['x-on:click' => 'toggleSelectRecordsOnPage','x-bind:checked' => '
-                                                if (areRecordsSelected(getRecordsOnPage())) {
-                                                    $el.checked = true
+                                     <?php $__env->slot('checkbox', null, ['x-on:click' => 'toggleSelectRecordsOnPage','x-bind:checked' => '
+                                            let recordsOnPage = getRecordsOnPage()
 
-                                                    return \'checked\'
-                                                }
+                                            if (recordsOnPage.length && areRecordsSelected(recordsOnPage)) {
+                                                $el.checked = true
 
-                                                $el.checked = false
+                                                return \'checked\'
+                                            }
 
-                                                return null
-                                            ']); ?>  <?php $__env->endSlot(); ?>
+                                            $el.checked = false
+
+                                            return null
+                                        ']); ?>  <?php $__env->endSlot(); ?>
+                                 <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
+                            <?php endif; ?>
+
+                            <?php if(count($actions) && $actionsPosition === Position::BeforeColumns): ?>
+                                <?php if($actionsColumnLabel): ?>
+                                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.header-cell','data' => ['alignment' => 'right']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('tables::header-cell'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['alignment' => 'right']); ?>
+                                        <?php echo e($actionsColumnLabel); ?>
+
                                      <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-                                <?php endif; ?>
-
-                                <?php if(count($actions) && $actionsPosition === Position::BeforeColumns): ?>
+                                <?php else: ?>
                                     <th class="w-5"></th>
                                 <?php endif; ?>
                             <?php endif; ?>
+                        <?php endif; ?>
 
-                            <?php $__currentLoopData = $columns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                        <?php $__currentLoopData = $columns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.header-cell','data' => ['extraAttributes' => $column->getExtraHeaderAttributes(),'isSortColumn' => $getSortColumn() === $column->getName(),'name' => $column->getName(),'alignment' => $column->getAlignment(),'sortable' => $column->isSortable() && (! $isReordering),'sortDirection' => $getSortDirection(),'class' => $getHiddenClasses($column)]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('tables::header-cell'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -511,8 +627,90 @@
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes(['extra-attributes' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($column->getExtraHeaderAttributes()),'is-sort-column' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($getSortColumn() === $column->getName()),'name' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($column->getName()),'alignment' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($column->getAlignment()),'sortable' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($column->isSortable() && (! $isReordering)),'sort-direction' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($getSortDirection()),'class' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($getHiddenClasses($column))]); ?>
-                                    <?php echo e($column->getLabel()); ?>
+                                <?php echo e($column->getLabel()); ?>
 
+                             <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+                        <?php if(count($actions) && (! $isReordering) && $actionsPosition === Position::AfterCells): ?>
+                            <?php if($actionsColumnLabel): ?>
+                                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.header-cell','data' => ['alignment' => 'right']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('tables::header-cell'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['alignment' => 'right']); ?>
+                                    <?php echo e($actionsColumnLabel); ?>
+
+                                 <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
+                            <?php else: ?>
+                                <th class="w-5"></th>
+                            <?php endif; ?>
+                        <?php endif; ?>
+                     <?php $__env->endSlot(); ?>
+
+                    <?php if($isColumnSearchVisible): ?>
+                        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.row','data' => []] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('tables::row'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+                            <?php if($isReordering): ?>
+                                <td></td>
+                            <?php else: ?>
+                                <?php if(count($actions) && in_array($actionsPosition, [Position::BeforeCells, Position::BeforeColumns])): ?>
+                                    <td></td>
+                                <?php endif; ?>
+
+                                <?php if($isSelectionEnabled): ?>
+                                    <td></td>
+                                <?php endif; ?>
+                            <?php endif; ?>
+
+                            <?php $__currentLoopData = $columns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.cell','data' => ['class' => 'px-4 py-1']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('tables::cell'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['class' => 'px-4 py-1']); ?>
+                                    <?php if($column->isIndividuallySearchable()): ?>
+                                        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.search-input','data' => ['wireModel' => 'tableColumnSearchQueries.'.e($column->getName()).'']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('tables::search-input'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['wire-model' => 'tableColumnSearchQueries.'.e($column->getName()).'']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
+                                    <?php endif; ?>
                                  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
@@ -522,63 +720,32 @@
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                             <?php if(count($actions) && (! $isReordering) && $actionsPosition === Position::AfterCells): ?>
-                                <th class="w-5"></th>
+                                <td></td>
                             <?php endif; ?>
-                         <?php $__env->endSlot(); ?>
-
-                        <?php if($isReordering): ?>
-                            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.reorder.indicator','data' => ['colspan' => $columnsCount]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
-<?php $component->withName('tables::reorder.indicator'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
-<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
-<?php endif; ?>
-<?php $component->withAttributes(['colspan' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($columnsCount)]); ?>
-<?php echo $__env->renderComponent(); ?>
+                         <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-                        <?php elseif($isSelectionEnabled): ?>
-                            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.selection-indicator','data' => ['allRecordsCount' => $getAllRecordsCount(),'colspan' => $columnsCount,'xShow' => 'selectedRecords.length']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
-<?php $component->withName('tables::selection-indicator'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
-<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
-<?php endif; ?>
-<?php $component->withAttributes(['all-records-count' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($getAllRecordsCount()),'colspan' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($columnsCount),'x-show' => 'selectedRecords.length']); ?>
-                                 <?php $__env->slot('selectedRecordsCount', null, []); ?> 
-                                    <span x-text="selectedRecords.length"></span>
-                                 <?php $__env->endSlot(); ?>
-                             <?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
-<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
-<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
-<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
-<?php endif; ?>
-                        <?php endif; ?>
+                    <?php endif; ?>
 
-                        <?php $__currentLoopData = $records; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $record): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <?php
-                                $recordAction = $getRecordAction($record);
-                                $recordKey = $getRecordKey($record);
-                                $recordUrl = $getRecordUrl($record);
-                            ?>
+                    <?php $__empty_1 = true; $__currentLoopData = $records; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $record): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+                        <?php
+                            $recordAction = $getRecordAction($record);
+                            $recordKey = $getRecordKey($record);
+                            $recordUrl = $getRecordUrl($record);
+                        ?>
 
-                            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.row','data' => ['recordAction' => $recordAction,'recordUrl' => $recordUrl,'wire:key' => $this->id . '.table.records.' . $recordKey,'wire:sortable.item' => $isReordering ? $recordKey : null,'wire:sortable.handle' => $isReordering,'striped' => $isStriped,'xBind:class' => '{
-                                    \'bg-gray-50 '.e(config('tables.dark_mode') ? 'dark:bg-gray-500/10' : '').'\': isRecordSelected(\''.e($recordKey).'\'),
-                                }','class' => \Illuminate\Support\Arr::toCssClasses(array_merge(
-                                    [
-                                        'group cursor-move' => $isReordering,
-                                    ],
-                                    $getRecordClasses($record),
-                                ))]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+                                \'bg-gray-50 '.e(config('tables.dark_mode') ? 'dark:bg-gray-500/10' : '').'\': isRecordSelected(\''.e($recordKey).'\'),
+                            }','class' => \Illuminate\Support\Arr::toCssClasses(array_merge(
+                                [
+                                    'group cursor-move' => $isReordering,
+                                ],
+                                $getRecordClasses($record),
+                            ))]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('tables::row'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
@@ -586,15 +753,15 @@
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes(['record-action' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($recordAction),'record-url' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($recordUrl),'wire:key' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($this->id . '.table.records.' . $recordKey),'wire:sortable.item' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($isReordering ? $recordKey : null),'wire:sortable.handle' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($isReordering),'striped' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($isStriped),'x-bind:class' => '{
-                                    \'bg-gray-50 '.e(config('tables.dark_mode') ? 'dark:bg-gray-500/10' : '').'\': isRecordSelected(\''.e($recordKey).'\'),
-                                }','class' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(\Illuminate\Support\Arr::toCssClasses(array_merge(
-                                    [
-                                        'group cursor-move' => $isReordering,
-                                    ],
-                                    $getRecordClasses($record),
-                                )))]); ?>
-                                <?php if($isReordering): ?>
-                                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                                \'bg-gray-50 '.e(config('tables.dark_mode') ? 'dark:bg-gray-500/10' : '').'\': isRecordSelected(\''.e($recordKey).'\'),
+                            }','class' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(\Illuminate\Support\Arr::toCssClasses(array_merge(
+                                [
+                                    'group cursor-move' => $isReordering,
+                                ],
+                                $getRecordClasses($record),
+                            )))]); ?>
+                            <?php if($isReordering): ?>
+                                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.reorder.cell','data' => []] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('tables::reorder.cell'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -609,9 +776,9 @@
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-                                <?php else: ?>
-                                    <?php if(count($actions) && $actionsPosition === Position::BeforeCells): ?>
-                                        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                            <?php else: ?>
+                                <?php if(count($actions) && $actionsPosition === Position::BeforeCells): ?>
+                                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.actions-cell','data' => ['actions' => $actions,'record' => $record]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('tables::actions-cell'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -626,10 +793,10 @@
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-                                    <?php endif; ?>
+                                <?php endif; ?>
 
-                                    <?php if($isSelectionEnabled): ?>
-                                        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                                <?php if($isSelectionEnabled): ?>
+                                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.checkbox-cell','data' => []] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('tables::checkbox-cell'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -638,17 +805,17 @@
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
-                                             <?php $__env->slot('checkbox', null, ['x-model' => 'selectedRecords','value' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($recordKey),'class' => 'table-row-checkbox']); ?>  <?php $__env->endSlot(); ?>
-                                         <?php echo $__env->renderComponent(); ?>
+                                         <?php $__env->slot('checkbox', null, ['x-model' => 'selectedRecords','value' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($recordKey),'class' => 'table-row-checkbox']); ?>  <?php $__env->endSlot(); ?>
+                                     <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-                                    <?php endif; ?>
+                                <?php endif; ?>
 
-                                    <?php if(count($actions) && $actionsPosition === Position::BeforeColumns): ?>
-                                        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                                <?php if(count($actions) && $actionsPosition === Position::BeforeColumns): ?>
+                                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.actions-cell','data' => ['actions' => $actions,'record' => $record]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('tables::actions-cell'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -663,15 +830,15 @@
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-                                    <?php endif; ?>
                                 <?php endif; ?>
+                            <?php endif; ?>
 
-                                <?php $__currentLoopData = $columns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                    <?php
-                                        $column->record($record);
-                                    ?>
+                            <?php $__currentLoopData = $columns; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $column): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <?php
+                                    $column->record($record);
+                                ?>
 
-                                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.cell','data' => ['action' => $column->getAction(),'name' => $column->getName(),'alignment' => $column->getAlignment(),'record' => $record,'tooltip' => $column->getTooltip(),'recordAction' => $recordAction,'recordUrl' => $recordUrl,'shouldOpenUrlInNewTab' => $column->shouldOpenUrlInNewTab(),'url' => $column->getUrl(),'isClickDisabled' => $column->isClickDisabled() || $isReordering,'class' => $getHiddenClasses($column),'wire:loading.remove.delay' => true,'wire:target' => ''.e(implode(',', \Filament\Tables\Table::LOADING_TARGETS)).'']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('tables::cell'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -680,18 +847,18 @@
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes(['action' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($column->getAction()),'name' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($column->getName()),'alignment' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($column->getAlignment()),'record' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($record),'tooltip' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($column->getTooltip()),'record-action' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($recordAction),'record-url' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($recordUrl),'should-open-url-in-new-tab' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($column->shouldOpenUrlInNewTab()),'url' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($column->getUrl()),'is-click-disabled' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($column->isClickDisabled() || $isReordering),'class' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($getHiddenClasses($column)),'wire:loading.remove.delay' => true,'wire:target' => ''.e(implode(',', \Filament\Tables\Table::LOADING_TARGETS)).'']); ?>
-                                        <?php echo e($column); ?>
+                                    <?php echo e($column); ?>
 
-                                     <?php echo $__env->renderComponent(); ?>
+                                 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
-                                <?php if(count($actions) && (! $isReordering) && $actionsPosition === Position::AfterCells): ?>
-                                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                            <?php if(count($actions) && (! $isReordering) && $actionsPosition === Position::AfterCells): ?>
+                                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.actions-cell','data' => ['actions' => $actions,'record' => $record]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('tables::actions-cell'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -706,9 +873,9 @@
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-                                <?php endif; ?>
+                            <?php endif; ?>
 
-                                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.loading-cell','data' => ['colspan' => $columnsCount,'wire:loading.class.remove.delay' => 'hidden','class' => 'hidden','wire:target' => ''.e(implode(',', \Filament\Tables\Table::LOADING_TARGETS)).'']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('tables::loading-cell'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -723,34 +890,20 @@
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-                             <?php echo $__env->renderComponent(); ?>
+                         <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
+                        <tr><td colspan="<?php echo e($columnsCount); ?>">
+                            <?php if($emptyState = $getEmptyState()): ?>
+                                <?php echo e($emptyState); ?>
 
-                        <?php if($contentFooter): ?>
-                             <?php $__env->slot('footer', null, []); ?> 
-                                <?php echo e($contentFooter->with(['columns' => $columns, 'records' => $records])); ?>
-
-                             <?php $__env->endSlot(); ?>
-                        <?php endif; ?>
-                     <?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
-<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
-<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
-<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
-<?php endif; ?>
-                <?php endif; ?>
-            <?php else: ?>
-                <?php if($emptyState = $getEmptyState()): ?>
-                    <?php echo e($emptyState); ?>
-
-                <?php else: ?>
-                    <div class="flex items-center justify-center p-4">
-                        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                            <?php else: ?>
+                                <div class="flex items-center justify-center p-4">
+                                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.empty-state.index','data' => ['icon' => $getEmptyStateIcon(),'actions' => $getEmptyStateActions()]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('tables::empty-state'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -759,23 +912,38 @@
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes(['icon' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($getEmptyStateIcon()),'actions' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($getEmptyStateActions())]); ?>
-                             <?php $__env->slot('heading', null, []); ?> 
-                                <?php echo e($getEmptyStateHeading()); ?>
+                                         <?php $__env->slot('heading', null, []); ?> 
+                                            <?php echo e($getEmptyStateHeading()); ?>
 
-                             <?php $__env->endSlot(); ?>
+                                         <?php $__env->endSlot(); ?>
 
-                             <?php $__env->slot('description', null, []); ?> 
-                                <?php echo e($getEmptyStateDescription()); ?>
+                                         <?php $__env->slot('description', null, []); ?> 
+                                            <?php echo e($getEmptyStateDescription()); ?>
 
-                             <?php $__env->endSlot(); ?>
-                         <?php echo $__env->renderComponent(); ?>
+                                         <?php $__env->endSlot(); ?>
+                                     <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-                    </div>
-                <?php endif; ?>
+                                </div>
+                            <?php endif; ?>
+                        </td></tr>
+                    <?php endif; ?>
+
+                    <?php if($contentFooter): ?>
+                         <?php $__env->slot('footer', null, []); ?> 
+                            <?php echo e($contentFooter->with(['columns' => $columns, 'records' => $records])); ?>
+
+                         <?php $__env->endSlot(); ?>
+                    <?php endif; ?>
+                 <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
             <?php endif; ?>
         </div>
 
@@ -802,6 +970,44 @@
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
+            </div>
+        <?php endif; ?>
+
+        <?php if($hasFiltersBelowContent): ?>
+            <div class="px-2 pb-2">
+                <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.hr','data' => []] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('tables::hr'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
+
+                <div class="p-4 mt-2">
+                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'tables::components.filters.index','data' => ['form' => $getFiltersForm()]] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('tables::filters'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['form' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($getFiltersForm())]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
+                </div>
             </div>
         <?php endif; ?>
      <?php echo $__env->renderComponent(); ?>

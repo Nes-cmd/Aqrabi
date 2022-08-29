@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\OrderResource\Widgets;
 
 use Filament\Widgets\LineChartWidget;
+use App\Models\Order;
 
 class OrdersChart extends LineChartWidget
 {
@@ -10,15 +11,28 @@ class OrdersChart extends LineChartWidget
     
     protected function getData(): array
     {
+        $order = Order::all()->map(function($raw){
+            $x = substr($raw->created_at, 0,10);
+            $raw['created_month'] = $x;
+            return $raw;
+        })->groupBy('created_month');
         
+        $data = [];
+        $month = [];
+        foreach ($order as $key => $child) {
+            array_push($data, count($child));
+            array_push($month, $key);
+        }
+
         return [
             'datasets' => [
                 [
                     'label' => 'Order from customer',
-                    'data' => [5, 10, 5, 2, 21, 32, 45, 74, 65, 45, 77, 89],
+                    'data' => $data,
                 ],
             ],
-            'labels' => ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            'labels' => $month,
+            // 'labels' => ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         ];
     }
 }

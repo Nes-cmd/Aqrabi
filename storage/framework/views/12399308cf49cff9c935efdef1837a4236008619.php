@@ -17,7 +17,7 @@
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes(['id' => $getId(),'label' => $getLabel(),'label-sr-only' => $isLabelHidden(),'helper-text' => $getHelperText(),'hint' => $getHint(),'hint-icon' => $getHintIcon(),'required' => $isRequired(),'state-path' => $getStatePath()]); ?>
-    <div <?php echo e($attributes->merge($getExtraAttributes())->class(['flex items-center space-x-2 rtl:space-x-reverse group filament-forms-text-input-component'])); ?>>
+    <div <?php echo e($attributes->merge($getExtraAttributes())->class(['filament-forms-text-input-component flex items-center space-x-2 rtl:space-x-reverse group'])); ?>>
         <?php if(($prefixAction = $getPrefixAction()) && (! $prefixAction->isHidden())): ?>
             <?php echo e($prefixAction); ?>
 
@@ -51,19 +51,21 @@
         <div class="flex-1">
             <input
                 <?php if (! ($hasMask())): ?>
+                    x-data="{}"
                     <?php echo e($applyStateBindingModifiers('wire:model')); ?>="<?php echo e($getStatePath()); ?>"
                     type="<?php echo e($getType()); ?>"
                 <?php else: ?>
                     x-data="textInputFormComponent({
                         <?php echo e($hasMask() ? "getMaskOptionsUsing: (IMask) => ({$getJsonMaskConfiguration()})," : null); ?>
 
-                        state: $wire.<?php echo e($isLazy() ?
-                                'entangle(\'' . $getStatePath() . '\').defer' :
-                                $applyStateBindingModifiers('entangle(\'' . $getStatePath() . '\')')); ?>,
+                        state: $wire.<?php echo e($applyStateBindingModifiers('entangle(\'' . $getStatePath() . '\')', lazilyEntangledModifiers: ['defer'])); ?>,
                     })"
                     type="text"
                     wire:ignore
-                    <?php if($isLazy()): ?> x-on:blur="$wire.$refresh" <?php endif; ?>
+                    <?php echo $isLazy() ? "x-on:blur=\"\$wire.\$refresh\"" : null; ?>
+
+                    <?php echo $isDebounced() ? "x-on:input.debounce.{$getDebounce()}=\"\$wire.\$refresh\"" : null; ?>
+
                     <?php echo e($getExtraAlpineAttributeBag()); ?>
 
                 <?php endif; ?>
@@ -100,11 +102,13 @@
                 <?php echo e($getExtraInputAttributeBag()->class([
                     'block w-full transition duration-75 rounded-lg shadow-sm focus:border-primary-600 focus:ring-1 focus:ring-inset focus:ring-primary-600 disabled:opacity-70',
                     'dark:bg-gray-700 dark:text-white dark:focus:border-primary-600' => config('forms.dark_mode'),
-                    'border-gray-300' => ! $errors->has($getStatePath()),
-                    'dark:border-gray-600' => (! $errors->has($getStatePath())) && config('forms.dark_mode'),
-                    'border-danger-600 ring-danger-600' => $errors->has($getStatePath()),
                 ])); ?>
 
+                x-bind:class="{
+                    'border-gray-300': ! (<?php echo \Illuminate\Support\Js::from($getStatePath())->toHtml() ?> in $wire.__instance.serverMemo.errors),
+                    'dark:border-gray-600': ! (<?php echo \Illuminate\Support\Js::from($getStatePath())->toHtml() ?> in $wire.__instance.serverMemo.errors) && <?php echo \Illuminate\Support\Js::from(config('forms.dark_mode'))->toHtml() ?>,
+                    'border-danger-600 ring-danger-600': (<?php echo \Illuminate\Support\Js::from($getStatePath())->toHtml() ?> in $wire.__instance.serverMemo.errors),
+                }"
             />
         </div>
 
