@@ -151,7 +151,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the remove cart.'
-        example: eos
+        example: accusamus
         required: true
         schema:
           type: string
@@ -532,7 +532,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product by category.'
-        example: et
+        example: magnam
         required: true
         schema:
           type: string
@@ -576,7 +576,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product by supplier.'
-        example: mollitia
+        example: dolorum
         required: true
         schema:
           type: string
@@ -1013,6 +1013,18 @@ paths:
                             - pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg
                           created_at: '2022-08-28T03:17:12.000000Z'
                           updated_at: '2022-08-28T03:17:12.000000Z'
+                    -
+                      id: 4
+                      fullname: 'Quamar Mercado'
+                      phone: '567876'
+                      email: zafuv@mailinator.com
+                      profile_url: null
+                      email_verified_at: null
+                      two_factor_secret: null
+                      two_factor_recovery_codes: null
+                      created_at: '2022-08-28T19:39:25.000000Z'
+                      updated_at: '2022-08-28T19:47:27.000000Z'
+                      products: []
                 properties:
                   products:
                     type: array
@@ -1153,6 +1165,18 @@ paths:
                               - pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg
                             created_at: '2022-08-28T03:17:12.000000Z'
                             updated_at: '2022-08-28T03:17:12.000000Z'
+                      -
+                        id: 4
+                        fullname: 'Quamar Mercado'
+                        phone: '567876'
+                        email: zafuv@mailinator.com
+                        profile_url: null
+                        email_verified_at: null
+                        two_factor_secret: null
+                        two_factor_recovery_codes: null
+                        created_at: '2022-08-28T19:39:25.000000Z'
+                        updated_at: '2022-08-28T19:47:27.000000Z'
+                        products: []
                     items:
                       type: object
       tags:
@@ -1198,10 +1222,83 @@ paths:
         in: path
         name: id
         description: 'The ID of the product single.'
-        example: et
+        example: impedit
         required: true
         schema:
           type: string
+  /api/shop/get-sliders:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  sliders:
+                    -
+                      id: 2
+                      information: 'Laudantium nisi ad '
+                      photo_url: rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg
+                      created_at: '2022-08-27T21:20:12.000000Z'
+                      updated_at: '2022-08-27T21:20:12.000000Z'
+                    -
+                      id: 3
+                      information: 'Rerum voluptatem pe'
+                      photo_url: VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg
+                      created_at: '2022-08-27T21:20:37.000000Z'
+                      updated_at: '2022-08-27T21:20:37.000000Z'
+                    -
+                      id: 4
+                      information: 'Aliqua Aliqua Debi'
+                      photo_url: 3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg
+                      created_at: '2022-08-27T21:20:54.000000Z'
+                      updated_at: '2022-08-27T21:20:54.000000Z'
+                properties:
+                  sliders:
+                    type: array
+                    example:
+                      -
+                        id: 2
+                        information: 'Laudantium nisi ad '
+                        photo_url: rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg
+                        created_at: '2022-08-27T21:20:12.000000Z'
+                        updated_at: '2022-08-27T21:20:12.000000Z'
+                      -
+                        id: 3
+                        information: 'Rerum voluptatem pe'
+                        photo_url: VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg
+                        created_at: '2022-08-27T21:20:37.000000Z'
+                        updated_at: '2022-08-27T21:20:37.000000Z'
+                      -
+                        id: 4
+                        information: 'Aliqua Aliqua Debi'
+                        photo_url: 3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg
+                        created_at: '2022-08-27T21:20:54.000000Z'
+                        updated_at: '2022-08-27T21:20:54.000000Z'
+                    items:
+                      type: object
+      tags:
+        - Endpoints
+      security: []
   /api/adress/get-countries:
     get:
       summary: ''
@@ -1357,79 +1454,6 @@ paths:
           schema:
             type: string
       responses: {  }
-      tags:
-        - Endpoints
-      security: []
-  /api/shop/get-sliders:
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  sliders:
-                    -
-                      id: 2
-                      information: 'Laudantium nisi ad '
-                      photo_url: rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg
-                      created_at: '2022-08-27T21:20:12.000000Z'
-                      updated_at: '2022-08-27T21:20:12.000000Z'
-                    -
-                      id: 3
-                      information: 'Rerum voluptatem pe'
-                      photo_url: VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg
-                      created_at: '2022-08-27T21:20:37.000000Z'
-                      updated_at: '2022-08-27T21:20:37.000000Z'
-                    -
-                      id: 4
-                      information: 'Aliqua Aliqua Debi'
-                      photo_url: 3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg
-                      created_at: '2022-08-27T21:20:54.000000Z'
-                      updated_at: '2022-08-27T21:20:54.000000Z'
-                properties:
-                  sliders:
-                    type: array
-                    example:
-                      -
-                        id: 2
-                        information: 'Laudantium nisi ad '
-                        photo_url: rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg
-                        created_at: '2022-08-27T21:20:12.000000Z'
-                        updated_at: '2022-08-27T21:20:12.000000Z'
-                      -
-                        id: 3
-                        information: 'Rerum voluptatem pe'
-                        photo_url: VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg
-                        created_at: '2022-08-27T21:20:37.000000Z'
-                        updated_at: '2022-08-27T21:20:37.000000Z'
-                      -
-                        id: 4
-                        information: 'Aliqua Aliqua Debi'
-                        photo_url: 3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg
-                        created_at: '2022-08-27T21:20:54.000000Z'
-                        updated_at: '2022-08-27T21:20:54.000000Z'
-                    items:
-                      type: object
       tags:
         - Endpoints
       security: []
