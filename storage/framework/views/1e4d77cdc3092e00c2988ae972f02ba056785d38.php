@@ -23,15 +23,13 @@
 } ?>
 <?php unset($__defined_vars); ?>
 
-<tr
+<div
     wire:key="<?php echo e($this->id); ?>.table.selection.indicator"
     x-cloak
-    <?php echo e($attributes->class(['bg-primary-500/10 filament-tables-selection-indicator'])); ?>
+    <?php echo e($attributes->class(['filament-tables-selection-indicator bg-primary-500/10 px-4 py-2 whitespace-nowrap text-sm'])); ?>
 
 >
-    <td class="px-4 py-2 whitespace-nowrap text-sm" colspan="<?php echo e($colspan); ?>">
-        <div>
-            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'filament-support::components.loading-indicator','data' => ['xShow' => 'isLoading','class' => 'inline-block animate-spin w-4 h-4 mr-3 text-primary-600']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('filament-support::loading-indicator'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -47,20 +45,18 @@
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
 
-            <span class="<?php echo \Illuminate\Support\Arr::toCssClasses(['dark:text-white' => config('tables.dark_mode')]) ?>" x-text="pluralize(<?php echo \Illuminate\Support\Js::from(__('tables::table.selection_indicator.selected_count'))->toHtml() ?>, selectedRecords.length, { count: selectedRecords.length })"></span>
+    <span class="<?php echo \Illuminate\Support\Arr::toCssClasses(['dark:text-white' => config('tables.dark_mode')]) ?>" x-text="pluralize(<?php echo \Illuminate\Support\Js::from(__('tables::table.selection_indicator.selected_count'))->toHtml() ?>, selectedRecords.length, { count: selectedRecords.length })"></span>
 
-            <span x-show="<?php echo e($allRecordsCount); ?> !== selectedRecords.length">
-                <button x-on:click="selectAllRecords" class="text-primary-600 text-sm font-medium">
-                    <?php echo e(__('tables::table.selection_indicator.buttons.select_all.label', ['count' => $allRecordsCount])); ?>.
-                </button>
-            </span>
+    <span x-show="<?php echo e($allRecordsCount); ?> !== selectedRecords.length">
+        <button x-on:click="selectAllRecords" class="text-primary-600 text-sm font-medium">
+            <?php echo e(__('tables::table.selection_indicator.buttons.select_all.label', ['count' => $allRecordsCount])); ?>.
+        </button>
+    </span>
 
-            <span>
-                <button x-on:click="deselectAllRecords" class="text-primary-600 text-sm font-medium">
-                    <?php echo e(__('tables::table.selection_indicator.buttons.deselect_all.label')); ?>.
-                </button>
-            </span>
-        </div>
-    </td>
-</tr>
+    <span>
+        <button x-on:click="deselectAllRecords" class="text-primary-600 text-sm font-medium">
+            <?php echo e(__('tables::table.selection_indicator.buttons.deselect_all.label')); ?>.
+        </button>
+    </span>
+</div>
 <?php /**PATH /home/nesren/Project/web/laravel/Aqrabi-Ecommerce/vendor/filament/tables/src/../resources/views/components/selection-indicator.blade.php ENDPATH**/ ?>

@@ -1,16 +1,19 @@
 <?php foreach($attributes->onlyProps([
     'footer' => null,
     'header' => null,
+    'poll',
 ]) as $__key => $__value) {
     $$__key = $$__key ?? $__value;
 } ?>
 <?php $attributes = $attributes->exceptProps([
     'footer' => null,
     'header' => null,
+    'poll',
 ]); ?>
 <?php foreach (array_filter(([
     'footer' => null,
     'header' => null,
+    'poll',
 ]), 'is_string', ARRAY_FILTER_USE_KEY) as $__key => $__value) {
     $$__key = $$__key ?? $__value;
 } ?>
@@ -21,15 +24,12 @@
 <?php unset($__defined_vars); ?>
 
 <table <?php echo e($attributes->class([
-    'w-full text-left rtl:text-right divide-y table-auto filament-tables-table',
+    'filament-tables-table w-full text-left rtl:text-right divide-y table-auto',
     'dark:divide-gray-700' => config('tables.dark_mode'),
 ])); ?>>
     <?php if($header): ?>
         <thead>
-            <tr class="<?php echo \Illuminate\Support\Arr::toCssClasses([
-                'bg-gray-50',
-                'dark:bg-gray-500/10' => config('tables.dark_mode'),
-            ]) ?>">
+            <tr class="bg-gray-500/5">
                 <?php echo e($header); ?>
 
             </tr>
@@ -40,6 +40,10 @@
         wire:sortable
         wire:end.stop="reorderTable($event.target.sortable.toArray())"
         wire:sortable.options="{ animation: 100 }"
+        <?php if($poll): ?>
+            wire:poll.<?php echo e($poll); ?>
+
+        <?php endif; ?>
         class="<?php echo \Illuminate\Support\Arr::toCssClasses([
             'divide-y whitespace-nowrap',
             'dark:divide-gray-700' => config('tables.dark_mode'),

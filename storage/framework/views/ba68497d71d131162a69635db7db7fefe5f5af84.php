@@ -67,6 +67,7 @@
 
 <div
     x-data="{ isOpen: false }"
+    x-trap.noscroll="isOpen"
     <?php if($id): ?>
         x-on:<?php echo e($closeEventName); ?>.window="if ($event.detail.id === '<?php echo e($id); ?>') isOpen = false"
         x-on:<?php echo e($openEventName); ?>.window="if ($event.detail.id === '<?php echo e($id); ?>') isOpen = true"
@@ -78,7 +79,7 @@
     <?php endif; ?>
     role="dialog"
     aria-modal="true"
-    class="<?php echo e($displayClasses); ?> filament-modal"
+    class="filament-modal <?php echo e($displayClasses); ?>"
 >
     <?php echo e($trigger); ?>
 
@@ -104,14 +105,13 @@
             <?php endif; ?>
             aria-hidden="true"
             class="<?php echo \Illuminate\Support\Arr::toCssClasses([
-                'fixed inset-0 w-full h-full bg-black/50 filament-modal-close-overlay',
+                'filament-modal-close-overlay fixed inset-0 w-full h-full bg-black/50',
                 'cursor-pointer' => config('filament-support.modal.is_closed_by_clicking_away', true)
             ]) ?>"
         ></div>
 
         <div
             x-show="isOpen"
-            x-trap.noscroll="isOpen"
             <?php if(filled($id)): ?>
                 x-on:keydown.window.escape="$dispatch('<?php echo e($closeEventName); ?>', { id: '<?php echo e($id); ?>' })"
             <?php else: ?>
@@ -129,7 +129,7 @@
         >
             <div
                 class="<?php echo \Illuminate\Support\Arr::toCssClasses([
-                    'w-full mx-auto p-2 space-y-2 bg-white rounded-xl cursor-default pointer-events-auto filament-modal-window',
+                    'filament-modal-window w-full mx-auto p-2 space-y-2 bg-white rounded-xl cursor-default pointer-events-auto',
                     'dark:bg-gray-800' => $darkMode,
                     'hidden' => ! $visible,
                     'max-w-xs' => $width === 'xs',
@@ -146,7 +146,7 @@
                 ]) ?>"
             >
                 <?php if($header): ?>
-                    <div class="px-4 py-2 filament-modal-header">
+                    <div class="filament-modal-header px-4 py-2">
                         <?php echo e($header); ?>
 
                     </div>
@@ -170,7 +170,7 @@
 <?php endif; ?>
                 <?php endif; ?>
 
-                <div class="space-y-2 filament-modal-content">
+                <div class="filament-modal-content space-y-2">
                     <?php if($heading || $subheading): ?>
                         <div class="<?php echo \Illuminate\Support\Arr::toCssClasses([
                             'p-4 space-y-2 text-center',
@@ -248,7 +248,7 @@
                 <?php endif; ?>
 
                 <?php if($footer): ?>
-                    <div class="px-4 py-2 filament-modal-footer">
+                    <div class="filament-modal-footer px-4 py-2">
                         <?php echo e($footer); ?>
 
                     </div>

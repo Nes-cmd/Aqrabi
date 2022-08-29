@@ -18,7 +18,7 @@
 <?php unset($__defined_vars); ?>
 
 <div aria-hidden="true" <?php echo e($attributes->class([
-    'border-t filament-hr',
+    'filament-hr border-t',
     'dark:border-gray-700' => $darkMode,
 ])); ?>></div>
 <?php /**PATH /home/nesren/Project/web/laravel/Aqrabi-Ecommerce/vendor/filament/support/src/../resources/views/components/hr.blade.php ENDPATH**/ ?>

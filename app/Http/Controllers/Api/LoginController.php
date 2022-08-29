@@ -20,6 +20,8 @@ class LoginController extends Controller
             $user = User::where('phone', $request->phone)->first();
             if($user && Hash::check($request->password, $user->password)){
                 $token = $user->createToken('API TOKEN');
+                $user = $user->with('roles')->where('id', $user->id)->get();
+
                 return ['token' => $token->plainTextToken, 'user' => $user];
             }
             else{

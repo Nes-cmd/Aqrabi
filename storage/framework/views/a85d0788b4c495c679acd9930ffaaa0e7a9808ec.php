@@ -32,7 +32,7 @@
 } ?>
 <?php unset($__defined_vars); ?>
 
-<th <?php echo e($attributes->merge($extraAttributes)->class(['p-0 filament-tables-header-cell'])); ?>>
+<th <?php echo e($attributes->merge($extraAttributes)->class(['filament-tables-header-cell p-0'])); ?>>
     <button
         <?php if($sortable): ?>
             wire:click="sortTable('<?php echo e($name); ?>')"
