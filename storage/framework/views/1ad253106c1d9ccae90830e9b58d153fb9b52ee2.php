@@ -1,1 +1,0 @@
-<?php /**PATH /home/nesren/Project/web/laravel/Aqrabi-Ecommerce/vendor/filament/filament/src/../resources/views/components/global-search/start.blade.php ENDPATH**/ ?>

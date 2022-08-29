@@ -13,12 +13,6 @@ use Illuminate\Support\ServiceProvider;
 use Laravel\Fortify\Fortify;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-use App\Filament\Pages\Settings;
-use App\Filament\Resources\ProductResource;
-use Filament\Facades\Filament;
-use Filament\Navigation\NavigationBuilder;
-use Filament\Navigation\NavigationItem;
-use Filament\Navigation\UserMenuItem;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -49,10 +43,6 @@ class FortifyServiceProvider extends ServiceProvider
             return Limit::perMinute(5)->by($phone.$request->ip());
         });
 
-        // RateLimiter::for('two-factor', function (Request $request) {
-        //     return Limit::perMinute(5)->by($request->session()->get('login.id'));
-        // });
-
         Fortify::loginView(function () {
             return view('auth.login');
         });
@@ -72,23 +62,6 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::loginView(function () {
             return view('auth.login');
         });
-        // Filament::navigation(function (NavigationBuilder $builder): NavigationBuilder {
-        //     return $builder->items([
-        //         NavigationItem::make('Dashboard')
-        //             ->icon('heroicon-o-home')
-        //             ->isActiveWhen(fn (): bool => request()->routeIs('filament.pages.dashboard'))
-        //             ->url(route('filament.pages.dashboard')),
-        //         ...ProductResource::getNavigationItems(),
-        //     ]);
-        // });
-        // Filament::serving(function () {
-        //     Filament::registerUserMenuItems([
-        //         UserMenuItem::make()
-        //             ->label('Settings')
-        //             ->url(route('filament.pages.account'))
-        //             ->icon('heroicon-s-cog'),
-        //         // ...
-        //     ]);
-        // });
+        
     }
 }

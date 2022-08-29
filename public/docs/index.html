@@ -30,9 +30,9 @@
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
-    <script src="../docs/js/tryitout-3.36.0.js"></script>
+    <script src="../docs/js/tryitout-3.37.0.js"></script>
 
-    <script src="../docs/js/theme-default-3.36.0.js"></script>
+    <script src="../docs/js/theme-default-3.37.0.js"></script>
 
 </head>
 
@@ -113,6 +113,9 @@
                                     <li class="tocify-item level-2" data-unique="endpoints-GETapi-shop-product-single--id-">
                         <a href="#endpoints-GETapi-shop-product-single--id-">GET api/shop/product-single/{id}</a>
                     </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-shop-get-sliders">
+                        <a href="#endpoints-GETapi-shop-get-sliders">GET api/shop/get-sliders</a>
+                    </li>
                                     <li class="tocify-item level-2" data-unique="endpoints-GETapi-adress-get-countries">
                         <a href="#endpoints-GETapi-adress-get-countries">GET api/adress/get-countries</a>
                     </li>
@@ -124,9 +127,6 @@
                     </li>
                                     <li class="tocify-item level-2" data-unique="endpoints-POSTapi-adress-store-shippment-adress">
                         <a href="#endpoints-POSTapi-adress-store-shippment-adress">POST api/adress/store-shippment-adress</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-shop-get-sliders">
-                        <a href="#endpoints-GETapi-shop-get-sliders">GET api/shop/get-sliders</a>
                     </li>
                                                     </ul>
                             </ul>
@@ -140,7 +140,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: August 28 2022</li>
+        <li>Last updated: August 29 2022</li>
     </ul>
 </div>
 
@@ -505,14 +505,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/customer/remove-cart/eos" \
+    --get "https://aqrabi.com/api/customer/remove-cart/accusamus" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/customer/remove-cart/eos"
+    "https://aqrabi.com/api/customer/remove-cart/accusamus"
 );
 
 const headers = {
@@ -591,7 +591,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-customer-remove-cart--id-"
-               value="eos"
+               value="accusamus"
                data-component="url" hidden>
     <br>
 <p>The ID of the remove cart.</p>
@@ -1028,14 +1028,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/product-by-category/et" \
+    --get "https://aqrabi.com/api/shop/product-by-category/magnam" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/product-by-category/et"
+    "https://aqrabi.com/api/shop/product-by-category/magnam"
 );
 
 const headers = {
@@ -1116,7 +1116,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-shop-product-by-category--id-"
-               value="et"
+               value="magnam"
                data-component="url" hidden>
     <br>
 <p>The ID of the product by category.</p>
@@ -1136,14 +1136,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/product-by-supplier/mollitia" \
+    --get "https://aqrabi.com/api/shop/product-by-supplier/dolorum" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/product-by-supplier/mollitia"
+    "https://aqrabi.com/api/shop/product-by-supplier/dolorum"
 );
 
 const headers = {
@@ -1224,7 +1224,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-shop-product-by-supplier--id-"
-               value="mollitia"
+               value="dolorum"
                data-component="url" hidden>
     <br>
 <p>The ID of the product by supplier.</p>
@@ -1662,6 +1662,19 @@ access-control-allow-origin: *
                     &quot;updated_at&quot;: &quot;2022-08-28T03:17:12.000000Z&quot;
                 }
             ]
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;fullname&quot;: &quot;Quamar Mercado&quot;,
+            &quot;phone&quot;: &quot;567876&quot;,
+            &quot;email&quot;: &quot;zafuv@mailinator.com&quot;,
+            &quot;profile_url&quot;: null,
+            &quot;email_verified_at&quot;: null,
+            &quot;two_factor_secret&quot;: null,
+            &quot;two_factor_recovery_codes&quot;: null,
+            &quot;created_at&quot;: &quot;2022-08-28T19:39:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-28T19:47:27.000000Z&quot;,
+            &quot;products&quot;: []
         }
     ]
 }</code>
@@ -1721,14 +1734,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/product-single/et" \
+    --get "https://aqrabi.com/api/shop/product-single/impedit" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/product-single/et"
+    "https://aqrabi.com/api/shop/product-single/impedit"
 );
 
 const headers = {
@@ -1809,11 +1822,130 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-shop-product-single--id-"
-               value="et"
+               value="impedit"
                data-component="url" hidden>
     <br>
 <p>The ID of the product single.</p>
             </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-shop-get-sliders">GET api/shop/get-sliders</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-shop-get-sliders">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "https://aqrabi.com/api/shop/get-sliders" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://aqrabi.com/api/shop/get-sliders"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-shop-get-sliders">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 52
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;sliders&quot;: [
+        {
+            &quot;id&quot;: 2,
+            &quot;information&quot;: &quot;Laudantium nisi ad &quot;,
+            &quot;photo_url&quot;: &quot;rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg&quot;,
+            &quot;created_at&quot;: &quot;2022-08-27T21:20:12.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-27T21:20:12.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;information&quot;: &quot;Rerum voluptatem pe&quot;,
+            &quot;photo_url&quot;: &quot;VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg&quot;,
+            &quot;created_at&quot;: &quot;2022-08-27T21:20:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-27T21:20:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;information&quot;: &quot;Aliqua Aliqua Debi&quot;,
+            &quot;photo_url&quot;: &quot;3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg&quot;,
+            &quot;created_at&quot;: &quot;2022-08-27T21:20:54.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-27T21:20:54.000000Z&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-shop-get-sliders" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-shop-get-sliders"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-shop-get-sliders"></code></pre>
+</span>
+<span id="execution-error-GETapi-shop-get-sliders" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-shop-get-sliders"></code></pre>
+</span>
+<form id="form-GETapi-shop-get-sliders" data-method="GET"
+      data-path="api/shop/get-sliders"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-shop-get-sliders', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-shop-get-sliders"
+                    onclick="tryItOut('GETapi-shop-get-sliders');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-shop-get-sliders"
+                    onclick="cancelTryOut('GETapi-shop-get-sliders');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-shop-get-sliders" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/shop/get-sliders</code></b>
+        </p>
                     </form>
 
             <h2 id="endpoints-GETapi-adress-get-countries">GET api/adress/get-countries</h2>
@@ -2195,125 +2327,6 @@ fetch(url, {
             <p>
             <small class="badge badge-black">POST</small>
             <b><code>api/adress/store-shippment-adress</code></b>
-        </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-shop-get-sliders">GET api/shop/get-sliders</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-shop-get-sliders">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/get-sliders" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/get-sliders"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-shop-get-sliders">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 52
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;sliders&quot;: [
-        {
-            &quot;id&quot;: 2,
-            &quot;information&quot;: &quot;Laudantium nisi ad &quot;,
-            &quot;photo_url&quot;: &quot;rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg&quot;,
-            &quot;created_at&quot;: &quot;2022-08-27T21:20:12.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-08-27T21:20:12.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 3,
-            &quot;information&quot;: &quot;Rerum voluptatem pe&quot;,
-            &quot;photo_url&quot;: &quot;VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg&quot;,
-            &quot;created_at&quot;: &quot;2022-08-27T21:20:37.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-08-27T21:20:37.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 4,
-            &quot;information&quot;: &quot;Aliqua Aliqua Debi&quot;,
-            &quot;photo_url&quot;: &quot;3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg&quot;,
-            &quot;created_at&quot;: &quot;2022-08-27T21:20:54.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-08-27T21:20:54.000000Z&quot;
-        }
-    ]
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-shop-get-sliders" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-shop-get-sliders"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-shop-get-sliders"></code></pre>
-</span>
-<span id="execution-error-GETapi-shop-get-sliders" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-shop-get-sliders"></code></pre>
-</span>
-<form id="form-GETapi-shop-get-sliders" data-method="GET"
-      data-path="api/shop/get-sliders"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-shop-get-sliders', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-shop-get-sliders"
-                    onclick="tryItOut('GETapi-shop-get-sliders');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-shop-get-sliders"
-                    onclick="cancelTryOut('GETapi-shop-get-sliders');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-shop-get-sliders" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/shop/get-sliders</code></b>
         </p>
                     </form>
 
