@@ -17,7 +17,7 @@
 } ?>
 <?php unset($__defined_vars); ?>
 
-<div <?php echo e($attributes->class(['flex flex-wrap items-center gap-4 filament-tables-actions-container'])); ?>>
+<div <?php echo e($attributes->class(['filament-tables-actions-container flex flex-wrap items-center gap-4'])); ?>>
     <?php $__currentLoopData = $actions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $action): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <?php echo e($action); ?>
 

@@ -49,7 +49,7 @@
             <p class="mb-0">Aqrabi &copy; 2022 all right reserved</p>
           </div>
           <div class="col-md-2 text-center text-md-left mb-4 mb-md-0">
-            <img src="{{ asset('logo.svg')}}" alt="logo">
+            <img height="50px" src="{{ asset('logo.svg')}}" alt="logo">
           </div>
           <!--  -->
           <div class="col-md-5 text-center text-md-right mb-4 mb-md-0">

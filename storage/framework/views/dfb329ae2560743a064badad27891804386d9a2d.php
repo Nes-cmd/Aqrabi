@@ -18,7 +18,7 @@
 <?php unset($__defined_vars); ?>
 
 <div
-    <?php echo e($attributes->class('filament-notifications-notification pointer-events-auto')); ?>
+    <?php echo e($attributes->class(['filament-notifications-notification pointer-events-auto invisible'])); ?>
 
     x-data="notificationComponent({ notification: <?php echo \Illuminate\Support\Js::from($notification)->toHtml() ?> })"
     wire:key="<?php echo e($this->id); ?>.notifications.<?php echo e($notification->getId()); ?>"

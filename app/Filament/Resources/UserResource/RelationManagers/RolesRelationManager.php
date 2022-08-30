@@ -14,13 +14,15 @@ class RolesRelationManager extends RelationManager
 {
     protected static string $relationship = 'roles';
 
-    protected static ?string $recordTitleAttribute = 'name';
+    protected static ?string $recordTitleAttribute = 'status';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')->required(),
+                Forms\Components\Select::make('status')
+                                            ->required()
+                                            ->options(['approved' => 'approved','pending' => 'pending']),
 
             ]);
     }
@@ -31,6 +33,7 @@ class RolesRelationManager extends RelationManager
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('slug'),
+                Tables\Columns\TextColumn::make('status'),
                 Tables\Columns\TextColumn::make('created_at')->date(),
             ])
             ->filters([
@@ -40,7 +43,7 @@ class RolesRelationManager extends RelationManager
                 Tables\Actions\AttachAction::make(),
             ])
             ->actions([
-                // Tables\Actions\EditAction::make(),
+                Tables\Actions\EditAction::make(),
                 Tables\Actions\DetachAction::make(),
             ]);
             // ->bulkActions([

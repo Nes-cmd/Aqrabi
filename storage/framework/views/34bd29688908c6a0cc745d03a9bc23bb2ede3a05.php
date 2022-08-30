@@ -1,13 +1,13 @@
 <?php foreach($attributes->onlyProps([
-    'darkMode' => false,
+    'columns' => '3',
 ]) as $__key => $__value) {
     $$__key = $$__key ?? $__value;
 } ?>
 <?php $attributes = $attributes->exceptProps([
-    'darkMode' => false,
+    'columns' => '3',
 ]); ?>
 <?php foreach (array_filter(([
-    'darkMode' => false,
+    'columns' => '3',
 ]), 'is_string', ARRAY_FILTER_USE_KEY) as $__key => $__value) {
     $$__key = $$__key ?? $__value;
 } ?>
@@ -17,8 +17,18 @@
 } ?>
 <?php unset($__defined_vars); ?>
 
-<h2 <?php echo e($attributes->class(['filament-modal-heading text-xl font-bold tracking-tight'])); ?>>
+<?php
+    $columns = (int) $columns;
+?>
+
+<div <?php echo e($attributes->class([
+    'grid gap-4 lg:gap-8 filament-stats',
+    'md:grid-cols-3' => $columns === 3,
+    'md:grid-cols-1' => $columns === 1,
+    'md:grid-cols-2' => $columns === 2,
+    'md:grid-cols-2 xl:grid-cols-4' => $columns === 4,
+])); ?>>
     <?php echo e($slot); ?>
 
-</h2>
-<?php /**PATH /home/nesren/Project/web/laravel/Aqrabi-Ecommerce/vendor/filament/support/src/../resources/views/components/modal/heading.blade.php ENDPATH**/ ?>
+</div>
+<?php /**PATH /home/nesren/Project/web/laravel/Aqrabi-Ecommerce/resources/views/vendor/filament/components/stats/index.blade.php ENDPATH**/ ?>

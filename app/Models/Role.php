@@ -11,6 +11,6 @@ class Role extends Model
     protected $guarded = [];
     public function users()
     {
-        return $this->belongsToMany(\App\Models\User::class);
+        return $this->belongsToMany(\App\Models\User::class)->withPivot('status');
     }
 }

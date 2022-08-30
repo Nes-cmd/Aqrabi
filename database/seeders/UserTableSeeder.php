@@ -25,7 +25,7 @@ class UserTableSeeder extends Seeder
             'email_verified_at' => '2021-12-30 19:59:40',
         ]);
         $role1 = Role::where('slug', 'admin')->first()->id;
-        $user1->roles()->attach($role1);
+        $user1->roles()->attach($role1, ['status' => 'approved']);
 
         $user2 = User::create([
             'fullname' => 'Supplier man',
@@ -35,7 +35,7 @@ class UserTableSeeder extends Seeder
             'email_verified_at' => '2021-12-30 19:59:40',
         ]);
         $role2 = Role::where('slug', 'supplier')->first()->id;
-        $user2->roles()->attach($role2);
+        $user2->roles()->attach($role2,['status' => 'approved']);
 
         $user3 = User::create([
             'fullname' => 'Some Customer',

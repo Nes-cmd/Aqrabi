@@ -1,3 +1,3 @@
 <div>
-<img width="60%" src="{{ asset('logo.svg')}}">
+<img width="45%" src="{{ asset('logo.svg')}}">
 </div>

@@ -21,12 +21,13 @@ class CreateUsersTable extends Migration
             $table->string('phone')->unique();
             $table->string('email')->unique();
             $table->string('profile_url')->nullable();
+            $table->string('tin_number')->nullable();
+            $table->string('document_url')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });
-        // User::create(['fullname' => 'admin','email' => 'admin@themesbrand.com','password' => Hash::make('123456'),'email_verified_at'=>'2022-01-02 17:04:58','avatar' => 'avatar-1.jpg','created_at' => now(),]);
     }
     /**
      * Reverse the migrations.

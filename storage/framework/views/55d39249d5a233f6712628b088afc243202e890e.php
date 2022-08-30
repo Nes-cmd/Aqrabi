@@ -1,4 +1,4 @@
-<p <?php echo e($attributes->class(['text-sm text-danger-600 filament-forms-field-wrapper-error-message '])); ?>>
+<p <?php echo e($attributes->class(['filament-forms-field-wrapper-error-message text-sm text-danger-600'])); ?>>
     <?php echo e($slot); ?>
 
 </p>

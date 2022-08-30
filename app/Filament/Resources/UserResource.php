@@ -19,7 +19,7 @@ class UserResource extends Resource
 {
     protected static ?string $model = User::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-user';
 
     public static function form(Form $form): Form
     {
@@ -54,11 +54,22 @@ class UserResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
     public static function getRelations(): array
     {
         return [
             RelationManagers\RolesRelationManager::class
+        ];
+    }
+    public static function getWidgets():array 
+    {
+        return [
+            \App\Filament\Resources\UserResource\Widgets\StatsOverview::class,
+        ];
+    }
+    public static function getHeaderWidgets():array
+    {
+        return [
+            \App\Filament\Resources\UserResource\Widgets\StatsOverview::class,
         ];
     }
     
@@ -66,15 +77,8 @@ class UserResource extends Resource
     {
         return [
             'index' => Pages\ListUsers::route('/'),
-            'create' => Pages\CreateUser::route('/create'),
+            // 'create' => Pages\CreateUser::route('/create'),
             'edit' => Pages\EditUser::route('/{record}/edit'),
         ];
-    } 
-    protected function mutateFormDataBeforeCreate(array $data): array
-    {
-        // dd('now u are here');
-        $data['password'] = Hash::make($data['password']);
-    
-        return $data;
-    } 
+    }
 }

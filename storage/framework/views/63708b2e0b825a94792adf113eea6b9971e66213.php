@@ -41,15 +41,15 @@
   <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('alert-component')->html();
-} elseif ($_instance->childHasBeenRendered('nqvlIzB')) {
-    $componentId = $_instance->getRenderedChildComponentId('nqvlIzB');
-    $componentTag = $_instance->getRenderedChildComponentTagName('nqvlIzB');
+} elseif ($_instance->childHasBeenRendered('HTHMUNg')) {
+    $componentId = $_instance->getRenderedChildComponentId('HTHMUNg');
+    $componentTag = $_instance->getRenderedChildComponentTagName('HTHMUNg');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('nqvlIzB');
+    $_instance->preserveRenderedChild('HTHMUNg');
 } else {
     $response = \Livewire\Livewire::mount('alert-component');
     $html = $response->html();
-    $_instance->logRenderedChild('nqvlIzB', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('HTHMUNg', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
@@ -65,7 +65,7 @@ echo $html;
             <p class="mb-0">Aqrabi &copy; 2022 all right reserved</p>
           </div>
           <div class="col-md-2 text-center text-md-left mb-4 mb-md-0">
-            <img src="<?php echo e(asset('logo.svg')); ?>" alt="logo">
+            <img height="50px" src="<?php echo e(asset('logo.svg')); ?>" alt="logo">
           </div>
           <!--  -->
           <div class="col-md-5 text-center text-md-right mb-4 mb-md-0">

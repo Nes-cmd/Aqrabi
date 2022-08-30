@@ -1,4 +1,4 @@
-<h2 <?php echo e($attributes->class(['text-xl font-bold tracking-tight filament-tables-header-heading'])); ?>>
+<h2 <?php echo e($attributes->class(['filament-tables-header-heading text-xl font-bold tracking-tight'])); ?>>
     <?php echo e($slot); ?>
 
 </h2>
