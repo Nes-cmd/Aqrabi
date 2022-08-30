@@ -24,7 +24,8 @@ class User extends Authenticatable implements HasName, FilamentUser
         'phone',
         'profile_url',
         'password',
-        'profile_url',
+        'tin_number',
+        'document_url'
     ];
 
     /**
@@ -59,7 +60,7 @@ class User extends Authenticatable implements HasName, FilamentUser
     }
     public function roles()
     {
-        return $this->belongsToMany(Role::class);
+        return $this->belongsToMany(Role::class)->withPivot('status');
     }
     public function hasRole($role)
     {
