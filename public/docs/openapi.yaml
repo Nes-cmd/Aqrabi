@@ -5,7 +5,7 @@ info:
   version: 1.0.0
 servers:
   -
-    url: 'https://aqrabi.com'
+    url: 'http://localhost:8000'
 paths:
   /api/login:
     post:
@@ -151,7 +151,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the remove cart.'
-        example: accusamus
+        example: quaerat
         required: true
         schema:
           type: string
@@ -289,10 +289,10 @@ paths:
                       category_id: 1
                       productname: 'Amy Sutton'
                       price: 64
-                      count: 9
+                      count: 7
                       description: 'Veritatis nostrud ei'
                       status: published
-                      ordered_counter: 43
+                      ordered_counter: 45
                       visiblity: '1'
                       tag: null
                       discount: null
@@ -302,17 +302,17 @@ paths:
                         - cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg
                         - 2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg
                       created_at: '2022-08-25T17:34:36.000000Z'
-                      updated_at: '2022-08-27T10:29:52.000000Z'
+                      updated_at: '2022-08-30T08:54:19.000000Z'
                     -
                       id: 3
                       supplier_id: 2
                       category_id: 2
                       productname: 'Shana Owens'
                       price: 154
-                      count: 43
+                      count: 41
                       description: 'description goes here'
                       status: published
-                      ordered_counter: 32
+                      ordered_counter: 34
                       visiblity: '1'
                       tag: null
                       discount: null
@@ -322,17 +322,17 @@ paths:
                         - V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
                         - DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
                       created_at: '2022-08-26T18:23:48.000000Z'
-                      updated_at: '2022-08-27T10:28:08.000000Z'
+                      updated_at: '2022-08-30T08:54:19.000000Z'
                     -
                       id: 4
                       supplier_id: 3
                       category_id: 2
                       productname: 'Hoyt White'
                       price: 963
-                      count: 63
+                      count: 62
                       description: 'Aspernatur ad exerci'
                       status: published
-                      ordered_counter: 21
+                      ordered_counter: 22
                       visiblity: '1'
                       tag: null
                       discount: null
@@ -342,17 +342,17 @@ paths:
                         - 0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg
                         - xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg
                       created_at: '2022-08-28T03:14:48.000000Z'
-                      updated_at: '2022-08-28T03:14:48.000000Z'
+                      updated_at: '2022-08-29T13:01:13.000000Z'
                     -
                       id: 5
                       supplier_id: 3
                       category_id: 2
                       productname: 'Melvin Riley'
                       price: 912
-                      count: 59
+                      count: 57
                       description: 'Suscipit doloribus e'
                       status: published
-                      ordered_counter: 34
+                      ordered_counter: 36
                       visiblity: '1'
                       tag: null
                       discount: null
@@ -362,7 +362,7 @@ paths:
                         - FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
                         - pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg
                       created_at: '2022-08-28T03:17:12.000000Z'
-                      updated_at: '2022-08-28T03:17:12.000000Z'
+                      updated_at: '2022-08-29T13:01:13.000000Z'
                     -
                       id: 6
                       supplier_id: 2
@@ -393,10 +393,10 @@ paths:
                         category_id: 1
                         productname: 'Amy Sutton'
                         price: 64
-                        count: 9
+                        count: 7
                         description: 'Veritatis nostrud ei'
                         status: published
-                        ordered_counter: 43
+                        ordered_counter: 45
                         visiblity: '1'
                         tag: null
                         discount: null
@@ -406,17 +406,17 @@ paths:
                           - cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg
                           - 2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg
                         created_at: '2022-08-25T17:34:36.000000Z'
-                        updated_at: '2022-08-27T10:29:52.000000Z'
+                        updated_at: '2022-08-30T08:54:19.000000Z'
                       -
                         id: 3
                         supplier_id: 2
                         category_id: 2
                         productname: 'Shana Owens'
                         price: 154
-                        count: 43
+                        count: 41
                         description: 'description goes here'
                         status: published
-                        ordered_counter: 32
+                        ordered_counter: 34
                         visiblity: '1'
                         tag: null
                         discount: null
@@ -426,17 +426,17 @@ paths:
                           - V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
                           - DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
                         created_at: '2022-08-26T18:23:48.000000Z'
-                        updated_at: '2022-08-27T10:28:08.000000Z'
+                        updated_at: '2022-08-30T08:54:19.000000Z'
                       -
                         id: 4
                         supplier_id: 3
                         category_id: 2
                         productname: 'Hoyt White'
                         price: 963
-                        count: 63
+                        count: 62
                         description: 'Aspernatur ad exerci'
                         status: published
-                        ordered_counter: 21
+                        ordered_counter: 22
                         visiblity: '1'
                         tag: null
                         discount: null
@@ -446,17 +446,17 @@ paths:
                           - 0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg
                           - xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg
                         created_at: '2022-08-28T03:14:48.000000Z'
-                        updated_at: '2022-08-28T03:14:48.000000Z'
+                        updated_at: '2022-08-29T13:01:13.000000Z'
                       -
                         id: 5
                         supplier_id: 3
                         category_id: 2
                         productname: 'Melvin Riley'
                         price: 912
-                        count: 59
+                        count: 57
                         description: 'Suscipit doloribus e'
                         status: published
-                        ordered_counter: 34
+                        ordered_counter: 36
                         visiblity: '1'
                         tag: null
                         discount: null
@@ -466,7 +466,7 @@ paths:
                           - FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
                           - pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg
                         created_at: '2022-08-28T03:17:12.000000Z'
-                        updated_at: '2022-08-28T03:17:12.000000Z'
+                        updated_at: '2022-08-29T13:01:13.000000Z'
                       -
                         id: 6
                         supplier_id: 2
@@ -532,7 +532,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product by category.'
-        example: magnam
+        example: corporis
         required: true
         schema:
           type: string
@@ -576,7 +576,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product by supplier.'
-        example: dolorum
+        example: sit
         required: true
         schema:
           type: string
@@ -622,10 +622,10 @@ paths:
                           category_id: 1
                           productname: 'Amy Sutton'
                           price: 64
-                          count: 9
+                          count: 7
                           description: 'Veritatis nostrud ei'
                           status: published
-                          ordered_counter: 43
+                          ordered_counter: 45
                           visiblity: '1'
                           tag: null
                           discount: null
@@ -635,7 +635,7 @@ paths:
                             - cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg
                             - 2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg
                           created_at: '2022-08-25T17:34:36.000000Z'
-                          updated_at: '2022-08-27T10:29:52.000000Z'
+                          updated_at: '2022-08-30T08:54:19.000000Z'
                     -
                       id: 2
                       name: 'Baker Jacobson'
@@ -650,10 +650,10 @@ paths:
                           category_id: 2
                           productname: 'Shana Owens'
                           price: 154
-                          count: 43
+                          count: 41
                           description: 'description goes here'
                           status: published
-                          ordered_counter: 32
+                          ordered_counter: 34
                           visiblity: '1'
                           tag: null
                           discount: null
@@ -663,17 +663,17 @@ paths:
                             - V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
                             - DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
                           created_at: '2022-08-26T18:23:48.000000Z'
-                          updated_at: '2022-08-27T10:28:08.000000Z'
+                          updated_at: '2022-08-30T08:54:19.000000Z'
                         -
                           id: 4
                           supplier_id: 3
                           category_id: 2
                           productname: 'Hoyt White'
                           price: 963
-                          count: 63
+                          count: 62
                           description: 'Aspernatur ad exerci'
                           status: published
-                          ordered_counter: 21
+                          ordered_counter: 22
                           visiblity: '1'
                           tag: null
                           discount: null
@@ -683,17 +683,17 @@ paths:
                             - 0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg
                             - xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg
                           created_at: '2022-08-28T03:14:48.000000Z'
-                          updated_at: '2022-08-28T03:14:48.000000Z'
+                          updated_at: '2022-08-29T13:01:13.000000Z'
                         -
                           id: 5
                           supplier_id: 3
                           category_id: 2
                           productname: 'Melvin Riley'
                           price: 912
-                          count: 59
+                          count: 57
                           description: 'Suscipit doloribus e'
                           status: published
-                          ordered_counter: 34
+                          ordered_counter: 36
                           visiblity: '1'
                           tag: null
                           discount: null
@@ -703,7 +703,7 @@ paths:
                             - FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
                             - pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg
                           created_at: '2022-08-28T03:17:12.000000Z'
-                          updated_at: '2022-08-28T03:17:12.000000Z'
+                          updated_at: '2022-08-29T13:01:13.000000Z'
                         -
                           id: 6
                           supplier_id: 2
@@ -742,10 +742,10 @@ paths:
                             category_id: 1
                             productname: 'Amy Sutton'
                             price: 64
-                            count: 9
+                            count: 7
                             description: 'Veritatis nostrud ei'
                             status: published
-                            ordered_counter: 43
+                            ordered_counter: 45
                             visiblity: '1'
                             tag: null
                             discount: null
@@ -755,7 +755,7 @@ paths:
                               - cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg
                               - 2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg
                             created_at: '2022-08-25T17:34:36.000000Z'
-                            updated_at: '2022-08-27T10:29:52.000000Z'
+                            updated_at: '2022-08-30T08:54:19.000000Z'
                       -
                         id: 2
                         name: 'Baker Jacobson'
@@ -770,10 +770,10 @@ paths:
                             category_id: 2
                             productname: 'Shana Owens'
                             price: 154
-                            count: 43
+                            count: 41
                             description: 'description goes here'
                             status: published
-                            ordered_counter: 32
+                            ordered_counter: 34
                             visiblity: '1'
                             tag: null
                             discount: null
@@ -783,17 +783,17 @@ paths:
                               - V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
                               - DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
                             created_at: '2022-08-26T18:23:48.000000Z'
-                            updated_at: '2022-08-27T10:28:08.000000Z'
+                            updated_at: '2022-08-30T08:54:19.000000Z'
                           -
                             id: 4
                             supplier_id: 3
                             category_id: 2
                             productname: 'Hoyt White'
                             price: 963
-                            count: 63
+                            count: 62
                             description: 'Aspernatur ad exerci'
                             status: published
-                            ordered_counter: 21
+                            ordered_counter: 22
                             visiblity: '1'
                             tag: null
                             discount: null
@@ -803,17 +803,17 @@ paths:
                               - 0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg
                               - xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg
                             created_at: '2022-08-28T03:14:48.000000Z'
-                            updated_at: '2022-08-28T03:14:48.000000Z'
+                            updated_at: '2022-08-29T13:01:13.000000Z'
                           -
                             id: 5
                             supplier_id: 3
                             category_id: 2
                             productname: 'Melvin Riley'
                             price: 912
-                            count: 59
+                            count: 57
                             description: 'Suscipit doloribus e'
                             status: published
-                            ordered_counter: 34
+                            ordered_counter: 36
                             visiblity: '1'
                             tag: null
                             discount: null
@@ -823,7 +823,7 @@ paths:
                               - FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
                               - pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg
                             created_at: '2022-08-28T03:17:12.000000Z'
-                            updated_at: '2022-08-28T03:17:12.000000Z'
+                            updated_at: '2022-08-29T13:01:13.000000Z'
                           -
                             id: 6
                             supplier_id: 2
@@ -883,11 +883,11 @@ paths:
                       phone: '0940678725'
                       email: admin@admin.com
                       profile_url: null
+                      tin_number: null
+                      document_url: null
                       email_verified_at: '2021-12-30T19:59:40.000000Z'
-                      two_factor_secret: null
-                      two_factor_recovery_codes: null
-                      created_at: '2022-08-25T16:59:48.000000Z'
-                      updated_at: '2022-08-25T16:59:48.000000Z'
+                      created_at: '2022-08-30T15:14:46.000000Z'
+                      updated_at: '2022-08-30T15:14:46.000000Z'
                       products: []
                     -
                       id: 2
@@ -895,11 +895,11 @@ paths:
                       phone: '0940678345'
                       email: supplier@supplier.com
                       profile_url: null
+                      tin_number: null
+                      document_url: null
                       email_verified_at: '2021-12-30T19:59:40.000000Z'
-                      two_factor_secret: null
-                      two_factor_recovery_codes: null
-                      created_at: '2022-08-25T16:59:48.000000Z'
-                      updated_at: '2022-08-25T16:59:48.000000Z'
+                      created_at: '2022-08-30T15:14:47.000000Z'
+                      updated_at: '2022-08-30T15:14:47.000000Z'
                       products:
                         -
                           id: 2
@@ -907,10 +907,10 @@ paths:
                           category_id: 1
                           productname: 'Amy Sutton'
                           price: 64
-                          count: 9
+                          count: 7
                           description: 'Veritatis nostrud ei'
                           status: published
-                          ordered_counter: 43
+                          ordered_counter: 45
                           visiblity: '1'
                           tag: null
                           discount: null
@@ -920,17 +920,17 @@ paths:
                             - cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg
                             - 2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg
                           created_at: '2022-08-25T17:34:36.000000Z'
-                          updated_at: '2022-08-27T10:29:52.000000Z'
+                          updated_at: '2022-08-30T08:54:19.000000Z'
                         -
                           id: 3
                           supplier_id: 2
                           category_id: 2
                           productname: 'Shana Owens'
                           price: 154
-                          count: 43
+                          count: 41
                           description: 'description goes here'
                           status: published
-                          ordered_counter: 32
+                          ordered_counter: 34
                           visiblity: '1'
                           tag: null
                           discount: null
@@ -940,7 +940,7 @@ paths:
                             - V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
                             - DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
                           created_at: '2022-08-26T18:23:48.000000Z'
-                          updated_at: '2022-08-27T10:28:08.000000Z'
+                          updated_at: '2022-08-30T08:54:19.000000Z'
                         -
                           id: 6
                           supplier_id: 2
@@ -967,11 +967,11 @@ paths:
                       phone: '0956567657'
                       email: customer@customer.com
                       profile_url: null
+                      tin_number: null
+                      document_url: null
                       email_verified_at: '2021-12-30T19:59:40.000000Z'
-                      two_factor_secret: null
-                      two_factor_recovery_codes: null
-                      created_at: '2022-08-25T16:59:49.000000Z'
-                      updated_at: '2022-08-25T16:59:49.000000Z'
+                      created_at: '2022-08-30T15:14:48.000000Z'
+                      updated_at: '2022-08-30T15:14:48.000000Z'
                       products:
                         -
                           id: 4
@@ -979,10 +979,10 @@ paths:
                           category_id: 2
                           productname: 'Hoyt White'
                           price: 963
-                          count: 63
+                          count: 62
                           description: 'Aspernatur ad exerci'
                           status: published
-                          ordered_counter: 21
+                          ordered_counter: 22
                           visiblity: '1'
                           tag: null
                           discount: null
@@ -992,17 +992,17 @@ paths:
                             - 0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg
                             - xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg
                           created_at: '2022-08-28T03:14:48.000000Z'
-                          updated_at: '2022-08-28T03:14:48.000000Z'
+                          updated_at: '2022-08-29T13:01:13.000000Z'
                         -
                           id: 5
                           supplier_id: 3
                           category_id: 2
                           productname: 'Melvin Riley'
                           price: 912
-                          count: 59
+                          count: 57
                           description: 'Suscipit doloribus e'
                           status: published
-                          ordered_counter: 34
+                          ordered_counter: 36
                           visiblity: '1'
                           tag: null
                           discount: null
@@ -1012,18 +1012,18 @@ paths:
                             - FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
                             - pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg
                           created_at: '2022-08-28T03:17:12.000000Z'
-                          updated_at: '2022-08-28T03:17:12.000000Z'
+                          updated_at: '2022-08-29T13:01:13.000000Z'
                     -
                       id: 4
-                      fullname: 'Quamar Mercado'
-                      phone: '567876'
-                      email: zafuv@mailinator.com
+                      fullname: nesren
+                      phone: '09567657'
+                      email: nk@laravel.com
                       profile_url: null
+                      tin_number: '54545'
+                      document_url: documents/tJ0ZLRX4DDsK4Q86UgLqRXW85oBDtDSA4XsBQ6UK.jpg
                       email_verified_at: null
-                      two_factor_secret: null
-                      two_factor_recovery_codes: null
-                      created_at: '2022-08-28T19:39:25.000000Z'
-                      updated_at: '2022-08-28T19:47:27.000000Z'
+                      created_at: '2022-08-30T15:15:22.000000Z'
+                      updated_at: '2022-08-30T15:15:22.000000Z'
                       products: []
                 properties:
                   products:
@@ -1035,11 +1035,11 @@ paths:
                         phone: '0940678725'
                         email: admin@admin.com
                         profile_url: null
+                        tin_number: null
+                        document_url: null
                         email_verified_at: '2021-12-30T19:59:40.000000Z'
-                        two_factor_secret: null
-                        two_factor_recovery_codes: null
-                        created_at: '2022-08-25T16:59:48.000000Z'
-                        updated_at: '2022-08-25T16:59:48.000000Z'
+                        created_at: '2022-08-30T15:14:46.000000Z'
+                        updated_at: '2022-08-30T15:14:46.000000Z'
                         products: []
                       -
                         id: 2
@@ -1047,11 +1047,11 @@ paths:
                         phone: '0940678345'
                         email: supplier@supplier.com
                         profile_url: null
+                        tin_number: null
+                        document_url: null
                         email_verified_at: '2021-12-30T19:59:40.000000Z'
-                        two_factor_secret: null
-                        two_factor_recovery_codes: null
-                        created_at: '2022-08-25T16:59:48.000000Z'
-                        updated_at: '2022-08-25T16:59:48.000000Z'
+                        created_at: '2022-08-30T15:14:47.000000Z'
+                        updated_at: '2022-08-30T15:14:47.000000Z'
                         products:
                           -
                             id: 2
@@ -1059,10 +1059,10 @@ paths:
                             category_id: 1
                             productname: 'Amy Sutton'
                             price: 64
-                            count: 9
+                            count: 7
                             description: 'Veritatis nostrud ei'
                             status: published
-                            ordered_counter: 43
+                            ordered_counter: 45
                             visiblity: '1'
                             tag: null
                             discount: null
@@ -1072,17 +1072,17 @@ paths:
                               - cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg
                               - 2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg
                             created_at: '2022-08-25T17:34:36.000000Z'
-                            updated_at: '2022-08-27T10:29:52.000000Z'
+                            updated_at: '2022-08-30T08:54:19.000000Z'
                           -
                             id: 3
                             supplier_id: 2
                             category_id: 2
                             productname: 'Shana Owens'
                             price: 154
-                            count: 43
+                            count: 41
                             description: 'description goes here'
                             status: published
-                            ordered_counter: 32
+                            ordered_counter: 34
                             visiblity: '1'
                             tag: null
                             discount: null
@@ -1092,7 +1092,7 @@ paths:
                               - V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
                               - DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
                             created_at: '2022-08-26T18:23:48.000000Z'
-                            updated_at: '2022-08-27T10:28:08.000000Z'
+                            updated_at: '2022-08-30T08:54:19.000000Z'
                           -
                             id: 6
                             supplier_id: 2
@@ -1119,11 +1119,11 @@ paths:
                         phone: '0956567657'
                         email: customer@customer.com
                         profile_url: null
+                        tin_number: null
+                        document_url: null
                         email_verified_at: '2021-12-30T19:59:40.000000Z'
-                        two_factor_secret: null
-                        two_factor_recovery_codes: null
-                        created_at: '2022-08-25T16:59:49.000000Z'
-                        updated_at: '2022-08-25T16:59:49.000000Z'
+                        created_at: '2022-08-30T15:14:48.000000Z'
+                        updated_at: '2022-08-30T15:14:48.000000Z'
                         products:
                           -
                             id: 4
@@ -1131,10 +1131,10 @@ paths:
                             category_id: 2
                             productname: 'Hoyt White'
                             price: 963
-                            count: 63
+                            count: 62
                             description: 'Aspernatur ad exerci'
                             status: published
-                            ordered_counter: 21
+                            ordered_counter: 22
                             visiblity: '1'
                             tag: null
                             discount: null
@@ -1144,17 +1144,17 @@ paths:
                               - 0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg
                               - xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg
                             created_at: '2022-08-28T03:14:48.000000Z'
-                            updated_at: '2022-08-28T03:14:48.000000Z'
+                            updated_at: '2022-08-29T13:01:13.000000Z'
                           -
                             id: 5
                             supplier_id: 3
                             category_id: 2
                             productname: 'Melvin Riley'
                             price: 912
-                            count: 59
+                            count: 57
                             description: 'Suscipit doloribus e'
                             status: published
-                            ordered_counter: 34
+                            ordered_counter: 36
                             visiblity: '1'
                             tag: null
                             discount: null
@@ -1164,18 +1164,18 @@ paths:
                               - FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
                               - pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg
                             created_at: '2022-08-28T03:17:12.000000Z'
-                            updated_at: '2022-08-28T03:17:12.000000Z'
+                            updated_at: '2022-08-29T13:01:13.000000Z'
                       -
                         id: 4
-                        fullname: 'Quamar Mercado'
-                        phone: '567876'
-                        email: zafuv@mailinator.com
+                        fullname: nesren
+                        phone: '09567657'
+                        email: nk@laravel.com
                         profile_url: null
+                        tin_number: '54545'
+                        document_url: documents/tJ0ZLRX4DDsK4Q86UgLqRXW85oBDtDSA4XsBQ6UK.jpg
                         email_verified_at: null
-                        two_factor_secret: null
-                        two_factor_recovery_codes: null
-                        created_at: '2022-08-28T19:39:25.000000Z'
-                        updated_at: '2022-08-28T19:47:27.000000Z'
+                        created_at: '2022-08-30T15:15:22.000000Z'
+                        updated_at: '2022-08-30T15:15:22.000000Z'
                         products: []
                     items:
                       type: object
@@ -1222,7 +1222,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product single.'
-        example: impedit
+        example: quo
         required: true
         schema:
           type: string

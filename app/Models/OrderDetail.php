@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class OrderDetail extends Model
@@ -16,5 +15,9 @@ class OrderDetail extends Model
     public function product()
     {
         return $this->belongsTo(\App\Models\Product::class, 'product_id');
+    }
+    public function supplier()
+    {
+        return $this->hasOne(\App\Models\User::class, 'supplier_id');
     }
 }

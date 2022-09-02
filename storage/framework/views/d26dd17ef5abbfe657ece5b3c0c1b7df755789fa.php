@@ -27,7 +27,7 @@
 <?php unset($__defined_vars); ?>
 
 <div <?php echo e($attributes->class([
-    'flex flex-1 flex-col items-center justify-center p-6 mx-auto space-y-6 text-center bg-white filament-tables-empty-state',
+    'filament-tables-empty-state flex flex-1 flex-col items-center justify-center p-6 mx-auto space-y-6 text-center bg-white',
     'dark:bg-gray-800' => config('tables.dark_mode'),
 ])); ?>>
     <div class="<?php echo \Illuminate\Support\Arr::toCssClasses([

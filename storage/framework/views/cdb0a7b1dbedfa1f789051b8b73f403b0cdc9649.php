@@ -1,5 +1,5 @@
 <p <?php echo e($attributes->class([
-    'text-sm font-medium text-gray-500 filament-tables-empty-state-description',
+    'filament-tables-empty-state-description text-sm font-medium text-gray-500',
     'dark:text-gray-400' => config('tables.dark_mode'),
 ])); ?>>
     <?php echo e($slot); ?>

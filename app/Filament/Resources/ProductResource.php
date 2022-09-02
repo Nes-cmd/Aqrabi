@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Models\Role;
 use App\Models\Category;
 use Filament\Forms\Components\Tabs\Tab;
+use Illuminate\Database\Eloquent\Model;
 
 class ProductResource extends Resource
 {
@@ -67,7 +68,8 @@ class ProductResource extends Resource
                 Tables\Columns\BooleanColumn::make('visiblity'),
             ])
             ->filters([
-                //
+                // Tables\Filters\BaseFilter::make('count')->default()
+                // ->apply(Product::where('id', 1))
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -77,7 +79,26 @@ class ProductResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+    public static function canCreate(): bool
+    {
+        return auth()->user()->hasVerifiedRole('admin');   
+    }
+    public static function getEloquentQuery(): Builder
+    {
+        if(auth()->user()->hasRole('supplier')){
+            return Product::where('supplier_id', auth()->user()->id);
+        }
+
+        return Product::where('id', '!=', 0);
+    }
+    public static function canDelete(Model $record): bool
+    {
+        return auth()->user()->hasVerifiedRole('admin');  ;
+    }
+    // public static function canEdit(Model $record): bool
+    // {
+    //     return auth()->user()->hasVerifiedRole('admin');  
+    // }
     public static function getRelations(): array
     {
         return [

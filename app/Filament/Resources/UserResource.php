@@ -33,6 +33,10 @@ class UserResource extends Resource
                 ])
             ]);
     }
+    public static function canViewAny():bool
+    {
+        return auth()->user()->hasVerifiedRole('admin');
+    }
 
     public static function table(Table $table): Table
     {

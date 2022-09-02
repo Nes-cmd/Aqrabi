@@ -28,9 +28,9 @@ class CreateNewUser implements CreatesNewUsers
             'phone' => ['required', 'string', 'max:15', Rule::unique(User::class)],
             'email' => ['required','string', 'email','max:255',Rule::unique(User::class),],
             'password' => $this->passwordRules(),
-            'tin_number' => ['required', 'min:3'],
+            'tin_number' => ['nullable', 'min:3'],
             'user_type' => 'required',
-            'document_url' => ['required', 'file'],
+            'document_url' => ['nullable', 'file'],
         ])->validate();
         $location = null;
         // dd($input['document_url']->put());

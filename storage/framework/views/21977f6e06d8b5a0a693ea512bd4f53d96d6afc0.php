@@ -22,7 +22,7 @@
 
 <div
     x-data="{}"
-    <?php echo e($attributes->class(['relative inline-block filament-tables-filters'])); ?>
+    <?php echo e($attributes->class(['filament-tables-filters relative inline-block'])); ?>
 
 >
     <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>

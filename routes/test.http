@@ -7,8 +7,23 @@ content-type: application/json
 }
 ###
 
+POST http://localhost:8000/api/register HTTP/1.1
+content-type: application/json
+
+{
+    "fullname":"Nuurm",
+    "phone":"0958877",
+    "email":"nu7@x.com",
+    "password": "password",
+    "password_confirmation": "password",
+    "user_type":"customer",
+    "tin_number":"8888",
+    "document" : null
+}
+###
+
 POST http://localhost:8000/api/customer/add-to-cart HTTP/1.1
-Authorization: Bearer 20|cP99Pbj24hPIg8trm2gg8dr5NcAQuEbwqWDwSjGU
+Authorization: Bearer 7|Q9cmtUfappP8xUuVUt1Mhp3XJskGTazKOhwwdvD3
 content-type: application/json
 
 {

@@ -18,7 +18,10 @@ class OrderResource extends Resource
     protected static ?string $model = Order::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-clipboard';
-
+    public static function canCreate(): bool
+    {
+        return false;
+    }
     public static function form(Form $form): Form
     {
         return $form
@@ -77,8 +80,16 @@ class OrderResource extends Resource
             \App\Filament\Resources\OrderResource\Widgets\OrdersChart::class,
         ];
     }
-    public static function createEnabled():bool
+    public static function getEloquentQuery(): Builder
     {
-        return false;
+        if(auth()->user()->hasRole('supplier')){
+            $order = Order::with('orderDetails')
+                                ->whereHas('orderDetails', function($query){
+                                    $query->where('supplier_id', auth()->user()->id);
+                                });
+            
+            return $order;
+        }
+        return Order::where('id', '!=', 0); 
     }
 }

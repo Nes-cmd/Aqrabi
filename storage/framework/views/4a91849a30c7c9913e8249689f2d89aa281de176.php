@@ -10,11 +10,14 @@
 <?php $component->withAttributes([]); ?>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-  <?php $__currentLoopData = $sliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slider): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-    <div class="carousel-item <?php echo e(!$loop->index?'active':''); ?>">
-      <img class="d-block w-100" height="70%" src="<?php echo e(asset('storage/'.$slider->photo_url)); ?>">
-    </div>
+   
+    <?php if(count($sliders)): ?>
+    <?php $__currentLoopData = $sliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slider): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+      <div class="carousel-item <?php echo e(!$loop->index?'active':''); ?>">
+        <img class="d-block w-100" height="70%" src="<?php echo e(asset('storage/'.$slider->photo_url)); ?>">
+      </div>
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>  
+    <?php endif; ?>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -27,15 +30,15 @@
 <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('blocks.collections-slide', ['type' => 'top-collections'])->html();
-} elseif ($_instance->childHasBeenRendered('zXsxyQu')) {
-    $componentId = $_instance->getRenderedChildComponentId('zXsxyQu');
-    $componentTag = $_instance->getRenderedChildComponentTagName('zXsxyQu');
+} elseif ($_instance->childHasBeenRendered('modvYxc')) {
+    $componentId = $_instance->getRenderedChildComponentId('modvYxc');
+    $componentTag = $_instance->getRenderedChildComponentTagName('modvYxc');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('zXsxyQu');
+    $_instance->preserveRenderedChild('modvYxc');
 } else {
     $response = \Livewire\Livewire::mount('blocks.collections-slide', ['type' => 'top-collections']);
     $html = $response->html();
-    $_instance->logRenderedChild('zXsxyQu', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('modvYxc', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
@@ -43,15 +46,15 @@ echo $html;
 <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('blocks.collections', ['type' => 'top-products'])->html();
-} elseif ($_instance->childHasBeenRendered('6La7KZN')) {
-    $componentId = $_instance->getRenderedChildComponentId('6La7KZN');
-    $componentTag = $_instance->getRenderedChildComponentTagName('6La7KZN');
+} elseif ($_instance->childHasBeenRendered('AfGovYG')) {
+    $componentId = $_instance->getRenderedChildComponentId('AfGovYG');
+    $componentTag = $_instance->getRenderedChildComponentTagName('AfGovYG');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('6La7KZN');
+    $_instance->preserveRenderedChild('AfGovYG');
 } else {
     $response = \Livewire\Livewire::mount('blocks.collections', ['type' => 'top-products']);
     $html = $response->html();
-    $_instance->logRenderedChild('6La7KZN', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('AfGovYG', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>

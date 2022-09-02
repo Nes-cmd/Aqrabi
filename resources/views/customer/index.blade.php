@@ -2,11 +2,14 @@
 <x-customer-layout>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-  @foreach ($sliders as $slider)
-    <div class="carousel-item {{ !$loop->index?'active':''}}">
-      <img class="d-block w-100" height="70%" src="{{ asset('storage/'.$slider->photo_url)}}">
-    </div>
+   
+    @if(count($sliders))
+    @foreach ($sliders as $slider)
+      <div class="carousel-item {{ !$loop->index?'active':''}}">
+        <img class="d-block w-100" height="70%" src="{{ asset('storage/'.$slider->photo_url)}}">
+      </div>
     @endforeach  
+    @endif
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>

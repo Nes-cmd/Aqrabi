@@ -1,13 +1,13 @@
 <?php foreach($attributes->onlyProps([
-    'form'
+    'form',
 ]) as $__key => $__value) {
     $$__key = $$__key ?? $__value;
 } ?>
 <?php $attributes = $attributes->exceptProps([
-    'form'
+    'form',
 ]); ?>
 <?php foreach (array_filter(([
-    'form'
+    'form',
 ]), 'is_string', ARRAY_FILTER_USE_KEY) as $__key => $__value) {
     $$__key = $$__key ?? $__value;
 } ?>
@@ -17,7 +17,7 @@
 } ?>
 <?php unset($__defined_vars); ?>
 
-<div class="space-y-6 filament-tables-filters-form" x-data="{}">
+<div class="filament-tables-filters-form space-y-6" x-data="{}">
     <?php echo e($form); ?>
 
 

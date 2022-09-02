@@ -17,7 +17,7 @@
 } ?>
 <?php unset($__defined_vars); ?>
 
-<h3 <?php echo e($attributes->class(['text-gray-500 filament-modal-subheading'])); ?>>
+<h3 <?php echo e($attributes->class(['filament-modal-subheading text-gray-500'])); ?>>
     <?php echo e($slot); ?>
 
 </h3>

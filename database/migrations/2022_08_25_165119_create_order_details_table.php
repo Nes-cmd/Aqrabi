@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('order_id', 0);
             $table->unsignedBigInteger('product_id', 0);
+            $table->unsignedBigInteger('supplier_id', 0);
             $table->float('quantity')->default(1);
             $table->string('specifications', 2000)->nullable();
             $table->foreign('order_id')->references('id')->on('orders');

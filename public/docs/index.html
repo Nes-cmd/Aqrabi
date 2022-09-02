@@ -26,7 +26,7 @@
             </style>
 
     <script>
-        var baseUrl = "https://aqrabi.com";
+        var baseUrl = "http://localhost:8000";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -140,7 +140,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: August 29 2022</li>
+        <li>Last updated: September 1 2022</li>
     </ul>
 </div>
 
@@ -154,7 +154,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 <blockquote>
 <p>Base URL</p>
 </blockquote>
-<pre><code class="language-yaml">https://aqrabi.com</code></pre>
+<pre><code class="language-yaml">http://localhost:8000</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
 <p>This API is not authenticated.</p>
@@ -176,14 +176,14 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://aqrabi.com/api/login" \
+    "http://localhost:8000/api/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/login"
+    "http://localhost:8000/api/login"
 );
 
 const headers = {
@@ -254,14 +254,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://aqrabi.com/api/register" \
+    "http://localhost:8000/api/register" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/register"
+    "http://localhost:8000/api/register"
 );
 
 const headers = {
@@ -332,14 +332,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://aqrabi.com/api/customer/add-to-cart" \
+    "http://localhost:8000/api/customer/add-to-cart" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/customer/add-to-cart"
+    "http://localhost:8000/api/customer/add-to-cart"
 );
 
 const headers = {
@@ -410,14 +410,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/customer/cart-list" \
+    --get "http://localhost:8000/api/customer/cart-list" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/customer/cart-list"
+    "http://localhost:8000/api/customer/cart-list"
 );
 
 const headers = {
@@ -505,14 +505,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/customer/remove-cart/accusamus" \
+    --get "http://localhost:8000/api/customer/remove-cart/quaerat" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/customer/remove-cart/accusamus"
+    "http://localhost:8000/api/customer/remove-cart/quaerat"
 );
 
 const headers = {
@@ -591,7 +591,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-customer-remove-cart--id-"
-               value="accusamus"
+               value="quaerat"
                data-component="url" hidden>
     <br>
 <p>The ID of the remove cart.</p>
@@ -611,14 +611,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/customer/remove-cart-all" \
+    --get "http://localhost:8000/api/customer/remove-cart-all" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/customer/remove-cart-all"
+    "http://localhost:8000/api/customer/remove-cart-all"
 );
 
 const headers = {
@@ -706,14 +706,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/categories" \
+    --get "http://localhost:8000/api/shop/categories" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/categories"
+    "http://localhost:8000/api/shop/categories"
 );
 
 const headers = {
@@ -820,14 +820,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/all-products" \
+    --get "http://localhost:8000/api/shop/all-products" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/all-products"
+    "http://localhost:8000/api/shop/all-products"
 );
 
 const headers = {
@@ -866,10 +866,10 @@ access-control-allow-origin: *
             &quot;category_id&quot;: 1,
             &quot;productname&quot;: &quot;Amy Sutton&quot;,
             &quot;price&quot;: 64,
-            &quot;count&quot;: 9,
+            &quot;count&quot;: 7,
             &quot;description&quot;: &quot;Veritatis nostrud ei&quot;,
             &quot;status&quot;: &quot;published&quot;,
-            &quot;ordered_counter&quot;: 43,
+            &quot;ordered_counter&quot;: 45,
             &quot;visiblity&quot;: &quot;1&quot;,
             &quot;tag&quot;: null,
             &quot;discount&quot;: null,
@@ -880,7 +880,7 @@ access-control-allow-origin: *
                 &quot;2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg&quot;
             ],
             &quot;created_at&quot;: &quot;2022-08-25T17:34:36.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-08-27T10:29:52.000000Z&quot;
+            &quot;updated_at&quot;: &quot;2022-08-30T08:54:19.000000Z&quot;
         },
         {
             &quot;id&quot;: 3,
@@ -888,10 +888,10 @@ access-control-allow-origin: *
             &quot;category_id&quot;: 2,
             &quot;productname&quot;: &quot;Shana Owens&quot;,
             &quot;price&quot;: 154,
-            &quot;count&quot;: 43,
+            &quot;count&quot;: 41,
             &quot;description&quot;: &quot;description goes here&quot;,
             &quot;status&quot;: &quot;published&quot;,
-            &quot;ordered_counter&quot;: 32,
+            &quot;ordered_counter&quot;: 34,
             &quot;visiblity&quot;: &quot;1&quot;,
             &quot;tag&quot;: null,
             &quot;discount&quot;: null,
@@ -902,7 +902,7 @@ access-control-allow-origin: *
                 &quot;DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
             ],
             &quot;created_at&quot;: &quot;2022-08-26T18:23:48.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-08-27T10:28:08.000000Z&quot;
+            &quot;updated_at&quot;: &quot;2022-08-30T08:54:19.000000Z&quot;
         },
         {
             &quot;id&quot;: 4,
@@ -910,10 +910,10 @@ access-control-allow-origin: *
             &quot;category_id&quot;: 2,
             &quot;productname&quot;: &quot;Hoyt White&quot;,
             &quot;price&quot;: 963,
-            &quot;count&quot;: 63,
+            &quot;count&quot;: 62,
             &quot;description&quot;: &quot;Aspernatur ad exerci&quot;,
             &quot;status&quot;: &quot;published&quot;,
-            &quot;ordered_counter&quot;: 21,
+            &quot;ordered_counter&quot;: 22,
             &quot;visiblity&quot;: &quot;1&quot;,
             &quot;tag&quot;: null,
             &quot;discount&quot;: null,
@@ -924,7 +924,7 @@ access-control-allow-origin: *
                 &quot;xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg&quot;
             ],
             &quot;created_at&quot;: &quot;2022-08-28T03:14:48.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-08-28T03:14:48.000000Z&quot;
+            &quot;updated_at&quot;: &quot;2022-08-29T13:01:13.000000Z&quot;
         },
         {
             &quot;id&quot;: 5,
@@ -932,10 +932,10 @@ access-control-allow-origin: *
             &quot;category_id&quot;: 2,
             &quot;productname&quot;: &quot;Melvin Riley&quot;,
             &quot;price&quot;: 912,
-            &quot;count&quot;: 59,
+            &quot;count&quot;: 57,
             &quot;description&quot;: &quot;Suscipit doloribus e&quot;,
             &quot;status&quot;: &quot;published&quot;,
-            &quot;ordered_counter&quot;: 34,
+            &quot;ordered_counter&quot;: 36,
             &quot;visiblity&quot;: &quot;1&quot;,
             &quot;tag&quot;: null,
             &quot;discount&quot;: null,
@@ -946,7 +946,7 @@ access-control-allow-origin: *
                 &quot;pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg&quot;
             ],
             &quot;created_at&quot;: &quot;2022-08-28T03:17:12.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-08-28T03:17:12.000000Z&quot;
+            &quot;updated_at&quot;: &quot;2022-08-29T13:01:13.000000Z&quot;
         },
         {
             &quot;id&quot;: 6,
@@ -1028,14 +1028,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/product-by-category/magnam" \
+    --get "http://localhost:8000/api/shop/product-by-category/corporis" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/product-by-category/magnam"
+    "http://localhost:8000/api/shop/product-by-category/corporis"
 );
 
 const headers = {
@@ -1116,7 +1116,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-shop-product-by-category--id-"
-               value="magnam"
+               value="corporis"
                data-component="url" hidden>
     <br>
 <p>The ID of the product by category.</p>
@@ -1136,14 +1136,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/product-by-supplier/dolorum" \
+    --get "http://localhost:8000/api/shop/product-by-supplier/sit" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/product-by-supplier/dolorum"
+    "http://localhost:8000/api/shop/product-by-supplier/sit"
 );
 
 const headers = {
@@ -1224,7 +1224,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-shop-product-by-supplier--id-"
-               value="dolorum"
+               value="sit"
                data-component="url" hidden>
     <br>
 <p>The ID of the product by supplier.</p>
@@ -1244,14 +1244,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/product-group-category" \
+    --get "http://localhost:8000/api/shop/product-group-category" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/product-group-category"
+    "http://localhost:8000/api/shop/product-group-category"
 );
 
 const headers = {
@@ -1298,10 +1298,10 @@ access-control-allow-origin: *
                     &quot;category_id&quot;: 1,
                     &quot;productname&quot;: &quot;Amy Sutton&quot;,
                     &quot;price&quot;: 64,
-                    &quot;count&quot;: 9,
+                    &quot;count&quot;: 7,
                     &quot;description&quot;: &quot;Veritatis nostrud ei&quot;,
                     &quot;status&quot;: &quot;published&quot;,
-                    &quot;ordered_counter&quot;: 43,
+                    &quot;ordered_counter&quot;: 45,
                     &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
@@ -1312,7 +1312,7 @@ access-control-allow-origin: *
                         &quot;2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-25T17:34:36.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-08-27T10:29:52.000000Z&quot;
+                    &quot;updated_at&quot;: &quot;2022-08-30T08:54:19.000000Z&quot;
                 }
             ]
         },
@@ -1330,10 +1330,10 @@ access-control-allow-origin: *
                     &quot;category_id&quot;: 2,
                     &quot;productname&quot;: &quot;Shana Owens&quot;,
                     &quot;price&quot;: 154,
-                    &quot;count&quot;: 43,
+                    &quot;count&quot;: 41,
                     &quot;description&quot;: &quot;description goes here&quot;,
                     &quot;status&quot;: &quot;published&quot;,
-                    &quot;ordered_counter&quot;: 32,
+                    &quot;ordered_counter&quot;: 34,
                     &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
@@ -1344,7 +1344,7 @@ access-control-allow-origin: *
                         &quot;DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-26T18:23:48.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-08-27T10:28:08.000000Z&quot;
+                    &quot;updated_at&quot;: &quot;2022-08-30T08:54:19.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 4,
@@ -1352,10 +1352,10 @@ access-control-allow-origin: *
                     &quot;category_id&quot;: 2,
                     &quot;productname&quot;: &quot;Hoyt White&quot;,
                     &quot;price&quot;: 963,
-                    &quot;count&quot;: 63,
+                    &quot;count&quot;: 62,
                     &quot;description&quot;: &quot;Aspernatur ad exerci&quot;,
                     &quot;status&quot;: &quot;published&quot;,
-                    &quot;ordered_counter&quot;: 21,
+                    &quot;ordered_counter&quot;: 22,
                     &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
@@ -1366,7 +1366,7 @@ access-control-allow-origin: *
                         &quot;xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-28T03:14:48.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-08-28T03:14:48.000000Z&quot;
+                    &quot;updated_at&quot;: &quot;2022-08-29T13:01:13.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 5,
@@ -1374,10 +1374,10 @@ access-control-allow-origin: *
                     &quot;category_id&quot;: 2,
                     &quot;productname&quot;: &quot;Melvin Riley&quot;,
                     &quot;price&quot;: 912,
-                    &quot;count&quot;: 59,
+                    &quot;count&quot;: 57,
                     &quot;description&quot;: &quot;Suscipit doloribus e&quot;,
                     &quot;status&quot;: &quot;published&quot;,
-                    &quot;ordered_counter&quot;: 34,
+                    &quot;ordered_counter&quot;: 36,
                     &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
@@ -1388,7 +1388,7 @@ access-control-allow-origin: *
                         &quot;pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-28T03:17:12.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-08-28T03:17:12.000000Z&quot;
+                    &quot;updated_at&quot;: &quot;2022-08-29T13:01:13.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 6,
@@ -1472,14 +1472,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/product-group-supplier" \
+    --get "http://localhost:8000/api/shop/product-group-supplier" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/product-group-supplier"
+    "http://localhost:8000/api/shop/product-group-supplier"
 );
 
 const headers = {
@@ -1518,11 +1518,11 @@ access-control-allow-origin: *
             &quot;phone&quot;: &quot;0940678725&quot;,
             &quot;email&quot;: &quot;admin@admin.com&quot;,
             &quot;profile_url&quot;: null,
+            &quot;tin_number&quot;: null,
+            &quot;document_url&quot;: null,
             &quot;email_verified_at&quot;: &quot;2021-12-30T19:59:40.000000Z&quot;,
-            &quot;two_factor_secret&quot;: null,
-            &quot;two_factor_recovery_codes&quot;: null,
-            &quot;created_at&quot;: &quot;2022-08-25T16:59:48.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-08-25T16:59:48.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-08-30T15:14:46.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-30T15:14:46.000000Z&quot;,
             &quot;products&quot;: []
         },
         {
@@ -1531,11 +1531,11 @@ access-control-allow-origin: *
             &quot;phone&quot;: &quot;0940678345&quot;,
             &quot;email&quot;: &quot;supplier@supplier.com&quot;,
             &quot;profile_url&quot;: null,
+            &quot;tin_number&quot;: null,
+            &quot;document_url&quot;: null,
             &quot;email_verified_at&quot;: &quot;2021-12-30T19:59:40.000000Z&quot;,
-            &quot;two_factor_secret&quot;: null,
-            &quot;two_factor_recovery_codes&quot;: null,
-            &quot;created_at&quot;: &quot;2022-08-25T16:59:48.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-08-25T16:59:48.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-08-30T15:14:47.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-30T15:14:47.000000Z&quot;,
             &quot;products&quot;: [
                 {
                     &quot;id&quot;: 2,
@@ -1543,10 +1543,10 @@ access-control-allow-origin: *
                     &quot;category_id&quot;: 1,
                     &quot;productname&quot;: &quot;Amy Sutton&quot;,
                     &quot;price&quot;: 64,
-                    &quot;count&quot;: 9,
+                    &quot;count&quot;: 7,
                     &quot;description&quot;: &quot;Veritatis nostrud ei&quot;,
                     &quot;status&quot;: &quot;published&quot;,
-                    &quot;ordered_counter&quot;: 43,
+                    &quot;ordered_counter&quot;: 45,
                     &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
@@ -1557,7 +1557,7 @@ access-control-allow-origin: *
                         &quot;2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-25T17:34:36.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-08-27T10:29:52.000000Z&quot;
+                    &quot;updated_at&quot;: &quot;2022-08-30T08:54:19.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 3,
@@ -1565,10 +1565,10 @@ access-control-allow-origin: *
                     &quot;category_id&quot;: 2,
                     &quot;productname&quot;: &quot;Shana Owens&quot;,
                     &quot;price&quot;: 154,
-                    &quot;count&quot;: 43,
+                    &quot;count&quot;: 41,
                     &quot;description&quot;: &quot;description goes here&quot;,
                     &quot;status&quot;: &quot;published&quot;,
-                    &quot;ordered_counter&quot;: 32,
+                    &quot;ordered_counter&quot;: 34,
                     &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
@@ -1579,7 +1579,7 @@ access-control-allow-origin: *
                         &quot;DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-26T18:23:48.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-08-27T10:28:08.000000Z&quot;
+                    &quot;updated_at&quot;: &quot;2022-08-30T08:54:19.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 6,
@@ -1611,11 +1611,11 @@ access-control-allow-origin: *
             &quot;phone&quot;: &quot;0956567657&quot;,
             &quot;email&quot;: &quot;customer@customer.com&quot;,
             &quot;profile_url&quot;: null,
+            &quot;tin_number&quot;: null,
+            &quot;document_url&quot;: null,
             &quot;email_verified_at&quot;: &quot;2021-12-30T19:59:40.000000Z&quot;,
-            &quot;two_factor_secret&quot;: null,
-            &quot;two_factor_recovery_codes&quot;: null,
-            &quot;created_at&quot;: &quot;2022-08-25T16:59:49.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-08-25T16:59:49.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-08-30T15:14:48.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-30T15:14:48.000000Z&quot;,
             &quot;products&quot;: [
                 {
                     &quot;id&quot;: 4,
@@ -1623,10 +1623,10 @@ access-control-allow-origin: *
                     &quot;category_id&quot;: 2,
                     &quot;productname&quot;: &quot;Hoyt White&quot;,
                     &quot;price&quot;: 963,
-                    &quot;count&quot;: 63,
+                    &quot;count&quot;: 62,
                     &quot;description&quot;: &quot;Aspernatur ad exerci&quot;,
                     &quot;status&quot;: &quot;published&quot;,
-                    &quot;ordered_counter&quot;: 21,
+                    &quot;ordered_counter&quot;: 22,
                     &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
@@ -1637,7 +1637,7 @@ access-control-allow-origin: *
                         &quot;xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-28T03:14:48.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-08-28T03:14:48.000000Z&quot;
+                    &quot;updated_at&quot;: &quot;2022-08-29T13:01:13.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 5,
@@ -1645,10 +1645,10 @@ access-control-allow-origin: *
                     &quot;category_id&quot;: 2,
                     &quot;productname&quot;: &quot;Melvin Riley&quot;,
                     &quot;price&quot;: 912,
-                    &quot;count&quot;: 59,
+                    &quot;count&quot;: 57,
                     &quot;description&quot;: &quot;Suscipit doloribus e&quot;,
                     &quot;status&quot;: &quot;published&quot;,
-                    &quot;ordered_counter&quot;: 34,
+                    &quot;ordered_counter&quot;: 36,
                     &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
@@ -1659,21 +1659,21 @@ access-control-allow-origin: *
                         &quot;pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-28T03:17:12.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-08-28T03:17:12.000000Z&quot;
+                    &quot;updated_at&quot;: &quot;2022-08-29T13:01:13.000000Z&quot;
                 }
             ]
         },
         {
             &quot;id&quot;: 4,
-            &quot;fullname&quot;: &quot;Quamar Mercado&quot;,
-            &quot;phone&quot;: &quot;567876&quot;,
-            &quot;email&quot;: &quot;zafuv@mailinator.com&quot;,
+            &quot;fullname&quot;: &quot;nesren&quot;,
+            &quot;phone&quot;: &quot;09567657&quot;,
+            &quot;email&quot;: &quot;nk@laravel.com&quot;,
             &quot;profile_url&quot;: null,
+            &quot;tin_number&quot;: &quot;54545&quot;,
+            &quot;document_url&quot;: &quot;documents/tJ0ZLRX4DDsK4Q86UgLqRXW85oBDtDSA4XsBQ6UK.jpg&quot;,
             &quot;email_verified_at&quot;: null,
-            &quot;two_factor_secret&quot;: null,
-            &quot;two_factor_recovery_codes&quot;: null,
-            &quot;created_at&quot;: &quot;2022-08-28T19:39:25.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-08-28T19:47:27.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-08-30T15:15:22.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-30T15:15:22.000000Z&quot;,
             &quot;products&quot;: []
         }
     ]
@@ -1734,14 +1734,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/product-single/impedit" \
+    --get "http://localhost:8000/api/shop/product-single/quo" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/product-single/impedit"
+    "http://localhost:8000/api/shop/product-single/quo"
 );
 
 const headers = {
@@ -1822,7 +1822,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-shop-product-single--id-"
-               value="impedit"
+               value="quo"
                data-component="url" hidden>
     <br>
 <p>The ID of the product single.</p>
@@ -1842,14 +1842,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/shop/get-sliders" \
+    --get "http://localhost:8000/api/shop/get-sliders" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/shop/get-sliders"
+    "http://localhost:8000/api/shop/get-sliders"
 );
 
 const headers = {
@@ -1961,14 +1961,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/adress/get-countries" \
+    --get "http://localhost:8000/api/adress/get-countries" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/adress/get-countries"
+    "http://localhost:8000/api/adress/get-countries"
 );
 
 const headers = {
@@ -2075,14 +2075,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/adress/get-shippment-adress" \
+    --get "http://localhost:8000/api/adress/get-shippment-adress" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/adress/get-shippment-adress"
+    "http://localhost:8000/api/adress/get-shippment-adress"
 );
 
 const headers = {
@@ -2170,14 +2170,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://aqrabi.com/api/adress/get-supplier-adress" \
+    --get "http://localhost:8000/api/adress/get-supplier-adress" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/adress/get-supplier-adress"
+    "http://localhost:8000/api/adress/get-supplier-adress"
 );
 
 const headers = {
@@ -2265,14 +2265,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://aqrabi.com/api/adress/store-shippment-adress" \
+    "http://localhost:8000/api/adress/store-shippment-adress" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://aqrabi.com/api/adress/store-shippment-adress"
+    "http://localhost:8000/api/adress/store-shippment-adress"
 );
 
 const headers = {

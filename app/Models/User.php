@@ -69,6 +69,14 @@ class User extends Authenticatable implements HasName, FilamentUser
         } 
         return false;
     }
+    public function hasVerifiedRole($role)
+    {
+        $data = $this->roles()->where('slug', $role)->first();
+        if($data && $data->pivot->status == 'approved'){
+            return true;
+        } 
+        return false;
+    }
     public function hasRoles($roles)
     {
         $roles = $this->roles()->whereIn('slug', $roles)->get();
@@ -76,5 +84,9 @@ class User extends Authenticatable implements HasName, FilamentUser
             return true;
         }
         return false;
+    }
+    public function orders()
+    {
+        return $this->hasMany(\App\Models\OrderDetail::class, 'supplier_id');
     }
 }

@@ -1,5 +1,5 @@
 <h2 <?php echo e($attributes->class([
-    'text-xl font-bold tracking-tight filament-tables-empty-state-heading',
+    'filament-tables-empty-state-heading text-xl font-bold tracking-tight',
     'dark:text-white' => config('tables.dark_mode'),
 ])); ?>>
     <?php echo e($slot); ?>

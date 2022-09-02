@@ -18,7 +18,10 @@ class CategoryResource extends Resource
     protected static ?string $model = Category::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-chip';
-
+    public static function canViewAny(): bool
+    {
+        return auth()->user()->hasVerifiedRole('admin');
+    }
     public static function form(Form $form): Form
     {
         return $form

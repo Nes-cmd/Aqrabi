@@ -24,7 +24,7 @@ class CheckoutComponent extends Component
     }
     public function placeOrder()
     {
-        $carts = Cart::where('user_id', auth()->user()->id)->get();
+        $carts = Cart::with('product')->where('user_id', auth()->user()->id)->get();
         $order = Order::create([
             'user_id' => auth()->user()->id,
             'orderId' => strtoupper(uniqid()),
@@ -33,6 +33,7 @@ class CheckoutComponent extends Component
         foreach($carts as $cart){
             OrderDetail::create([
                 'order_id' => $order->id,
+                'supplier_id' => $cart->product->supplier_id,
                 'product_id' => $cart->product_id,
                 'quantity' => $cart->quantity,
                 'specifications' => $cart->specifications
