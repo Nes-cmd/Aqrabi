@@ -4,6 +4,7 @@ namespace App\Filament\Resources\OrderResource\Widgets;
 
 use Filament\Widgets\LineChartWidget;
 use App\Models\Order;
+use App\Models\OrderDetail;
 use Flowframe\Trend\Trend;
 use Flowframe\Trend\TrendValue;
 
@@ -11,10 +12,10 @@ class OrdersChart extends LineChartWidget
 {
     protected static ?string $heading = 'Orders';
     
-    public static function canView(): bool
-    {
-        return auth()->user()->hasRole('admin'); 
-    }
+    // public static function canView(): bool
+    // {
+    //     return auth()->user()->hasRole('admin'); 
+    // }
     protected function getData(): array
     {
         // $order = Order::all()->map(function($raw){
@@ -42,20 +43,30 @@ class OrdersChart extends LineChartWidget
         //     'labels' => $month,
         //     // 'labels' => ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         // ];
-
-        $data = Trend::model(Order::class)
+        if(auth()->user()->hasVerifiedRole('admin')){
+            $orderTrend = Trend::model(Order::class)
             ->between(
                 start: now()->startOfYear(),
                 end: now()->endOfYear(),
             )
             ->perMonth()
             ->count();
-    
+        }
+        else{
+            $orderTrend = Trend::query(OrderDetail::where('supplier_id', auth()->user()->id)->distinct('order_id'))
+                                ->between(
+                                    start: now()->startOfMonth(),
+                                    end  : now()->endOfMonth()
+                                )
+                                ->perDay()
+                                ->count();
+        }
+        
         return [
             'datasets' => [
                 [
                     'label' => 'Orders',
-                    'data' => $data->map(fn (TrendValue $value) => $value->aggregate),
+                    'data' => $orderTrend->map(fn (TrendValue $value) => $value->aggregate),
                     'backgroundColor' => [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -75,7 +86,7 @@ class OrdersChart extends LineChartWidget
                     'borderWidth' => 2
                 ],
             ],
-            'labels' => $data->map(fn (TrendValue $value) => $value->date),
+            'labels' => $orderTrend->map(fn (TrendValue $value) => $value->date),
         ];
     }
 }

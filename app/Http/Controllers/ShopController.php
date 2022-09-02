@@ -6,12 +6,14 @@ use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\Slider;
-use DB;
 class ShopController extends Controller
 {
     public function index()
     {
         $sliders = Slider::all();
+        // session()->flush();
+        // session()->save();
+        // dd(session()->all());
         return view('customer.index', compact('sliders'));
     }
     public function test()

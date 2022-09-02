@@ -10,11 +10,11 @@ class SearchComponent extends Component
     public $suggestions = [];
     public function updatedQuery()
     {
-        $this->suggestions = \DB::table('products')->where('productname', 'like', '%'.$this->query.'%')->select('id','productname')->get();
+        $this->suggestions = \DB::table('products')->where('productname', 'like', '%'.$this->query.'%')->select('id','productname')->get()->take(5);
     }
     public function search()
     {
-        return redirect('shop/list/search/'.$this->query);
+        return redirect('shop/search/'.$this->query);
     }
     public function render()
     {

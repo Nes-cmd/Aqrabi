@@ -41,15 +41,15 @@
   <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('alert-component')->html();
-} elseif ($_instance->childHasBeenRendered('OaRkJPB')) {
-    $componentId = $_instance->getRenderedChildComponentId('OaRkJPB');
-    $componentTag = $_instance->getRenderedChildComponentTagName('OaRkJPB');
+} elseif ($_instance->childHasBeenRendered('ysg7WWw')) {
+    $componentId = $_instance->getRenderedChildComponentId('ysg7WWw');
+    $componentTag = $_instance->getRenderedChildComponentTagName('ysg7WWw');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('OaRkJPB');
+    $_instance->preserveRenderedChild('ysg7WWw');
 } else {
     $response = \Livewire\Livewire::mount('alert-component');
     $html = $response->html();
-    $_instance->logRenderedChild('OaRkJPB', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('ysg7WWw', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>

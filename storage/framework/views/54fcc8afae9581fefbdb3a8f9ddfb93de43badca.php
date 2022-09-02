@@ -29,21 +29,21 @@
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <!-- product image slider -->
                     <div class="product-slider">
-                        <div data-image="<?php echo e(asset($product->main_photo)); ?>">
+                        <div data-image="<?php echo e(asset('storage/'.$product->main_photo)); ?>">
                             <img class="img-fluid w-100 h-50 image-zoom" src="<?php echo e(asset('storage/'.$product->main_photo)); ?>" alt="product-img" data-zoom="<?php echo e(asset('storage/'.$product->main_photo)); ?>">
                         </div>
                         <?php if(count($product->photos) > 0 ): ?>
-                        <div data-image="<?php echo e(asset($product->photos[0])); ?>">
+                        <div data-image="<?php echo e(asset('storage/'.$product->photos[0])); ?>">
                             <img class="img-fluid w-100 image-zoom" src="<?php echo e(asset('storage/'.$product->photos[0])); ?>" alt="product-img" data-zoom="<?php echo e(asset('storage/'.$product->photos[0])); ?>">
                         </div>
                         <?php endif; ?>
                         <?php if(count($product->photos) > 1 ): ?>
-                        <div data-image="<?php echo e(asset($product->photos[1])); ?>">
+                        <div data-image="<?php echo e(asset('storage/'.$product->photos[1])); ?>">
                             <img class="img-fluid w-100 image-zoom" src="<?php echo e(asset('storage/'.$product->photos[1])); ?>" alt="product-img" data-zoom="<?php echo e(asset('storage/'.$product->photos[1])); ?>">
                         </div>
                         <?php endif; ?>
                         <?php if(count($product->photos) > 2 ): ?>
-                        <div data-image="<?php echo e(asset($product->photos[2])); ?>">
+                        <div data-image="<?php echo e(asset('storage/'.$product->photos[2])); ?>">
                             <img class="img-fluid w-100 image-zoom" src="<?php echo e(asset('storage/'.$product->photos[2])); ?>" alt="product-img" data-zoom="<?php echo e(asset('storage/'.$product->photos[2])); ?>">
                         </div>
                         <?php endif; ?>

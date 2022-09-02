@@ -38,15 +38,15 @@
           <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('search-component')->html();
-} elseif ($_instance->childHasBeenRendered('e8zkiIj')) {
-    $componentId = $_instance->getRenderedChildComponentId('e8zkiIj');
-    $componentTag = $_instance->getRenderedChildComponentTagName('e8zkiIj');
+} elseif ($_instance->childHasBeenRendered('FRkdtJy')) {
+    $componentId = $_instance->getRenderedChildComponentId('FRkdtJy');
+    $componentTag = $_instance->getRenderedChildComponentTagName('FRkdtJy');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('e8zkiIj');
+    $_instance->preserveRenderedChild('FRkdtJy');
 } else {
     $response = \Livewire\Livewire::mount('search-component');
     $html = $response->html();
-    $_instance->logRenderedChild('e8zkiIj', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('FRkdtJy', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
@@ -55,15 +55,15 @@ echo $html;
       <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('cart')->html();
-} elseif ($_instance->childHasBeenRendered('jPW8WGF')) {
-    $componentId = $_instance->getRenderedChildComponentId('jPW8WGF');
-    $componentTag = $_instance->getRenderedChildComponentTagName('jPW8WGF');
+} elseif ($_instance->childHasBeenRendered('ArKKfrE')) {
+    $componentId = $_instance->getRenderedChildComponentId('ArKKfrE');
+    $componentTag = $_instance->getRenderedChildComponentTagName('ArKKfrE');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('jPW8WGF');
+    $_instance->preserveRenderedChild('ArKKfrE');
 } else {
     $response = \Livewire\Livewire::mount('cart');
     $html = $response->html();
-    $_instance->logRenderedChild('jPW8WGF', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('ArKKfrE', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
@@ -80,7 +80,7 @@ echo $html;
             <a class="dropdown-item" href="#">Settings</a>
           </li>
           <li>
-            <a class="dropdown-item" href="#">Logout</a>
+             Logout
           </li>
           <?php endif; ?>
           <?php if(auth()->guard()->guest()): ?>

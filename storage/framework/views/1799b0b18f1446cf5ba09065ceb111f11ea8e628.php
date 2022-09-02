@@ -1,5 +1,5 @@
 <div>
-    <input wire:model="query"  class="search-box" autofocus id="search" type="search" list="suggest" placeholder="Enter Keywords...">
+    <input wire:model="query" wire:keydown.enter="search" class="search-box" autofocus id="search" type="search" list="suggest" placeholder="Enter Keywords...">
     <button wire:click="search" class="search-icon"><i class="ti-search"></i></button>
     <datalist id="suggest">
         <?php $__currentLoopData = $suggestions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $suggestion): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

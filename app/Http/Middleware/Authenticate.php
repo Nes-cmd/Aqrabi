@@ -3,7 +3,8 @@
 namespace App\Http\Middleware;
 
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
-
+use Illuminate\Support\Facades\Redirect;
+use App\Providers\RouteServiceProvider;
 class Authenticate extends Middleware
 {
     /**
@@ -15,6 +16,7 @@ class Authenticate extends Middleware
     protected function redirectTo($request)
     {
         if (! $request->expectsJson()) {
+            Redirect::setIntendedUrl(url()->previous());
             return route('login');
         }
     }

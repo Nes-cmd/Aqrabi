@@ -10,6 +10,11 @@ use Livewire\Component;
 class ShopComponent extends Component
 {
     public $viewType = 'list';
+    public $query;
+    public function mount($query = '%')
+    {
+        $this->query = $query;
+    }
     public function wishlist($id)
     {
         Wishlist::create([
@@ -19,7 +24,7 @@ class ShopComponent extends Component
     }
     public function render()
     {
-        $products = Product::paginate(5);
+        $products = Product::where('productname', 'like', '%'.$this->query.'%')->paginate(5);
         $categories =  Category::all();
         return view('livewire.shop-component', compact('products', 'categories'))
                     ->layout('layouts.customer.app');

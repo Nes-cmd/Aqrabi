@@ -141,9 +141,9 @@ return [
         'register' => [
             Widgets\AccountWidget::class,
             Widgets\FilamentInfoWidget::class,
-            \App\Filament\Resources\UserResource\Widgets\StatsOverview::class,
+            App\Filament\Resources\UserResource\Widgets\StatsOverview::class,
             App\Filament\Resources\OrderResource\Widgets\OrdersChart::class,
-            
+            App\Filament\Resources\OrderResource\Widgets\LatestOrders::class,
         ],
     ],
 

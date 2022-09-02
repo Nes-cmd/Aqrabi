@@ -13,6 +13,7 @@ use App\Http\Livewire\Wishlist;
 
 Route::get('shop/single-product/{id}', SingleProduct::class)->name('shop.single-product');
 Route::get('shop/producs', ShopComponent::class)->name('shop.list');
+Route::get('shop/search/{query?}', ShopComponent::class)->name('shop.search');
 
 Route::middleware('auth')->get('shop/cart-detail', CartDetail::class)->name('shop.cart-detail');
 Route::middleware('auth')->get('shop/checkout', CheckoutComponent::class)->name('shop.checkout');
