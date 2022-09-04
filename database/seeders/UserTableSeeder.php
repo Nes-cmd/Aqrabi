@@ -56,7 +56,5 @@ class UserTableSeeder extends Seeder
         ]);
         $role4 = Role::where('slug', 'operator')->first()->id;
         $user4->roles()->attach($role4);
-
-      
     }
 }

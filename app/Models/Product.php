@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 class Product extends Model
 {
     protected $guarded  = [];
-   
+    protected $casts = ['photos' => 'array'];
     protected function photos(): Attribute
     {
         if(!request()->is('api/*')){
@@ -16,7 +16,7 @@ class Product extends Model
                     get: fn ($value) => json_decode($value)
             );
          }
-        return Attribute::make(
+        return Attribute::make(get:
             function($value){
                 $values = json_decode($value);
                 $index = 0;
