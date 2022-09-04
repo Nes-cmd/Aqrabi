@@ -31,7 +31,7 @@
                     </div>
                     <div class="product-info">
                         <h3 class="h5"><a class="text-color" href="product-single.html">{{$product->productname}}</a></h3>
-                        <span class="h5">{{$product->price}}</span>
+                        <span class="h5">{{$product->price.' ETB'}}</span>
                     </div>
                 </div>
             </div>

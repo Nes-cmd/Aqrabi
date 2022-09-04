@@ -47,6 +47,15 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::loginView(function () {
             return view('auth.login');
         });
+        $this->app->instance(LoginResponse::class, new class implements LoginResponse {
+            public function toResponse($request)
+            {
+                if(auth()->user()->hasRole('admin')){
+                    return redirect('/admin');
+                }
+                return redirect()->intended(RouteServiceProvider::HOME);
+            }
+        });
         Fortify::authenticateUsing(function (Request $request) {
             $user = User::where('phone', $request->phone)->first();
             if ($user &&
@@ -63,15 +72,7 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::loginView(function () {
             return view('auth.login');
         });
-        $this->app->instance(LoginResponse::class, new class implements LoginResponse {
-            public function toResponse($request)
-            {
-                if(auth()->user()->hasRoles(['admin', 'supplier'])){
-                    return redirect('/admin');
-                }
-                return redirect()->intended(RouteServiceProvider::HOME);
-            }
-        });
+        
         
     }
 }

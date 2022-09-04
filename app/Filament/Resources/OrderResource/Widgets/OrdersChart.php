@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\OrderResource\Widgets;
 
+use App\Helper\DashboardDataFecher;
 use Filament\Widgets\LineChartWidget;
 use App\Models\Order;
 use App\Models\OrderDetail;
@@ -18,6 +19,7 @@ class OrdersChart extends LineChartWidget
     // }
     protected function getData(): array
     {
+        $dashboardFecher = new DashboardDataFecher();
         // $order = Order::all()->map(function($raw){
         //     $x = substr($raw->created_at, 0,10);
         //     $raw['created_month'] = $x;
@@ -44,29 +46,17 @@ class OrdersChart extends LineChartWidget
         //     // 'labels' => ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         // ];
         if(auth()->user()->hasVerifiedRole('admin')){
-            $orderTrend = Trend::model(Order::class)
-            ->between(
-                start: now()->startOfYear(),
-                end: now()->endOfYear(),
-            )
-            ->perMonth()
-            ->count();
+            $orderTrend = $dashboardFecher->totalOrderTrend();
         }
         else{
-            $orderTrend = Trend::query(OrderDetail::where('supplier_id', auth()->user()->id)->distinct('order_id'))
-                                ->between(
-                                    start: now()->startOfMonth(),
-                                    end  : now()->endOfMonth()
-                                )
-                                ->perDay()
-                                ->count();
+            $orderTrend = $dashboardFecher->supplierOrderTrend();
         }
         
         return [
             'datasets' => [
                 [
                     'label' => 'Orders',
-                    'data' => $orderTrend->map(fn (TrendValue $value) => $value->aggregate),
+                    'data' => $orderTrend['monthly_data'],
                     'backgroundColor' => [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -86,7 +76,7 @@ class OrdersChart extends LineChartWidget
                     'borderWidth' => 2
                 ],
             ],
-            'labels' => $orderTrend->map(fn (TrendValue $value) => $value->date),
+            'labels' => $orderTrend['label'],
         ];
     }
 }

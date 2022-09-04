@@ -2,7 +2,7 @@ POST http://localhost:8000/api/login HTTP/1.1
 content-type: application/json
 
 {
-    "phone": "0940678725",
+    "phone": "0940678345",
     "password": "password"
 }
 ###
@@ -25,7 +25,6 @@ content-type: application/json
 POST http://localhost:8000/api/customer/add-to-cart HTTP/1.1
 Authorization: Bearer 7|Q9cmtUfappP8xUuVUt1Mhp3XJskGTazKOhwwdvD3
 content-type: application/json
-
 {
     "product_id": "1",
     "quantity":3
@@ -62,7 +61,7 @@ get http://localhost:8000/api/shop/product-group-category HTTP/1.1
 get http://localhost:8000/api/shop/product-group-supplier HTTP/1.1
 
 ###
-get http://localhost:8000/api/shop/product-single/1 HTTP/1.1
+get http://localhost:8000/api/shop/product-single/2 HTTP/1.1
 
 ###
 get http://localhost:8000/api/shop/get-sliders HTTP/1.1
@@ -88,3 +87,6 @@ content-type: application/json
     "city_name": "Addis",
     "addressLine1": "XXXX"
 }
+### Admin
+GET http://localhost:8000/api/supplier/dashboard/customers HTTP/1.1
+Authorization: Bearer 10|MOwKZRfPmsu86D4TH0fiCdmiavflYl6NPPcG98LP

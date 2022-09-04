@@ -89,4 +89,8 @@ class User extends Authenticatable implements HasName, FilamentUser
     {
         return $this->hasMany(\App\Models\OrderDetail::class, 'supplier_id');
     }
+    public function customerOrders()
+    {
+        return $this->hasMany(\App\Models\Order);
+    }
 }

@@ -42,12 +42,7 @@ class ShopController extends Controller
     }
     public function singleProduct($id)
     {
-        $products = Product::where('id', $id)->first();
-        return ['products' => $products];
-    }
-    public function getSliders()
-    {
-        $sliders = Slider::all();
-        return ['sliders' => $sliders];
+        $product = Product::find($id);
+        return ['product' => $product];
     }
 }

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white w-100" id="navbar">
-  <a class="navbar-brand order-2 order-lg-1 col-md-2 text-center text-md-left" href="<?php echo e(route('shop.index')); ?>"><img height="50px" src="<?php echo e(asset('logo.svg')); ?>" alt="logo"></a>
+  <a class="navbar-brand order-2 order-lg-1 col-md-2 text-center text-md-left" href="<?php echo e(route('shop.index')); ?>"><img height="45px" src="<?php echo e(asset('logo.svg')); ?>" alt="logo"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -26,7 +26,7 @@
           <i class="ti-heart"></i> Wishlist
         </a>
       </li>
-     <?php endif; ?>
+      <?php endif; ?>
     </ul>
   </div>
   <div class="order-3 navbar-right-elements">
@@ -38,15 +38,15 @@
           <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('search-component')->html();
-} elseif ($_instance->childHasBeenRendered('FRkdtJy')) {
-    $componentId = $_instance->getRenderedChildComponentId('FRkdtJy');
-    $componentTag = $_instance->getRenderedChildComponentTagName('FRkdtJy');
+} elseif ($_instance->childHasBeenRendered('QXtk7PF')) {
+    $componentId = $_instance->getRenderedChildComponentId('QXtk7PF');
+    $componentTag = $_instance->getRenderedChildComponentTagName('QXtk7PF');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('FRkdtJy');
+    $_instance->preserveRenderedChild('QXtk7PF');
 } else {
     $response = \Livewire\Livewire::mount('search-component');
     $html = $response->html();
-    $_instance->logRenderedChild('FRkdtJy', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('QXtk7PF', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
@@ -55,21 +55,21 @@ echo $html;
       <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('cart')->html();
-} elseif ($_instance->childHasBeenRendered('ArKKfrE')) {
-    $componentId = $_instance->getRenderedChildComponentId('ArKKfrE');
-    $componentTag = $_instance->getRenderedChildComponentTagName('ArKKfrE');
+} elseif ($_instance->childHasBeenRendered('L42HKEP')) {
+    $componentId = $_instance->getRenderedChildComponentId('L42HKEP');
+    $componentTag = $_instance->getRenderedChildComponentTagName('L42HKEP');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('ArKKfrE');
+    $_instance->preserveRenderedChild('L42HKEP');
 } else {
     $response = \Livewire\Livewire::mount('cart');
     $html = $response->html();
-    $_instance->logRenderedChild('ArKKfrE', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('L42HKEP', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
       <div class="search dropdown">
         <a class="hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="40"alt="Img"loading="lazy"/>
+          <img src="<?php echo e(asset('customer/images/user.png')); ?>" class="rounded-circle" height="40" alt="Img" loading="lazy" />
         </a>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
           <?php if(auth()->guard()->check()): ?>
@@ -80,8 +80,15 @@ echo $html;
             <a class="dropdown-item" href="#">Settings</a>
           </li>
           <li>
-             Logout
+            <a class="dropdown-item" href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+              <?php echo e(__('Logout')); ?>
+
+            </a>
           </li>
+          <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
+              <?php echo csrf_field(); ?>
+            </form>
           <?php endif; ?>
           <?php if(auth()->guard()->guest()): ?>
           <li>

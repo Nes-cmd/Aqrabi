@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Api\AdminDashboardController;
+use App\Http\Controllers\Api\SupplierDashboardController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\CartController;
@@ -35,4 +36,22 @@ Route::prefix('adress')->group(function(){
     Route::middleware('auth:sanctum')->get('get-shippment-adress', [AdressController::class, 'getShippmentAdress']);
     Route::middleware('auth:sanctum')->get('get-supplier-adress', [AdressController::class, 'getSupplierAdress']);
     Route::middleware('auth:sanctum')->post('store-shippment-adress', [AdressController::class, 'storeShippmentAdress']);
+});
+
+Route::prefix('admin')->middleware(['auth:sanctum','admin'])->group(function(){
+    Route::get('dashboard/index', [AdminDashboardController::class, 'index']);
+    // Route::get('dashboard/products', [AdminDashboardController::class, 'product']);
+    // Route::get('dashboard/categories', [AdminDashboardController::class, 'category']);
+    Route::get('dashboard/orders', [AdminDashboardController::class, 'order']);
+    // Route::get('dashboard/sliders', [AdminDashboardController::class, 'slider']);
+    Route::get('dashboard/users', [AdminDashboardController::class, 'user']);
+});
+
+Route::prefix('supplier')->middleware(['auth:sanctum','supplier'])->group(function(){
+    Route::get('dashboard/index', [SupplierDashboardController::class, 'index']);
+    // Route::get('dashboard/products', [SupplierDashboardController::class, 'product']);
+    // Route::get('dashboard/categories', [SupplierDashboardController::class, 'category']);
+    Route::get('dashboard/orders', [SupplierDashboardController::class, 'order']);
+    // Route::get('dashboard/sliders', [SupplierDashboardController::class, 'slider']);
+    Route::get('dashboard/customers', [SupplierDashboardController::class, 'customer']);
 });
