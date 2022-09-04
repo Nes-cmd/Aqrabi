@@ -14,7 +14,7 @@ class Slider extends Model
     {
         if(!request()->is('api/*')){
               return Attribute::make(
-                    get: fn ($value) => json_decode($value)
+                    get: fn ($value) => $value
             );
          }
         return Attribute::make(fn($value) => env('APP_URL').'/storage/'.$value);
