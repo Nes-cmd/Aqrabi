@@ -151,7 +151,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the remove cart.'
-        example: quaerat
+        example: minus
         required: true
         schema:
           type: string
@@ -289,40 +289,40 @@ paths:
                       category_id: 1
                       productname: 'Amy Sutton'
                       price: 64
-                      count: 7
+                      count: 6
                       description: 'Veritatis nostrud ei'
                       status: published
-                      ordered_counter: 45
+                      ordered_counter: 46
                       visiblity: '1'
                       tag: null
                       discount: null
-                      main_photo: fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg
+                      main_photo: 'http://localhost:8000/storage/fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg'
                       photos:
-                        - 8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg
-                        - cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg
-                        - 2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg
+                        - 'http://localhost:8000/storage/8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg'
+                        - 'http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg'
+                        - 'http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg'
                       created_at: '2022-08-25T17:34:36.000000Z'
-                      updated_at: '2022-08-30T08:54:19.000000Z'
+                      updated_at: '2022-09-01T14:53:20.000000Z'
                     -
                       id: 3
                       supplier_id: 2
                       category_id: 2
                       productname: 'Shana Owens'
                       price: 154
-                      count: 41
+                      count: 40
                       description: 'description goes here'
                       status: published
-                      ordered_counter: 34
+                      ordered_counter: 35
                       visiblity: '1'
                       tag: null
                       discount: null
-                      main_photo: KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
+                      main_photo: 'http://localhost:8000/storage/KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
                       photos:
-                        - rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg
-                        - V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
-                        - DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
+                        - 'http://localhost:8000/storage/rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg'
+                        - 'http://localhost:8000/storage/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
+                        - 'http://localhost:8000/storage/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                       created_at: '2022-08-26T18:23:48.000000Z'
-                      updated_at: '2022-08-30T08:54:19.000000Z'
+                      updated_at: '2022-09-01T14:53:20.000000Z'
                     -
                       id: 4
                       supplier_id: 3
@@ -336,11 +336,11 @@ paths:
                       visiblity: '1'
                       tag: null
                       discount: null
-                      main_photo: hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg
+                      main_photo: 'http://localhost:8000/storage/hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg'
                       photos:
-                        - a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg
-                        - 0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg
-                        - xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg
+                        - 'http://localhost:8000/storage/a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg'
+                        - 'http://localhost:8000/storage/0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg'
+                        - 'http://localhost:8000/storage/xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg'
                       created_at: '2022-08-28T03:14:48.000000Z'
                       updated_at: '2022-08-29T13:01:13.000000Z'
                     -
@@ -356,11 +356,11 @@ paths:
                       visiblity: '1'
                       tag: null
                       discount: null
-                      main_photo: 6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg
+                      main_photo: 'http://localhost:8000/storage/6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg'
                       photos:
-                        - oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
-                        - FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
-                        - pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg
+                        - 'http://localhost:8000/storage/oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
+                        - 'http://localhost:8000/storage/FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
+                        - 'http://localhost:8000/storage/pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg'
                       created_at: '2022-08-28T03:17:12.000000Z'
                       updated_at: '2022-08-29T13:01:13.000000Z'
                     -
@@ -376,11 +376,11 @@ paths:
                       visiblity: '0'
                       tag: null
                       discount: null
-                      main_photo: yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg
+                      main_photo: 'http://localhost:8000/storage/yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg'
                       photos:
-                        - dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg
-                        - lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg
-                        - U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
+                        - 'http://localhost:8000/storage/dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg'
+                        - 'http://localhost:8000/storage/lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg'
+                        - 'http://localhost:8000/storage/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                       created_at: '2022-08-28T03:18:33.000000Z'
                       updated_at: '2022-08-28T03:18:33.000000Z'
                 properties:
@@ -393,40 +393,40 @@ paths:
                         category_id: 1
                         productname: 'Amy Sutton'
                         price: 64
-                        count: 7
+                        count: 6
                         description: 'Veritatis nostrud ei'
                         status: published
-                        ordered_counter: 45
+                        ordered_counter: 46
                         visiblity: '1'
                         tag: null
                         discount: null
-                        main_photo: fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg
+                        main_photo: 'http://localhost:8000/storage/fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg'
                         photos:
-                          - 8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg
-                          - cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg
-                          - 2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg
+                          - 'http://localhost:8000/storage/8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg'
+                          - 'http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg'
+                          - 'http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg'
                         created_at: '2022-08-25T17:34:36.000000Z'
-                        updated_at: '2022-08-30T08:54:19.000000Z'
+                        updated_at: '2022-09-01T14:53:20.000000Z'
                       -
                         id: 3
                         supplier_id: 2
                         category_id: 2
                         productname: 'Shana Owens'
                         price: 154
-                        count: 41
+                        count: 40
                         description: 'description goes here'
                         status: published
-                        ordered_counter: 34
+                        ordered_counter: 35
                         visiblity: '1'
                         tag: null
                         discount: null
-                        main_photo: KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
+                        main_photo: 'http://localhost:8000/storage/KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
                         photos:
-                          - rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg
-                          - V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
-                          - DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
+                          - 'http://localhost:8000/storage/rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg'
+                          - 'http://localhost:8000/storage/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
+                          - 'http://localhost:8000/storage/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                         created_at: '2022-08-26T18:23:48.000000Z'
-                        updated_at: '2022-08-30T08:54:19.000000Z'
+                        updated_at: '2022-09-01T14:53:20.000000Z'
                       -
                         id: 4
                         supplier_id: 3
@@ -440,11 +440,11 @@ paths:
                         visiblity: '1'
                         tag: null
                         discount: null
-                        main_photo: hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg
+                        main_photo: 'http://localhost:8000/storage/hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg'
                         photos:
-                          - a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg
-                          - 0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg
-                          - xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg
+                          - 'http://localhost:8000/storage/a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg'
+                          - 'http://localhost:8000/storage/0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg'
+                          - 'http://localhost:8000/storage/xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg'
                         created_at: '2022-08-28T03:14:48.000000Z'
                         updated_at: '2022-08-29T13:01:13.000000Z'
                       -
@@ -460,11 +460,11 @@ paths:
                         visiblity: '1'
                         tag: null
                         discount: null
-                        main_photo: 6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg
+                        main_photo: 'http://localhost:8000/storage/6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg'
                         photos:
-                          - oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
-                          - FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
-                          - pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg
+                          - 'http://localhost:8000/storage/oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
+                          - 'http://localhost:8000/storage/FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
+                          - 'http://localhost:8000/storage/pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg'
                         created_at: '2022-08-28T03:17:12.000000Z'
                         updated_at: '2022-08-29T13:01:13.000000Z'
                       -
@@ -480,11 +480,11 @@ paths:
                         visiblity: '0'
                         tag: null
                         discount: null
-                        main_photo: yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg
+                        main_photo: 'http://localhost:8000/storage/yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg'
                         photos:
-                          - dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg
-                          - lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg
-                          - U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
+                          - 'http://localhost:8000/storage/dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg'
+                          - 'http://localhost:8000/storage/lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg'
+                          - 'http://localhost:8000/storage/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                         created_at: '2022-08-28T03:18:33.000000Z'
                         updated_at: '2022-08-28T03:18:33.000000Z'
                     items:
@@ -532,7 +532,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product by category.'
-        example: corporis
+        example: quos
         required: true
         schema:
           type: string
@@ -576,7 +576,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product by supplier.'
-        example: sit
+        example: suscipit
         required: true
         schema:
           type: string
@@ -622,20 +622,20 @@ paths:
                           category_id: 1
                           productname: 'Amy Sutton'
                           price: 64
-                          count: 7
+                          count: 6
                           description: 'Veritatis nostrud ei'
                           status: published
-                          ordered_counter: 45
+                          ordered_counter: 46
                           visiblity: '1'
                           tag: null
                           discount: null
-                          main_photo: fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg
+                          main_photo: 'http://localhost:8000/storage/fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg'
                           photos:
-                            - 8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg
-                            - cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg
-                            - 2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg
+                            - 'http://localhost:8000/storage/8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg'
+                            - 'http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg'
+                            - 'http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg'
                           created_at: '2022-08-25T17:34:36.000000Z'
-                          updated_at: '2022-08-30T08:54:19.000000Z'
+                          updated_at: '2022-09-01T14:53:20.000000Z'
                     -
                       id: 2
                       name: 'Baker Jacobson'
@@ -650,20 +650,20 @@ paths:
                           category_id: 2
                           productname: 'Shana Owens'
                           price: 154
-                          count: 41
+                          count: 40
                           description: 'description goes here'
                           status: published
-                          ordered_counter: 34
+                          ordered_counter: 35
                           visiblity: '1'
                           tag: null
                           discount: null
-                          main_photo: KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
+                          main_photo: 'http://localhost:8000/storage/KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
                           photos:
-                            - rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg
-                            - V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
-                            - DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
+                            - 'http://localhost:8000/storage/rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg'
+                            - 'http://localhost:8000/storage/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
+                            - 'http://localhost:8000/storage/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                           created_at: '2022-08-26T18:23:48.000000Z'
-                          updated_at: '2022-08-30T08:54:19.000000Z'
+                          updated_at: '2022-09-01T14:53:20.000000Z'
                         -
                           id: 4
                           supplier_id: 3
@@ -677,11 +677,11 @@ paths:
                           visiblity: '1'
                           tag: null
                           discount: null
-                          main_photo: hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg
+                          main_photo: 'http://localhost:8000/storage/hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg'
                           photos:
-                            - a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg
-                            - 0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg
-                            - xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg
+                            - 'http://localhost:8000/storage/a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg'
+                            - 'http://localhost:8000/storage/0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg'
+                            - 'http://localhost:8000/storage/xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg'
                           created_at: '2022-08-28T03:14:48.000000Z'
                           updated_at: '2022-08-29T13:01:13.000000Z'
                         -
@@ -697,11 +697,11 @@ paths:
                           visiblity: '1'
                           tag: null
                           discount: null
-                          main_photo: 6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg
+                          main_photo: 'http://localhost:8000/storage/6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg'
                           photos:
-                            - oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
-                            - FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
-                            - pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg
+                            - 'http://localhost:8000/storage/oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
+                            - 'http://localhost:8000/storage/FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
+                            - 'http://localhost:8000/storage/pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg'
                           created_at: '2022-08-28T03:17:12.000000Z'
                           updated_at: '2022-08-29T13:01:13.000000Z'
                         -
@@ -717,11 +717,11 @@ paths:
                           visiblity: '0'
                           tag: null
                           discount: null
-                          main_photo: yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg
+                          main_photo: 'http://localhost:8000/storage/yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg'
                           photos:
-                            - dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg
-                            - lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg
-                            - U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
+                            - 'http://localhost:8000/storage/dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg'
+                            - 'http://localhost:8000/storage/lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg'
+                            - 'http://localhost:8000/storage/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                           created_at: '2022-08-28T03:18:33.000000Z'
                           updated_at: '2022-08-28T03:18:33.000000Z'
                 properties:
@@ -742,20 +742,20 @@ paths:
                             category_id: 1
                             productname: 'Amy Sutton'
                             price: 64
-                            count: 7
+                            count: 6
                             description: 'Veritatis nostrud ei'
                             status: published
-                            ordered_counter: 45
+                            ordered_counter: 46
                             visiblity: '1'
                             tag: null
                             discount: null
-                            main_photo: fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg
+                            main_photo: 'http://localhost:8000/storage/fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg'
                             photos:
-                              - 8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg
-                              - cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg
-                              - 2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg
+                              - 'http://localhost:8000/storage/8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg'
+                              - 'http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg'
+                              - 'http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg'
                             created_at: '2022-08-25T17:34:36.000000Z'
-                            updated_at: '2022-08-30T08:54:19.000000Z'
+                            updated_at: '2022-09-01T14:53:20.000000Z'
                       -
                         id: 2
                         name: 'Baker Jacobson'
@@ -770,20 +770,20 @@ paths:
                             category_id: 2
                             productname: 'Shana Owens'
                             price: 154
-                            count: 41
+                            count: 40
                             description: 'description goes here'
                             status: published
-                            ordered_counter: 34
+                            ordered_counter: 35
                             visiblity: '1'
                             tag: null
                             discount: null
-                            main_photo: KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
+                            main_photo: 'http://localhost:8000/storage/KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
                             photos:
-                              - rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg
-                              - V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
-                              - DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
+                              - 'http://localhost:8000/storage/rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg'
+                              - 'http://localhost:8000/storage/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
+                              - 'http://localhost:8000/storage/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                             created_at: '2022-08-26T18:23:48.000000Z'
-                            updated_at: '2022-08-30T08:54:19.000000Z'
+                            updated_at: '2022-09-01T14:53:20.000000Z'
                           -
                             id: 4
                             supplier_id: 3
@@ -797,11 +797,11 @@ paths:
                             visiblity: '1'
                             tag: null
                             discount: null
-                            main_photo: hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg
+                            main_photo: 'http://localhost:8000/storage/hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg'
                             photos:
-                              - a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg
-                              - 0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg
-                              - xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg
+                              - 'http://localhost:8000/storage/a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg'
+                              - 'http://localhost:8000/storage/0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg'
+                              - 'http://localhost:8000/storage/xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg'
                             created_at: '2022-08-28T03:14:48.000000Z'
                             updated_at: '2022-08-29T13:01:13.000000Z'
                           -
@@ -817,11 +817,11 @@ paths:
                             visiblity: '1'
                             tag: null
                             discount: null
-                            main_photo: 6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg
+                            main_photo: 'http://localhost:8000/storage/6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg'
                             photos:
-                              - oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
-                              - FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
-                              - pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg
+                              - 'http://localhost:8000/storage/oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
+                              - 'http://localhost:8000/storage/FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
+                              - 'http://localhost:8000/storage/pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg'
                             created_at: '2022-08-28T03:17:12.000000Z'
                             updated_at: '2022-08-29T13:01:13.000000Z'
                           -
@@ -837,11 +837,11 @@ paths:
                             visiblity: '0'
                             tag: null
                             discount: null
-                            main_photo: yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg
+                            main_photo: 'http://localhost:8000/storage/yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg'
                             photos:
-                              - dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg
-                              - lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg
-                              - U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
+                              - 'http://localhost:8000/storage/dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg'
+                              - 'http://localhost:8000/storage/lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg'
+                              - 'http://localhost:8000/storage/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                             created_at: '2022-08-28T03:18:33.000000Z'
                             updated_at: '2022-08-28T03:18:33.000000Z'
                     items:
@@ -907,40 +907,40 @@ paths:
                           category_id: 1
                           productname: 'Amy Sutton'
                           price: 64
-                          count: 7
+                          count: 6
                           description: 'Veritatis nostrud ei'
                           status: published
-                          ordered_counter: 45
+                          ordered_counter: 46
                           visiblity: '1'
                           tag: null
                           discount: null
-                          main_photo: fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg
+                          main_photo: 'http://localhost:8000/storage/fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg'
                           photos:
-                            - 8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg
-                            - cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg
-                            - 2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg
+                            - 'http://localhost:8000/storage/8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg'
+                            - 'http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg'
+                            - 'http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg'
                           created_at: '2022-08-25T17:34:36.000000Z'
-                          updated_at: '2022-08-30T08:54:19.000000Z'
+                          updated_at: '2022-09-01T14:53:20.000000Z'
                         -
                           id: 3
                           supplier_id: 2
                           category_id: 2
                           productname: 'Shana Owens'
                           price: 154
-                          count: 41
+                          count: 40
                           description: 'description goes here'
                           status: published
-                          ordered_counter: 34
+                          ordered_counter: 35
                           visiblity: '1'
                           tag: null
                           discount: null
-                          main_photo: KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
+                          main_photo: 'http://localhost:8000/storage/KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
                           photos:
-                            - rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg
-                            - V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
-                            - DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
+                            - 'http://localhost:8000/storage/rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg'
+                            - 'http://localhost:8000/storage/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
+                            - 'http://localhost:8000/storage/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                           created_at: '2022-08-26T18:23:48.000000Z'
-                          updated_at: '2022-08-30T08:54:19.000000Z'
+                          updated_at: '2022-09-01T14:53:20.000000Z'
                         -
                           id: 6
                           supplier_id: 2
@@ -954,11 +954,11 @@ paths:
                           visiblity: '0'
                           tag: null
                           discount: null
-                          main_photo: yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg
+                          main_photo: 'http://localhost:8000/storage/yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg'
                           photos:
-                            - dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg
-                            - lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg
-                            - U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
+                            - 'http://localhost:8000/storage/dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg'
+                            - 'http://localhost:8000/storage/lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg'
+                            - 'http://localhost:8000/storage/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                           created_at: '2022-08-28T03:18:33.000000Z'
                           updated_at: '2022-08-28T03:18:33.000000Z'
                     -
@@ -986,11 +986,11 @@ paths:
                           visiblity: '1'
                           tag: null
                           discount: null
-                          main_photo: hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg
+                          main_photo: 'http://localhost:8000/storage/hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg'
                           photos:
-                            - a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg
-                            - 0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg
-                            - xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg
+                            - 'http://localhost:8000/storage/a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg'
+                            - 'http://localhost:8000/storage/0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg'
+                            - 'http://localhost:8000/storage/xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg'
                           created_at: '2022-08-28T03:14:48.000000Z'
                           updated_at: '2022-08-29T13:01:13.000000Z'
                         -
@@ -1006,11 +1006,11 @@ paths:
                           visiblity: '1'
                           tag: null
                           discount: null
-                          main_photo: 6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg
+                          main_photo: 'http://localhost:8000/storage/6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg'
                           photos:
-                            - oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
-                            - FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
-                            - pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg
+                            - 'http://localhost:8000/storage/oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
+                            - 'http://localhost:8000/storage/FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
+                            - 'http://localhost:8000/storage/pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg'
                           created_at: '2022-08-28T03:17:12.000000Z'
                           updated_at: '2022-08-29T13:01:13.000000Z'
                     -
@@ -1059,40 +1059,40 @@ paths:
                             category_id: 1
                             productname: 'Amy Sutton'
                             price: 64
-                            count: 7
+                            count: 6
                             description: 'Veritatis nostrud ei'
                             status: published
-                            ordered_counter: 45
+                            ordered_counter: 46
                             visiblity: '1'
                             tag: null
                             discount: null
-                            main_photo: fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg
+                            main_photo: 'http://localhost:8000/storage/fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg'
                             photos:
-                              - 8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg
-                              - cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg
-                              - 2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg
+                              - 'http://localhost:8000/storage/8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg'
+                              - 'http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg'
+                              - 'http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg'
                             created_at: '2022-08-25T17:34:36.000000Z'
-                            updated_at: '2022-08-30T08:54:19.000000Z'
+                            updated_at: '2022-09-01T14:53:20.000000Z'
                           -
                             id: 3
                             supplier_id: 2
                             category_id: 2
                             productname: 'Shana Owens'
                             price: 154
-                            count: 41
+                            count: 40
                             description: 'description goes here'
                             status: published
-                            ordered_counter: 34
+                            ordered_counter: 35
                             visiblity: '1'
                             tag: null
                             discount: null
-                            main_photo: KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
+                            main_photo: 'http://localhost:8000/storage/KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
                             photos:
-                              - rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg
-                              - V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
-                              - DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
+                              - 'http://localhost:8000/storage/rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg'
+                              - 'http://localhost:8000/storage/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
+                              - 'http://localhost:8000/storage/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                             created_at: '2022-08-26T18:23:48.000000Z'
-                            updated_at: '2022-08-30T08:54:19.000000Z'
+                            updated_at: '2022-09-01T14:53:20.000000Z'
                           -
                             id: 6
                             supplier_id: 2
@@ -1106,11 +1106,11 @@ paths:
                             visiblity: '0'
                             tag: null
                             discount: null
-                            main_photo: yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg
+                            main_photo: 'http://localhost:8000/storage/yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg'
                             photos:
-                              - dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg
-                              - lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg
-                              - U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
+                              - 'http://localhost:8000/storage/dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg'
+                              - 'http://localhost:8000/storage/lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg'
+                              - 'http://localhost:8000/storage/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                             created_at: '2022-08-28T03:18:33.000000Z'
                             updated_at: '2022-08-28T03:18:33.000000Z'
                       -
@@ -1138,11 +1138,11 @@ paths:
                             visiblity: '1'
                             tag: null
                             discount: null
-                            main_photo: hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg
+                            main_photo: 'http://localhost:8000/storage/hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg'
                             photos:
-                              - a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg
-                              - 0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg
-                              - xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg
+                              - 'http://localhost:8000/storage/a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg'
+                              - 'http://localhost:8000/storage/0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg'
+                              - 'http://localhost:8000/storage/xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg'
                             created_at: '2022-08-28T03:14:48.000000Z'
                             updated_at: '2022-08-29T13:01:13.000000Z'
                           -
@@ -1158,11 +1158,11 @@ paths:
                             visiblity: '1'
                             tag: null
                             discount: null
-                            main_photo: 6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg
+                            main_photo: 'http://localhost:8000/storage/6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg'
                             photos:
-                              - oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png
-                              - FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg
-                              - pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg
+                              - 'http://localhost:8000/storage/oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
+                              - 'http://localhost:8000/storage/FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
+                              - 'http://localhost:8000/storage/pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg'
                             created_at: '2022-08-28T03:17:12.000000Z'
                             updated_at: '2022-08-29T13:01:13.000000Z'
                       -
@@ -1209,9 +1209,9 @@ paths:
               schema:
                 type: object
                 example:
-                  products: null
+                  product: null
                 properties:
-                  products:
+                  product:
                     type: string
                     example: null
       tags:
@@ -1222,83 +1222,10 @@ paths:
         in: path
         name: id
         description: 'The ID of the product single.'
-        example: quo
+        example: laborum
         required: true
         schema:
           type: string
-  /api/shop/get-sliders:
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  sliders:
-                    -
-                      id: 2
-                      information: 'Laudantium nisi ad '
-                      photo_url: rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg
-                      created_at: '2022-08-27T21:20:12.000000Z'
-                      updated_at: '2022-08-27T21:20:12.000000Z'
-                    -
-                      id: 3
-                      information: 'Rerum voluptatem pe'
-                      photo_url: VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg
-                      created_at: '2022-08-27T21:20:37.000000Z'
-                      updated_at: '2022-08-27T21:20:37.000000Z'
-                    -
-                      id: 4
-                      information: 'Aliqua Aliqua Debi'
-                      photo_url: 3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg
-                      created_at: '2022-08-27T21:20:54.000000Z'
-                      updated_at: '2022-08-27T21:20:54.000000Z'
-                properties:
-                  sliders:
-                    type: array
-                    example:
-                      -
-                        id: 2
-                        information: 'Laudantium nisi ad '
-                        photo_url: rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg
-                        created_at: '2022-08-27T21:20:12.000000Z'
-                        updated_at: '2022-08-27T21:20:12.000000Z'
-                      -
-                        id: 3
-                        information: 'Rerum voluptatem pe'
-                        photo_url: VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg
-                        created_at: '2022-08-27T21:20:37.000000Z'
-                        updated_at: '2022-08-27T21:20:37.000000Z'
-                      -
-                        id: 4
-                        information: 'Aliqua Aliqua Debi'
-                        photo_url: 3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg
-                        created_at: '2022-08-27T21:20:54.000000Z'
-                        updated_at: '2022-08-27T21:20:54.000000Z'
-                    items:
-                      type: object
-      tags:
-        - Endpoints
-      security: []
   /api/adress/get-countries:
     get:
       summary: ''
@@ -1454,6 +1381,289 @@ paths:
           schema:
             type: string
       responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/admin/dashboard/index:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/admin/dashboard/orders:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/admin/dashboard/users:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/supplier/dashboard/index:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/supplier/dashboard/customers:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/supplier/dashboard/orders:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/shop/get-sliders:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  sliders:
+                    -
+                      id: 2
+                      information: 'Laudantium nisi ad '
+                      photo_url: rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg
+                      created_at: '2022-08-27T21:20:12.000000Z'
+                      updated_at: '2022-08-27T21:20:12.000000Z'
+                    -
+                      id: 3
+                      information: 'Rerum voluptatem pe'
+                      photo_url: VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg
+                      created_at: '2022-08-27T21:20:37.000000Z'
+                      updated_at: '2022-08-27T21:20:37.000000Z'
+                    -
+                      id: 4
+                      information: 'Aliqua Aliqua Debi'
+                      photo_url: 3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg
+                      created_at: '2022-08-27T21:20:54.000000Z'
+                      updated_at: '2022-08-27T21:20:54.000000Z'
+                properties:
+                  sliders:
+                    type: array
+                    example:
+                      -
+                        id: 2
+                        information: 'Laudantium nisi ad '
+                        photo_url: rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg
+                        created_at: '2022-08-27T21:20:12.000000Z'
+                        updated_at: '2022-08-27T21:20:12.000000Z'
+                      -
+                        id: 3
+                        information: 'Rerum voluptatem pe'
+                        photo_url: VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg
+                        created_at: '2022-08-27T21:20:37.000000Z'
+                        updated_at: '2022-08-27T21:20:37.000000Z'
+                      -
+                        id: 4
+                        information: 'Aliqua Aliqua Debi'
+                        photo_url: 3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg
+                        created_at: '2022-08-27T21:20:54.000000Z'
+                        updated_at: '2022-08-27T21:20:54.000000Z'
+                    items:
+                      type: object
       tags:
         - Endpoints
       security: []

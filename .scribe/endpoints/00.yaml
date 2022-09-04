@@ -94,7 +94,7 @@ endpoints:
         name: id
         description: 'The ID of the remove cart.'
         required: true
-        example: quaerat
+        example: minus
         type: string
         custom: []
     queryParameters: []
@@ -179,7 +179,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"products":[{"id":2,"supplier_id":2,"category_id":1,"productname":"Amy Sutton","price":64,"count":7,"description":"Veritatis nostrud ei","status":"published","ordered_counter":45,"visiblity":"1","tag":null,"discount":null,"main_photo":"fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg","photos":["8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg","cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg","2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg"],"created_at":"2022-08-25T17:34:36.000000Z","updated_at":"2022-08-30T08:54:19.000000Z"},{"id":3,"supplier_id":2,"category_id":2,"productname":"Shana Owens","price":154,"count":41,"description":"description goes here","status":"published","ordered_counter":34,"visiblity":"1","tag":null,"discount":null,"main_photo":"KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","photos":["rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-26T18:23:48.000000Z","updated_at":"2022-08-30T08:54:19.000000Z"},{"id":4,"supplier_id":3,"category_id":2,"productname":"Hoyt White","price":963,"count":62,"description":"Aspernatur ad exerci","status":"published","ordered_counter":22,"visiblity":"1","tag":null,"discount":null,"main_photo":"hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg","photos":["a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg","0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg","xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg"],"created_at":"2022-08-28T03:14:48.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":5,"supplier_id":3,"category_id":2,"productname":"Melvin Riley","price":912,"count":57,"description":"Suscipit doloribus e","status":"published","ordered_counter":36,"visiblity":"1","tag":null,"discount":null,"main_photo":"6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg","photos":["oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg","pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg"],"created_at":"2022-08-28T03:17:12.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":6,"supplier_id":2,"category_id":2,"productname":"Theodore Delacruz","price":283,"count":55,"description":"hgf","status":"published","ordered_counter":55,"visiblity":"0","tag":null,"discount":null,"main_photo":"yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","photos":["dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-28T03:18:33.000000Z","updated_at":"2022-08-28T03:18:33.000000Z"}]}'
+        content: '{"products":[{"id":2,"supplier_id":2,"category_id":1,"productname":"Amy Sutton","price":64,"count":6,"description":"Veritatis nostrud ei","status":"published","ordered_counter":46,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg"],"created_at":"2022-08-25T17:34:36.000000Z","updated_at":"2022-09-01T14:53:20.000000Z"},{"id":3,"supplier_id":2,"category_id":2,"productname":"Shana Owens","price":154,"count":40,"description":"description goes here","status":"published","ordered_counter":35,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","photos":["http:\/\/localhost:8000\/storage\/rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","http:\/\/localhost:8000\/storage\/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-26T18:23:48.000000Z","updated_at":"2022-09-01T14:53:20.000000Z"},{"id":4,"supplier_id":3,"category_id":2,"productname":"Hoyt White","price":963,"count":62,"description":"Aspernatur ad exerci","status":"published","ordered_counter":22,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg"],"created_at":"2022-08-28T03:14:48.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":5,"supplier_id":3,"category_id":2,"productname":"Melvin Riley","price":912,"count":57,"description":"Suscipit doloribus e","status":"published","ordered_counter":36,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","http:\/\/localhost:8000\/storage\/FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg"],"created_at":"2022-08-28T03:17:12.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":6,"supplier_id":2,"category_id":2,"productname":"Theodore Delacruz","price":283,"count":55,"description":"hgf","status":"published","ordered_counter":55,"visiblity":"0","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-28T03:18:33.000000Z","updated_at":"2022-08-28T03:18:33.000000Z"}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -205,7 +205,7 @@ endpoints:
         name: id
         description: 'The ID of the product by category.'
         required: true
-        example: corporis
+        example: quos
         type: string
         custom: []
     queryParameters: []
@@ -239,7 +239,7 @@ endpoints:
         name: id
         description: 'The ID of the product by supplier.'
         required: true
-        example: sit
+        example: suscipit
         type: string
         custom: []
     queryParameters: []
@@ -274,7 +274,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"products":[{"id":1,"name":"Kenyon Rodriquez","description":"Mollit numquam et cu","visibility":"public","created_at":"2022-08-25T17:32:29.000000Z","updated_at":"2022-08-25T17:32:29.000000Z","products":[{"id":2,"supplier_id":2,"category_id":1,"productname":"Amy Sutton","price":64,"count":7,"description":"Veritatis nostrud ei","status":"published","ordered_counter":45,"visiblity":"1","tag":null,"discount":null,"main_photo":"fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg","photos":["8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg","cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg","2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg"],"created_at":"2022-08-25T17:34:36.000000Z","updated_at":"2022-08-30T08:54:19.000000Z"}]},{"id":2,"name":"Baker Jacobson","description":"Dolore voluptate nem","visibility":"public","created_at":"2022-08-25T17:32:42.000000Z","updated_at":"2022-08-25T17:32:42.000000Z","products":[{"id":3,"supplier_id":2,"category_id":2,"productname":"Shana Owens","price":154,"count":41,"description":"description goes here","status":"published","ordered_counter":34,"visiblity":"1","tag":null,"discount":null,"main_photo":"KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","photos":["rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-26T18:23:48.000000Z","updated_at":"2022-08-30T08:54:19.000000Z"},{"id":4,"supplier_id":3,"category_id":2,"productname":"Hoyt White","price":963,"count":62,"description":"Aspernatur ad exerci","status":"published","ordered_counter":22,"visiblity":"1","tag":null,"discount":null,"main_photo":"hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg","photos":["a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg","0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg","xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg"],"created_at":"2022-08-28T03:14:48.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":5,"supplier_id":3,"category_id":2,"productname":"Melvin Riley","price":912,"count":57,"description":"Suscipit doloribus e","status":"published","ordered_counter":36,"visiblity":"1","tag":null,"discount":null,"main_photo":"6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg","photos":["oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg","pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg"],"created_at":"2022-08-28T03:17:12.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":6,"supplier_id":2,"category_id":2,"productname":"Theodore Delacruz","price":283,"count":55,"description":"hgf","status":"published","ordered_counter":55,"visiblity":"0","tag":null,"discount":null,"main_photo":"yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","photos":["dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-28T03:18:33.000000Z","updated_at":"2022-08-28T03:18:33.000000Z"}]}]}'
+        content: '{"products":[{"id":1,"name":"Kenyon Rodriquez","description":"Mollit numquam et cu","visibility":"public","created_at":"2022-08-25T17:32:29.000000Z","updated_at":"2022-08-25T17:32:29.000000Z","products":[{"id":2,"supplier_id":2,"category_id":1,"productname":"Amy Sutton","price":64,"count":6,"description":"Veritatis nostrud ei","status":"published","ordered_counter":46,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg"],"created_at":"2022-08-25T17:34:36.000000Z","updated_at":"2022-09-01T14:53:20.000000Z"}]},{"id":2,"name":"Baker Jacobson","description":"Dolore voluptate nem","visibility":"public","created_at":"2022-08-25T17:32:42.000000Z","updated_at":"2022-08-25T17:32:42.000000Z","products":[{"id":3,"supplier_id":2,"category_id":2,"productname":"Shana Owens","price":154,"count":40,"description":"description goes here","status":"published","ordered_counter":35,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","photos":["http:\/\/localhost:8000\/storage\/rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","http:\/\/localhost:8000\/storage\/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-26T18:23:48.000000Z","updated_at":"2022-09-01T14:53:20.000000Z"},{"id":4,"supplier_id":3,"category_id":2,"productname":"Hoyt White","price":963,"count":62,"description":"Aspernatur ad exerci","status":"published","ordered_counter":22,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg"],"created_at":"2022-08-28T03:14:48.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":5,"supplier_id":3,"category_id":2,"productname":"Melvin Riley","price":912,"count":57,"description":"Suscipit doloribus e","status":"published","ordered_counter":36,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","http:\/\/localhost:8000\/storage\/FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg"],"created_at":"2022-08-28T03:17:12.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":6,"supplier_id":2,"category_id":2,"productname":"Theodore Delacruz","price":283,"count":55,"description":"hgf","status":"published","ordered_counter":55,"visiblity":"0","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-28T03:18:33.000000Z","updated_at":"2022-08-28T03:18:33.000000Z"}]}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -301,7 +301,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"products":[{"id":1,"fullname":"Admin","phone":"0940678725","email":"admin@admin.com","profile_url":null,"tin_number":null,"document_url":null,"email_verified_at":"2021-12-30T19:59:40.000000Z","created_at":"2022-08-30T15:14:46.000000Z","updated_at":"2022-08-30T15:14:46.000000Z","products":[]},{"id":2,"fullname":"Supplier man","phone":"0940678345","email":"supplier@supplier.com","profile_url":null,"tin_number":null,"document_url":null,"email_verified_at":"2021-12-30T19:59:40.000000Z","created_at":"2022-08-30T15:14:47.000000Z","updated_at":"2022-08-30T15:14:47.000000Z","products":[{"id":2,"supplier_id":2,"category_id":1,"productname":"Amy Sutton","price":64,"count":7,"description":"Veritatis nostrud ei","status":"published","ordered_counter":45,"visiblity":"1","tag":null,"discount":null,"main_photo":"fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg","photos":["8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg","cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg","2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg"],"created_at":"2022-08-25T17:34:36.000000Z","updated_at":"2022-08-30T08:54:19.000000Z"},{"id":3,"supplier_id":2,"category_id":2,"productname":"Shana Owens","price":154,"count":41,"description":"description goes here","status":"published","ordered_counter":34,"visiblity":"1","tag":null,"discount":null,"main_photo":"KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","photos":["rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-26T18:23:48.000000Z","updated_at":"2022-08-30T08:54:19.000000Z"},{"id":6,"supplier_id":2,"category_id":2,"productname":"Theodore Delacruz","price":283,"count":55,"description":"hgf","status":"published","ordered_counter":55,"visiblity":"0","tag":null,"discount":null,"main_photo":"yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","photos":["dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-28T03:18:33.000000Z","updated_at":"2022-08-28T03:18:33.000000Z"}]},{"id":3,"fullname":"Some Customer","phone":"0956567657","email":"customer@customer.com","profile_url":null,"tin_number":null,"document_url":null,"email_verified_at":"2021-12-30T19:59:40.000000Z","created_at":"2022-08-30T15:14:48.000000Z","updated_at":"2022-08-30T15:14:48.000000Z","products":[{"id":4,"supplier_id":3,"category_id":2,"productname":"Hoyt White","price":963,"count":62,"description":"Aspernatur ad exerci","status":"published","ordered_counter":22,"visiblity":"1","tag":null,"discount":null,"main_photo":"hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg","photos":["a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg","0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg","xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg"],"created_at":"2022-08-28T03:14:48.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":5,"supplier_id":3,"category_id":2,"productname":"Melvin Riley","price":912,"count":57,"description":"Suscipit doloribus e","status":"published","ordered_counter":36,"visiblity":"1","tag":null,"discount":null,"main_photo":"6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg","photos":["oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg","pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg"],"created_at":"2022-08-28T03:17:12.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"}]},{"id":4,"fullname":"nesren","phone":"09567657","email":"nk@laravel.com","profile_url":null,"tin_number":"54545","document_url":"documents\/tJ0ZLRX4DDsK4Q86UgLqRXW85oBDtDSA4XsBQ6UK.jpg","email_verified_at":null,"created_at":"2022-08-30T15:15:22.000000Z","updated_at":"2022-08-30T15:15:22.000000Z","products":[]}]}'
+        content: '{"products":[{"id":1,"fullname":"Admin","phone":"0940678725","email":"admin@admin.com","profile_url":null,"tin_number":null,"document_url":null,"email_verified_at":"2021-12-30T19:59:40.000000Z","created_at":"2022-08-30T15:14:46.000000Z","updated_at":"2022-08-30T15:14:46.000000Z","products":[]},{"id":2,"fullname":"Supplier man","phone":"0940678345","email":"supplier@supplier.com","profile_url":null,"tin_number":null,"document_url":null,"email_verified_at":"2021-12-30T19:59:40.000000Z","created_at":"2022-08-30T15:14:47.000000Z","updated_at":"2022-08-30T15:14:47.000000Z","products":[{"id":2,"supplier_id":2,"category_id":1,"productname":"Amy Sutton","price":64,"count":6,"description":"Veritatis nostrud ei","status":"published","ordered_counter":46,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg"],"created_at":"2022-08-25T17:34:36.000000Z","updated_at":"2022-09-01T14:53:20.000000Z"},{"id":3,"supplier_id":2,"category_id":2,"productname":"Shana Owens","price":154,"count":40,"description":"description goes here","status":"published","ordered_counter":35,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","photos":["http:\/\/localhost:8000\/storage\/rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","http:\/\/localhost:8000\/storage\/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-26T18:23:48.000000Z","updated_at":"2022-09-01T14:53:20.000000Z"},{"id":6,"supplier_id":2,"category_id":2,"productname":"Theodore Delacruz","price":283,"count":55,"description":"hgf","status":"published","ordered_counter":55,"visiblity":"0","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-28T03:18:33.000000Z","updated_at":"2022-08-28T03:18:33.000000Z"}]},{"id":3,"fullname":"Some Customer","phone":"0956567657","email":"customer@customer.com","profile_url":null,"tin_number":null,"document_url":null,"email_verified_at":"2021-12-30T19:59:40.000000Z","created_at":"2022-08-30T15:14:48.000000Z","updated_at":"2022-08-30T15:14:48.000000Z","products":[{"id":4,"supplier_id":3,"category_id":2,"productname":"Hoyt White","price":963,"count":62,"description":"Aspernatur ad exerci","status":"published","ordered_counter":22,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg"],"created_at":"2022-08-28T03:14:48.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":5,"supplier_id":3,"category_id":2,"productname":"Melvin Riley","price":912,"count":57,"description":"Suscipit doloribus e","status":"published","ordered_counter":36,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","http:\/\/localhost:8000\/storage\/FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg"],"created_at":"2022-08-28T03:17:12.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"}]},{"id":4,"fullname":"nesren","phone":"09567657","email":"nk@laravel.com","profile_url":null,"tin_number":"54545","document_url":"documents\/tJ0ZLRX4DDsK4Q86UgLqRXW85oBDtDSA4XsBQ6UK.jpg","email_verified_at":null,"created_at":"2022-08-30T15:15:22.000000Z","updated_at":"2022-08-30T15:15:22.000000Z","products":[]}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -327,7 +327,7 @@ endpoints:
         name: id
         description: 'The ID of the product single.'
         required: true
-        example: quo
+        example: laborum
         type: string
         custom: []
     queryParameters: []
@@ -335,39 +335,12 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"products":null}'
+        content: '{"product":null}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
           x-ratelimit-remaining: '53'
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: api/shop/get-sliders
-    metadata:
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"sliders":[{"id":2,"information":"Laudantium nisi ad ","photo_url":"rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg","created_at":"2022-08-27T21:20:12.000000Z","updated_at":"2022-08-27T21:20:12.000000Z"},{"id":3,"information":"Rerum voluptatem pe","photo_url":"VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg","created_at":"2022-08-27T21:20:37.000000Z","updated_at":"2022-08-27T21:20:37.000000Z"},{"id":4,"information":"Aliqua Aliqua Debi","photo_url":"3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg","created_at":"2022-08-27T21:20:54.000000Z","updated_at":"2022-08-27T21:20:54.000000Z"}]}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '52'
           access-control-allow-origin: '*'
         description: null
     responseFields: []
@@ -464,4 +437,181 @@ endpoints:
     queryParameters: []
     bodyParameters: []
     responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/dashboard/index
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/dashboard/orders
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/dashboard/users
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/supplier/dashboard/index
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/supplier/dashboard/customers
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/supplier/dashboard/orders
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/shop/get-sliders
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"sliders":[{"id":2,"information":"Laudantium nisi ad ","photo_url":"rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg","created_at":"2022-08-27T21:20:12.000000Z","updated_at":"2022-08-27T21:20:12.000000Z"},{"id":3,"information":"Rerum voluptatem pe","photo_url":"VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg","created_at":"2022-08-27T21:20:37.000000Z","updated_at":"2022-08-27T21:20:37.000000Z"},{"id":4,"information":"Aliqua Aliqua Debi","photo_url":"3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg","created_at":"2022-08-27T21:20:54.000000Z","updated_at":"2022-08-27T21:20:54.000000Z"}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '52'
+          access-control-allow-origin: '*'
+        description: null
     responseFields: []

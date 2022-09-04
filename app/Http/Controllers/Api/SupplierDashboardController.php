@@ -17,7 +17,7 @@ class SupplierDashboardController extends Controller
         $data['supplier_products_trend'] = $dataFetch->supplierProductTrend();
         return $data;
     }
-    public function orders()
+    public function order()
     {
         $orders = Order::with(['ordersDetail' => function($query){
             $query->where('supplier_id', auth()->id());

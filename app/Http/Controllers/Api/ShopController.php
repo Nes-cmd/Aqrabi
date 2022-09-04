@@ -45,4 +45,9 @@ class ShopController extends Controller
         $product = Product::find($id);
         return ['product' => $product];
     }
+    public function getSliders()
+    {
+        $sliders = Slider::all();
+        return ['sliders' => $sliders];
+    }
 }

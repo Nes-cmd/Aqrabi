@@ -113,9 +113,6 @@
                                     <li class="tocify-item level-2" data-unique="endpoints-GETapi-shop-product-single--id-">
                         <a href="#endpoints-GETapi-shop-product-single--id-">GET api/shop/product-single/{id}</a>
                     </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-shop-get-sliders">
-                        <a href="#endpoints-GETapi-shop-get-sliders">GET api/shop/get-sliders</a>
-                    </li>
                                     <li class="tocify-item level-2" data-unique="endpoints-GETapi-adress-get-countries">
                         <a href="#endpoints-GETapi-adress-get-countries">GET api/adress/get-countries</a>
                     </li>
@@ -127,6 +124,27 @@
                     </li>
                                     <li class="tocify-item level-2" data-unique="endpoints-POSTapi-adress-store-shippment-adress">
                         <a href="#endpoints-POSTapi-adress-store-shippment-adress">POST api/adress/store-shippment-adress</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-admin-dashboard-index">
+                        <a href="#endpoints-GETapi-admin-dashboard-index">GET api/admin/dashboard/index</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-admin-dashboard-orders">
+                        <a href="#endpoints-GETapi-admin-dashboard-orders">GET api/admin/dashboard/orders</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-admin-dashboard-users">
+                        <a href="#endpoints-GETapi-admin-dashboard-users">GET api/admin/dashboard/users</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-supplier-dashboard-index">
+                        <a href="#endpoints-GETapi-supplier-dashboard-index">GET api/supplier/dashboard/index</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-supplier-dashboard-customers">
+                        <a href="#endpoints-GETapi-supplier-dashboard-customers">GET api/supplier/dashboard/customers</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-supplier-dashboard-orders">
+                        <a href="#endpoints-GETapi-supplier-dashboard-orders">GET api/supplier/dashboard/orders</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-shop-get-sliders">
+                        <a href="#endpoints-GETapi-shop-get-sliders">GET api/shop/get-sliders</a>
                     </li>
                                                     </ul>
                             </ul>
@@ -140,7 +158,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: September 1 2022</li>
+        <li>Last updated: September 4 2022</li>
     </ul>
 </div>
 
@@ -505,14 +523,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/customer/remove-cart/quaerat" \
+    --get "http://localhost:8000/api/customer/remove-cart/minus" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/customer/remove-cart/quaerat"
+    "http://localhost:8000/api/customer/remove-cart/minus"
 );
 
 const headers = {
@@ -591,7 +609,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-customer-remove-cart--id-"
-               value="quaerat"
+               value="minus"
                data-component="url" hidden>
     <br>
 <p>The ID of the remove cart.</p>
@@ -866,21 +884,21 @@ access-control-allow-origin: *
             &quot;category_id&quot;: 1,
             &quot;productname&quot;: &quot;Amy Sutton&quot;,
             &quot;price&quot;: 64,
-            &quot;count&quot;: 7,
+            &quot;count&quot;: 6,
             &quot;description&quot;: &quot;Veritatis nostrud ei&quot;,
             &quot;status&quot;: &quot;published&quot;,
-            &quot;ordered_counter&quot;: 45,
+            &quot;ordered_counter&quot;: 46,
             &quot;visiblity&quot;: &quot;1&quot;,
             &quot;tag&quot;: null,
             &quot;discount&quot;: null,
-            &quot;main_photo&quot;: &quot;fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg&quot;,
+            &quot;main_photo&quot;: &quot;http://localhost:8000/storage/fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg&quot;,
             &quot;photos&quot;: [
-                &quot;8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg&quot;,
-                &quot;cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg&quot;,
-                &quot;2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg&quot;
+                &quot;http://localhost:8000/storage/8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg&quot;,
+                &quot;http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg&quot;,
+                &quot;http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg&quot;
             ],
             &quot;created_at&quot;: &quot;2022-08-25T17:34:36.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-08-30T08:54:19.000000Z&quot;
+            &quot;updated_at&quot;: &quot;2022-09-01T14:53:20.000000Z&quot;
         },
         {
             &quot;id&quot;: 3,
@@ -888,21 +906,21 @@ access-control-allow-origin: *
             &quot;category_id&quot;: 2,
             &quot;productname&quot;: &quot;Shana Owens&quot;,
             &quot;price&quot;: 154,
-            &quot;count&quot;: 41,
+            &quot;count&quot;: 40,
             &quot;description&quot;: &quot;description goes here&quot;,
             &quot;status&quot;: &quot;published&quot;,
-            &quot;ordered_counter&quot;: 34,
+            &quot;ordered_counter&quot;: 35,
             &quot;visiblity&quot;: &quot;1&quot;,
             &quot;tag&quot;: null,
             &quot;discount&quot;: null,
-            &quot;main_photo&quot;: &quot;KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
+            &quot;main_photo&quot;: &quot;http://localhost:8000/storage/KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
             &quot;photos&quot;: [
-                &quot;rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg&quot;,
-                &quot;V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
-                &quot;DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
+                &quot;http://localhost:8000/storage/rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg&quot;,
+                &quot;http://localhost:8000/storage/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
+                &quot;http://localhost:8000/storage/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
             ],
             &quot;created_at&quot;: &quot;2022-08-26T18:23:48.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-08-30T08:54:19.000000Z&quot;
+            &quot;updated_at&quot;: &quot;2022-09-01T14:53:20.000000Z&quot;
         },
         {
             &quot;id&quot;: 4,
@@ -917,11 +935,11 @@ access-control-allow-origin: *
             &quot;visiblity&quot;: &quot;1&quot;,
             &quot;tag&quot;: null,
             &quot;discount&quot;: null,
-            &quot;main_photo&quot;: &quot;hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg&quot;,
+            &quot;main_photo&quot;: &quot;http://localhost:8000/storage/hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg&quot;,
             &quot;photos&quot;: [
-                &quot;a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg&quot;,
-                &quot;0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg&quot;,
-                &quot;xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg&quot;
+                &quot;http://localhost:8000/storage/a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg&quot;,
+                &quot;http://localhost:8000/storage/0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg&quot;,
+                &quot;http://localhost:8000/storage/xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg&quot;
             ],
             &quot;created_at&quot;: &quot;2022-08-28T03:14:48.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2022-08-29T13:01:13.000000Z&quot;
@@ -939,11 +957,11 @@ access-control-allow-origin: *
             &quot;visiblity&quot;: &quot;1&quot;,
             &quot;tag&quot;: null,
             &quot;discount&quot;: null,
-            &quot;main_photo&quot;: &quot;6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg&quot;,
+            &quot;main_photo&quot;: &quot;http://localhost:8000/storage/6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg&quot;,
             &quot;photos&quot;: [
-                &quot;oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
-                &quot;FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;,
-                &quot;pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg&quot;
+                &quot;http://localhost:8000/storage/oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
+                &quot;http://localhost:8000/storage/FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;,
+                &quot;http://localhost:8000/storage/pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg&quot;
             ],
             &quot;created_at&quot;: &quot;2022-08-28T03:17:12.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2022-08-29T13:01:13.000000Z&quot;
@@ -961,11 +979,11 @@ access-control-allow-origin: *
             &quot;visiblity&quot;: &quot;0&quot;,
             &quot;tag&quot;: null,
             &quot;discount&quot;: null,
-            &quot;main_photo&quot;: &quot;yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg&quot;,
+            &quot;main_photo&quot;: &quot;http://localhost:8000/storage/yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg&quot;,
             &quot;photos&quot;: [
-                &quot;dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg&quot;,
-                &quot;lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg&quot;,
-                &quot;U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
+                &quot;http://localhost:8000/storage/dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg&quot;,
+                &quot;http://localhost:8000/storage/lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg&quot;,
+                &quot;http://localhost:8000/storage/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
             ],
             &quot;created_at&quot;: &quot;2022-08-28T03:18:33.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2022-08-28T03:18:33.000000Z&quot;
@@ -1028,14 +1046,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/shop/product-by-category/corporis" \
+    --get "http://localhost:8000/api/shop/product-by-category/quos" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/shop/product-by-category/corporis"
+    "http://localhost:8000/api/shop/product-by-category/quos"
 );
 
 const headers = {
@@ -1116,7 +1134,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-shop-product-by-category--id-"
-               value="corporis"
+               value="quos"
                data-component="url" hidden>
     <br>
 <p>The ID of the product by category.</p>
@@ -1136,14 +1154,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/shop/product-by-supplier/sit" \
+    --get "http://localhost:8000/api/shop/product-by-supplier/suscipit" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/shop/product-by-supplier/sit"
+    "http://localhost:8000/api/shop/product-by-supplier/suscipit"
 );
 
 const headers = {
@@ -1224,7 +1242,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-shop-product-by-supplier--id-"
-               value="sit"
+               value="suscipit"
                data-component="url" hidden>
     <br>
 <p>The ID of the product by supplier.</p>
@@ -1298,21 +1316,21 @@ access-control-allow-origin: *
                     &quot;category_id&quot;: 1,
                     &quot;productname&quot;: &quot;Amy Sutton&quot;,
                     &quot;price&quot;: 64,
-                    &quot;count&quot;: 7,
+                    &quot;count&quot;: 6,
                     &quot;description&quot;: &quot;Veritatis nostrud ei&quot;,
                     &quot;status&quot;: &quot;published&quot;,
-                    &quot;ordered_counter&quot;: 45,
+                    &quot;ordered_counter&quot;: 46,
                     &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
-                    &quot;main_photo&quot;: &quot;fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg&quot;,
+                    &quot;main_photo&quot;: &quot;http://localhost:8000/storage/fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg&quot;,
                     &quot;photos&quot;: [
-                        &quot;8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg&quot;,
-                        &quot;cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg&quot;,
-                        &quot;2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg&quot;
+                        &quot;http://localhost:8000/storage/8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg&quot;,
+                        &quot;http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg&quot;,
+                        &quot;http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-25T17:34:36.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-08-30T08:54:19.000000Z&quot;
+                    &quot;updated_at&quot;: &quot;2022-09-01T14:53:20.000000Z&quot;
                 }
             ]
         },
@@ -1330,21 +1348,21 @@ access-control-allow-origin: *
                     &quot;category_id&quot;: 2,
                     &quot;productname&quot;: &quot;Shana Owens&quot;,
                     &quot;price&quot;: 154,
-                    &quot;count&quot;: 41,
+                    &quot;count&quot;: 40,
                     &quot;description&quot;: &quot;description goes here&quot;,
                     &quot;status&quot;: &quot;published&quot;,
-                    &quot;ordered_counter&quot;: 34,
+                    &quot;ordered_counter&quot;: 35,
                     &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
-                    &quot;main_photo&quot;: &quot;KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
+                    &quot;main_photo&quot;: &quot;http://localhost:8000/storage/KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
                     &quot;photos&quot;: [
-                        &quot;rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg&quot;,
-                        &quot;V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
-                        &quot;DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
+                        &quot;http://localhost:8000/storage/rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg&quot;,
+                        &quot;http://localhost:8000/storage/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
+                        &quot;http://localhost:8000/storage/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-26T18:23:48.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-08-30T08:54:19.000000Z&quot;
+                    &quot;updated_at&quot;: &quot;2022-09-01T14:53:20.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 4,
@@ -1359,11 +1377,11 @@ access-control-allow-origin: *
                     &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
-                    &quot;main_photo&quot;: &quot;hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg&quot;,
+                    &quot;main_photo&quot;: &quot;http://localhost:8000/storage/hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg&quot;,
                     &quot;photos&quot;: [
-                        &quot;a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg&quot;,
-                        &quot;0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg&quot;,
-                        &quot;xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg&quot;
+                        &quot;http://localhost:8000/storage/a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg&quot;,
+                        &quot;http://localhost:8000/storage/0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg&quot;,
+                        &quot;http://localhost:8000/storage/xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-28T03:14:48.000000Z&quot;,
                     &quot;updated_at&quot;: &quot;2022-08-29T13:01:13.000000Z&quot;
@@ -1381,11 +1399,11 @@ access-control-allow-origin: *
                     &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
-                    &quot;main_photo&quot;: &quot;6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg&quot;,
+                    &quot;main_photo&quot;: &quot;http://localhost:8000/storage/6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg&quot;,
                     &quot;photos&quot;: [
-                        &quot;oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
-                        &quot;FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;,
-                        &quot;pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg&quot;
+                        &quot;http://localhost:8000/storage/oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
+                        &quot;http://localhost:8000/storage/FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;,
+                        &quot;http://localhost:8000/storage/pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-28T03:17:12.000000Z&quot;,
                     &quot;updated_at&quot;: &quot;2022-08-29T13:01:13.000000Z&quot;
@@ -1403,11 +1421,11 @@ access-control-allow-origin: *
                     &quot;visiblity&quot;: &quot;0&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
-                    &quot;main_photo&quot;: &quot;yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg&quot;,
+                    &quot;main_photo&quot;: &quot;http://localhost:8000/storage/yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg&quot;,
                     &quot;photos&quot;: [
-                        &quot;dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg&quot;,
-                        &quot;lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg&quot;,
-                        &quot;U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
+                        &quot;http://localhost:8000/storage/dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg&quot;,
+                        &quot;http://localhost:8000/storage/lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg&quot;,
+                        &quot;http://localhost:8000/storage/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-28T03:18:33.000000Z&quot;,
                     &quot;updated_at&quot;: &quot;2022-08-28T03:18:33.000000Z&quot;
@@ -1543,21 +1561,21 @@ access-control-allow-origin: *
                     &quot;category_id&quot;: 1,
                     &quot;productname&quot;: &quot;Amy Sutton&quot;,
                     &quot;price&quot;: 64,
-                    &quot;count&quot;: 7,
+                    &quot;count&quot;: 6,
                     &quot;description&quot;: &quot;Veritatis nostrud ei&quot;,
                     &quot;status&quot;: &quot;published&quot;,
-                    &quot;ordered_counter&quot;: 45,
+                    &quot;ordered_counter&quot;: 46,
                     &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
-                    &quot;main_photo&quot;: &quot;fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg&quot;,
+                    &quot;main_photo&quot;: &quot;http://localhost:8000/storage/fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg&quot;,
                     &quot;photos&quot;: [
-                        &quot;8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg&quot;,
-                        &quot;cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg&quot;,
-                        &quot;2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg&quot;
+                        &quot;http://localhost:8000/storage/8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg&quot;,
+                        &quot;http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg&quot;,
+                        &quot;http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-25T17:34:36.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-08-30T08:54:19.000000Z&quot;
+                    &quot;updated_at&quot;: &quot;2022-09-01T14:53:20.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 3,
@@ -1565,21 +1583,21 @@ access-control-allow-origin: *
                     &quot;category_id&quot;: 2,
                     &quot;productname&quot;: &quot;Shana Owens&quot;,
                     &quot;price&quot;: 154,
-                    &quot;count&quot;: 41,
+                    &quot;count&quot;: 40,
                     &quot;description&quot;: &quot;description goes here&quot;,
                     &quot;status&quot;: &quot;published&quot;,
-                    &quot;ordered_counter&quot;: 34,
+                    &quot;ordered_counter&quot;: 35,
                     &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
-                    &quot;main_photo&quot;: &quot;KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
+                    &quot;main_photo&quot;: &quot;http://localhost:8000/storage/KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
                     &quot;photos&quot;: [
-                        &quot;rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg&quot;,
-                        &quot;V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
-                        &quot;DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
+                        &quot;http://localhost:8000/storage/rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg&quot;,
+                        &quot;http://localhost:8000/storage/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
+                        &quot;http://localhost:8000/storage/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-26T18:23:48.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-08-30T08:54:19.000000Z&quot;
+                    &quot;updated_at&quot;: &quot;2022-09-01T14:53:20.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 6,
@@ -1594,11 +1612,11 @@ access-control-allow-origin: *
                     &quot;visiblity&quot;: &quot;0&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
-                    &quot;main_photo&quot;: &quot;yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg&quot;,
+                    &quot;main_photo&quot;: &quot;http://localhost:8000/storage/yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg&quot;,
                     &quot;photos&quot;: [
-                        &quot;dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg&quot;,
-                        &quot;lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg&quot;,
-                        &quot;U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
+                        &quot;http://localhost:8000/storage/dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg&quot;,
+                        &quot;http://localhost:8000/storage/lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg&quot;,
+                        &quot;http://localhost:8000/storage/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-28T03:18:33.000000Z&quot;,
                     &quot;updated_at&quot;: &quot;2022-08-28T03:18:33.000000Z&quot;
@@ -1630,11 +1648,11 @@ access-control-allow-origin: *
                     &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
-                    &quot;main_photo&quot;: &quot;hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg&quot;,
+                    &quot;main_photo&quot;: &quot;http://localhost:8000/storage/hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg&quot;,
                     &quot;photos&quot;: [
-                        &quot;a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg&quot;,
-                        &quot;0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg&quot;,
-                        &quot;xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg&quot;
+                        &quot;http://localhost:8000/storage/a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg&quot;,
+                        &quot;http://localhost:8000/storage/0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg&quot;,
+                        &quot;http://localhost:8000/storage/xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-28T03:14:48.000000Z&quot;,
                     &quot;updated_at&quot;: &quot;2022-08-29T13:01:13.000000Z&quot;
@@ -1652,11 +1670,11 @@ access-control-allow-origin: *
                     &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
-                    &quot;main_photo&quot;: &quot;6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg&quot;,
+                    &quot;main_photo&quot;: &quot;http://localhost:8000/storage/6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg&quot;,
                     &quot;photos&quot;: [
-                        &quot;oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
-                        &quot;FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;,
-                        &quot;pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg&quot;
+                        &quot;http://localhost:8000/storage/oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png&quot;,
+                        &quot;http://localhost:8000/storage/FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg&quot;,
+                        &quot;http://localhost:8000/storage/pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-28T03:17:12.000000Z&quot;,
                     &quot;updated_at&quot;: &quot;2022-08-29T13:01:13.000000Z&quot;
@@ -1734,14 +1752,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/shop/product-single/quo" \
+    --get "http://localhost:8000/api/shop/product-single/laborum" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/shop/product-single/quo"
+    "http://localhost:8000/api/shop/product-single/laborum"
 );
 
 const headers = {
@@ -1773,7 +1791,7 @@ access-control-allow-origin: *
         </details>         <pre>
 
 <code class="language-json">{
-    &quot;products&quot;: null
+    &quot;product&quot;: null
 }</code>
  </pre>
     </span>
@@ -1822,130 +1840,11 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-shop-product-single--id-"
-               value="quo"
+               value="laborum"
                data-component="url" hidden>
     <br>
 <p>The ID of the product single.</p>
             </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-shop-get-sliders">GET api/shop/get-sliders</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-shop-get-sliders">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/shop/get-sliders" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/shop/get-sliders"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-shop-get-sliders">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 52
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;sliders&quot;: [
-        {
-            &quot;id&quot;: 2,
-            &quot;information&quot;: &quot;Laudantium nisi ad &quot;,
-            &quot;photo_url&quot;: &quot;rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg&quot;,
-            &quot;created_at&quot;: &quot;2022-08-27T21:20:12.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-08-27T21:20:12.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 3,
-            &quot;information&quot;: &quot;Rerum voluptatem pe&quot;,
-            &quot;photo_url&quot;: &quot;VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg&quot;,
-            &quot;created_at&quot;: &quot;2022-08-27T21:20:37.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-08-27T21:20:37.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 4,
-            &quot;information&quot;: &quot;Aliqua Aliqua Debi&quot;,
-            &quot;photo_url&quot;: &quot;3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg&quot;,
-            &quot;created_at&quot;: &quot;2022-08-27T21:20:54.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-08-27T21:20:54.000000Z&quot;
-        }
-    ]
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-shop-get-sliders" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-shop-get-sliders"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-shop-get-sliders"></code></pre>
-</span>
-<span id="execution-error-GETapi-shop-get-sliders" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-shop-get-sliders"></code></pre>
-</span>
-<form id="form-GETapi-shop-get-sliders" data-method="GET"
-      data-path="api/shop/get-sliders"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-shop-get-sliders', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-shop-get-sliders"
-                    onclick="tryItOut('GETapi-shop-get-sliders');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-shop-get-sliders"
-                    onclick="cancelTryOut('GETapi-shop-get-sliders');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-shop-get-sliders" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/shop/get-sliders</code></b>
-        </p>
                     </form>
 
             <h2 id="endpoints-GETapi-adress-get-countries">GET api/adress/get-countries</h2>
@@ -2327,6 +2226,695 @@ fetch(url, {
             <p>
             <small class="badge badge-black">POST</small>
             <b><code>api/adress/store-shippment-adress</code></b>
+        </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-admin-dashboard-index">GET api/admin/dashboard/index</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-admin-dashboard-index">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/admin/dashboard/index" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/admin/dashboard/index"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-admin-dashboard-index">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-admin-dashboard-index" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-admin-dashboard-index"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-admin-dashboard-index"></code></pre>
+</span>
+<span id="execution-error-GETapi-admin-dashboard-index" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-admin-dashboard-index"></code></pre>
+</span>
+<form id="form-GETapi-admin-dashboard-index" data-method="GET"
+      data-path="api/admin/dashboard/index"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-admin-dashboard-index', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-admin-dashboard-index"
+                    onclick="tryItOut('GETapi-admin-dashboard-index');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-admin-dashboard-index"
+                    onclick="cancelTryOut('GETapi-admin-dashboard-index');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-admin-dashboard-index" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/admin/dashboard/index</code></b>
+        </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-admin-dashboard-orders">GET api/admin/dashboard/orders</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-admin-dashboard-orders">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/admin/dashboard/orders" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/admin/dashboard/orders"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-admin-dashboard-orders">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-admin-dashboard-orders" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-admin-dashboard-orders"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-admin-dashboard-orders"></code></pre>
+</span>
+<span id="execution-error-GETapi-admin-dashboard-orders" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-admin-dashboard-orders"></code></pre>
+</span>
+<form id="form-GETapi-admin-dashboard-orders" data-method="GET"
+      data-path="api/admin/dashboard/orders"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-admin-dashboard-orders', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-admin-dashboard-orders"
+                    onclick="tryItOut('GETapi-admin-dashboard-orders');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-admin-dashboard-orders"
+                    onclick="cancelTryOut('GETapi-admin-dashboard-orders');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-admin-dashboard-orders" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/admin/dashboard/orders</code></b>
+        </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-admin-dashboard-users">GET api/admin/dashboard/users</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-admin-dashboard-users">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/admin/dashboard/users" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/admin/dashboard/users"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-admin-dashboard-users">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-admin-dashboard-users" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-admin-dashboard-users"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-admin-dashboard-users"></code></pre>
+</span>
+<span id="execution-error-GETapi-admin-dashboard-users" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-admin-dashboard-users"></code></pre>
+</span>
+<form id="form-GETapi-admin-dashboard-users" data-method="GET"
+      data-path="api/admin/dashboard/users"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-admin-dashboard-users', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-admin-dashboard-users"
+                    onclick="tryItOut('GETapi-admin-dashboard-users');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-admin-dashboard-users"
+                    onclick="cancelTryOut('GETapi-admin-dashboard-users');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-admin-dashboard-users" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/admin/dashboard/users</code></b>
+        </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-supplier-dashboard-index">GET api/supplier/dashboard/index</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-supplier-dashboard-index">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/supplier/dashboard/index" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/supplier/dashboard/index"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-supplier-dashboard-index">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-supplier-dashboard-index" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-supplier-dashboard-index"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-supplier-dashboard-index"></code></pre>
+</span>
+<span id="execution-error-GETapi-supplier-dashboard-index" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-supplier-dashboard-index"></code></pre>
+</span>
+<form id="form-GETapi-supplier-dashboard-index" data-method="GET"
+      data-path="api/supplier/dashboard/index"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-supplier-dashboard-index', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-supplier-dashboard-index"
+                    onclick="tryItOut('GETapi-supplier-dashboard-index');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-supplier-dashboard-index"
+                    onclick="cancelTryOut('GETapi-supplier-dashboard-index');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-supplier-dashboard-index" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/supplier/dashboard/index</code></b>
+        </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-supplier-dashboard-customers">GET api/supplier/dashboard/customers</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-supplier-dashboard-customers">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/supplier/dashboard/customers" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/supplier/dashboard/customers"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-supplier-dashboard-customers">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-supplier-dashboard-customers" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-supplier-dashboard-customers"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-supplier-dashboard-customers"></code></pre>
+</span>
+<span id="execution-error-GETapi-supplier-dashboard-customers" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-supplier-dashboard-customers"></code></pre>
+</span>
+<form id="form-GETapi-supplier-dashboard-customers" data-method="GET"
+      data-path="api/supplier/dashboard/customers"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-supplier-dashboard-customers', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-supplier-dashboard-customers"
+                    onclick="tryItOut('GETapi-supplier-dashboard-customers');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-supplier-dashboard-customers"
+                    onclick="cancelTryOut('GETapi-supplier-dashboard-customers');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-supplier-dashboard-customers" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/supplier/dashboard/customers</code></b>
+        </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-supplier-dashboard-orders">GET api/supplier/dashboard/orders</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-supplier-dashboard-orders">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/supplier/dashboard/orders" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/supplier/dashboard/orders"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-supplier-dashboard-orders">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-supplier-dashboard-orders" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-supplier-dashboard-orders"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-supplier-dashboard-orders"></code></pre>
+</span>
+<span id="execution-error-GETapi-supplier-dashboard-orders" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-supplier-dashboard-orders"></code></pre>
+</span>
+<form id="form-GETapi-supplier-dashboard-orders" data-method="GET"
+      data-path="api/supplier/dashboard/orders"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-supplier-dashboard-orders', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-supplier-dashboard-orders"
+                    onclick="tryItOut('GETapi-supplier-dashboard-orders');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-supplier-dashboard-orders"
+                    onclick="cancelTryOut('GETapi-supplier-dashboard-orders');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-supplier-dashboard-orders" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/supplier/dashboard/orders</code></b>
+        </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-shop-get-sliders">GET api/shop/get-sliders</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-shop-get-sliders">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/shop/get-sliders" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/shop/get-sliders"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-shop-get-sliders">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 52
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;sliders&quot;: [
+        {
+            &quot;id&quot;: 2,
+            &quot;information&quot;: &quot;Laudantium nisi ad &quot;,
+            &quot;photo_url&quot;: &quot;rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg&quot;,
+            &quot;created_at&quot;: &quot;2022-08-27T21:20:12.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-27T21:20:12.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;information&quot;: &quot;Rerum voluptatem pe&quot;,
+            &quot;photo_url&quot;: &quot;VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg&quot;,
+            &quot;created_at&quot;: &quot;2022-08-27T21:20:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-27T21:20:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;information&quot;: &quot;Aliqua Aliqua Debi&quot;,
+            &quot;photo_url&quot;: &quot;3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg&quot;,
+            &quot;created_at&quot;: &quot;2022-08-27T21:20:54.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-08-27T21:20:54.000000Z&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-shop-get-sliders" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-shop-get-sliders"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-shop-get-sliders"></code></pre>
+</span>
+<span id="execution-error-GETapi-shop-get-sliders" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-shop-get-sliders"></code></pre>
+</span>
+<form id="form-GETapi-shop-get-sliders" data-method="GET"
+      data-path="api/shop/get-sliders"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-shop-get-sliders', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-shop-get-sliders"
+                    onclick="tryItOut('GETapi-shop-get-sliders');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-shop-get-sliders"
+                    onclick="cancelTryOut('GETapi-shop-get-sliders');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-shop-get-sliders" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/shop/get-sliders</code></b>
         </p>
                     </form>
 
