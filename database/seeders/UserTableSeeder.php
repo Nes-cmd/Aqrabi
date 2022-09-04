@@ -22,7 +22,7 @@ class UserTableSeeder extends Seeder
             'phone' => '0940678725',
             'email' => 'admin@admin.com',
             'password' => '$2y$10$HQA6uxXGTAZPJityLRZqf.oZXXZ.N/a1FHmTsC6IEKc75C5maGuBG', //password
-            'email_verified_at' => '2021-12-30 19:59:40',
+            'phone_verified_at' => '2021-12-30 19:59:40',
         ]);
         $role1 = Role::where('slug', 'admin')->first()->id;
         $user1->roles()->attach($role1, ['status' => 'approved']);
@@ -32,7 +32,7 @@ class UserTableSeeder extends Seeder
             'phone' => '0940678345',
             'email' => 'supplier@supplier.com',
             'password' => '$2y$10$HQA6uxXGTAZPJityLRZqf.oZXXZ.N/a1FHmTsC6IEKc75C5maGuBG', //password
-            'email_verified_at' => '2021-12-30 19:59:40',
+            'phone_verified_at' => '2021-12-30 19:59:40',
         ]);
         $role2 = Role::where('slug', 'supplier')->first()->id;
         $user2->roles()->attach($role2,['status' => 'approved']);
@@ -42,10 +42,20 @@ class UserTableSeeder extends Seeder
             'phone' => '0956567657',
             'email' => 'customer@customer.com',
             'password' => Hash::make('password'),//'$2y$10$HQA6uxXGTAZPJityLRZqf.oZXXZ.N/a1FHmTsC6IEKc75C5maGuBG', //password
-            'email_verified_at' => '2021-12-30 19:59:40',
+            'phone_verified_at' => '2021-12-30 19:59:40',
         ]);
         $role3 = Role::where('slug', 'customer')->first()->id;
         $user3->roles()->attach($role3);
+
+        $user4 = User::create([
+            'fullname' => 'Operator man',
+            'phone' => '0956327657',
+            'email' => 'op@aqrabi.com',
+            'password' => Hash::make('password'),//'$2y$10$HQA6uxXGTAZPJityLRZqf.oZXXZ.N/a1FHmTsC6IEKc75C5maGuBG', //password
+            'phone_verified_at' => '2021-12-30 19:59:40',
+        ]);
+        $role4 = Role::where('slug', 'operator')->first()->id;
+        $user4->roles()->attach($role4);
 
       
     }

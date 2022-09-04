@@ -19,5 +19,6 @@ class RoleTableSeeder extends Seeder
         Role::create(['name' => 'Supplier', 'slug' => 'supplier']);
         Role::create(['name' => 'Content creator', 'slug' => 'content-creator']);
         Role::create(['name' => 'Customer', 'slug' => 'customer']);
+        Role::create(['name' => 'Operator', 'slug' => 'operator']);
     }
 }
