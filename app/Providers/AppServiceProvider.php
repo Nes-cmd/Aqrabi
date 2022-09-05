@@ -32,6 +32,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        \Illuminate\Pagination\Paginator::useBootstrapFive();
         // Filament::serving(function () {
         //     Filament::registerNavigationGroups([
         //         NavigationGroup::make()

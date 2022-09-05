@@ -1,13 +1,16 @@
 <x-customer-layout>
     <section class="signin-page account">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
+                <div class="col-md-6 mx-auto d-none d-lg-block">
+                    <img src="customer/images/kids.webp" alt="">
+                </div>
                 <div class="col-md-6 mx-auto">
                     <div class="block text-center">
-                       
                         <h2 class="text-center">Create Account</h2>
                         <form class="text-left clearfix" method="post" action="{{ route('register')}}" enctype="multipart/form-data">
                             @csrf
+                            <input type="hidden" name="user_type" value="{{session()->get('type')}}">
                             <div class="form-group">
                                 <input type="text" name="fullname" value="{{ old('fullname')}}" class="form-control" placeholder="Full Name">
                             </div>
@@ -44,22 +47,19 @@
                                 <input type="password" name="password_confirmation" class="form-control" placeholder="Re enter password">
                             </div>
 
-                            <div class="form-group">
-                                <label class="ml-2" for="document_url" >Your document</label>
-                                <input type="file" name="document_url" id="document_url" value="{{ old('document_url')}}" class="form-control" placeholder="Upload document">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupFileAddon01">Your document</span>
+                                </div>
+                                <div class="custom-file">
+                                    <input type="file" name="document_url" class="custom-file-input" value="{{ old('document_url')}}" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                </div>
                             </div>
                             @error('document_url')
-                            <span style="color:red;padding-left:3px">{{ $message }}</span>
+                            <span style="color:red;padding-left:3px;">{{ $message }}</span>
                             @enderror
-                            <label for="type">What is your role?</label>
-                            <div class="form-group">
-                                <label>Customer</label>
-                                <input type="radio" name="user_type" value="customer">
-                                <label>Supplier</label>
-                                <input type="radio" name="user_type" value="supplier">
-                            </div>
-
-                            <div class="text-center">
+                            <div class="text-center m-5">
                                 <button type="submit" class="btn btn-dark">Register</button>
                             </div>
                         </form>
@@ -70,4 +70,11 @@
             </div>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            bsCustomFileInput.init()
+        })
+    </script>
 </x-customer-layout>

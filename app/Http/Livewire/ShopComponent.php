@@ -9,7 +9,6 @@ use Livewire\Component;
 
 class ShopComponent extends Component
 {
-    public $viewType = 'list';
     public $query;
     public function mount($query = '%')
     {
@@ -24,7 +23,7 @@ class ShopComponent extends Component
     }
     public function render()
     {
-        $products = Product::where('productname', 'like', '%'.$this->query.'%')->paginate(5);
+        $products = Product::where('productname', 'like', '%'.$this->query.'%')->where('count', '>', 0)->paginate(5);
         $categories =  Category::all();
         return view('livewire.shop-component', compact('products', 'categories'))
                     ->layout('layouts.customer.app');

@@ -1,7 +1,10 @@
 <x-customer-layout>
     <section class="signin-page account">
         <div class="container">
-            <div class="row">
+        <div class="row align-items-center">
+                <div class="col-md-6 mx-auto d-none d-lg-block">
+                    <img src="customer/images/kids.webp" alt="">
+                </div>
                 <div class="col-md-6 mx-auto">
                     <div class="block text-center">
                         
@@ -18,7 +21,7 @@
                                 <input type="password" name="password" class="form-control" placeholder="Password">
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary">Login</button>
+                                <button type="submit" class="btn btn-dark">Login</button>
                             </div>
                         </form>
                         <p class="mt-3">New in this site ?<a href="{{ route('register')}}"> Create New Account</a></p>

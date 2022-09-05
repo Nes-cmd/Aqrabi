@@ -32,19 +32,21 @@
   @livewireStyles
 </head>
 
-<body>
+<body style="position: relative; min-height: 100vh;">
 
-  <!-- navigation -->
-  @include('layouts.customer.navbar')
-  <!-- navigation -->
-  @livewire('alert-component')
-  {{ $slot }}
+  <main>
+    <!-- navigation -->
+    @include('layouts.customer.navbar')
+    <!-- navigation -->
+    @livewire('alert-component')
+    {{ $slot }}
 
+  </main>
   <!-- footer -->
-  <footer class="bg-light">
+  <footer class="bg-light" style="position:absolute;bottom:0px;width:100%;margin-top:10px">
     <div class="bg-dark py-4">
       <div class="container">
-        <div class="row" style="color: red">
+        <div class="row">
           <div class="col-md-5 text-center text-md-left mb-4 mb-md-0 align-self-center">
             <p class="mb-0">Aqrabi &copy; 2022 all right reserved</p>
           </div>
@@ -53,7 +55,7 @@
           </div>
           <!--  -->
           <div class="col-md-5 text-center text-md-right mb-4 mb-md-0">
-            <ul class="list-inline social-icon-alt" >
+            <ul class="list-inline social-icon-alt">
               <li class="list-inline-item"><a href="#"><i class="ti-facebook"></i></a></li>
               <li class="list-inline-item"><a href="#"><i class="ti-twitter-alt"></i></a></li>
               <li class="list-inline-item"><a href="#"><i class="ti-vimeo-alt"></i></a></li>

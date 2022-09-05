@@ -16,8 +16,8 @@
                     <img src="customer/images/feature/product.png" alt="product-img" class="img-fluid">
                 </div>
                 <div class="col-lg-5 col-md-6 text-center text-md-left align-self-center pl-5">
-                    <h3 class="mb-lg-2 mb-2">{{ $product->productname }}</h3>
-                    <span class="mb-lg-4 mb-3 h5">${{$product->price}}</span>
+                    <h3 class="mb-lg-2 mb-2"><?php echo e($product->productname); ?></h3>
+                    <span class="mb-lg-4 mb-3 h5">$<?php echo e($product->price); ?></span>
                     <p class="mb-lg-4 mb-3 text-gray">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. sed ut perspic atis unde omnis iste natus</p>
                 </div>
             </div>
@@ -29,31 +29,31 @@
                     <div class="col-lg-6 mb-4 mb-lg-0">
                         <!-- product image slider -->
                         <div class="product-slider">
-                            <div style="height: 300px;width: 400px;" data-image="{{ asset('storage/'.$product->main_photo) }}">
-                                <img style="height: 300px;width: 400px;" class="img-fluid image-zoom" src="{{ asset('storage/'.$product->main_photo) }}" alt="product-img" data-zoom="{{ asset('storage/'.$product->main_photo) }}">
+                            <div style="height: 300px;width: 400px;" data-image="<?php echo e(asset('storage/'.$product->main_photo)); ?>">
+                                <img style="height: 300px;width: 400px;" class="img-fluid image-zoom" src="<?php echo e(asset('storage/'.$product->main_photo)); ?>" alt="product-img" data-zoom="<?php echo e(asset('storage/'.$product->main_photo)); ?>">
                             </div>
-                            @if(count($product->photos) > 0 )
-                            <div style="height: 300px;width: 400px;" data-image="{{ asset('storage/'.$product->photos[0]) }}">
-                                <img style="height: 300px;width: 400px;" class="img-fluid w-100 image-zoom" src="{{ asset('storage/'.$product->photos[0]) }}" alt="product-img" data-zoom="{{ asset('storage/'.$product->photos[0]) }}">
+                            <?php if(count($product->photos) > 0 ): ?>
+                            <div style="height: 300px;width: 400px;" data-image="<?php echo e(asset('storage/'.$product->photos[0])); ?>">
+                                <img style="height: 300px;width: 400px;" class="img-fluid w-100 image-zoom" src="<?php echo e(asset('storage/'.$product->photos[0])); ?>" alt="product-img" data-zoom="<?php echo e(asset('storage/'.$product->photos[0])); ?>">
                             </div>
-                            @endif
-                            @if(count($product->photos) > 1 )
-                            <div style="height: 300px;width: 400px;" data-image="{{ asset('storage/'.$product->photos[1]) }}">
-                                <img style="height: 300px;width: 400px;" class="img-fluid w-100 image-zoom" src="{{ asset('storage/'.$product->photos[1]) }}" alt="product-img" data-zoom="{{ asset('storage/'.$product->photos[1]) }}">
+                            <?php endif; ?>
+                            <?php if(count($product->photos) > 1 ): ?>
+                            <div style="height: 300px;width: 400px;" data-image="<?php echo e(asset('storage/'.$product->photos[1])); ?>">
+                                <img style="height: 300px;width: 400px;" class="img-fluid w-100 image-zoom" src="<?php echo e(asset('storage/'.$product->photos[1])); ?>" alt="product-img" data-zoom="<?php echo e(asset('storage/'.$product->photos[1])); ?>">
                             </div>
-                            @endif
-                            @if(count($product->photos) > 2 )
-                            <div style="height: 300px;width: 400px;" data-image="{{ asset('storage/'.$product->photos[2]) }}">
-                                <img style="height: 300px;width: 400px;" class="img-fluid w-100 image-zoom" src="{{ asset('storage/'.$product->photos[2]) }}" alt="product-img" data-zoom="{{ asset('storage/'.$product->photos[2]) }}">
+                            <?php endif; ?>
+                            <?php if(count($product->photos) > 2 ): ?>
+                            <div style="height: 300px;width: 400px;" data-image="<?php echo e(asset('storage/'.$product->photos[2])); ?>">
+                                <img style="height: 300px;width: 400px;" class="img-fluid w-100 image-zoom" src="<?php echo e(asset('storage/'.$product->photos[2])); ?>" alt="product-img" data-zoom="<?php echo e(asset('storage/'.$product->photos[2])); ?>">
                             </div>
-                            @endif
+                            <?php endif; ?>
                         </div>
                     </div>
                     <!-- produt details -->
                     <div class="col-lg-6 mb-100">
-                        <h2>{{ $product->productname }}</h2>
-                        <i class="ti-check-box text-{{ $product->count?'success':'danger'}}"></i>
-                        <span class="text-{{ $product->count?'success':'danger'}}">{{ $product->count?'Instock':'Outofstock'}}</span>
+                        <h2><?php echo e($product->productname); ?></h2>
+                        <i class="ti-check-box text-<?php echo e($product->count?'success':'danger'); ?>"></i>
+                        <span class="text-<?php echo e($product->count?'success':'danger'); ?>"><?php echo e($product->count?'Instock':'Outofstock'); ?></span>
                         <ul class="list-inline mb-4">
                             <li class="list-inline-item mx-0"><a href="#" class="rated"><i class="ti-star"></i></a></li>
                             <li class="list-inline-item mx-0"><a href="#" class="rated"><i class="ti-star"></i></a></li>
@@ -62,10 +62,10 @@
                             <li class="list-inline-item mx-0"><a href="#" class="rated"><i class="ti-star"></i></a></li>
                             <li class="list-inline-item"><a href="#" class="text-gray ml-3">( 3 Reviews )</a></li>
                         </ul>
-                        <h4 class="text-primary h3">${{ $product->price }} @if($product->discount != 0)<s class="text-color ml-2">${{$product->discount + $product->price}}</s>@endif</h4>
-                        @if($product->discount != 0)
-                        <h6 class="mb-4">You save: <span class="text-primary">${{$product->discount}} USD ({{ round(($product->discount)/($product->price + $product->discount)*100,2) }}%)</span></h6>
-                        @endif
+                        <h4 class="text-primary h3">$<?php echo e($product->price); ?> <?php if($product->discount != 0): ?><s class="text-color ml-2">$<?php echo e($product->discount + $product->price); ?></s><?php endif; ?></h4>
+                        <?php if($product->discount != 0): ?>
+                        <h6 class="mb-4">You save: <span class="text-primary">$<?php echo e($product->discount); ?> USD (<?php echo e(round(($product->discount)/($product->price + $product->discount)*100,2)); ?>%)</span></h6>
+                        <?php endif; ?>
                         <div class="d-flex flex-column flex-sm-row justify-content-between mb-4">
                             <div>
                                 <input wire:model="quantity" class="quantity mr-sm-2 mb-3 mb-sm-0" type="text" name="quantity">
@@ -123,8 +123,8 @@
                             <div class="product-thumb">
                                 <div class="overflow-hidden position-relative">
                                     <a href="product-single.html">
-                                        <img class="img-fluid w-100 mb-3 img-first" src="{{ asset('customer/images/collection/product-2.jpg')}}" alt="product-img">
-                                        <img class="img-fluid w-100 mb-3 img-second" src="{{ asset('customer/images/collection/product-5.jpg')}}" alt="product-img">
+                                        <img class="img-fluid w-100 mb-3 img-first" src="<?php echo e(asset('customer/images/collection/product-2.jpg')); ?>" alt="product-img">
+                                        <img class="img-fluid w-100 mb-3 img-second" src="<?php echo e(asset('customer/images/collection/product-5.jpg')); ?>" alt="product-img">
                                     </a>
                                     <div class="btn-cart">
                                         <a href="#" class="btn btn-primary btn-sm">Add To Cart</a>
@@ -153,8 +153,8 @@
                             <div class="product-thumb">
                                 <div class="overflow-hidden position-relative">
                                     <a href="product-single.html">
-                                        <img class="img-fluid w-100 mb-3 img-first" src="{{ asset('customer/images/collection/product-3.jpg')}}" alt="product-img">
-                                        <img class="img-fluid w-100 mb-3 img-second" src="{{ asset('customer/images/collection/product-6.jpg')}}" alt="product-img">
+                                        <img class="img-fluid w-100 mb-3 img-first" src="<?php echo e(asset('customer/images/collection/product-3.jpg')); ?>" alt="product-img">
+                                        <img class="img-fluid w-100 mb-3 img-second" src="<?php echo e(asset('customer/images/collection/product-6.jpg')); ?>" alt="product-img">
                                     </a>
                                     <div class="btn-cart">
                                         <a href="#" class="btn btn-primary btn-sm">Add To Cart</a>
@@ -187,8 +187,8 @@
                             <div class="product-thumb">
                                 <div class="overflow-hidden position-relative">
                                     <a href="product-single.html">
-                                        <img class="img-fluid w-100 mb-3 img-first" src="{{ asset('customer/images/collection/product-4.jpg')}}" alt="product-img">
-                                        <img class="img-fluid w-100 mb-3 img-second" src="{{ asset('customer/images/collection/product-2.jpg')}}" alt="product-img">
+                                        <img class="img-fluid w-100 mb-3 img-first" src="<?php echo e(asset('customer/images/collection/product-4.jpg')); ?>" alt="product-img">
+                                        <img class="img-fluid w-100 mb-3 img-second" src="<?php echo e(asset('customer/images/collection/product-2.jpg')); ?>" alt="product-img">
                                     </a>
                                     <div class="btn-cart">
                                         <a href="#" class="btn btn-primary btn-sm">Add To Cart</a>
@@ -221,11 +221,11 @@
                             <div class="product-thumb">
                                 <div class="overflow-hidden position-relative">
                                     <a href="product-single.html">
-                                        <img class="img-fluid w-100 mb-3 img-first" src="{{ asset('customer/images/collection/product-6.jpg')}}" alt="product-img">
-                                        <img class="img-fluid w-100 mb-3 img-second" src="{{ asset('customer/images/collection/product-1.jpg')}}" alt="product-img">
+                                        <img class="img-fluid w-100 mb-3 img-first" src="<?php echo e(asset('customer/images/collection/product-6.jpg')); ?>" alt="product-img">
+                                        <img class="img-fluid w-100 mb-3 img-second" src="<?php echo e(asset('customer/images/collection/product-1.jpg')); ?>" alt="product-img">
                                     </a>
                                     <div class="btn-cart">
-                                        <button wire:click="toCart({{$product->id}})" class="btn btn-primary btn-sm">Add To Cart</button>
+                                        <button wire:click="toCart(<?php echo e($product->id); ?>)" class="btn btn-primary btn-sm">Add To Cart</button>
                                     </div>
                                 </div>
                                 <div class="product-hover-overlay">
@@ -248,4 +248,4 @@
                 </div>
             </div>
     </div>
-</section>
+</section><?php /**PATH /home/nesren/Project/web/laravel/Aqrabi-Ecommerce/resources/views/livewire/single-product.blade.php ENDPATH**/ ?>
