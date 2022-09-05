@@ -7,6 +7,14 @@
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
+    <style>
+        .phone{
+            padding-bottom: 7px;
+            border-radius: 0px;
+            width: 50%;
+            /* margin: 2px; */
+        }
+    </style>
     <section class="signin-page account">
         <div class="container">
             <div class="row align-items-center">
@@ -45,8 +53,12 @@ $message = $__bag->first($__errorArgs[0]); ?>
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
-                            <div class="form-group">
-                                <input type="text" name="phone" value="<?php echo e(old('phone')); ?>" class="form-control" placeholder="Phone eg">
+                            <div class="form-group" style="display:flex">
+                                    <select name="country_code" value="<?php echo e(old('country_code')); ?>" class="form-control phone">
+                                        <option value="+251">Ethiopia (+251)</option>
+                                        <option value="+251">Ertria (+252)</option>
+                                    </select>
+                                    <input name="phone" value="<?php echo e(old('phone')); ?>"  class="form-control" placeholder="09434..." type="text">
                             </div>
                             <?php $__errorArgs = ['phone'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');

@@ -30,15 +30,15 @@
 <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('blocks.collections-slide', ['type' => 'top-collections'])->html();
-} elseif ($_instance->childHasBeenRendered('wLnitQE')) {
-    $componentId = $_instance->getRenderedChildComponentId('wLnitQE');
-    $componentTag = $_instance->getRenderedChildComponentTagName('wLnitQE');
+} elseif ($_instance->childHasBeenRendered('v7MAdem')) {
+    $componentId = $_instance->getRenderedChildComponentId('v7MAdem');
+    $componentTag = $_instance->getRenderedChildComponentTagName('v7MAdem');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('wLnitQE');
+    $_instance->preserveRenderedChild('v7MAdem');
 } else {
     $response = \Livewire\Livewire::mount('blocks.collections-slide', ['type' => 'top-collections']);
     $html = $response->html();
-    $_instance->logRenderedChild('wLnitQE', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('v7MAdem', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
@@ -46,15 +46,15 @@ echo $html;
 <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('blocks.collections', ['type' => 'top-products'])->html();
-} elseif ($_instance->childHasBeenRendered('fTLvrpg')) {
-    $componentId = $_instance->getRenderedChildComponentId('fTLvrpg');
-    $componentTag = $_instance->getRenderedChildComponentTagName('fTLvrpg');
+} elseif ($_instance->childHasBeenRendered('lJNLQ5z')) {
+    $componentId = $_instance->getRenderedChildComponentId('lJNLQ5z');
+    $componentTag = $_instance->getRenderedChildComponentTagName('lJNLQ5z');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('fTLvrpg');
+    $_instance->preserveRenderedChild('lJNLQ5z');
 } else {
     $response = \Livewire\Livewire::mount('blocks.collections', ['type' => 'top-products']);
     $html = $response->html();
-    $_instance->logRenderedChild('fTLvrpg', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('lJNLQ5z', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>

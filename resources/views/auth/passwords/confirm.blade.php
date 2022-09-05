@@ -9,7 +9,7 @@
                 <div class="row g-0 align-items-center">
                     <div class="col-xxl-4 col-lg-4 col-md-6">
                         <div class="row justify-content-center g-0">
-                            <div class="col-xl-9">
+                            <div class="col-xl-9"> 
                                <div class="p-4">
                                     <div class="card mb-0">
                                         <div class="card-body">

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\PhoneVerificationController;
 use App\Http\Controllers\CustomerDashboardController;
 use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
@@ -24,10 +25,7 @@ Route::get('/shop/order-success/{id}', function ($id)
 {
     return view('customer.order-success')->with(['orderId' => $id]);
 });
-Route::get('register-user/{type}', function($type){
-    session()->put(['type' => $type]);
-    return redirect()->route('register');
-})->name('register-user');
+
 Route::get('test', [ShopController::class, 'index'])->name('shop.index');
 
 Route::view('/choose-acccount-type','customer.choose-user')->name('choose-acccount-type');
@@ -39,3 +37,11 @@ Route::get('customer/address', [CustomerDashboardController::class, 'address'])-
 Route::get('customer/profile', [CustomerDashboardController::class, 'profile'])->name('customer.profile');
 // Route::get('supplier/login', function(){return view('auth.supplier-login');});
 // Route::post('/supplier/login', [AuthenticatedSessionController::class, 'store'])->name('supplier-login');
+
+Route::get('register-user/{type}', function($type){
+    session()->put(['type' => $type]);
+    return redirect()->route('register');
+})->name('register-user');
+Route::middleware('auth')->get('phone-verify', [PhoneVerificationController::class, 'sendVerification'])->name('phone-verify');
+Route::middleware('auth')->get('phone-verification', [PhoneVerificationController::class, 'verifyPhone'])->name('phone-verification');
+Route::get('phone-verify', [PhoneVerificationController::class, 'sendVerification']);

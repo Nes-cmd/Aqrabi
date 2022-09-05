@@ -9,7 +9,7 @@
                         </a>
                         <h2 class="text-center">Please verify your phone</h2>
                         <form class="text-left clearfix">
-                            <p>A verification code will be sent to you. Once you have received the verification code, you will be able to proceed for your account.</p>
+                            <p>A verification code sent to your phone <i>{{auth()->user()->phone}}</i>. Once you have received the verification code, you will be able to proceed for your account.</p>
                             <div class="form-group">
                                 <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Account phone number">
                             </div>

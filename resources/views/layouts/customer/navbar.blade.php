@@ -27,8 +27,8 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('customer.profile')}}">
-          <i class="ti-user"></i> Profile
+        <a class="nav-link" href="{{ route('customer.dashboard')}}">
+          <i class="ti-user"></i> Profile 
         </a>
       </li>
       @endauth

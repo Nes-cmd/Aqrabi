@@ -14,6 +14,7 @@ use Laravel\Fortify\Fortify;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Laravel\Fortify\Contracts\LoginResponse;
+use Laravel\Fortify\Contracts\RegisterResponse;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -50,12 +51,26 @@ class FortifyServiceProvider extends ServiceProvider
         $this->app->instance(LoginResponse::class, new class implements LoginResponse {
             public function toResponse($request)
             {
+                if(auth()->user()->phone_verified_at == null){
+                    return redirect()->route('phone-verification');
+                }
                 if(auth()->user()->hasRole('admin')){
                     return redirect('/admin');
                 }
                 return redirect()->intended(RouteServiceProvider::HOME);
             }
         });
+
+        $this->app->instance(RegisterResponse::class, new class implements RegisterResponse {
+            public function toResponse($request)
+            {
+                if(auth()->user()->phone_verified_at == null){
+                    return redirect()->route('phone-verification');
+                }
+                return redirect()->intended(RouteServiceProvider::HOME);
+            }
+        });
+        
         Fortify::authenticateUsing(function (Request $request) {
             $user = User::where('phone', $request->phone)->first();
             if ($user &&
@@ -73,8 +88,12 @@ class FortifyServiceProvider extends ServiceProvider
             return view('auth.login');
         });
 
-        Fortify::verifyEmailView(function () {
-            return view('auth.verify');
+        // Fortify::verifyEmailView(function () {
+        //     return view('auth.verify');
+        // });
+
+        Fortify::requestPasswordResetLinkView(function () {
+            return view('auth.passwords.reset');
         });
         
         
