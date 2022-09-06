@@ -29,6 +29,7 @@
   <!--Favicon-->
   <link rel="shortcut icon" href="" type="image/x-icon">
   <link rel="icon" href="" type="image/x-icon">
+  
   @livewireStyles
 </head>
 
@@ -38,7 +39,6 @@
     <!-- navigation -->
     @include('layouts.customer.navbar')
     <!-- navigation -->
-    @livewire('alert-component')
     {{ $slot }}
 
   </main>
@@ -71,6 +71,8 @@
   </div>
   <!-- /main wrapper -->
   @livewireScripts
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <x-livewire-alert::scripts />
   <!-- jQuery -->
   <script src="{{ asset('customer/plugins/jQuery/jquery.min.js')}}"></script>
   <!-- Bootstracustomer/p JS -->

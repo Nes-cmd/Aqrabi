@@ -7,10 +7,10 @@
   <div class="collapse navbar-collapse order-1 order-lg-2" id="navbarSupportedContent">
     <ul class="navbar-nav mx-auto">
       <li class="nav-item">
-        <a class="nav-link text-primary" href="{{ route('shop.index') }}">home</a>
+        <a class="nav-link {{Route::currentRouteName()=='shop.index'?'text-primary':''}}" href="{{ route('shop.index') }}">home</a>
       </li>
       <li class="nav-item dropdown view">
-        <a class="nav-link" href="{{ route('shop.list')}}" role="button" aria-expanded="false">
+        <a class="nav-link {{Route::currentRouteName()=='shop.list'?'text-primary':''}}" href="{{ route('shop.list')}}" role="button" aria-expanded="false">
           shop
         </a>
       </li>
@@ -34,8 +34,8 @@
       @endauth
       @guest
       <li class="nav-item">
-        <a class="nav-link" href="{{route('choose-acccount-type')}}">
-          <i class="ti-user"></i> Signup
+        <a class="nav-link" href="{{route('login')}}">
+          <i class="ti-user"></i> Signin
         </a>
       </li>
       @endguest

@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Cart;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 use App\Models\Order;
 use App\Models\OrderDetail;
 use App\Models\Product;
@@ -11,8 +12,8 @@ use Faker\Core\Uuid;
 
 class CheckoutComponent extends Component
 {
+    use LivewireAlert;
     protected $listeners = ['shippmentAdded', 'pageSelector', 'placeOrder'];
-
     public $page = 'shippment';
     public $shippmentAdress = null;
 

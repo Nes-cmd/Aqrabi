@@ -54,7 +54,7 @@ class FortifyServiceProvider extends ServiceProvider
                 if(auth()->user()->phone_verified_at == null){
                     return redirect()->route('phone-verification');
                 }
-                if(auth()->user()->hasRole('admin')){
+                if(auth()->user()->hasVerifiedRole('admin')){
                     return redirect('/admin');
                 }
                 return redirect()->intended(RouteServiceProvider::HOME);
@@ -65,13 +65,17 @@ class FortifyServiceProvider extends ServiceProvider
             public function toResponse($request)
             {
                 if(auth()->user()->phone_verified_at == null){
-                    return redirect()->route('phone-verification');
+                    return redirect()->route('verify-phone');
                 }
                 return redirect()->intended(RouteServiceProvider::HOME);
             }
         });
         
         Fortify::authenticateUsing(function (Request $request) {
+            $request->validate([
+                'phone' => 'required|max:14|min:9',
+                'password' => 'required|min:6'
+            ]);
             $user = User::where('phone', $request->phone)->first();
             if ($user &&
                 Hash::check($request->password, $user->password)) {

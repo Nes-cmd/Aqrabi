@@ -10,7 +10,7 @@
                         <ul class="pl-0 shop-list list-unstyled">
                             <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $cat): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <li>
-                                <p wire:click="subcategory(<?php echo e($cat->id); ?>)" class="d-flex py-2 text-gray justify-content-between">
+                                <p  wire:click="categoryFilter(<?php echo e($cat->id); ?>)" class="pl-2 justify-content-between <?php echo e($categoryFilterId==$cat->id?'text-primary':''); ?>">
                                     <span><?php echo e($cat->name); ?></span>
                                 </p>
                             </li>

@@ -29,6 +29,7 @@
   <!--Favicon-->
   <link rel="shortcut icon" href="" type="image/x-icon">
   <link rel="icon" href="" type="image/x-icon">
+  
   <?php echo \Livewire\Livewire::styles(); ?>
 
 </head>
@@ -39,21 +40,6 @@
     <!-- navigation -->
     <?php echo $__env->make('layouts.customer.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <!-- navigation -->
-    <?php
-if (! isset($_instance)) {
-    $html = \Livewire\Livewire::mount('alert-component')->html();
-} elseif ($_instance->childHasBeenRendered('T7x6lFi')) {
-    $componentId = $_instance->getRenderedChildComponentId('T7x6lFi');
-    $componentTag = $_instance->getRenderedChildComponentTagName('T7x6lFi');
-    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('T7x6lFi');
-} else {
-    $response = \Livewire\Livewire::mount('alert-component');
-    $html = $response->html();
-    $_instance->logRenderedChild('T7x6lFi', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
-}
-echo $html;
-?>
     <?php echo e($slot); ?>
 
 
@@ -88,6 +74,22 @@ echo $html;
   <!-- /main wrapper -->
   <?php echo \Livewire\Livewire::scripts(); ?>
 
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'livewire-alert::components.scripts','data' => []] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('livewire-alert::scripts'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
   <!-- jQuery -->
   <script src="<?php echo e(asset('customer/plugins/jQuery/jquery.min.js')); ?>"></script>
   <!-- Bootstracustomer/p JS -->

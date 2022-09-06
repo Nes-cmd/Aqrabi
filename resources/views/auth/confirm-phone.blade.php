@@ -1,17 +1,18 @@
 <x-customer-layout>
     <section class="forget-password-page account">
         <div class="container">
-            <div class="row">
+        <div class="row align-items-center">
+                <div class="col-md-6 mx-auto d-none d-lg-block">
+                    <img src="customer/images/kids.webp" alt="">
+                </div>
                 <div class="col-md-6 mx-auto">
                     <div class="block text-center">
-                        <a class="logo" href="index.html">
-                            <img src="images/logo.png" alt="logo">
-                        </a>
-                        <h2 class="text-center">Please verify your phone</h2>
-                        <form class="text-left clearfix">
-                            <p>A verification code sent to your phone <i>{{auth()->user()->phone}}</i>. Once you have received the verification code, you will be able to proceed for your account.</p>
+                        <h2 class="text-center">Please confirm your phone</h2>
+                        <form action="{{route('check-verification')}}" method="post" class="text-left clearfix">
+                        @csrf    
+                        <p>A verification code sent to your phone <i>{{auth()->user()->phone}}</i>. Once you have received the verification code, please entr that code here to verify the phone.</p>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Account phone number">
+                                <input type="text" name="confirmation_code" class="form-control" id="exampleInputEmail1" placeholder="Enter the code">
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary">Submit</button>

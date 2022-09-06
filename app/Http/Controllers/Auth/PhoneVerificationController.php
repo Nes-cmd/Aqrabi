@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use Twilio\Rest\Client; 
+use App\Models\User;
 use Illuminate\Http\Request;
+use App\Helper\TwilioSMS;
 
 class PhoneVerificationController extends Controller
 {
@@ -16,20 +17,25 @@ class PhoneVerificationController extends Controller
     {
         $code = rand(1000,9999);
         session()->put('short_code', $code);
-        $this->sendMessage('This is your Arabi phone verification code '.$code, '+251940678725');
+        $twilio = new TwilioSMS();
+        $twilio->sendMessage('This is your Arabi phone verification code '.$code, '+251940678725');
         return view('auth.confirm-phone');
 
     }
-    private function sendMessage($message, $recipients)
+    public function checkVerification(Request $request)
     {
-        $account_sid = env("TWILIO_SID");
-        $auth_token = env("TWILIO_AUTH");
-        $twilio_number = env("TWILIO_NUMBER");
-        $client = new Client($account_sid, $auth_token);
-        $response = $client->messages->create(
-            $recipients,
-            ['from' => $twilio_number, 'body' => $message]
-        );
-        return $response;
+        $request->validate([
+            'confirmation_code' => 'required|numeric|digits:4',
+        ]);
+        if($request->confirmation_code == session()->get('short_code')){
+            $user = User::find(auth()->id());
+            $user->phone_verified_at = now()->toDateTimeString();
+            $user->save();
+            session()->forget('short_code');
+            session()->save();
+            return redirect('/');
+        }
+        return back()->with('error','The code you entered is not correct');
     }
+    
 }

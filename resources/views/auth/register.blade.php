@@ -76,7 +76,7 @@
                             </div>
                         </form>
                         <p class="mt-3">Already hava an account ?<a href="{{ route('login')}}"> Login</a></p>
-                        <p><a href="{{ url('forgot-password') }}"> Forgot your password?</a></p>
+                        <p><a href="{{ url('forget-password') }}"> Forgot your password?</a></p>
                     </div>
                 </div>
             </div>

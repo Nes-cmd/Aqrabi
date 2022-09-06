@@ -9,13 +9,13 @@
 <?php $component->withAttributes([]); ?>
     <section class="signin-page account">
         <div class="container">
-        <div class="row align-items-center">
+            <div class="row align-items-center">
                 <div class="col-md-6 mx-auto d-none d-lg-block">
                     <img src="customer/images/kids.webp" alt="">
                 </div>
                 <div class="col-md-6 mx-auto">
                     <div class="block text-center">
-                        
+
                         <h2 class="text-center">Welcome Back</h2>
                         <form class="text-left clearfix" method="post" action="<?php echo e(route('login')); ?>">
                             <?php echo csrf_field(); ?>
@@ -39,7 +39,7 @@ unset($__errorArgs, $__bag); ?>
                                 <button type="submit" class="btn btn-dark">Login</button>
                             </div>
                         </form>
-                        <p class="mt-3">New in this site ?<a href="<?php echo e(route('register')); ?>"> Create New Account</a></p>
+                        <p class="mt-3">New in this site ?<a href="<?php echo e(route('choose-acccount-type')); ?>"> Create New Account</a></p>
                     </div>
                 </div>
             </div>

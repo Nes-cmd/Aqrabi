@@ -10,7 +10,7 @@
                         <ul class="pl-0 shop-list list-unstyled">
                             @foreach ($categories as $cat)
                             <li>
-                                <p wire:click="subcategory({{$cat->id}})" class="d-flex py-2 text-gray justify-content-between">
+                                <p  wire:click="categoryFilter({{$cat->id}})" class="pl-2 justify-content-between {{$categoryFilterId==$cat->id?'text-primary':''}}">
                                     <span>{{ $cat->name }}</span>
                                 </p>
                             </li>

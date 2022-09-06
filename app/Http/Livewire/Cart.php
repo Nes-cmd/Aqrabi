@@ -4,15 +4,16 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Cart as MyCart;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class Cart extends Component
 {
+    use LivewireAlert;
     protected $listeners = ['toCart', 'cartSize'];
     public $cart_size;
     public $cart = [];
     public function mount()
     {
-
         if(auth()->user()){
             $this->updateCart();
         }
@@ -31,6 +32,10 @@ class Cart extends Component
                 'quantity' => $quantity
             ]);
             $this->updateCart();
+            $this->alert('success', 'Item added to cart', [
+                'toast' => true,
+                'position' => 'top-end',
+            ]);
         }
         else{
             return redirect('/login');
@@ -46,6 +51,7 @@ class Cart extends Component
         MyCart::where('id', $id)->delete();
         $this->updateCart();
         $this->render();
+        $this->alert('info', 'Item removed', ['position' => 'top-end']);
     }
     public function render()
     {

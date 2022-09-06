@@ -6,6 +6,9 @@ use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\Slider;
+use App\Models\User;
+
+
 class ShopController extends Controller
 {
     public function index()

@@ -20,6 +20,7 @@ class UserTableSeeder extends Seeder
         $user1 = User::create([
             'fullname' => 'Admin',
             'phone' => '0940678725',
+            'dial_code' => '+251',
             'email' => 'admin@admin.com',
             'password' => '$2y$10$HQA6uxXGTAZPJityLRZqf.oZXXZ.N/a1FHmTsC6IEKc75C5maGuBG', //password
             'phone_verified_at' => '2021-12-30 19:59:40',
@@ -30,6 +31,7 @@ class UserTableSeeder extends Seeder
         $user2 = User::create([
             'fullname' => 'Supplier man',
             'phone' => '0940678345',
+            'dial_code' => '+251',
             'email' => 'supplier@supplier.com',
             'password' => '$2y$10$HQA6uxXGTAZPJityLRZqf.oZXXZ.N/a1FHmTsC6IEKc75C5maGuBG', //password
             'phone_verified_at' => '2021-12-30 19:59:40',
@@ -40,6 +42,7 @@ class UserTableSeeder extends Seeder
         $user3 = User::create([
             'fullname' => 'Some Customer',
             'phone' => '0956567657',
+            'dial_code' => '+251',
             'email' => 'customer@customer.com',
             'password' => Hash::make('password'),//'$2y$10$HQA6uxXGTAZPJityLRZqf.oZXXZ.N/a1FHmTsC6IEKc75C5maGuBG', //password
             'phone_verified_at' => '2021-12-30 19:59:40',
@@ -50,6 +53,7 @@ class UserTableSeeder extends Seeder
         $user4 = User::create([
             'fullname' => 'Operator man',
             'phone' => '0956327657',
+            'dial_code' => '+251',
             'email' => 'op@aqrabi.com',
             'password' => Hash::make('password'),//'$2y$10$HQA6uxXGTAZPJityLRZqf.oZXXZ.N/a1FHmTsC6IEKc75C5maGuBG', //password
             'phone_verified_at' => '2021-12-30 19:59:40',

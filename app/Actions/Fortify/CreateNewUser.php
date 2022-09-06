@@ -32,12 +32,7 @@ class CreateNewUser implements CreatesNewUsers
             'document_url' => ['nullable', 'file'],
         ])->validate();
         $location = null;
-        if(strlen($input['phone']) == 9){
-            $phone = $input['country_code'].$input['phone'];
-        }
-        else{
-            $phone = $input['country_code'].substr($input['phone'],1);
-        }
+        
         if(array_key_exists('document_url', $input)){
             $location = $input['document_url']->store('public/documents');
             $location = substr($location, 7);
@@ -46,8 +41,9 @@ class CreateNewUser implements CreatesNewUsers
         $user =  User::create([
             'fullname' => $input['fullname'],
             'email' => $input['email'],
-            'phone' => $phone,
+            'phone' => $input['phone'],
             'tin_number' => $input['tin_number'],
+            'dial_code' => $input['country_code'],
             'document_url' => $location,
             'password' => Hash::make($input['password']),
         ]);

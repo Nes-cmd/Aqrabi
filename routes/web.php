@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\PasswordResetController;
 use App\Http\Controllers\Auth\PhoneVerificationController;
 use App\Http\Controllers\CustomerDashboardController;
 use App\Http\Controllers\ShopController;
@@ -25,23 +26,30 @@ Route::get('/shop/order-success/{id}', function ($id)
 {
     return view('customer.order-success')->with(['orderId' => $id]);
 });
-
-Route::get('test', [ShopController::class, 'index'])->name('shop.index');
+ 
+Route::get('/', [ShopController::class, 'index'])->name('shop.index');
 
 Route::view('/choose-acccount-type','customer.choose-user')->name('choose-acccount-type');
-Route::get('/', [ShopController::class, 'test'])->name('shop.index');
+// Route::get('/', [ShopController::class, 'test'])->name('shop.index');
 
 Route::get('customer/dashboard', [CustomerDashboardController::class, 'dashboard'])->name('customer.dashboard');
 Route::get('customer/orders', [CustomerDashboardController::class, 'orders'])->name('customer.orders');
 Route::get('customer/address', [CustomerDashboardController::class, 'address'])->name('customer.address');
 Route::get('customer/profile', [CustomerDashboardController::class, 'profile'])->name('customer.profile');
-// Route::get('supplier/login', function(){return view('auth.supplier-login');});
-// Route::post('/supplier/login', [AuthenticatedSessionController::class, 'store'])->name('supplier-login');
 
 Route::get('register-user/{type}', function($type){
     session()->put(['type' => $type]);
     return redirect()->route('register');
-})->name('register-user');
-Route::middleware('auth')->get('phone-verify', [PhoneVerificationController::class, 'sendVerification'])->name('phone-verify');
+})->name('register-user'); 
+
+Route::middleware('auth')->get('verify-phone', [PhoneVerificationController::class, 'sendVerification'])->name('verify-phone');
 Route::middleware('auth')->get('phone-verification', [PhoneVerificationController::class, 'verifyPhone'])->name('phone-verification');
-Route::get('phone-verify', [PhoneVerificationController::class, 'sendVerification']);
+Route::middleware('auth')->post('check-verification', [PhoneVerificationController::class, 'checkVerification'])->name('check-verification');
+
+Route::middleware('guest')->get('forget-password', [PasswordResetController::class, 'resetView'])->name('forget-password');
+Route::middleware('guest')->get('confirm-phone', [PasswordResetController::class, 'confirmPhoneView'])->name('confirm-phone');
+Route::middleware('guest')->get('code-resend', [PasswordResetController::class, 'codeResend'])->name('code-resend');
+Route::middleware('guest')->post('phone-confirmation', [PasswordResetController::class, 'phoneConfirmation'])->name('phone-confirmation');
+Route::middleware('guest')->get('password-change', [PasswordResetController::class, 'passwordChangeView'])->name('password-change');
+Route::middleware('guest')->post('code-confirmation', [PasswordResetController::class,'codeConfirmation'])->name('code-confirmation');
+Route::middleware('guest')->post('change-password', [PasswordResetController::class, 'changePassword'])->name('change-password');

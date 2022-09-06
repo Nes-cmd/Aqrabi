@@ -10,6 +10,7 @@
         "flowframe/laravel-trend": "^0.1.1",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "jantinnerezo/livewire-alert": "^2.2",
         "laravel/fortify": "^1.13",
         "laravel/framework": "^9.0",
         "laravel/sanctum": "^2.11",

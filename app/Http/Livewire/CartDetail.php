@@ -3,10 +3,12 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 use App\Models\Cart;
 
 class CartDetail extends Component
 {
+    use LivewireAlert;
     public $carts;
     protected $rules = ['carts.*.quantity' => 'required'];
     public function mount()
@@ -20,6 +22,7 @@ class CartDetail extends Component
         Cart::where('id', $id)->delete();
         $this->updateCart();
         $this->emit('cartSize');
+        $this->alert('info', 'Item removed', ['position' => 'top-end']);
     }
     public function decrement($id)
     {
