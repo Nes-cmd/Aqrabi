@@ -7,6 +7,66 @@ servers:
   -
     url: 'http://localhost:8000'
 paths:
+  /api/test-session:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: 'no'
+      tags:
+        - Endpoints
+      security: []
+  /api/get-session:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: 'no'
+      tags:
+        - Endpoints
+      security: []
   /api/login:
     post:
       summary: ''
@@ -31,6 +91,121 @@ paths:
         - Endpoints
       security: []
   /api/register:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/send-verificaion-code:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/verify-phone:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/get-password-reset-code:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/verify-password-reset-code:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/reset-password:
     post:
       summary: ''
       description: ''
@@ -151,7 +326,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the remove cart.'
-        example: minus
+        example: ipsum
         required: true
         schema:
           type: string
@@ -289,10 +464,10 @@ paths:
                       category_id: 1
                       productname: 'Amy Sutton'
                       price: 64
-                      count: 6
-                      description: 'Veritatis nostrud ei'
+                      count: 5
+                      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                       status: published
-                      ordered_counter: 46
+                      ordered_counter: 47
                       visiblity: '1'
                       tag: null
                       discount: null
@@ -302,17 +477,17 @@ paths:
                         - 'http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg'
                         - 'http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg'
                       created_at: '2022-08-25T17:34:36.000000Z'
-                      updated_at: '2022-09-01T14:53:20.000000Z'
+                      updated_at: '2022-09-06T08:25:24.000000Z'
                     -
                       id: 3
                       supplier_id: 2
                       category_id: 2
                       productname: 'Shana Owens'
                       price: 154
-                      count: 40
+                      count: 38
                       description: 'description goes here'
                       status: published
-                      ordered_counter: 35
+                      ordered_counter: 37
                       visiblity: '1'
                       tag: null
                       discount: null
@@ -322,7 +497,7 @@ paths:
                         - 'http://localhost:8000/storage/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
                         - 'http://localhost:8000/storage/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                       created_at: '2022-08-26T18:23:48.000000Z'
-                      updated_at: '2022-09-01T14:53:20.000000Z'
+                      updated_at: '2022-09-06T08:25:24.000000Z'
                     -
                       id: 4
                       supplier_id: 3
@@ -330,7 +505,7 @@ paths:
                       productname: 'Hoyt White'
                       price: 963
                       count: 62
-                      description: 'Aspernatur ad exerci'
+                      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                       status: published
                       ordered_counter: 22
                       visiblity: '1'
@@ -350,7 +525,7 @@ paths:
                       productname: 'Melvin Riley'
                       price: 912
                       count: 57
-                      description: 'Suscipit doloribus e'
+                      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                       status: published
                       ordered_counter: 36
                       visiblity: '1'
@@ -370,7 +545,7 @@ paths:
                       productname: 'Theodore Delacruz'
                       price: 283
                       count: 55
-                      description: hgf
+                      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                       status: published
                       ordered_counter: 55
                       visiblity: '0'
@@ -383,6 +558,23 @@ paths:
                         - 'http://localhost:8000/storage/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                       created_at: '2022-08-28T03:18:33.000000Z'
                       updated_at: '2022-08-28T03:18:33.000000Z'
+                    -
+                      id: 7
+                      supplier_id: 4
+                      category_id: 2
+                      productname: 'Sophia Barron'
+                      price: 366
+                      count: 50
+                      description: 'Quidem voluptatem M'
+                      status: published
+                      ordered_counter: 0
+                      visiblity: '1'
+                      tag: null
+                      discount: null
+                      main_photo: 'http://localhost:8000/storage/lHdY6WjE7PXvpGw8fZWPfbsxW2kI6K-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg'
+                      photos: []
+                      created_at: '2022-09-04T12:06:23.000000Z'
+                      updated_at: '2022-09-04T12:06:23.000000Z'
                 properties:
                   products:
                     type: array
@@ -393,10 +585,10 @@ paths:
                         category_id: 1
                         productname: 'Amy Sutton'
                         price: 64
-                        count: 6
-                        description: 'Veritatis nostrud ei'
+                        count: 5
+                        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                         status: published
-                        ordered_counter: 46
+                        ordered_counter: 47
                         visiblity: '1'
                         tag: null
                         discount: null
@@ -406,17 +598,17 @@ paths:
                           - 'http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg'
                           - 'http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg'
                         created_at: '2022-08-25T17:34:36.000000Z'
-                        updated_at: '2022-09-01T14:53:20.000000Z'
+                        updated_at: '2022-09-06T08:25:24.000000Z'
                       -
                         id: 3
                         supplier_id: 2
                         category_id: 2
                         productname: 'Shana Owens'
                         price: 154
-                        count: 40
+                        count: 38
                         description: 'description goes here'
                         status: published
-                        ordered_counter: 35
+                        ordered_counter: 37
                         visiblity: '1'
                         tag: null
                         discount: null
@@ -426,7 +618,7 @@ paths:
                           - 'http://localhost:8000/storage/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
                           - 'http://localhost:8000/storage/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                         created_at: '2022-08-26T18:23:48.000000Z'
-                        updated_at: '2022-09-01T14:53:20.000000Z'
+                        updated_at: '2022-09-06T08:25:24.000000Z'
                       -
                         id: 4
                         supplier_id: 3
@@ -434,7 +626,7 @@ paths:
                         productname: 'Hoyt White'
                         price: 963
                         count: 62
-                        description: 'Aspernatur ad exerci'
+                        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                         status: published
                         ordered_counter: 22
                         visiblity: '1'
@@ -454,7 +646,7 @@ paths:
                         productname: 'Melvin Riley'
                         price: 912
                         count: 57
-                        description: 'Suscipit doloribus e'
+                        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                         status: published
                         ordered_counter: 36
                         visiblity: '1'
@@ -474,7 +666,7 @@ paths:
                         productname: 'Theodore Delacruz'
                         price: 283
                         count: 55
-                        description: hgf
+                        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                         status: published
                         ordered_counter: 55
                         visiblity: '0'
@@ -487,6 +679,23 @@ paths:
                           - 'http://localhost:8000/storage/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                         created_at: '2022-08-28T03:18:33.000000Z'
                         updated_at: '2022-08-28T03:18:33.000000Z'
+                      -
+                        id: 7
+                        supplier_id: 4
+                        category_id: 2
+                        productname: 'Sophia Barron'
+                        price: 366
+                        count: 50
+                        description: 'Quidem voluptatem M'
+                        status: published
+                        ordered_counter: 0
+                        visiblity: '1'
+                        tag: null
+                        discount: null
+                        main_photo: 'http://localhost:8000/storage/lHdY6WjE7PXvpGw8fZWPfbsxW2kI6K-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg'
+                        photos: []
+                        created_at: '2022-09-04T12:06:23.000000Z'
+                        updated_at: '2022-09-04T12:06:23.000000Z'
                     items:
                       type: object
       tags:
@@ -532,7 +741,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product by category.'
-        example: quos
+        example: molestiae
         required: true
         schema:
           type: string
@@ -576,7 +785,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product by supplier.'
-        example: suscipit
+        example: eos
         required: true
         schema:
           type: string
@@ -622,10 +831,10 @@ paths:
                           category_id: 1
                           productname: 'Amy Sutton'
                           price: 64
-                          count: 6
-                          description: 'Veritatis nostrud ei'
+                          count: 5
+                          description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                           status: published
-                          ordered_counter: 46
+                          ordered_counter: 47
                           visiblity: '1'
                           tag: null
                           discount: null
@@ -635,7 +844,7 @@ paths:
                             - 'http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg'
                             - 'http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg'
                           created_at: '2022-08-25T17:34:36.000000Z'
-                          updated_at: '2022-09-01T14:53:20.000000Z'
+                          updated_at: '2022-09-06T08:25:24.000000Z'
                     -
                       id: 2
                       name: 'Baker Jacobson'
@@ -650,10 +859,10 @@ paths:
                           category_id: 2
                           productname: 'Shana Owens'
                           price: 154
-                          count: 40
+                          count: 38
                           description: 'description goes here'
                           status: published
-                          ordered_counter: 35
+                          ordered_counter: 37
                           visiblity: '1'
                           tag: null
                           discount: null
@@ -663,7 +872,7 @@ paths:
                             - 'http://localhost:8000/storage/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
                             - 'http://localhost:8000/storage/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                           created_at: '2022-08-26T18:23:48.000000Z'
-                          updated_at: '2022-09-01T14:53:20.000000Z'
+                          updated_at: '2022-09-06T08:25:24.000000Z'
                         -
                           id: 4
                           supplier_id: 3
@@ -671,7 +880,7 @@ paths:
                           productname: 'Hoyt White'
                           price: 963
                           count: 62
-                          description: 'Aspernatur ad exerci'
+                          description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                           status: published
                           ordered_counter: 22
                           visiblity: '1'
@@ -691,7 +900,7 @@ paths:
                           productname: 'Melvin Riley'
                           price: 912
                           count: 57
-                          description: 'Suscipit doloribus e'
+                          description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                           status: published
                           ordered_counter: 36
                           visiblity: '1'
@@ -711,7 +920,7 @@ paths:
                           productname: 'Theodore Delacruz'
                           price: 283
                           count: 55
-                          description: hgf
+                          description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                           status: published
                           ordered_counter: 55
                           visiblity: '0'
@@ -724,6 +933,23 @@ paths:
                             - 'http://localhost:8000/storage/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                           created_at: '2022-08-28T03:18:33.000000Z'
                           updated_at: '2022-08-28T03:18:33.000000Z'
+                        -
+                          id: 7
+                          supplier_id: 4
+                          category_id: 2
+                          productname: 'Sophia Barron'
+                          price: 366
+                          count: 50
+                          description: 'Quidem voluptatem M'
+                          status: published
+                          ordered_counter: 0
+                          visiblity: '1'
+                          tag: null
+                          discount: null
+                          main_photo: 'http://localhost:8000/storage/lHdY6WjE7PXvpGw8fZWPfbsxW2kI6K-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg'
+                          photos: []
+                          created_at: '2022-09-04T12:06:23.000000Z'
+                          updated_at: '2022-09-04T12:06:23.000000Z'
                 properties:
                   products:
                     type: array
@@ -742,10 +968,10 @@ paths:
                             category_id: 1
                             productname: 'Amy Sutton'
                             price: 64
-                            count: 6
-                            description: 'Veritatis nostrud ei'
+                            count: 5
+                            description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                             status: published
-                            ordered_counter: 46
+                            ordered_counter: 47
                             visiblity: '1'
                             tag: null
                             discount: null
@@ -755,7 +981,7 @@ paths:
                               - 'http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg'
                               - 'http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg'
                             created_at: '2022-08-25T17:34:36.000000Z'
-                            updated_at: '2022-09-01T14:53:20.000000Z'
+                            updated_at: '2022-09-06T08:25:24.000000Z'
                       -
                         id: 2
                         name: 'Baker Jacobson'
@@ -770,10 +996,10 @@ paths:
                             category_id: 2
                             productname: 'Shana Owens'
                             price: 154
-                            count: 40
+                            count: 38
                             description: 'description goes here'
                             status: published
-                            ordered_counter: 35
+                            ordered_counter: 37
                             visiblity: '1'
                             tag: null
                             discount: null
@@ -783,7 +1009,7 @@ paths:
                               - 'http://localhost:8000/storage/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
                               - 'http://localhost:8000/storage/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                             created_at: '2022-08-26T18:23:48.000000Z'
-                            updated_at: '2022-09-01T14:53:20.000000Z'
+                            updated_at: '2022-09-06T08:25:24.000000Z'
                           -
                             id: 4
                             supplier_id: 3
@@ -791,7 +1017,7 @@ paths:
                             productname: 'Hoyt White'
                             price: 963
                             count: 62
-                            description: 'Aspernatur ad exerci'
+                            description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                             status: published
                             ordered_counter: 22
                             visiblity: '1'
@@ -811,7 +1037,7 @@ paths:
                             productname: 'Melvin Riley'
                             price: 912
                             count: 57
-                            description: 'Suscipit doloribus e'
+                            description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                             status: published
                             ordered_counter: 36
                             visiblity: '1'
@@ -831,7 +1057,7 @@ paths:
                             productname: 'Theodore Delacruz'
                             price: 283
                             count: 55
-                            description: hgf
+                            description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                             status: published
                             ordered_counter: 55
                             visiblity: '0'
@@ -844,6 +1070,23 @@ paths:
                               - 'http://localhost:8000/storage/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                             created_at: '2022-08-28T03:18:33.000000Z'
                             updated_at: '2022-08-28T03:18:33.000000Z'
+                          -
+                            id: 7
+                            supplier_id: 4
+                            category_id: 2
+                            productname: 'Sophia Barron'
+                            price: 366
+                            count: 50
+                            description: 'Quidem voluptatem M'
+                            status: published
+                            ordered_counter: 0
+                            visiblity: '1'
+                            tag: null
+                            discount: null
+                            main_photo: 'http://localhost:8000/storage/lHdY6WjE7PXvpGw8fZWPfbsxW2kI6K-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg'
+                            photos: []
+                            created_at: '2022-09-04T12:06:23.000000Z'
+                            updated_at: '2022-09-04T12:06:23.000000Z'
                     items:
                       type: object
       tags:
@@ -880,14 +1123,15 @@ paths:
                     -
                       id: 1
                       fullname: Admin
-                      phone: '0940678725'
+                      phone: '940678725'
                       email: admin@admin.com
                       profile_url: null
                       tin_number: null
                       document_url: null
-                      email_verified_at: '2021-12-30T19:59:40.000000Z'
-                      created_at: '2022-08-30T15:14:46.000000Z'
-                      updated_at: '2022-08-30T15:14:46.000000Z'
+                      phone_verified_at: '2021-12-30 19:59:40'
+                      created_at: '2022-09-05T11:28:47.000000Z'
+                      updated_at: '2022-09-06T11:13:06.000000Z'
+                      dial_code: '+251'
                       products: []
                     -
                       id: 2
@@ -897,9 +1141,10 @@ paths:
                       profile_url: null
                       tin_number: null
                       document_url: null
-                      email_verified_at: '2021-12-30T19:59:40.000000Z'
-                      created_at: '2022-08-30T15:14:47.000000Z'
-                      updated_at: '2022-08-30T15:14:47.000000Z'
+                      phone_verified_at: '2021-12-30 19:59:40'
+                      created_at: '2022-09-05T11:28:47.000000Z'
+                      updated_at: '2022-09-05T11:28:47.000000Z'
+                      dial_code: ''
                       products:
                         -
                           id: 2
@@ -907,10 +1152,10 @@ paths:
                           category_id: 1
                           productname: 'Amy Sutton'
                           price: 64
-                          count: 6
-                          description: 'Veritatis nostrud ei'
+                          count: 5
+                          description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                           status: published
-                          ordered_counter: 46
+                          ordered_counter: 47
                           visiblity: '1'
                           tag: null
                           discount: null
@@ -920,17 +1165,17 @@ paths:
                             - 'http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg'
                             - 'http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg'
                           created_at: '2022-08-25T17:34:36.000000Z'
-                          updated_at: '2022-09-01T14:53:20.000000Z'
+                          updated_at: '2022-09-06T08:25:24.000000Z'
                         -
                           id: 3
                           supplier_id: 2
                           category_id: 2
                           productname: 'Shana Owens'
                           price: 154
-                          count: 40
+                          count: 38
                           description: 'description goes here'
                           status: published
-                          ordered_counter: 35
+                          ordered_counter: 37
                           visiblity: '1'
                           tag: null
                           discount: null
@@ -940,7 +1185,7 @@ paths:
                             - 'http://localhost:8000/storage/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
                             - 'http://localhost:8000/storage/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                           created_at: '2022-08-26T18:23:48.000000Z'
-                          updated_at: '2022-09-01T14:53:20.000000Z'
+                          updated_at: '2022-09-06T08:25:24.000000Z'
                         -
                           id: 6
                           supplier_id: 2
@@ -948,7 +1193,7 @@ paths:
                           productname: 'Theodore Delacruz'
                           price: 283
                           count: 55
-                          description: hgf
+                          description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                           status: published
                           ordered_counter: 55
                           visiblity: '0'
@@ -969,9 +1214,10 @@ paths:
                       profile_url: null
                       tin_number: null
                       document_url: null
-                      email_verified_at: '2021-12-30T19:59:40.000000Z'
-                      created_at: '2022-08-30T15:14:48.000000Z'
-                      updated_at: '2022-08-30T15:14:48.000000Z'
+                      phone_verified_at: '2021-12-30 19:59:40'
+                      created_at: '2022-09-05T11:28:47.000000Z'
+                      updated_at: '2022-09-05T11:28:47.000000Z'
+                      dial_code: ''
                       products:
                         -
                           id: 4
@@ -980,7 +1226,7 @@ paths:
                           productname: 'Hoyt White'
                           price: 963
                           count: 62
-                          description: 'Aspernatur ad exerci'
+                          description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                           status: published
                           ordered_counter: 22
                           visiblity: '1'
@@ -1000,7 +1246,7 @@ paths:
                           productname: 'Melvin Riley'
                           price: 912
                           count: 57
-                          description: 'Suscipit doloribus e'
+                          description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                           status: published
                           ordered_counter: 36
                           visiblity: '1'
@@ -1015,15 +1261,46 @@ paths:
                           updated_at: '2022-08-29T13:01:13.000000Z'
                     -
                       id: 4
-                      fullname: nesren
-                      phone: '09567657'
-                      email: nk@laravel.com
+                      fullname: 'Operator man'
+                      phone: '0956327657'
+                      email: op@aqrabi.com
                       profile_url: null
-                      tin_number: '54545'
-                      document_url: documents/tJ0ZLRX4DDsK4Q86UgLqRXW85oBDtDSA4XsBQ6UK.jpg
-                      email_verified_at: null
-                      created_at: '2022-08-30T15:15:22.000000Z'
-                      updated_at: '2022-08-30T15:15:22.000000Z'
+                      tin_number: null
+                      document_url: null
+                      phone_verified_at: '2021-12-30 19:59:40'
+                      created_at: '2022-09-05T11:28:48.000000Z'
+                      updated_at: '2022-09-05T11:28:48.000000Z'
+                      dial_code: ''
+                      products:
+                        -
+                          id: 7
+                          supplier_id: 4
+                          category_id: 2
+                          productname: 'Sophia Barron'
+                          price: 366
+                          count: 50
+                          description: 'Quidem voluptatem M'
+                          status: published
+                          ordered_counter: 0
+                          visiblity: '1'
+                          tag: null
+                          discount: null
+                          main_photo: 'http://localhost:8000/storage/lHdY6WjE7PXvpGw8fZWPfbsxW2kI6K-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg'
+                          photos: []
+                          created_at: '2022-09-04T12:06:23.000000Z'
+                          updated_at: '2022-09-04T12:06:23.000000Z'
+                    -
+                      id: 5
+                      fullname: 'Lila Pruitt'
+                      phone: '+251956567659'
+                      email: dudaw@mailinator.com
+                      profile_url: null
+                      tin_number: '372'
+                      document_url: null
+                      phone_verified_at: '2022-09-05 11:40:04'
+                      created_at: '2022-09-05T11:31:37.000000Z'
+                      updated_at: '2022-09-05T11:40:04.000000Z'
+                      dial_code: ''
                       products: []
                 properties:
                   products:
@@ -1032,14 +1309,15 @@ paths:
                       -
                         id: 1
                         fullname: Admin
-                        phone: '0940678725'
+                        phone: '940678725'
                         email: admin@admin.com
                         profile_url: null
                         tin_number: null
                         document_url: null
-                        email_verified_at: '2021-12-30T19:59:40.000000Z'
-                        created_at: '2022-08-30T15:14:46.000000Z'
-                        updated_at: '2022-08-30T15:14:46.000000Z'
+                        phone_verified_at: '2021-12-30 19:59:40'
+                        created_at: '2022-09-05T11:28:47.000000Z'
+                        updated_at: '2022-09-06T11:13:06.000000Z'
+                        dial_code: '+251'
                         products: []
                       -
                         id: 2
@@ -1049,9 +1327,10 @@ paths:
                         profile_url: null
                         tin_number: null
                         document_url: null
-                        email_verified_at: '2021-12-30T19:59:40.000000Z'
-                        created_at: '2022-08-30T15:14:47.000000Z'
-                        updated_at: '2022-08-30T15:14:47.000000Z'
+                        phone_verified_at: '2021-12-30 19:59:40'
+                        created_at: '2022-09-05T11:28:47.000000Z'
+                        updated_at: '2022-09-05T11:28:47.000000Z'
+                        dial_code: ''
                         products:
                           -
                             id: 2
@@ -1059,10 +1338,10 @@ paths:
                             category_id: 1
                             productname: 'Amy Sutton'
                             price: 64
-                            count: 6
-                            description: 'Veritatis nostrud ei'
+                            count: 5
+                            description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                             status: published
-                            ordered_counter: 46
+                            ordered_counter: 47
                             visiblity: '1'
                             tag: null
                             discount: null
@@ -1072,17 +1351,17 @@ paths:
                               - 'http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg'
                               - 'http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg'
                             created_at: '2022-08-25T17:34:36.000000Z'
-                            updated_at: '2022-09-01T14:53:20.000000Z'
+                            updated_at: '2022-09-06T08:25:24.000000Z'
                           -
                             id: 3
                             supplier_id: 2
                             category_id: 2
                             productname: 'Shana Owens'
                             price: 154
-                            count: 40
+                            count: 38
                             description: 'description goes here'
                             status: published
-                            ordered_counter: 35
+                            ordered_counter: 37
                             visiblity: '1'
                             tag: null
                             discount: null
@@ -1092,7 +1371,7 @@ paths:
                               - 'http://localhost:8000/storage/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png'
                               - 'http://localhost:8000/storage/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg'
                             created_at: '2022-08-26T18:23:48.000000Z'
-                            updated_at: '2022-09-01T14:53:20.000000Z'
+                            updated_at: '2022-09-06T08:25:24.000000Z'
                           -
                             id: 6
                             supplier_id: 2
@@ -1100,7 +1379,7 @@ paths:
                             productname: 'Theodore Delacruz'
                             price: 283
                             count: 55
-                            description: hgf
+                            description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                             status: published
                             ordered_counter: 55
                             visiblity: '0'
@@ -1121,9 +1400,10 @@ paths:
                         profile_url: null
                         tin_number: null
                         document_url: null
-                        email_verified_at: '2021-12-30T19:59:40.000000Z'
-                        created_at: '2022-08-30T15:14:48.000000Z'
-                        updated_at: '2022-08-30T15:14:48.000000Z'
+                        phone_verified_at: '2021-12-30 19:59:40'
+                        created_at: '2022-09-05T11:28:47.000000Z'
+                        updated_at: '2022-09-05T11:28:47.000000Z'
+                        dial_code: ''
                         products:
                           -
                             id: 4
@@ -1132,7 +1412,7 @@ paths:
                             productname: 'Hoyt White'
                             price: 963
                             count: 62
-                            description: 'Aspernatur ad exerci'
+                            description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                             status: published
                             ordered_counter: 22
                             visiblity: '1'
@@ -1152,7 +1432,7 @@ paths:
                             productname: 'Melvin Riley'
                             price: 912
                             count: 57
-                            description: 'Suscipit doloribus e'
+                            description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                             status: published
                             ordered_counter: 36
                             visiblity: '1'
@@ -1167,15 +1447,46 @@ paths:
                             updated_at: '2022-08-29T13:01:13.000000Z'
                       -
                         id: 4
-                        fullname: nesren
-                        phone: '09567657'
-                        email: nk@laravel.com
+                        fullname: 'Operator man'
+                        phone: '0956327657'
+                        email: op@aqrabi.com
                         profile_url: null
-                        tin_number: '54545'
-                        document_url: documents/tJ0ZLRX4DDsK4Q86UgLqRXW85oBDtDSA4XsBQ6UK.jpg
-                        email_verified_at: null
-                        created_at: '2022-08-30T15:15:22.000000Z'
-                        updated_at: '2022-08-30T15:15:22.000000Z'
+                        tin_number: null
+                        document_url: null
+                        phone_verified_at: '2021-12-30 19:59:40'
+                        created_at: '2022-09-05T11:28:48.000000Z'
+                        updated_at: '2022-09-05T11:28:48.000000Z'
+                        dial_code: ''
+                        products:
+                          -
+                            id: 7
+                            supplier_id: 4
+                            category_id: 2
+                            productname: 'Sophia Barron'
+                            price: 366
+                            count: 50
+                            description: 'Quidem voluptatem M'
+                            status: published
+                            ordered_counter: 0
+                            visiblity: '1'
+                            tag: null
+                            discount: null
+                            main_photo: 'http://localhost:8000/storage/lHdY6WjE7PXvpGw8fZWPfbsxW2kI6K-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg'
+                            photos: []
+                            created_at: '2022-09-04T12:06:23.000000Z'
+                            updated_at: '2022-09-04T12:06:23.000000Z'
+                      -
+                        id: 5
+                        fullname: 'Lila Pruitt'
+                        phone: '+251956567659'
+                        email: dudaw@mailinator.com
+                        profile_url: null
+                        tin_number: '372'
+                        document_url: null
+                        phone_verified_at: '2022-09-05 11:40:04'
+                        created_at: '2022-09-05T11:31:37.000000Z'
+                        updated_at: '2022-09-05T11:40:04.000000Z'
+                        dial_code: ''
                         products: []
                     items:
                       type: object
@@ -1222,10 +1533,83 @@ paths:
         in: path
         name: id
         description: 'The ID of the product single.'
-        example: laborum
+        example: doloremque
         required: true
         schema:
           type: string
+  /api/shop/get-sliders:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  sliders:
+                    -
+                      id: 2
+                      information: 'Laudantium nisi ad '
+                      photo_url: 'http://localhost:8000/storage/rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg'
+                      created_at: '2022-08-27T21:20:12.000000Z'
+                      updated_at: '2022-08-27T21:20:12.000000Z'
+                    -
+                      id: 3
+                      information: 'Rerum voluptatem pe'
+                      photo_url: 'http://localhost:8000/storage/VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg'
+                      created_at: '2022-08-27T21:20:37.000000Z'
+                      updated_at: '2022-08-27T21:20:37.000000Z'
+                    -
+                      id: 4
+                      information: 'Aliqua Aliqua Debi'
+                      photo_url: 'http://localhost:8000/storage/3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg'
+                      created_at: '2022-08-27T21:20:54.000000Z'
+                      updated_at: '2022-08-27T21:20:54.000000Z'
+                properties:
+                  sliders:
+                    type: array
+                    example:
+                      -
+                        id: 2
+                        information: 'Laudantium nisi ad '
+                        photo_url: 'http://localhost:8000/storage/rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg'
+                        created_at: '2022-08-27T21:20:12.000000Z'
+                        updated_at: '2022-08-27T21:20:12.000000Z'
+                      -
+                        id: 3
+                        information: 'Rerum voluptatem pe'
+                        photo_url: 'http://localhost:8000/storage/VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg'
+                        created_at: '2022-08-27T21:20:37.000000Z'
+                        updated_at: '2022-08-27T21:20:37.000000Z'
+                      -
+                        id: 4
+                        information: 'Aliqua Aliqua Debi'
+                        photo_url: 'http://localhost:8000/storage/3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg'
+                        created_at: '2022-08-27T21:20:54.000000Z'
+                        updated_at: '2022-08-27T21:20:54.000000Z'
+                    items:
+                      type: object
+      tags:
+        - Endpoints
+      security: []
   /api/adress/get-countries:
     get:
       summary: ''
@@ -1524,41 +1908,6 @@ paths:
       tags:
         - Endpoints
       security: []
-  /api/supplier/dashboard/customers:
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-      security: []
   /api/supplier/dashboard/orders:
     get:
       summary: ''
@@ -1594,7 +1943,7 @@ paths:
       tags:
         - Endpoints
       security: []
-  /api/shop/get-sliders:
+  /api/supplier/dashboard/customers:
     get:
       summary: ''
       description: ''
@@ -1614,56 +1963,18 @@ paths:
           schema:
             type: string
       responses:
-        200:
+        401:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  sliders:
-                    -
-                      id: 2
-                      information: 'Laudantium nisi ad '
-                      photo_url: rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg
-                      created_at: '2022-08-27T21:20:12.000000Z'
-                      updated_at: '2022-08-27T21:20:12.000000Z'
-                    -
-                      id: 3
-                      information: 'Rerum voluptatem pe'
-                      photo_url: VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg
-                      created_at: '2022-08-27T21:20:37.000000Z'
-                      updated_at: '2022-08-27T21:20:37.000000Z'
-                    -
-                      id: 4
-                      information: 'Aliqua Aliqua Debi'
-                      photo_url: 3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg
-                      created_at: '2022-08-27T21:20:54.000000Z'
-                      updated_at: '2022-08-27T21:20:54.000000Z'
+                  message: Unauthenticated.
                 properties:
-                  sliders:
-                    type: array
-                    example:
-                      -
-                        id: 2
-                        information: 'Laudantium nisi ad '
-                        photo_url: rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg
-                        created_at: '2022-08-27T21:20:12.000000Z'
-                        updated_at: '2022-08-27T21:20:12.000000Z'
-                      -
-                        id: 3
-                        information: 'Rerum voluptatem pe'
-                        photo_url: VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg
-                        created_at: '2022-08-27T21:20:37.000000Z'
-                        updated_at: '2022-08-27T21:20:37.000000Z'
-                      -
-                        id: 4
-                        information: 'Aliqua Aliqua Debi'
-                        photo_url: 3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg
-                        created_at: '2022-08-27T21:20:54.000000Z'
-                        updated_at: '2022-08-27T21:20:54.000000Z'
-                    items:
-                      type: object
+                  message:
+                    type: string
+                    example: Unauthenticated.
       tags:
         - Endpoints
       security: []

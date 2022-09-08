@@ -9,7 +9,7 @@ use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\ShopController;
 use App\Http\Controllers\Api\AdressController;
-use App\Http\Controllers\Auth\Auth\PasswordResetController;
+use App\Http\Controllers\Api\Auth\PasswordResetController;
 use Illuminate\Http\Request;
 
 Route::get('test-session', function(){

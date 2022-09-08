@@ -3,6 +3,62 @@ description: ''
 endpoints:
   -
     httpMethods:
+      - GET
+    uri: api/test-session
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: 'no'
+        headers:
+          content-type: 'text/html; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=MR5UvTkCg8u1v2g9rRrGp6NSF2fAiMdY9NVPQoyN; expires=Thu, 06 Jul 2023 23:04:48 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/get-session
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: 'no'
+        headers:
+          content-type: 'text/html; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '58'
+          access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=eR8qC6ePnj8yQYpr111PmG9ij8AMrXTCRSIeEiJO; expires=Thu, 06 Jul 2023 23:04:48 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
       - POST
     uri: api/login
     metadata:
@@ -22,6 +78,91 @@ endpoints:
     httpMethods:
       - POST
     uri: api/register
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/send-verificaion-code
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/verify-phone
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/get-password-reset-code
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/verify-password-reset-code
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/reset-password
     metadata:
       title: ''
       description: ''
@@ -75,6 +216,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=hBr0fi6YythbT6YC8Wx1ITXAHtS37l7qIDWhKkIh; expires=Thu, 06 Jul 2023 23:04:49 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
@@ -94,7 +236,7 @@ endpoints:
         name: id
         description: 'The ID of the remove cart.'
         required: true
-        example: minus
+        example: ipsum
         type: string
         custom: []
     queryParameters: []
@@ -107,6 +249,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=woMhugMfZsY5AABGRMjPjVqnxBwkpBzDQ5re4tgR; expires=Thu, 06 Jul 2023 23:04:49 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
@@ -132,6 +275,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=dYA0XeuVGPKdwM2OEc1rck8oiEQcOsv5WaZFg9Ir; expires=Thu, 06 Jul 2023 23:04:49 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
@@ -157,8 +301,9 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '59'
+          x-ratelimit-remaining: '57'
           access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=CweU9a3AfEWFUR6qe9iDwXjzWcUrMnbkaw9y0xPm; expires=Thu, 06 Jul 2023 23:04:49 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
@@ -179,13 +324,14 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"products":[{"id":2,"supplier_id":2,"category_id":1,"productname":"Amy Sutton","price":64,"count":6,"description":"Veritatis nostrud ei","status":"published","ordered_counter":46,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg"],"created_at":"2022-08-25T17:34:36.000000Z","updated_at":"2022-09-01T14:53:20.000000Z"},{"id":3,"supplier_id":2,"category_id":2,"productname":"Shana Owens","price":154,"count":40,"description":"description goes here","status":"published","ordered_counter":35,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","photos":["http:\/\/localhost:8000\/storage\/rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","http:\/\/localhost:8000\/storage\/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-26T18:23:48.000000Z","updated_at":"2022-09-01T14:53:20.000000Z"},{"id":4,"supplier_id":3,"category_id":2,"productname":"Hoyt White","price":963,"count":62,"description":"Aspernatur ad exerci","status":"published","ordered_counter":22,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg"],"created_at":"2022-08-28T03:14:48.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":5,"supplier_id":3,"category_id":2,"productname":"Melvin Riley","price":912,"count":57,"description":"Suscipit doloribus e","status":"published","ordered_counter":36,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","http:\/\/localhost:8000\/storage\/FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg"],"created_at":"2022-08-28T03:17:12.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":6,"supplier_id":2,"category_id":2,"productname":"Theodore Delacruz","price":283,"count":55,"description":"hgf","status":"published","ordered_counter":55,"visiblity":"0","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-28T03:18:33.000000Z","updated_at":"2022-08-28T03:18:33.000000Z"}]}'
+        content: '{"products":[{"id":2,"supplier_id":2,"category_id":1,"productname":"Amy Sutton","price":64,"count":5,"description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n","status":"published","ordered_counter":47,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg"],"created_at":"2022-08-25T17:34:36.000000Z","updated_at":"2022-09-06T08:25:24.000000Z"},{"id":3,"supplier_id":2,"category_id":2,"productname":"Shana Owens","price":154,"count":38,"description":"description goes here","status":"published","ordered_counter":37,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","photos":["http:\/\/localhost:8000\/storage\/rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","http:\/\/localhost:8000\/storage\/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-26T18:23:48.000000Z","updated_at":"2022-09-06T08:25:24.000000Z"},{"id":4,"supplier_id":3,"category_id":2,"productname":"Hoyt White","price":963,"count":62,"description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n","status":"published","ordered_counter":22,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg"],"created_at":"2022-08-28T03:14:48.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":5,"supplier_id":3,"category_id":2,"productname":"Melvin Riley","price":912,"count":57,"description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n","status":"published","ordered_counter":36,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","http:\/\/localhost:8000\/storage\/FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg"],"created_at":"2022-08-28T03:17:12.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":6,"supplier_id":2,"category_id":2,"productname":"Theodore Delacruz","price":283,"count":55,"description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n","status":"published","ordered_counter":55,"visiblity":"0","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-28T03:18:33.000000Z","updated_at":"2022-08-28T03:18:33.000000Z"},{"id":7,"supplier_id":4,"category_id":2,"productname":"Sophia Barron","price":366,"count":50,"description":"Quidem voluptatem M","status":"published","ordered_counter":0,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/lHdY6WjE7PXvpGw8fZWPfbsxW2kI6K-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg","photos":[],"created_at":"2022-09-04T12:06:23.000000Z","updated_at":"2022-09-04T12:06:23.000000Z"}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '58'
+          x-ratelimit-remaining: '56'
           access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=xNzALz69VxK6ObFe53lAmE9Txk00YNpbcYhBNk5S; expires=Thu, 06 Jul 2023 23:04:49 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
@@ -205,7 +351,7 @@ endpoints:
         name: id
         description: 'The ID of the product by category.'
         required: true
-        example: quos
+        example: molestiae
         type: string
         custom: []
     queryParameters: []
@@ -218,8 +364,9 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '57'
+          x-ratelimit-remaining: '55'
           access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=Lbjs5Y9VIkQNVamKHUz6Ao2bxVCM4AfLh6ZUvgHE; expires=Thu, 06 Jul 2023 23:04:49 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
@@ -239,7 +386,7 @@ endpoints:
         name: id
         description: 'The ID of the product by supplier.'
         required: true
-        example: suscipit
+        example: eos
         type: string
         custom: []
     queryParameters: []
@@ -252,8 +399,9 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '56'
+          x-ratelimit-remaining: '54'
           access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=DdhuwlhZOQpW3QcjItJeYgkXhLLlOCu7aJuLVvxh; expires=Thu, 06 Jul 2023 23:04:49 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
@@ -274,13 +422,14 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"products":[{"id":1,"name":"Kenyon Rodriquez","description":"Mollit numquam et cu","visibility":"public","created_at":"2022-08-25T17:32:29.000000Z","updated_at":"2022-08-25T17:32:29.000000Z","products":[{"id":2,"supplier_id":2,"category_id":1,"productname":"Amy Sutton","price":64,"count":6,"description":"Veritatis nostrud ei","status":"published","ordered_counter":46,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg"],"created_at":"2022-08-25T17:34:36.000000Z","updated_at":"2022-09-01T14:53:20.000000Z"}]},{"id":2,"name":"Baker Jacobson","description":"Dolore voluptate nem","visibility":"public","created_at":"2022-08-25T17:32:42.000000Z","updated_at":"2022-08-25T17:32:42.000000Z","products":[{"id":3,"supplier_id":2,"category_id":2,"productname":"Shana Owens","price":154,"count":40,"description":"description goes here","status":"published","ordered_counter":35,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","photos":["http:\/\/localhost:8000\/storage\/rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","http:\/\/localhost:8000\/storage\/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-26T18:23:48.000000Z","updated_at":"2022-09-01T14:53:20.000000Z"},{"id":4,"supplier_id":3,"category_id":2,"productname":"Hoyt White","price":963,"count":62,"description":"Aspernatur ad exerci","status":"published","ordered_counter":22,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg"],"created_at":"2022-08-28T03:14:48.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":5,"supplier_id":3,"category_id":2,"productname":"Melvin Riley","price":912,"count":57,"description":"Suscipit doloribus e","status":"published","ordered_counter":36,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","http:\/\/localhost:8000\/storage\/FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg"],"created_at":"2022-08-28T03:17:12.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":6,"supplier_id":2,"category_id":2,"productname":"Theodore Delacruz","price":283,"count":55,"description":"hgf","status":"published","ordered_counter":55,"visiblity":"0","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-28T03:18:33.000000Z","updated_at":"2022-08-28T03:18:33.000000Z"}]}]}'
+        content: '{"products":[{"id":1,"name":"Kenyon Rodriquez","description":"Mollit numquam et cu","visibility":"public","created_at":"2022-08-25T17:32:29.000000Z","updated_at":"2022-08-25T17:32:29.000000Z","products":[{"id":2,"supplier_id":2,"category_id":1,"productname":"Amy Sutton","price":64,"count":5,"description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n","status":"published","ordered_counter":47,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg"],"created_at":"2022-08-25T17:34:36.000000Z","updated_at":"2022-09-06T08:25:24.000000Z"}]},{"id":2,"name":"Baker Jacobson","description":"Dolore voluptate nem","visibility":"public","created_at":"2022-08-25T17:32:42.000000Z","updated_at":"2022-08-25T17:32:42.000000Z","products":[{"id":3,"supplier_id":2,"category_id":2,"productname":"Shana Owens","price":154,"count":38,"description":"description goes here","status":"published","ordered_counter":37,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","photos":["http:\/\/localhost:8000\/storage\/rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","http:\/\/localhost:8000\/storage\/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-26T18:23:48.000000Z","updated_at":"2022-09-06T08:25:24.000000Z"},{"id":4,"supplier_id":3,"category_id":2,"productname":"Hoyt White","price":963,"count":62,"description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n","status":"published","ordered_counter":22,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg"],"created_at":"2022-08-28T03:14:48.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":5,"supplier_id":3,"category_id":2,"productname":"Melvin Riley","price":912,"count":57,"description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n","status":"published","ordered_counter":36,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","http:\/\/localhost:8000\/storage\/FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg"],"created_at":"2022-08-28T03:17:12.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":6,"supplier_id":2,"category_id":2,"productname":"Theodore Delacruz","price":283,"count":55,"description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n","status":"published","ordered_counter":55,"visiblity":"0","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-28T03:18:33.000000Z","updated_at":"2022-08-28T03:18:33.000000Z"},{"id":7,"supplier_id":4,"category_id":2,"productname":"Sophia Barron","price":366,"count":50,"description":"Quidem voluptatem M","status":"published","ordered_counter":0,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/lHdY6WjE7PXvpGw8fZWPfbsxW2kI6K-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg","photos":[],"created_at":"2022-09-04T12:06:23.000000Z","updated_at":"2022-09-04T12:06:23.000000Z"}]}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '55'
+          x-ratelimit-remaining: '53'
           access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=wUmE1IfX27TnngtRfZdFyJyleFlvhdLRBwkCvRUY; expires=Thu, 06 Jul 2023 23:04:49 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
@@ -301,13 +450,14 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"products":[{"id":1,"fullname":"Admin","phone":"0940678725","email":"admin@admin.com","profile_url":null,"tin_number":null,"document_url":null,"email_verified_at":"2021-12-30T19:59:40.000000Z","created_at":"2022-08-30T15:14:46.000000Z","updated_at":"2022-08-30T15:14:46.000000Z","products":[]},{"id":2,"fullname":"Supplier man","phone":"0940678345","email":"supplier@supplier.com","profile_url":null,"tin_number":null,"document_url":null,"email_verified_at":"2021-12-30T19:59:40.000000Z","created_at":"2022-08-30T15:14:47.000000Z","updated_at":"2022-08-30T15:14:47.000000Z","products":[{"id":2,"supplier_id":2,"category_id":1,"productname":"Amy Sutton","price":64,"count":6,"description":"Veritatis nostrud ei","status":"published","ordered_counter":46,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg"],"created_at":"2022-08-25T17:34:36.000000Z","updated_at":"2022-09-01T14:53:20.000000Z"},{"id":3,"supplier_id":2,"category_id":2,"productname":"Shana Owens","price":154,"count":40,"description":"description goes here","status":"published","ordered_counter":35,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","photos":["http:\/\/localhost:8000\/storage\/rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","http:\/\/localhost:8000\/storage\/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-26T18:23:48.000000Z","updated_at":"2022-09-01T14:53:20.000000Z"},{"id":6,"supplier_id":2,"category_id":2,"productname":"Theodore Delacruz","price":283,"count":55,"description":"hgf","status":"published","ordered_counter":55,"visiblity":"0","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-28T03:18:33.000000Z","updated_at":"2022-08-28T03:18:33.000000Z"}]},{"id":3,"fullname":"Some Customer","phone":"0956567657","email":"customer@customer.com","profile_url":null,"tin_number":null,"document_url":null,"email_verified_at":"2021-12-30T19:59:40.000000Z","created_at":"2022-08-30T15:14:48.000000Z","updated_at":"2022-08-30T15:14:48.000000Z","products":[{"id":4,"supplier_id":3,"category_id":2,"productname":"Hoyt White","price":963,"count":62,"description":"Aspernatur ad exerci","status":"published","ordered_counter":22,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg"],"created_at":"2022-08-28T03:14:48.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":5,"supplier_id":3,"category_id":2,"productname":"Melvin Riley","price":912,"count":57,"description":"Suscipit doloribus e","status":"published","ordered_counter":36,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","http:\/\/localhost:8000\/storage\/FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg"],"created_at":"2022-08-28T03:17:12.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"}]},{"id":4,"fullname":"nesren","phone":"09567657","email":"nk@laravel.com","profile_url":null,"tin_number":"54545","document_url":"documents\/tJ0ZLRX4DDsK4Q86UgLqRXW85oBDtDSA4XsBQ6UK.jpg","email_verified_at":null,"created_at":"2022-08-30T15:15:22.000000Z","updated_at":"2022-08-30T15:15:22.000000Z","products":[]}]}'
+        content: '{"products":[{"id":1,"fullname":"Admin","phone":"940678725","email":"admin@admin.com","profile_url":null,"tin_number":null,"document_url":null,"phone_verified_at":"2021-12-30 19:59:40","created_at":"2022-09-05T11:28:47.000000Z","updated_at":"2022-09-06T11:13:06.000000Z","dial_code":"+251","products":[]},{"id":2,"fullname":"Supplier man","phone":"0940678345","email":"supplier@supplier.com","profile_url":null,"tin_number":null,"document_url":null,"phone_verified_at":"2021-12-30 19:59:40","created_at":"2022-09-05T11:28:47.000000Z","updated_at":"2022-09-05T11:28:47.000000Z","dial_code":"","products":[{"id":2,"supplier_id":2,"category_id":1,"productname":"Amy Sutton","price":64,"count":5,"description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n","status":"published","ordered_counter":47,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/fe577vuyHWERzHACKzsBklQc6pF7gq-metaNFY4VllQME13TFJkb3VLOGk0cWM1c0pycWwzSDM5a0tueExvcmhEQS5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/8am3tEA42476X58gBBxUBLeVpCqcYX-metaRWZkcnVPNU9ZeEFmTjViZG5PdERVTWF4elVqeGduQ3M5eDNtMW5hOS5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg"],"created_at":"2022-08-25T17:34:36.000000Z","updated_at":"2022-09-06T08:25:24.000000Z"},{"id":3,"supplier_id":2,"category_id":2,"productname":"Shana Owens","price":154,"count":38,"description":"description goes here","status":"published","ordered_counter":37,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/KMkLInPwNu3lLdXjGrGW8jFqvNLBe6-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","photos":["http:\/\/localhost:8000\/storage\/rXvRZtRUnlOiWqZakNNJs79O7TLKXE-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/V9sdIw2YwHuvBzJIUVJIYzg81a4oBA-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","http:\/\/localhost:8000\/storage\/DFq1i7y6F8CXMDQT71gTdifHx4gcOd-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-26T18:23:48.000000Z","updated_at":"2022-09-06T08:25:24.000000Z"},{"id":6,"supplier_id":2,"category_id":2,"productname":"Theodore Delacruz","price":283,"count":55,"description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n","status":"published","ordered_counter":55,"visiblity":"0","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/yVlcQJ9u4XZ0aIm1XVrgn5z81FYdtM-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/dn1sLbdfsLvjhujzOrV51T5IBIKxrG-metacWpkMEhjUm5ocUhTV2pzdWNtb0RHbDdCVHBTUVBxd1o2RzhaVkVOUy5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/lRA3psyv03XAEGpOVBp2X9tCdmASFh-metab1dMQmV5VDJWcnpiNGI3V1pEWDg2b09TNWw0bnhwYnh4RnA5REhlVi5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/U8kYfJwzTL5dYRkAilsJZ1Pf8PFiYs-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg"],"created_at":"2022-08-28T03:18:33.000000Z","updated_at":"2022-08-28T03:18:33.000000Z"}]},{"id":3,"fullname":"Some Customer","phone":"0956567657","email":"customer@customer.com","profile_url":null,"tin_number":null,"document_url":null,"phone_verified_at":"2021-12-30 19:59:40","created_at":"2022-09-05T11:28:47.000000Z","updated_at":"2022-09-05T11:28:47.000000Z","dial_code":"","products":[{"id":4,"supplier_id":3,"category_id":2,"productname":"Hoyt White","price":963,"count":62,"description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n","status":"published","ordered_counter":22,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/hCYEsP3VBGsvmRJGTx9cbJ1jd8tuRI-metaWHg5aVdrZE52MTNvWXJIUGJSS1JWNENMVm9TVkxVT2VmdWxIc2FKQi5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/a7ZuUvjN1VHC95HinO73mvgEzFwDcf-metaeDE1bkFDOUNiR2h4Mk1Bek5PTk52cjFnUTdmSGtCS0ZUVGNQdmZneS5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/0JtqbZs5z3CrFsGJlNLswu27eNniVi-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/xZ2O5uTlbaVrVJQL4cJp5fJUBt6xTu-metaV3pDVzA3YVNVdUlZSW0xbEUzZ0NsRW1Ga0prcVJhSGl4dUVUQlVLRC5qcGVn-.jpg"],"created_at":"2022-08-28T03:14:48.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"},{"id":5,"supplier_id":3,"category_id":2,"productname":"Melvin Riley","price":912,"count":57,"description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n","status":"published","ordered_counter":36,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/6xGl28wLXzyA3PiOISpB9QsD3lzeiT-metaVDkyTXc3a0pxUzU4T3hjTlE3cHJncEtKSlY5ZVhCSjlUaDZTbGFrNS5qcGVn-.jpg","photos":["http:\/\/localhost:8000\/storage\/oAFePkPlDMvZMIQJp5AxP1L3XH2CKZ-metaT2lzRGJyU1VwZ1hEbWd3dW9xa2ZNZnFTM3g0QzRGUlVuRmVUQjVOMi5wbmc=-.png","http:\/\/localhost:8000\/storage\/FnyYiXUHbg43OsFa2l8pm5soqTqkLF-metaTlJyRlJyaGg5cHZpOHd0NTJoNXpKOXRaV0RQNjZMWnBobElkVWhYcC5qcGVn-.jpg","http:\/\/localhost:8000\/storage\/pMAhJUBApejnuZXItZh4W5UnD16lWT-metaTkxmSDhkdWRSbHdLZDJZb1g2NExmTjlZZDE3T2xoMG1WYzhIVkRSeC5qcGVn-.jpg"],"created_at":"2022-08-28T03:17:12.000000Z","updated_at":"2022-08-29T13:01:13.000000Z"}]},{"id":4,"fullname":"Operator man","phone":"0956327657","email":"op@aqrabi.com","profile_url":null,"tin_number":null,"document_url":null,"phone_verified_at":"2021-12-30 19:59:40","created_at":"2022-09-05T11:28:48.000000Z","updated_at":"2022-09-05T11:28:48.000000Z","dial_code":"","products":[{"id":7,"supplier_id":4,"category_id":2,"productname":"Sophia Barron","price":366,"count":50,"description":"Quidem voluptatem M","status":"published","ordered_counter":0,"visiblity":"1","tag":null,"discount":null,"main_photo":"http:\/\/localhost:8000\/storage\/lHdY6WjE7PXvpGw8fZWPfbsxW2kI6K-metad1ppNERBMjhnanZMRG1XR2RhbHBFNnNvMWl1U2lzT1hpc3pweGczRC5qcGVn-.jpg","photos":[],"created_at":"2022-09-04T12:06:23.000000Z","updated_at":"2022-09-04T12:06:23.000000Z"}]},{"id":5,"fullname":"Lila Pruitt","phone":"+251956567659","email":"dudaw@mailinator.com","profile_url":null,"tin_number":"372","document_url":null,"phone_verified_at":"2022-09-05 11:40:04","created_at":"2022-09-05T11:31:37.000000Z","updated_at":"2022-09-05T11:40:04.000000Z","dial_code":"","products":[]}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '54'
+          x-ratelimit-remaining: '52'
           access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=9wZdls40JH5z2JPQ3qEbnJ3rM2PH5XeaPXCI8Gwo; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
@@ -327,7 +477,7 @@ endpoints:
         name: id
         description: 'The ID of the product single.'
         required: true
-        example: laborum
+        example: doloremque
         type: string
         custom: []
     queryParameters: []
@@ -340,8 +490,37 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '53'
+          x-ratelimit-remaining: '51'
           access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=kEXJjZk0PrdytglIryv9nS3ItXWktREbRdiQowoN; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/shop/get-sliders
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"sliders":[{"id":2,"information":"Laudantium nisi ad ","photo_url":"http:\/\/localhost:8000\/storage\/rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg","created_at":"2022-08-27T21:20:12.000000Z","updated_at":"2022-08-27T21:20:12.000000Z"},{"id":3,"information":"Rerum voluptatem pe","photo_url":"http:\/\/localhost:8000\/storage\/VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg","created_at":"2022-08-27T21:20:37.000000Z","updated_at":"2022-08-27T21:20:37.000000Z"},{"id":4,"information":"Aliqua Aliqua Debi","photo_url":"http:\/\/localhost:8000\/storage\/3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg","created_at":"2022-08-27T21:20:54.000000Z","updated_at":"2022-08-27T21:20:54.000000Z"}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '50'
+          access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=HFXbIrtSdFpO9HOG0ppFkyRy8AdvfSr59JKj65Fa; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
@@ -367,8 +546,9 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '51'
+          x-ratelimit-remaining: '49'
           access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=F72CUbMvFgMAclmA97oVeRu4C32d49vNgDh9X9Ky; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
@@ -394,6 +574,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=TIgLxnJNt8xSrfa7qg7JBwAdjfP553W3o5cC4RDr; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
@@ -419,6 +600,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=kDfNUGivNlfsUP4ZBLADdUaZqGnsUhLspJzqP3yU; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
@@ -461,6 +643,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=2roJmUWDKOG16MMub81F1ef5NoDXYbVVh4ga3vkO; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
@@ -486,6 +669,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=vDVLCFNyawYisSNWhPyssfeKKioL6k9LIeMHzJlJ; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
@@ -511,6 +695,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=Inh4zrgE094vnAOOfQA3uheTbiaO8MqrOHDVp0Lj; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
@@ -536,31 +721,7 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           access-control-allow-origin: '*'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: api/supplier/dashboard/customers
-    metadata:
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=1vBhSbbGQBV7UkLe0EcLSduuwwXtnncaHPNYC6Mh; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
@@ -586,12 +747,13 @@ endpoints:
           cache-control: 'no-cache, private'
           content-type: application/json
           access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=LnzZerxIxPCWqQNrUmRP9KjpPC5W3eequRS3JTtA; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
     httpMethods:
       - GET
-    uri: api/shop/get-sliders
+    uri: api/supplier/dashboard/customers
     metadata:
       title: ''
       description: ''
@@ -605,13 +767,12 @@ endpoints:
     bodyParameters: []
     responses:
       -
-        status: 200
-        content: '{"sliders":[{"id":2,"information":"Laudantium nisi ad ","photo_url":"rsc2JKOfLYi0abSYA71WZ6p441cIz2-metaaW1nMy5qcGVn-.jpg","created_at":"2022-08-27T21:20:12.000000Z","updated_at":"2022-08-27T21:20:12.000000Z"},{"id":3,"information":"Rerum voluptatem pe","photo_url":"VC6x978zj2aD0pJkR2N7n8DZBG4F3B-metaaW1nMi5qcGVn-.jpg","created_at":"2022-08-27T21:20:37.000000Z","updated_at":"2022-08-27T21:20:37.000000Z"},{"id":4,"information":"Aliqua Aliqua Debi","photo_url":"3lbMp0MBVrCSkRnTyQOOk0aIlkSC1k-metaaW1nNS5qcGVn-.jpg","created_at":"2022-08-27T21:20:54.000000Z","updated_at":"2022-08-27T21:20:54.000000Z"}]}'
+        status: 401
+        content: '{"message":"Unauthenticated."}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '52'
           access-control-allow-origin: '*'
+          set-cookie: 'aqrabi_session=87lYQaU4OvUh6ZTAvjebKeUxzePZHOFb7gSMXxS3; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
