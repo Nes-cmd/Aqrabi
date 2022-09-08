@@ -10,3 +10,12 @@ function cartTotal()
     }
     return $total;
 }
+function phoneMerge($dial_code, $phone)
+{
+    if (strlen($phone) == 9) {
+        $phone = $dial_code . $phone;
+    } else {
+        $phone = $dial_code . substr($phone, 1);
+    }
+    return $phone;
+}

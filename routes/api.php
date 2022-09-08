@@ -5,13 +5,30 @@ use App\Http\Controllers\Api\SupplierDashboardController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\CartController;
-use App\Http\Controllers\Api\LoginController;
-use App\Http\Controllers\Api\RegisterController;
+use App\Http\Controllers\Api\Auth\LoginController;
+use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\ShopController;
 use App\Http\Controllers\Api\AdressController;
+use App\Http\Controllers\Auth\Auth\PasswordResetController;
+use Illuminate\Http\Request;
+
+Route::get('test-session', function(){
+    session()->put('s', 'no');
+    return session()->get('s');
+});
+
+Route::get('get-session', function(){
+    return session()->get('s');
+});
 
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/register', [RegisterController::class, 'register']);
+Route::middleware('auth:sanctum')->post('/send-verificaion-code', [RegisterController::class, 'sendVerification']);
+Route::middleware('auth:sanctum')->post('/verify-phone', [RegisterController::class, 'verifyPhone']);
+
+Route::middleware('guest')->post('get-password-reset-code', [PasswordResetController::class, 'phoneConfirmation']);
+Route::middleware('guest')->post('verify-password-reset-code', [PasswordResetController::class, 'codeVerification']);
+Route::middleware('guest')->post('reset-password', [PasswordResetController::class, 'resetPassword']);
 
 Route::prefix('customer/')->middleware('auth:sanctum')->group(function(){
     Route::post('/add-to-cart', [CartController::class, 'addToCart']);

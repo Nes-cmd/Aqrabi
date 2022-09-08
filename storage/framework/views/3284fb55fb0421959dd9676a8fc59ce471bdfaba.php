@@ -9,12 +9,12 @@
 <?php $component->withAttributes([]); ?>
     <section class="forget-password-page account">
         <div class="container">
-            <div class="row">
+        <div class="row align-items-center">
+                <div class="col-md-6 mx-auto d-none d-lg-block">
+                    <img src="customer/images/kids.webp" alt="">
+                </div>
                 <div class="col-md-6 mx-auto">
                     <div class="block text-center">
-                        <a class="logo" href="index.html">
-                            <img src="images/logo.png" alt="logo">
-                        </a>
                         <h2 class="text-center">You are almost done!</h2>
                         <form action="<?php echo e(route('change-password')); ?>" method="post" class="text-left clearfix">
                             <?php echo csrf_field(); ?>

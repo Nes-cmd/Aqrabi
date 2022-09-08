@@ -9,7 +9,7 @@ use Jantinnerezo\LivewireAlert\LivewireAlert;
 class Cart extends Component
 {
     use LivewireAlert;
-    protected $listeners = ['toCart', 'cartSize'];
+    protected $listeners = ['toCart', 'cartSize','alertFired'];
     public $cart_size;
     public $cart = [];
     public function mount()
@@ -17,6 +17,13 @@ class Cart extends Component
         if(auth()->user()){
             $this->updateCart();
         }
+    }
+    public function alertFired()
+    {
+        $this->alert('success', 'Item added to cart', [
+            'toast' => true,
+            'position' => 'top-end',
+        ]);
     }
     public function cartSize()
     {

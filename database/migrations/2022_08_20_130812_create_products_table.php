@@ -21,7 +21,7 @@ return new class extends Migration
             $table->double('price');
             $table->integer('count');
             $table->integer('ordered_counter')->default(0);
-            $table->string('description');
+            $table->text('description', 2000);
             $table->string('status')->default('published');
             $table->string('visiblity')->default('public');
             $table->string('tag')->nullable();

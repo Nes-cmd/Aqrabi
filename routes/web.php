@@ -39,7 +39,7 @@ Route::get('customer/profile', [CustomerDashboardController::class, 'profile'])-
 
 Route::get('register-user/{type}', function($type){
     session()->put(['type' => $type]);
-    return redirect()->route('register');
+    return redirect()->route('register'); 
 })->name('register-user'); 
 
 Route::middleware('auth')->get('verify-phone', [PhoneVerificationController::class, 'sendVerification'])->name('verify-phone');

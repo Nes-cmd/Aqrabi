@@ -90,3 +90,6 @@ content-type: application/json
 ### Admin
 GET http://localhost:8000/api/supplier/dashboard/customers HTTP/1.1
 Authorization: Bearer 10|MOwKZRfPmsu86D4TH0fiCdmiavflYl6NPPcG98LP
+
+###
+GET http://localhost:8000/api/get-session HTTP/1.1

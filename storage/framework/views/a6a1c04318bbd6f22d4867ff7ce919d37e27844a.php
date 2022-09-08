@@ -40,6 +40,7 @@ unset($__errorArgs, $__bag); ?>
                             </div>
                         </form>
                         <p class="mt-3">New in this site ?<a href="<?php echo e(route('choose-acccount-type')); ?>"> Create New Account</a></p>
+                        <p><a href="<?php echo e(url('forget-password')); ?>" class="text-blue"> Forgot your password?</a></p>
                     </div>
                 </div>
             </div>

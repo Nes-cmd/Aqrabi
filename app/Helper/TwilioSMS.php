@@ -16,4 +16,10 @@ class TwilioSMS{
         );
         return $response;
     }
+    public function sendVerificationCode($phone)
+    {
+        $code = rand(1000, 9999);
+        session()->put('short_code', $code);
+        return $this->sendMessage('This is your Arabi phone verification code ' . $code, $phone);
+    }
 }

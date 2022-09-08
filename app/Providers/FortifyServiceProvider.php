@@ -45,7 +45,7 @@ class FortifyServiceProvider extends ServiceProvider
             return Limit::perMinute(5)->by($phone.$request->ip());
         });
 
-        Fortify::loginView(function () {
+        Fortify::loginView(function () { 
             return view('auth.login');
         });
         $this->app->instance(LoginResponse::class, new class implements LoginResponse {

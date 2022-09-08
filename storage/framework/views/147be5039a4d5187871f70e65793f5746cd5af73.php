@@ -126,7 +126,6 @@ unset($__errorArgs, $__bag); ?>
                             </div>
                         </form>
                         <p class="mt-3">Already hava an account ?<a href="<?php echo e(route('login')); ?>"> Login</a></p>
-                        <p><a href="<?php echo e(url('forget-password')); ?>"> Forgot your password?</a></p>
                     </div>
                 </div>
             </div>

@@ -13,9 +13,12 @@
                         <p>A verification code has been sent to your phone <i>{{ $phone }}</i>. Once you have received the verification code, please entr that code here to verify the phone.</p>
                             <div class="form-group">
                                 <input type="text" name="confirmation_code" class="form-control" id="exampleInputEmail1" placeholder="Enter the code">
+                                @error('confirmation_code')
+                                    <span style="color: red;padding-left:6px">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-dark">Submit</button>
                             </div>
                         </form>
                         <div class="flex text-center">

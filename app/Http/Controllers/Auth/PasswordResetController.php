@@ -16,30 +16,26 @@ class PasswordResetController extends Controller
     }
     public function phoneConfirmation(Request $request)
     {
-
         $request->validate([
             'country_code' => 'required',
             'phone' => 'required|max:10|min:9'
         ]);
-        if (strlen($request->phone) == 9) {
-            $phone = $request->country_code . $request->phone;
-        } else {
-            $phone = $request->country_code . substr($request->phone, 1);
-        }
+        $phone = phoneMerge($request->country_code, $request->phone);
 
-        $user = User::where('phone', $phone)->first();
+        $user = User::where('phone', $request->phone)->first();
         if ($user) {
             $code = rand(1000, 9999);
-            // PasswordReset::create([
-            //     'phone' => $phone,
-            //     'code' => $code
-            // ]);
-            $requester = ['phone' => $phone, 'code' => $code, 'confirmed' => false];
+            $requester = ['phone' => $request->phone, 'dial_code' => $request->country_code, 'code' => $code, 'confirmed' => false];
             session()->put('password_reset_requester', $requester);
             $twilio = new TwilioSMS();
             $twilio->sendMessage('This is your Arabi phone verification code ' . $code, $phone);
+            
+            $alert = ['title' => 'Message sent to your phone', 'position' => 'center', 'showConfirmButton' => true,'icon' => 'info', 'timer' => 3000];
+            session()->flash('alert', $alert);
             return redirect('confirm-phone');
         } else {
+            $alert = ['title' => 'Your account not found!','message' => 'We are unable to find your account,please make sure the phone is correct!', 'position' => 'center', 'showConfirmButton' => true,'icon' => 'info', 'timer' => 5000];
+            session()->flash('alert', $alert);
             return back();
         }
     }
@@ -49,8 +45,11 @@ class PasswordResetController extends Controller
         $code = rand(1000, 9999);
         $requester['code'] = $code;
         session()->put('password_reset_requester', $requester);
+        $phone = phoneMerge($requester['dial_code'],$requester['phone']);
         $twilio = new TwilioSMS();
-        $twilio->sendMessage('This is your Arabi phone verification code ' . $code, $requester['phone']);
+        $twilio->sendMessage('This is your Arabi phone verification code ' . $code, $phone);
+        $alert = ['title' => 'We have sent a code to your phone', 'position' => 'center', 'showConfirmButton' => true,'icon' => 'info', 'timer' => 3000];
+        session()->flash('alert', $alert);    
         return redirect('confirm-phone');
     }
     public function confirmPhoneView()
@@ -69,6 +68,8 @@ class PasswordResetController extends Controller
             session()->put('password_reset_requester', $requester);
             return redirect()->route('password-change');
         }
+        $alert = ['title' => 'The code you entered is not correct','message' => 'Code doesn\'t mach our record', 'position' => 'center', 'showConfirmButton' => true,'icon' => 'info', 'timer' => 3000];
+        session()->flash('alert', $alert);    
         return redirect()->route('forget-password');
     }
     public function passwordChangeView()
@@ -88,6 +89,8 @@ class PasswordResetController extends Controller
             $user->save();
             session()->forget('password_reset_requester');
             session()->save();
+            $alert = ['title' => 'You have successfully updated your password','message' => 'You can login with new password!', 'position' => 'center', 'showConfirmButton' => true,'icon' => 'info', 'timer' => 3000];
+            session()->flash('alert', $alert);    
             return redirect('login');
         }
         return redirect()->route('forget-password');

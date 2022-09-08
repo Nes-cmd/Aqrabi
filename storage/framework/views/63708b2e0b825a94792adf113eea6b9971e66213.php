@@ -11,6 +11,8 @@
 
   <!-- ** Plugins Needed for the Project ** -->
   <!-- Bootstrap -->
+  <?php echo \Livewire\Livewire::styles(); ?>
+
   <link rel="stylesheet" href="<?php echo e(asset('customer/plugins/bootstrap/bootstrap.min.css')); ?>">
   <link rel="stylesheet" href="<?php echo e(asset('customer/plugins/themify-icons/themify-icons.css')); ?>">
   <link rel="stylesheet" href="<?php echo e(asset('customer/plugins/slick/slick.css')); ?>">
@@ -29,9 +31,7 @@
   <!--Favicon-->
   <link rel="shortcut icon" href="" type="image/x-icon">
   <link rel="icon" href="" type="image/x-icon">
-  
-  <?php echo \Livewire\Livewire::styles(); ?>
-
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body style="position: relative; min-height: 100vh;">
@@ -44,6 +44,21 @@
 
 
   </main>
+  <?php $__env->startPush('scripts'); ?>
+  <?php if(session()->has('alert')): ?>
+  <?php ($alert = session()->get('alert')); ?>
+  <?php ($message = array_key_exists('message', $alert)?$alert['message']:'' ); ?>
+  <script>
+    Swal.fire({
+      position: "<?php echo e($alert['position']); ?>",
+      icon: "<?php echo e($alert['icon']); ?>",
+      title: "<?php echo e($alert['title']); ?>",
+      message: "<?php echo e($message); ?>",
+      showConfirmButton: "<?php echo e($alert['showConfirmButton']); ?>",
+      timer: "<?php echo e($alert['timer']); ?>",
+    })
+  </script>
+  <?php endif; ?>
   <!-- footer -->
   <footer class="bg-light" style="position:absolute;bottom:0px;width:100%;margin-top:10px">
     <div class="bg-dark py-4">
@@ -53,7 +68,7 @@
             <p class="mb-0">Aqrabi &copy; 2022 all right reserved</p>
           </div>
           <div class="col-md-2 text-center text-md-left mb-4 mb-md-0">
-            <img height="50px" src="<?php echo e(asset('logo.svg')); ?>" alt="logo">
+            <img height="35px" src="<?php echo e(asset('logo.svg')); ?>" alt="logo">
           </div>
           <!--  -->
           <div class="col-md-5 text-center text-md-right mb-4 mb-md-0">
@@ -69,12 +84,10 @@
     </div>
   </footer>
   <!-- /footer -->
-
   </div>
   <!-- /main wrapper -->
   <?php echo \Livewire\Livewire::scripts(); ?>
 
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'livewire-alert::components.scripts','data' => []] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('livewire-alert::scripts'); ?>

@@ -11,6 +11,7 @@
 
   <!-- ** Plugins Needed for the Project ** -->
   <!-- Bootstrap -->
+  @livewireStyles
   <link rel="stylesheet" href="{{ asset('customer/plugins/bootstrap/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{ asset('customer/plugins/themify-icons/themify-icons.css')}}">
   <link rel="stylesheet" href="{{ asset('customer/plugins/slick/slick.css')}}">
@@ -29,8 +30,7 @@
   <!--Favicon-->
   <link rel="shortcut icon" href="" type="image/x-icon">
   <link rel="icon" href="" type="image/x-icon">
-  
-  @livewireStyles
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body style="position: relative; min-height: 100vh;">
@@ -42,6 +42,21 @@
     {{ $slot }}
 
   </main>
+  @push('scripts')
+  @if(session()->has('alert'))
+  @php($alert = session()->get('alert'))
+  @php($message = array_key_exists('message', $alert)?$alert['message']:'' )
+  <script>
+    Swal.fire({
+      position: "{{ $alert['position'] }}",
+      icon: "{{ $alert['icon'] }}",
+      title: "{{ $alert['title'] }}",
+      message: "{{ $message }}",
+      showConfirmButton: "{{ $alert['showConfirmButton'] }}",
+      timer: "{{ $alert['timer'] }}",
+    })
+  </script>
+  @endif
   <!-- footer -->
   <footer class="bg-light" style="position:absolute;bottom:0px;width:100%;margin-top:10px">
     <div class="bg-dark py-4">
@@ -51,7 +66,7 @@
             <p class="mb-0">Aqrabi &copy; 2022 all right reserved</p>
           </div>
           <div class="col-md-2 text-center text-md-left mb-4 mb-md-0">
-            <img height="50px" src="{{ asset('logo.svg')}}" alt="logo">
+            <img height="35px" src="{{ asset('logo.svg')}}" alt="logo">
           </div>
           <!--  -->
           <div class="col-md-5 text-center text-md-right mb-4 mb-md-0">
@@ -67,11 +82,9 @@
     </div>
   </footer>
   <!-- /footer -->
-
   </div>
   <!-- /main wrapper -->
   @livewireScripts
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <x-livewire-alert::scripts />
   <!-- jQuery -->
   <script src="{{ asset('customer/plugins/jQuery/jquery.min.js')}}"></script>

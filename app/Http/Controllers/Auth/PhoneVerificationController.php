@@ -15,19 +15,18 @@ class PhoneVerificationController extends Controller
     }
     public function sendVerification()
     {
-        $code = rand(1000,9999);
-        session()->put('short_code', $code);
+        $user = auth()->user();
+        $phone = phoneMerge($user->dial_code, $user->phone);
         $twilio = new TwilioSMS();
-        $twilio->sendMessage('This is your Arabi phone verification code '.$code, '+251940678725');
+        $twilio->sendVerificationCode($phone);
         return view('auth.confirm-phone');
-
     }
     public function checkVerification(Request $request)
     {
         $request->validate([
             'confirmation_code' => 'required|numeric|digits:4',
         ]);
-        if($request->confirmation_code == session()->get('short_code')){
+        if ($request->confirmation_code == session()->get('short_code')) {
             $user = User::find(auth()->id());
             $user->phone_verified_at = now()->toDateTimeString();
             $user->save();
@@ -35,7 +34,6 @@ class PhoneVerificationController extends Controller
             session()->save();
             return redirect('/');
         }
-        return back()->with('error','The code you entered is not correct');
+        return back()->with('error', 'The code you entered is not correct');
     }
-    
 }

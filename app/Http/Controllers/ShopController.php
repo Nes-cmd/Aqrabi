@@ -1,22 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Order;
-use App\Models\Product;
-use Illuminate\Http\Request;
 use App\Models\Slider;
-use App\Models\User;
-
 
 class ShopController extends Controller
 {
     public function index()
     {
+        // $alert = ['title' => 'Title goes here', 'position' => 'center', 'showConfirmButton' => true,'icon' => 'danger', 'timer' => 3000];
+        // session()->flash('alert', $alert);
         $sliders = Slider::all();
-        // session()->flush();
-        // session()->save();
-        // dd(session()->all());
         return view('customer.index', compact('sliders'));
     }
     public function test()

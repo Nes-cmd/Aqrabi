@@ -35,7 +35,7 @@
       @guest
       <li class="nav-item">
         <a class="nav-link" href="{{route('login')}}">
-          <i class="ti-user"></i> Signin
+          <i class="ti-user"></i> Account
         </a>
       </li>
       @endguest

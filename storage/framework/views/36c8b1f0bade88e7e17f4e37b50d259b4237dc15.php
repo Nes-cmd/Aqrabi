@@ -35,7 +35,7 @@
       <?php if(auth()->guard()->guest()): ?>
       <li class="nav-item">
         <a class="nav-link" href="<?php echo e(route('login')); ?>">
-          <i class="ti-user"></i> Signin
+          <i class="ti-user"></i> Account
         </a>
       </li>
       <?php endif; ?>
@@ -50,15 +50,15 @@
           <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('search-component')->html();
-} elseif ($_instance->childHasBeenRendered('PTsJoP5')) {
-    $componentId = $_instance->getRenderedChildComponentId('PTsJoP5');
-    $componentTag = $_instance->getRenderedChildComponentTagName('PTsJoP5');
+} elseif ($_instance->childHasBeenRendered('isoQics')) {
+    $componentId = $_instance->getRenderedChildComponentId('isoQics');
+    $componentTag = $_instance->getRenderedChildComponentTagName('isoQics');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('PTsJoP5');
+    $_instance->preserveRenderedChild('isoQics');
 } else {
     $response = \Livewire\Livewire::mount('search-component');
     $html = $response->html();
-    $_instance->logRenderedChild('PTsJoP5', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('isoQics', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
@@ -67,15 +67,15 @@ echo $html;
       <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('cart')->html();
-} elseif ($_instance->childHasBeenRendered('pWa3k9o')) {
-    $componentId = $_instance->getRenderedChildComponentId('pWa3k9o');
-    $componentTag = $_instance->getRenderedChildComponentTagName('pWa3k9o');
+} elseif ($_instance->childHasBeenRendered('stH63N0')) {
+    $componentId = $_instance->getRenderedChildComponentId('stH63N0');
+    $componentTag = $_instance->getRenderedChildComponentTagName('stH63N0');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('pWa3k9o');
+    $_instance->preserveRenderedChild('stH63N0');
 } else {
     $response = \Livewire\Livewire::mount('cart');
     $html = $response->html();
-    $_instance->logRenderedChild('pWa3k9o', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('stH63N0', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
