@@ -9,16 +9,19 @@
 <?php $component->withAttributes([]); ?>
     <section class="forget-password-page account">
         <div class="container">
-        <div class="row align-items-center">
-                <div class="col-md-6 mx-auto d-none d-lg-block">
-                    <img src="customer/images/kids.webp" alt="">
+            <div class="mb-100"></div>
+            <div class="row align-items-center bg-secondary mt-50">
+                <div class="col-md-6 d-none d-lg-block">
+                    <div class="text-center">
+                        <img width="60%" height="auto" src="logo.svg" alt="">
+                    </div>
                 </div>
-                <div class="col-md-6 mx-auto">
-                    <div class="block text-center">
+                <div class="col-md-6 p-0">
+                    <div class="block text-center m-0">
                         <h2 class="text-center">Please confirm your phone</h2>
                         <form action="<?php echo e(route('code-confirmation')); ?>" method="post" class="text-left clearfix">
-                        <?php echo csrf_field(); ?>    
-                        <p>A verification code has been sent to your phone <i><?php echo e($phone); ?></i>. Once you have received the verification code, please entr that code here to verify the phone.</p>
+                            <?php echo csrf_field(); ?>
+                            <p>A verification code has been sent to your phone <i><?php echo e($phone); ?></i>. Once you have received the verification code, please entr that code here to verify the phone.</p>
                             <div class="form-group">
                                 <input type="text" name="confirmation_code" class="form-control" id="exampleInputEmail1" placeholder="Enter the code">
                                 <?php $__errorArgs = ['confirmation_code'];
@@ -26,7 +29,7 @@ $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?>
-                                    <span style="color: red;padding-left:6px"><?php echo e($message); ?></span>
+                                <span style="color: red;padding-left:6px"><?php echo e($message); ?></span>
                                 <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;

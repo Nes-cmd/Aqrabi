@@ -36,7 +36,7 @@
                                         </div>
                                         <div class="product-hover-overlay">
                                             <button wire:click="wishlist(<?php echo e($product->id); ?>)" class="product-icon favorite" data-toggle="tooltip" data-placement="left" title="Wishlist"><i class="ti-heart"></i></button>
-                                            <a href="#" class="product-icon cart" data-toggle="tooltip" data-placement="left" title="View detail"><i class="ti-search"></i></a>
+                                            <a href="<?php echo e(route('shop.single-product', $product->id)); ?>" class="product-icon cart" data-toggle="tooltip" data-placement="left" title="View detail"><i class="ti-search"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -45,7 +45,7 @@
                                         <div class="product-info">
                                             <h3 class="mb-md-4 mb-3"><a class="text-color" href="product-single.html"><?php echo e($product->productname); ?></a></h3>
                                             <p class="mb-md-4 mb-3"><?php echo e($product->description); ?></p>
-                                            <span class="h4">$<?php echo e($product->price); ?></span>
+                                            <span class="h4"><?php echo e($product->price); ?>  ETB</span>
                                             <ul class="list-inline mt-3">
                                                 <li class="list-inline-item"><button wire:click="$emit('toCart' , <?php echo e($product->id); ?> )" class="btn btn-dark btn-sm">Add To Cart</button></li>
                                             </ul>

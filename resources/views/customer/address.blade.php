@@ -25,14 +25,17 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>Company</th>
-                                        <th>Name</th>
-                                        <th>Address</th>
                                         <th>Country</th>
+                                        <th>Full name</th>
+                                        <th>City</th>
+                                        <th>Zip coce</th>
                                         <th>Phone</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($adresses as $adress)
+                                        
+                                    @endforeach
                                     <tr>
                                         <td>Nokia</td>
                                         <td>Adam Smith</td>

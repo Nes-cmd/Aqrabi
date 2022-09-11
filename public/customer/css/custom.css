@@ -38,3 +38,34 @@
     to {top: 0; opacity: 0;}
 }
 
+.my-search {
+    margin-top: 4px;
+    width: 400px;
+    right: 0;
+    left: -300px;
+    position: absolute
+  }
+  @media screen and (min-width: 600px) {
+    .my-search {
+      margin-top: 12px;
+      width: 400px;
+      right: 0;
+      left: -200px;
+      position: absolute
+    }
+  }
+  h1,
+  h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #F4C803;
+  }
+  @media screen and (min-width: 400px) {
+    h1,
+    h2{
+      font-size: 60px;
+      font-weight: bold;
+      color: #F4C803;
+      font-family:'Russo One';
+    }
+  }

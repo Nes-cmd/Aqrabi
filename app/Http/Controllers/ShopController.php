@@ -16,4 +16,8 @@ class ShopController extends Controller
     {
         return '<h1 style="text-center">On development</h1>';
     }
+    public function orderSuccess($id)
+    {
+        return view('customer.order-success')->with(['orderId' => $id]);
+    }
 }

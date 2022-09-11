@@ -1,13 +1,15 @@
 <x-customer-layout>
     <section class="signin-page account">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 mx-auto d-none d-lg-block">
-                    <img src="customer/images/kids.webp" alt="">
+            <div class="mb-100"></div>
+            <div class="row align-items-center bg-secondary mt-50">
+                <div class="col-md-6 d-none d-lg-block">
+                    <div class="text-center">
+                        <img width="60%" height="auto" src="logo.svg" alt="">
+                    </div>
                 </div>
-                <div class="col-md-6 mx-auto">
-                    <div class="block text-center">
-
+                <div class="col-md-6 p-0">
+                    <div class="block text-center m-0">
                         <h2 class="text-center">Welcome Back</h2>
                         <form class="text-left clearfix" method="post" action="{{ route('login')}}">
                             @csrf

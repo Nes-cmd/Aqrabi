@@ -7,8 +7,8 @@
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
-<style>
-        .phone{
+    <style>
+        .phone {
             padding-bottom: 7px;
             border-radius: 0px;
             width: 50%;
@@ -17,22 +17,25 @@
     </style>
     <section class="forget-password-page account">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 mx-auto d-none d-lg-block">
-                    <img src="customer/images/kids.webp" alt="">
+            <div class="mb-100"></div>
+            <div class="row align-items-center bg-secondary mt-50">
+                <div class="col-md-6 d-none d-lg-block">
+                    <div class="text-center">
+                        <img width="60%" height="auto" src="logo.svg" alt="">
+                    </div>
                 </div>
-                <div class="col-md-6 mx-auto">
-                    <div class="block text-center">
+                <div class="col-md-6 p-0">
+                    <div class="block text-center m-0">
                         <h2 class="text-center">Please enter your phone</h2>
-                        <form method="post" action="<?php echo e(route('phone-confirmation')); ?>"  class="text-left clearfix">
+                        <form method="post" action="<?php echo e(route('phone-confirmation')); ?>" class="text-left clearfix">
                             <?php echo csrf_field(); ?>
                             <p>A verification code will be sent to you. Once you have received the verification code, you will be able to proceed for your account.</p>
                             <div class="form-group" style="display:flex">
-                                    <select name="country_code" value="<?php echo e(old('country_code')); ?>" class="form-control phone">
-                                        <option value="+251">Ethiopia (+251)</option>
-                                        <option value="+251">Ertria (+252)</option>
-                                    </select>
-                                    <input name="phone" value="<?php echo e(old('phone')); ?>"  class="form-control" placeholder="09434..." type="text">
+                                <select name="country_code" value="<?php echo e(old('country_code')); ?>" class="form-control phone">
+                                    <option value="+251">Ethiopia (+251)</option>
+                                    <option value="+251">Ertria (+252)</option>
+                                </select>
+                                <input name="phone" value="<?php echo e(old('phone')); ?>" class="form-control" placeholder="09434..." type="text">
                             </div>
                             <?php $__errorArgs = ['phone'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');

@@ -1,8 +1,8 @@
 <section class="section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-title"><?php echo e($title); ?></h2>
+      <div class="col-lg-12">
+        <h1 class="mb-4 text-center"><?php echo e($title); ?></h1>
       </div>
       <div class="col-12">
         <div class="collection-slider">
@@ -27,8 +27,8 @@
                   </div>
                 </div>
                 <div class="product-hover-overlay">
-                  <a href="#" class="product-icon favorite" data-toggle="tooltip" data-placement="left" title="" data-original-title="Wishlist"><i class="ti-heart"></i></a>
-                  <a href="#" class="product-icon cart" data-toggle="tooltip" data-placement="left" title="" data-original-title="Compare"><i class="ti-search"></i></a>
+                  <button wire:click="wishlist(<?php echo e($product->id); ?>)" class="product-icon favorite" data-toggle="tooltip" data-placement="left" title="" data-original-title="Wishlist"><i class="ti-heart"></i></button>
+                  <a href="<?php echo e(route('shop.single-product', $product->id)); ?>" class="product-icon cart" data-toggle="tooltip" data-placement="left" title="" data-original-title="Details"><i class="ti-search"></i></a>
                 </div>
               </div>
               <div class="product-info">

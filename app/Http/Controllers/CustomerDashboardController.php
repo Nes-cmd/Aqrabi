@@ -2,25 +2,32 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
+use App\Models\Address;
 use Illuminate\Http\Request;
 
 class CustomerDashboardController extends Controller
 {
     public function dashboard()
     {
-        $this->middleware('auth');
-        return view('customer.dashboard');
+        $orders = Order::where('user_id', auth()->id())->get();
+        return view('customer.dashboard', compact('orders'));
     }
     public function profile()
     {
-        return view('customer.profile');
+        $user = auth()->user();
+        return view('customer.profile', compact('user'));
     }
     public function orders()
     {
-        return view('customer.order');
+        $orders = Order::with('orderDetails','orderDetails.product')->where('user_id', auth()->id())->get();
+        // dd($orders);
+        return view('customer.order', compact('orders'));
     }
     public function address()
     {
-        return view('customer.address');
+        $adresses = Address::with('country')->where('user_id', auth()->id())->get();
+        dd($adresses);
+        return view('customer.address', compact('adresses'));
     }
 }

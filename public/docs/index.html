@@ -74,13 +74,7 @@
                     <a href="#endpoints">Endpoints</a>
                 </li>
                                     <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-test-session">
-                        <a href="#endpoints-GETapi-test-session">GET api/test-session</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-get-session">
-                        <a href="#endpoints-GETapi-get-session">GET api/get-session</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-login">
+                                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-login">
                         <a href="#endpoints-POSTapi-login">POST api/login</a>
                     </li>
                                     <li class="tocify-item level-2" data-unique="endpoints-POSTapi-register">
@@ -201,198 +195,6 @@ You can switch the language used with the tabs at the top right (or from the nav
         <h1 id="endpoints">Endpoints</h1>
 
     
-
-            <h2 id="endpoints-GETapi-test-session">GET api/test-session</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-test-session">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/test-session" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/test-session"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-test-session">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">content-type: text/html; charset=UTF-8
-cache-control: no-cache, private
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 59
-access-control-allow-origin: *
-set-cookie: aqrabi_session=MR5UvTkCg8u1v2g9rRrGp6NSF2fAiMdY9NVPQoyN; expires=Thu, 06 Jul 2023 23:04:48 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">no</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-test-session" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-test-session"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-test-session"></code></pre>
-</span>
-<span id="execution-error-GETapi-test-session" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-test-session"></code></pre>
-</span>
-<form id="form-GETapi-test-session" data-method="GET"
-      data-path="api/test-session"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-test-session', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-test-session"
-                    onclick="tryItOut('GETapi-test-session');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-test-session"
-                    onclick="cancelTryOut('GETapi-test-session');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-test-session" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/test-session</code></b>
-        </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-get-session">GET api/get-session</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-get-session">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/get-session" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/get-session"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-get-session">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">content-type: text/html; charset=UTF-8
-cache-control: no-cache, private
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 58
-access-control-allow-origin: *
-set-cookie: aqrabi_session=eR8qC6ePnj8yQYpr111PmG9ij8AMrXTCRSIeEiJO; expires=Thu, 06 Jul 2023 23:04:48 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">no</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-get-session" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-get-session"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-get-session"></code></pre>
-</span>
-<span id="execution-error-GETapi-get-session" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-get-session"></code></pre>
-</span>
-<form id="form-GETapi-get-session" data-method="GET"
-      data-path="api/get-session"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-get-session', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-get-session"
-                    onclick="tryItOut('GETapi-get-session');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-get-session"
-                    onclick="cancelTryOut('GETapi-get-session');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-get-session" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/get-session</code></b>
-        </p>
-                    </form>
 
             <h2 id="endpoints-POSTapi-login">POST api/login</h2>
 
@@ -1064,7 +866,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 access-control-allow-origin: *
-set-cookie: aqrabi_session=hBr0fi6YythbT6YC8Wx1ITXAHtS37l7qIDWhKkIh; expires=Thu, 06 Jul 2023 23:04:49 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=CKXCPmlCrR7U6CseqBdClWhmvFzji2EXuXk7zOfH; expires=Fri, 07 Jul 2023 06:39:03 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 
@@ -1127,14 +929,14 @@ set-cookie: aqrabi_session=hBr0fi6YythbT6YC8Wx1ITXAHtS37l7qIDWhKkIh; expires=Thu
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/customer/remove-cart/ipsum" \
+    --get "http://localhost:8000/api/customer/remove-cart/illum" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/customer/remove-cart/ipsum"
+    "http://localhost:8000/api/customer/remove-cart/illum"
 );
 
 const headers = {
@@ -1160,7 +962,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 access-control-allow-origin: *
-set-cookie: aqrabi_session=woMhugMfZsY5AABGRMjPjVqnxBwkpBzDQ5re4tgR; expires=Thu, 06 Jul 2023 23:04:49 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=zyaCSP766LaTH2Nidky3O2KtunhxDUSTOOlzphJD; expires=Fri, 07 Jul 2023 06:39:03 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 
@@ -1214,7 +1016,7 @@ set-cookie: aqrabi_session=woMhugMfZsY5AABGRMjPjVqnxBwkpBzDQ5re4tgR; expires=Thu
                 <input type="text"
                name="id"
                data-endpoint="GETapi-customer-remove-cart--id-"
-               value="ipsum"
+               value="illum"
                data-component="url" hidden>
     <br>
 <p>The ID of the remove cart.</p>
@@ -1267,7 +1069,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 access-control-allow-origin: *
-set-cookie: aqrabi_session=dYA0XeuVGPKdwM2OEc1rck8oiEQcOsv5WaZFg9Ir; expires=Thu, 06 Jul 2023 23:04:49 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=0ODKvDgg8h9RyXlLV7N0jdjMq0deRiWLPy1mmGtO; expires=Fri, 07 Jul 2023 06:39:03 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 
@@ -1363,9 +1165,9 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 57
+x-ratelimit-remaining: 59
 access-control-allow-origin: *
-set-cookie: aqrabi_session=CweU9a3AfEWFUR6qe9iDwXjzWcUrMnbkaw9y0xPm; expires=Thu, 06 Jul 2023 23:04:49 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=59WbPNJk6IiN7MZ51gWVr2EZsKVgBMLotfyKgDu4; expires=Fri, 07 Jul 2023 06:39:03 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 
@@ -1478,9 +1280,9 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 56
+x-ratelimit-remaining: 58
 access-control-allow-origin: *
-set-cookie: aqrabi_session=xNzALz69VxK6ObFe53lAmE9Txk00YNpbcYhBNk5S; expires=Thu, 06 Jul 2023 23:04:49 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=SAlDAcGTs9htxt85cpTbzgR2QfOub70hSk0DwDlT; expires=Fri, 07 Jul 2023 06:39:03 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 
@@ -1492,10 +1294,10 @@ set-cookie: aqrabi_session=xNzALz69VxK6ObFe53lAmE9Txk00YNpbcYhBNk5S; expires=Thu
             &quot;category_id&quot;: 1,
             &quot;productname&quot;: &quot;Amy Sutton&quot;,
             &quot;price&quot;: 64,
-            &quot;count&quot;: 5,
+            &quot;count&quot;: 3,
             &quot;description&quot;: &quot;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n&quot;,
             &quot;status&quot;: &quot;published&quot;,
-            &quot;ordered_counter&quot;: 47,
+            &quot;ordered_counter&quot;: 49,
             &quot;visiblity&quot;: &quot;1&quot;,
             &quot;tag&quot;: null,
             &quot;discount&quot;: null,
@@ -1506,7 +1308,7 @@ set-cookie: aqrabi_session=xNzALz69VxK6ObFe53lAmE9Txk00YNpbcYhBNk5S; expires=Thu
                 &quot;http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg&quot;
             ],
             &quot;created_at&quot;: &quot;2022-08-25T17:34:36.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-09-06T08:25:24.000000Z&quot;
+            &quot;updated_at&quot;: &quot;2022-09-08T15:17:19.000000Z&quot;
         },
         {
             &quot;id&quot;: 3,
@@ -1672,14 +1474,14 @@ set-cookie: aqrabi_session=xNzALz69VxK6ObFe53lAmE9Txk00YNpbcYhBNk5S; expires=Thu
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/shop/product-by-category/molestiae" \
+    --get "http://localhost:8000/api/shop/product-by-category/ea" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/shop/product-by-category/molestiae"
+    "http://localhost:8000/api/shop/product-by-category/ea"
 );
 
 const headers = {
@@ -1705,9 +1507,9 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 55
+x-ratelimit-remaining: 57
 access-control-allow-origin: *
-set-cookie: aqrabi_session=Lbjs5Y9VIkQNVamKHUz6Ao2bxVCM4AfLh6ZUvgHE; expires=Thu, 06 Jul 2023 23:04:49 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=eIvOHg5hRVGS23JZ2zGUf622IqYIRTwNgw029eSV; expires=Fri, 07 Jul 2023 06:39:03 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 
@@ -1761,7 +1563,7 @@ set-cookie: aqrabi_session=Lbjs5Y9VIkQNVamKHUz6Ao2bxVCM4AfLh6ZUvgHE; expires=Thu
                 <input type="text"
                name="id"
                data-endpoint="GETapi-shop-product-by-category--id-"
-               value="molestiae"
+               value="ea"
                data-component="url" hidden>
     <br>
 <p>The ID of the product by category.</p>
@@ -1781,14 +1583,14 @@ set-cookie: aqrabi_session=Lbjs5Y9VIkQNVamKHUz6Ao2bxVCM4AfLh6ZUvgHE; expires=Thu
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/shop/product-by-supplier/eos" \
+    --get "http://localhost:8000/api/shop/product-by-supplier/exercitationem" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/shop/product-by-supplier/eos"
+    "http://localhost:8000/api/shop/product-by-supplier/exercitationem"
 );
 
 const headers = {
@@ -1814,9 +1616,9 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 54
+x-ratelimit-remaining: 56
 access-control-allow-origin: *
-set-cookie: aqrabi_session=DdhuwlhZOQpW3QcjItJeYgkXhLLlOCu7aJuLVvxh; expires=Thu, 06 Jul 2023 23:04:49 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=77tHQ7lmtHdQxT2HbSpucnCOvhCHrTdzj7xRfr7k; expires=Fri, 07 Jul 2023 06:39:03 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 
@@ -1870,7 +1672,7 @@ set-cookie: aqrabi_session=DdhuwlhZOQpW3QcjItJeYgkXhLLlOCu7aJuLVvxh; expires=Thu
                 <input type="text"
                name="id"
                data-endpoint="GETapi-shop-product-by-supplier--id-"
-               value="eos"
+               value="exercitationem"
                data-component="url" hidden>
     <br>
 <p>The ID of the product by supplier.</p>
@@ -1923,9 +1725,9 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 53
+x-ratelimit-remaining: 55
 access-control-allow-origin: *
-set-cookie: aqrabi_session=wUmE1IfX27TnngtRfZdFyJyleFlvhdLRBwkCvRUY; expires=Thu, 06 Jul 2023 23:04:49 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=vQmtvuSDSIkozyblTOnszJYouX5mPXsHJTtC922X; expires=Fri, 07 Jul 2023 06:39:03 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 
@@ -1945,10 +1747,10 @@ set-cookie: aqrabi_session=wUmE1IfX27TnngtRfZdFyJyleFlvhdLRBwkCvRUY; expires=Thu
                     &quot;category_id&quot;: 1,
                     &quot;productname&quot;: &quot;Amy Sutton&quot;,
                     &quot;price&quot;: 64,
-                    &quot;count&quot;: 5,
+                    &quot;count&quot;: 3,
                     &quot;description&quot;: &quot;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n&quot;,
                     &quot;status&quot;: &quot;published&quot;,
-                    &quot;ordered_counter&quot;: 47,
+                    &quot;ordered_counter&quot;: 49,
                     &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
@@ -1959,7 +1761,7 @@ set-cookie: aqrabi_session=wUmE1IfX27TnngtRfZdFyJyleFlvhdLRBwkCvRUY; expires=Thu
                         &quot;http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-25T17:34:36.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-09-06T08:25:24.000000Z&quot;
+                    &quot;updated_at&quot;: &quot;2022-09-08T15:17:19.000000Z&quot;
                 }
             ]
         },
@@ -2170,9 +1972,9 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 52
+x-ratelimit-remaining: 54
 access-control-allow-origin: *
-set-cookie: aqrabi_session=9wZdls40JH5z2JPQ3qEbnJ3rM2PH5XeaPXCI8Gwo; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=6kNOjRbOg303mdYHleJSbTNDeWd1worMATBDlyw6; expires=Fri, 07 Jul 2023 06:39:03 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 
@@ -2211,10 +2013,10 @@ set-cookie: aqrabi_session=9wZdls40JH5z2JPQ3qEbnJ3rM2PH5XeaPXCI8Gwo; expires=Thu
                     &quot;category_id&quot;: 1,
                     &quot;productname&quot;: &quot;Amy Sutton&quot;,
                     &quot;price&quot;: 64,
-                    &quot;count&quot;: 5,
+                    &quot;count&quot;: 3,
                     &quot;description&quot;: &quot;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n&quot;,
                     &quot;status&quot;: &quot;published&quot;,
-                    &quot;ordered_counter&quot;: 47,
+                    &quot;ordered_counter&quot;: 49,
                     &quot;visiblity&quot;: &quot;1&quot;,
                     &quot;tag&quot;: null,
                     &quot;discount&quot;: null,
@@ -2225,7 +2027,7 @@ set-cookie: aqrabi_session=9wZdls40JH5z2JPQ3qEbnJ3rM2PH5XeaPXCI8Gwo; expires=Thu
                         &quot;http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg&quot;
                     ],
                     &quot;created_at&quot;: &quot;2022-08-25T17:34:36.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-09-06T08:25:24.000000Z&quot;
+                    &quot;updated_at&quot;: &quot;2022-09-08T15:17:19.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 3,
@@ -2437,14 +2239,14 @@ set-cookie: aqrabi_session=9wZdls40JH5z2JPQ3qEbnJ3rM2PH5XeaPXCI8Gwo; expires=Thu
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/shop/product-single/doloremque" \
+    --get "http://localhost:8000/api/shop/product-single/ut" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/shop/product-single/doloremque"
+    "http://localhost:8000/api/shop/product-single/ut"
 );
 
 const headers = {
@@ -2470,9 +2272,9 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 51
+x-ratelimit-remaining: 53
 access-control-allow-origin: *
-set-cookie: aqrabi_session=kEXJjZk0PrdytglIryv9nS3ItXWktREbRdiQowoN; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=WyiSnDaZlS8Fa2ai0JZP1ML3bQvjPSt5lkUI0Yyq; expires=Fri, 07 Jul 2023 06:39:03 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 
@@ -2526,7 +2328,7 @@ set-cookie: aqrabi_session=kEXJjZk0PrdytglIryv9nS3ItXWktREbRdiQowoN; expires=Thu
                 <input type="text"
                name="id"
                data-endpoint="GETapi-shop-product-single--id-"
-               value="doloremque"
+               value="ut"
                data-component="url" hidden>
     <br>
 <p>The ID of the product single.</p>
@@ -2579,9 +2381,9 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 50
+x-ratelimit-remaining: 52
 access-control-allow-origin: *
-set-cookie: aqrabi_session=HFXbIrtSdFpO9HOG0ppFkyRy8AdvfSr59JKj65Fa; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=eMsbiWg8yMCrEWvq9nzAsMmiuQI1LWgTRjnd8asL; expires=Fri, 07 Jul 2023 06:39:03 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 
@@ -2699,9 +2501,9 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 49
+x-ratelimit-remaining: 51
 access-control-allow-origin: *
-set-cookie: aqrabi_session=F72CUbMvFgMAclmA97oVeRu4C32d49vNgDh9X9Ky; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=7MRXrZs3y7euOYtAJo75YBiI8nc1Nfb1BWyKo5El; expires=Fri, 07 Jul 2023 06:39:03 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 
@@ -2814,7 +2616,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 access-control-allow-origin: *
-set-cookie: aqrabi_session=TIgLxnJNt8xSrfa7qg7JBwAdjfP553W3o5cC4RDr; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=OGgRas9kEXt0juQzHslCq4AITJcGGCOdv4MlEA3N; expires=Fri, 07 Jul 2023 06:39:04 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 
@@ -2910,7 +2712,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 access-control-allow-origin: *
-set-cookie: aqrabi_session=kDfNUGivNlfsUP4ZBLADdUaZqGnsUhLspJzqP3yU; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=7SFceOrs8po4tiT0OtF2ct70y8LSaCyJHm83uw6o; expires=Fri, 07 Jul 2023 06:39:04 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 
@@ -3084,7 +2886,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 access-control-allow-origin: *
-set-cookie: aqrabi_session=2roJmUWDKOG16MMub81F1ef5NoDXYbVVh4ga3vkO; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=iYbROquokIYFJoWS29kSM3ldvK1taUC7tbi8XywG; expires=Fri, 07 Jul 2023 06:39:04 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 
@@ -3180,7 +2982,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 access-control-allow-origin: *
-set-cookie: aqrabi_session=vDVLCFNyawYisSNWhPyssfeKKioL6k9LIeMHzJlJ; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=8NWKhaKDQHuxvvcSisiMx9nDvwGhnXxU0B2nZpOM; expires=Fri, 07 Jul 2023 06:39:04 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 
@@ -3276,7 +3078,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 access-control-allow-origin: *
-set-cookie: aqrabi_session=Inh4zrgE094vnAOOfQA3uheTbiaO8MqrOHDVp0Lj; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=GXnpZNx5Iq1OXGZWuvoO9Q97IWyNLDcVrHNkuZWz; expires=Fri, 07 Jul 2023 06:39:04 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 
@@ -3372,7 +3174,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 access-control-allow-origin: *
-set-cookie: aqrabi_session=1vBhSbbGQBV7UkLe0EcLSduuwwXtnncaHPNYC6Mh; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=wFgcttPfLxuWpckYTHjUdoZEEazXlViY2y4aAKPe; expires=Fri, 07 Jul 2023 06:39:04 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 
@@ -3468,7 +3270,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 access-control-allow-origin: *
-set-cookie: aqrabi_session=LnzZerxIxPCWqQNrUmRP9KjpPC5W3eequRS3JTtA; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=73RHe5yLaz0SgEdGRhDxcHfoS5MIQcGGKkcFLKBu; expires=Fri, 07 Jul 2023 06:39:04 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 
@@ -3564,7 +3366,7 @@ fetch(url, {
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 access-control-allow-origin: *
-set-cookie: aqrabi_session=87lYQaU4OvUh6ZTAvjebKeUxzePZHOFb7gSMXxS3; expires=Thu, 06 Jul 2023 23:04:50 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
+set-cookie: aqrabi_session=FSJ6hehcsV8ECMwr4pfo2GDPbELa4CI8rMoralP2; expires=Fri, 07 Jul 2023 06:39:04 GMT; Max-Age=26060580; path=/; httponly; samesite=lax
  </code></pre>
         </details>         <pre>
 

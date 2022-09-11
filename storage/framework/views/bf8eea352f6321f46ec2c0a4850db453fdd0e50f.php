@@ -1,12 +1,11 @@
-<section class="section mb-10">
-    <div class="container">
+<section class="section">
+    <div class="container mb-50">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="mb-4 text-center text-7xl"><?php echo e($title); ?></h1>
+                <h1 class="mb-4 text-center"><?php echo e($title); ?></h1>
             </div>
-            <!-- product -->
             <?php $__currentLoopData = $values; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0 rounded">
+            <div class="col-lg-3 col-sm-6 mb-5 rounded">
                 <div class="product text-center">
                     <div class="product-thumb">
                         <div class="overflow-hidden position-relative">
@@ -25,8 +24,8 @@
                             </div>
                         </div>
                         <div class="product-hover-overlay">
-                            <a href="#" class="product-icon favorite" data-toggle="tooltip" data-placement="left" title="" data-original-title="Wishlist"><i class="ti-heart"></i></a>
-                            <a href="#" class="product-icon cart" data-toggle="tooltip" data-placement="left" title="" data-original-title="Compare"><i class="ti-search"></i></a>
+                            <button wire:click="wishlist(<?php echo e($product->id); ?>)" class="product-icon favorite" data-toggle="tooltip" data-placement="left" title="" data-original-title="Wishlist"><i class="ti-heart"></i></button>
+                            <a href="<?php echo e(route('shop.single-product', $product->id)); ?>" class="product-icon cart" data-toggle="tooltip" data-placement="left" title="" data-original-title="See detail"><i class="ti-search"></i></a>
                         </div>
                     </div>
                     <div class="product-info">

@@ -5,25 +5,24 @@
         <h4 class="mb-4">Your Cart</h4>
         @if($cart_size)
         <ul class="pl-0 mb-3">
-      
-        @foreach($carts as $cart)
-        <li class="d-flex border-bottom">
-            <img width="70px" src="{{ asset('storage/'.$cart->product->main_photo )}}" alt="product-img">
-            <div class="mx-3">
-            <h6>{{$cart->product->prductname }}</h6>
-            <span>{{ $cart->quantity }}</span> X <span>${{$cart->product->price}}</span>
-            </div>
-            <i wire:click="remove({{ $cart->id }})" class="ti-close"></i>
-        </li>
-        @endforeach
+            @foreach($carts as $cart)
+            <li class="d-flex border-bottom">
+                <img width="70px" src="{{ asset('storage/'.$cart->product->main_photo )}}" alt="product-img">
+                <div class="mx-3">
+                    <h6>{{$cart->product->prductname }}</h6>
+                    <span>{{ $cart->quantity }}</span> X <span>${{$cart->product->price}}</span>
+                </div>
+                <i wire:click="remove({{ $cart->id }})" class="ti-close"></i>
+            </li>
+            @endforeach
         </ul>
         <div class="mb-3">
-        <span>Cart Total</span>
-        <span class="float-right">${{'433'}}</span>
+            <span>Cart Total</span>
+            <span class="float-right">{{cartTotal()['total']}} birr</span>
         </div>
         <div class="text-center">
-        <a href="{{ route('shop.cart-detail') }}" class="btn btn-dark btn-mobile rounded-0">view cart</a>
-        <a href="{{ route('shop.checkout') }}" class="btn btn-dark btn-mobile rounded-0">check out</a>
+            <a href="{{ route('shop.cart-detail') }}" class="btn btn-dark btn-mobile rounded-0">view cart</a>
+            <a href="{{ route('shop.checkout') }}" class="btn btn-dark btn-mobile rounded-0">check out</a>
         </div>
         @else
         <h4>Your cart is empty!</h4>

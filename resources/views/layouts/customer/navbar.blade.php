@@ -44,9 +44,9 @@
   <div class="order-3 navbar-right-elements">
     <div class="search-cart">
       <!-- search -->
-      <div class="search">
+      <div class="search" style="position:relative;">
         <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
-        <div class="search-wrapper col-md-4">
+        <div class="search-wrapper float-left my-search">
           @livewire('search-component')
         </div>
       </div>

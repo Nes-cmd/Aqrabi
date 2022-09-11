@@ -23,6 +23,9 @@ class ShopComponent extends Component
     }
     public function wishlist($id)
     {
+        if(!auth()->check()){
+            return redirect('login');
+        }
         Wishlist::create([
             'user_id' => auth()->user()->id,
             'product_id' => $id,

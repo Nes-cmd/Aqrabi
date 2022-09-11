@@ -1,55 +1,52 @@
 <?php
 
-use App\Http\Controllers\Auth\PasswordResetController;
-use App\Http\Controllers\Auth\PhoneVerificationController;
-use App\Http\Controllers\CustomerDashboardController;
 use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
 
-use App\Http\Livewire\CartDetail;
-use App\Http\Livewire\SingleProduct;
-use App\Http\Livewire\ShopComponent;
-use App\Http\Livewire\CheckoutComponent;
-use App\Http\Livewire\Wishlist;
-
-Route::get('shop/single-product/{id}', SingleProduct::class)->name('shop.single-product');
-Route::get('shop/producs', ShopComponent::class)->name('shop.list');
-Route::get('shop/search/{query?}', ShopComponent::class)->name('shop.search');
-
-Route::middleware('auth')->get('shop/cart-detail', CartDetail::class)->name('shop.cart-detail');
-Route::middleware('auth')->get('shop/checkout', CheckoutComponent::class)->name('shop.checkout');
-Route::middleware('auth')->get('shop/wishlist', Wishlist::class)->name('shop.wishlist');
-
-Route::view('shop/contact', 'customer.contact')->name('shop.contact');
-Route::get('/shop/order-success/{id}', function ($id)
-{
-    return view('customer.order-success')->with(['orderId' => $id]);
-});
- 
-Route::get('/', [ShopController::class, 'index'])->name('shop.index');
-
+// Misclaneous
 Route::view('/choose-acccount-type','customer.choose-user')->name('choose-acccount-type');
-// Route::get('/', [ShopController::class, 'test'])->name('shop.index');
-
-Route::get('customer/dashboard', [CustomerDashboardController::class, 'dashboard'])->name('customer.dashboard');
-Route::get('customer/orders', [CustomerDashboardController::class, 'orders'])->name('customer.orders');
-Route::get('customer/address', [CustomerDashboardController::class, 'address'])->name('customer.address');
-Route::get('customer/profile', [CustomerDashboardController::class, 'profile'])->name('customer.profile');
-
 Route::get('register-user/{type}', function($type){
     session()->put(['type' => $type]);
     return redirect()->route('register'); 
-})->name('register-user'); 
+})->name('register-user');
 
-Route::middleware('auth')->get('verify-phone', [PhoneVerificationController::class, 'sendVerification'])->name('verify-phone');
-Route::middleware('auth')->get('phone-verification', [PhoneVerificationController::class, 'verifyPhone'])->name('phone-verification');
-Route::middleware('auth')->post('check-verification', [PhoneVerificationController::class, 'checkVerification'])->name('check-verification');
+// Products route
+Route::get('/', [ShopController::class, 'index'])->name('shop.index');
+Route::view('shop/contact', 'customer.contact')->name('shop.contact');
+Route::get('shop/single-product/{id}', App\Http\Livewire\SingleProduct::class)->name('shop.single-product');
+Route::get('shop/producs', App\Http\Livewire\ShopComponent::class)->name('shop.list');
+Route::get('shop/search/{query?}', App\Http\Livewire\ShopComponent::class)->name('shop.search');
 
-Route::middleware('guest')->get('forget-password', [PasswordResetController::class, 'resetView'])->name('forget-password');
-Route::middleware('guest')->get('confirm-phone', [PasswordResetController::class, 'confirmPhoneView'])->name('confirm-phone');
-Route::middleware('guest')->get('code-resend', [PasswordResetController::class, 'codeResend'])->name('code-resend');
-Route::middleware('guest')->post('phone-confirmation', [PasswordResetController::class, 'phoneConfirmation'])->name('phone-confirmation');
-Route::middleware('guest')->get('password-change', [PasswordResetController::class, 'passwordChangeView'])->name('password-change');
-Route::middleware('guest')->post('code-confirmation', [PasswordResetController::class,'codeConfirmation'])->name('code-confirmation');
-Route::middleware('guest')->post('change-password', [PasswordResetController::class, 'changePassword'])->name('change-password');
+// Make order
+Route::middleware('auth')->prefix('shop')->name('shop.')->group(function(){
+    Route::get('cart-detail', App\Http\Livewire\CartDetail::class)->name('cart-detail');
+    Route::get('checkout', App\Http\Livewire\CheckoutComponent::class)->name('checkout');
+    Route::get('wishlist', App\Http\Livewire\Wishlist::class)->name('wishlist');
+    Route::get('order-success/{id}', [ShopController::class, 'orderSuccess']);
+});
+
+// Custmer profile manegment
+Route::controller(App\Http\Controllers\CustomerDashboardController::class)->prefix('costomer')->middleware('auth')->name('customer.')->group(function(){
+    Route::get('dashboard', 'dashboard')->name('dashboard');
+    Route::get('orders', 'orders')->name('orders');
+    Route::get('address', 'address')->name('address');
+    Route::get('profile', 'profile')->name('profile');
+});
+
+// Phone verification routes
+Route::middleware('auth')->controller(App\Http\Controllers\Auth\PhoneVerificationController::class)->group(function(){
+    Route::get('verify-phone', 'sendVerification')->name('verify-phone');
+    Route::get('phone-verification', 'verifyPhone')->name('phone-verification');
+    Route::post('check-verification', 'checkVerification')->name('check-verification');
+});
+
+//Password rest routes
+Route::middleware('guest')->controller(App\Http\Controllers\Auth\PasswordResetController::class)->group(function(){
+    Route::get('forget-password', 'resetView')->name('forget-password');
+    Route::get('confirm-phone', 'confirmPhoneView')->name('confirm-phone');
+    Route::get('code-resend',  'codeResend')->name('code-resend');
+    Route::post('phone-confirmation', 'phoneConfirmation')->name('phone-confirmation');
+    Route::get('password-change', 'passwordChangeView')->name('password-change');
+    Route::post('code-confirmation', 'codeConfirmation')->name('code-confirmation');
+    Route::post('change-password',  'changePassword')->name('change-password');
+});

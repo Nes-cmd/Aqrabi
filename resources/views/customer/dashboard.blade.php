@@ -30,7 +30,7 @@
                             </div>
                         </div>
                         <div class="total-order mt-4">
-                            <h4>Total Orders</h4>
+                            <h4>Total Orders <i class="text-success">{{count($orders)}}</i></h4>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -43,24 +43,14 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($orders as $order)
                                         <tr>
-                                            <td><a href="#">#252125</a></td>
-                                            <td>Mar 25, 2016</td>
-                                            <td>2</td>
-                                            <td>$ 99.00</td>
+                                            <td><a href="#">#{{ $order->orderId }}</a></td>
+                                            <td>{{ $order->created_at->diffForHumans()}}</td>
+                                            <td>{{ $order->total_item }}</td>
+                                            <td>{{ $order->total_price }} ETB</td>
                                         </tr>
-                                        <tr>
-                                            <td><a href="#">#252125</a></td>
-                                            <td>Mar 25, 2016</td>
-                                            <td>2</td>
-                                            <td>$ 99.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">#252125</a></td>
-                                            <td>Mar 25, 2016</td>
-                                            <td>2</td>
-                                            <td>$ 99.00</td>
-                                        </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

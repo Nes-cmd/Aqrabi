@@ -7,66 +7,6 @@ servers:
   -
     url: 'http://localhost:8000'
 paths:
-  /api/test-session:
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            text/plain:
-              schema:
-                type: string
-                example: 'no'
-      tags:
-        - Endpoints
-      security: []
-  /api/get-session:
-    get:
-      summary: ''
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses:
-        200:
-          description: ''
-          content:
-            text/plain:
-              schema:
-                type: string
-                example: 'no'
-      tags:
-        - Endpoints
-      security: []
   /api/login:
     post:
       summary: ''
@@ -326,7 +266,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the remove cart.'
-        example: ipsum
+        example: illum
         required: true
         schema:
           type: string
@@ -464,10 +404,10 @@ paths:
                       category_id: 1
                       productname: 'Amy Sutton'
                       price: 64
-                      count: 5
+                      count: 3
                       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                       status: published
-                      ordered_counter: 47
+                      ordered_counter: 49
                       visiblity: '1'
                       tag: null
                       discount: null
@@ -477,7 +417,7 @@ paths:
                         - 'http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg'
                         - 'http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg'
                       created_at: '2022-08-25T17:34:36.000000Z'
-                      updated_at: '2022-09-06T08:25:24.000000Z'
+                      updated_at: '2022-09-08T15:17:19.000000Z'
                     -
                       id: 3
                       supplier_id: 2
@@ -585,10 +525,10 @@ paths:
                         category_id: 1
                         productname: 'Amy Sutton'
                         price: 64
-                        count: 5
+                        count: 3
                         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                         status: published
-                        ordered_counter: 47
+                        ordered_counter: 49
                         visiblity: '1'
                         tag: null
                         discount: null
@@ -598,7 +538,7 @@ paths:
                           - 'http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg'
                           - 'http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg'
                         created_at: '2022-08-25T17:34:36.000000Z'
-                        updated_at: '2022-09-06T08:25:24.000000Z'
+                        updated_at: '2022-09-08T15:17:19.000000Z'
                       -
                         id: 3
                         supplier_id: 2
@@ -741,7 +681,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product by category.'
-        example: molestiae
+        example: ea
         required: true
         schema:
           type: string
@@ -785,7 +725,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product by supplier.'
-        example: eos
+        example: exercitationem
         required: true
         schema:
           type: string
@@ -831,10 +771,10 @@ paths:
                           category_id: 1
                           productname: 'Amy Sutton'
                           price: 64
-                          count: 5
+                          count: 3
                           description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                           status: published
-                          ordered_counter: 47
+                          ordered_counter: 49
                           visiblity: '1'
                           tag: null
                           discount: null
@@ -844,7 +784,7 @@ paths:
                             - 'http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg'
                             - 'http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg'
                           created_at: '2022-08-25T17:34:36.000000Z'
-                          updated_at: '2022-09-06T08:25:24.000000Z'
+                          updated_at: '2022-09-08T15:17:19.000000Z'
                     -
                       id: 2
                       name: 'Baker Jacobson'
@@ -968,10 +908,10 @@ paths:
                             category_id: 1
                             productname: 'Amy Sutton'
                             price: 64
-                            count: 5
+                            count: 3
                             description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                             status: published
-                            ordered_counter: 47
+                            ordered_counter: 49
                             visiblity: '1'
                             tag: null
                             discount: null
@@ -981,7 +921,7 @@ paths:
                               - 'http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg'
                               - 'http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg'
                             created_at: '2022-08-25T17:34:36.000000Z'
-                            updated_at: '2022-09-06T08:25:24.000000Z'
+                            updated_at: '2022-09-08T15:17:19.000000Z'
                       -
                         id: 2
                         name: 'Baker Jacobson'
@@ -1152,10 +1092,10 @@ paths:
                           category_id: 1
                           productname: 'Amy Sutton'
                           price: 64
-                          count: 5
+                          count: 3
                           description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                           status: published
-                          ordered_counter: 47
+                          ordered_counter: 49
                           visiblity: '1'
                           tag: null
                           discount: null
@@ -1165,7 +1105,7 @@ paths:
                             - 'http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg'
                             - 'http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg'
                           created_at: '2022-08-25T17:34:36.000000Z'
-                          updated_at: '2022-09-06T08:25:24.000000Z'
+                          updated_at: '2022-09-08T15:17:19.000000Z'
                         -
                           id: 3
                           supplier_id: 2
@@ -1338,10 +1278,10 @@ paths:
                             category_id: 1
                             productname: 'Amy Sutton'
                             price: 64
-                            count: 5
+                            count: 3
                             description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto rerum ea nemo tempora nulla doloribus saepe, natus, tempore qui quisquam suscipit culpa corrupti dolores aspernatur ipsa vel, impedit eum corporis.\n"
                             status: published
-                            ordered_counter: 47
+                            ordered_counter: 49
                             visiblity: '1'
                             tag: null
                             discount: null
@@ -1351,7 +1291,7 @@ paths:
                               - 'http://localhost:8000/storage/cxCKf1TgCspboSTuV2B0qn4rGd4nWw-metaZTl1ejdROHhaUVBSNzZQU040eHc2MEI2NXBlWHNkVmszS1J5N0RoUi5qcGVn-.jpg'
                               - 'http://localhost:8000/storage/2DOrk7FouyyVeZDxJFteChwOLpb8ci-metaZEFuTTA1Q3VIMVRpcnRleTh5aFBCVWs0cnJ0UFE5T2RWSDVvdTQwdi5qcGVn-.jpg'
                             created_at: '2022-08-25T17:34:36.000000Z'
-                            updated_at: '2022-09-06T08:25:24.000000Z'
+                            updated_at: '2022-09-08T15:17:19.000000Z'
                           -
                             id: 3
                             supplier_id: 2
@@ -1533,7 +1473,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the product single.'
-        example: doloremque
+        example: ut
         required: true
         schema:
           type: string

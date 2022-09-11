@@ -15,24 +15,23 @@
   <link rel="stylesheet" href="{{ asset('customer/plugins/bootstrap/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{ asset('customer/plugins/themify-icons/themify-icons.css')}}">
   <link rel="stylesheet" href="{{ asset('customer/plugins/slick/slick.css')}}">
-  <link rel="stylesheet" href="{{ asset('customer/plugins/venobox/venobox.css')}}">
+  <!-- <link rel="stylesheet" href="{{ asset('customer/plugins/venobox/venobox.css')}}"> -->
   <link rel="stylesheet" href="{{ asset('customer/plugins/animate/animate.css')}}">
-  <link rel="stylesheet" href="{{ asset('customer/plugins/aos/aos.css')}}">
+  <!-- <link rel="stylesheet" href="{{ asset('customer/plugins/aos/aos.css')}}"> -->
   <link rel="stylesheet" href="{{ asset('customer/plugins/bootstrap-touchspin-master/jquery.bootstrap-touchspin.min.css')}}">
   <link rel="stylesheet" href="{{ asset('customer/plugins/nice-select/nice-select.css')}}">
-  <link rel="stylesheet" href="{{ asset('customer/plugins/bootstrap-slider/bootstrap-slider.min.css')}}">
+  <!-- <link rel="stylesheet" href="{{ asset('customer/plugins/bootstrap-slider/bootstrap-slider.min.css')}}"> -->
 
   <!-- Main Stylesheet -->
   <link href="{{ URL::to('customer/css/style.css')}}" rel="stylesheet">
   <!-- Custom style -->
   <link rel="stylesheet" href="{{URL::to('customer/css/custom.css')}}">
-
+  <link href='https://fonts.googleapis.com/css?family=Russo One' rel='stylesheet'>
   <!--Favicon-->
   <link rel="shortcut icon" href="" type="image/x-icon">
   <link rel="icon" href="" type="image/x-icon">
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-
 <body style="position: relative; min-height: 100vh;">
 
   <main>

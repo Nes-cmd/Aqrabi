@@ -38,7 +38,7 @@
                             </div>
                         </div>
                         <div class="total-order mt-4">
-                            <h4>Total Orders</h4>
+                            <h4>Total Orders <i class="text-success"><?php echo e(count($orders)); ?></i></h4>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -51,24 +51,14 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php $__currentLoopData = $orders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $order): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <tr>
-                                            <td><a href="#">#252125</a></td>
-                                            <td>Mar 25, 2016</td>
-                                            <td>2</td>
-                                            <td>$ 99.00</td>
+                                            <td><a href="#">#<?php echo e($order->orderId); ?></a></td>
+                                            <td><?php echo e($order->created_at->diffForHumans()); ?></td>
+                                            <td><?php echo e($order->total_item); ?></td>
+                                            <td><?php echo e($order->total_price); ?> ETB</td>
                                         </tr>
-                                        <tr>
-                                            <td><a href="#">#252125</a></td>
-                                            <td>Mar 25, 2016</td>
-                                            <td>2</td>
-                                            <td>$ 99.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">#252125</a></td>
-                                            <td>Mar 25, 2016</td>
-                                            <td>2</td>
-                                            <td>$ 99.00</td>
-                                        </tr>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </tbody>
                                 </table>
                             </div>

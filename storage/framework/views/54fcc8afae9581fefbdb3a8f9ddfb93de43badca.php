@@ -9,19 +9,7 @@
                 </ol>
             </div>
         </nav>
-        <!-- /breadcrumb -->
-        <div id="quickView" class="quickview">
-            <div class="row w-100">
-                <div class="col-lg-6 col-md-6 mb-5 mb-md-0 pl-5 pt-4 pt-lg-0 pl-lg-0">
-                    <img src="customer/images/feature/product.png" alt="product-img" class="img-fluid">
-                </div>
-                <div class="col-lg-5 col-md-6 text-center text-md-left align-self-center pl-5">
-                    <h3 class="mb-lg-2 mb-2"><?php echo e($product->productname); ?></h3>
-                    <span class="mb-lg-4 mb-3 h5">$<?php echo e($product->price); ?></span>
-                    <p class="mb-lg-4 mb-3 text-gray">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. sed ut perspic atis unde omnis iste natus</p>
-                </div>
-            </div>
-        </div>
+        
         <!-- product-single -->
         <section class="section">
             <div class="container">
@@ -51,7 +39,7 @@
                     </div>
                     <!-- produt details -->
                     <div class="col-lg-6 mb-100">
-                        <h2><?php echo e($product->productname); ?></h2>
+                        <h3><?php echo e($product->productname); ?></h3>
                         <i class="ti-check-box text-<?php echo e($product->count?'success':'danger'); ?>"></i>
                         <span class="text-<?php echo e($product->count?'success':'danger'); ?>"><?php echo e($product->count?'Instock':'Outofstock'); ?></span>
                         <ul class="list-inline mb-4">
@@ -113,7 +101,7 @@
         <!-- related products -->
         <section class="section">
             <div class="container">
-                <div class="row">
+                <div class="row mb-60">
                     <div class="col-lg-12">
                         <h2 class="mb-4">Related Products</h2>
                     </div>

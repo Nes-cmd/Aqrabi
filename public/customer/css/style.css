@@ -92,7 +92,8 @@ h6, .h6 {
 }
 
 .btn-primary:hover {
-  background: #ff7168;
+  /* E44D53 */
+  background: #e44d53;
   border-color: transparent;
 }
 
@@ -158,12 +159,12 @@ body {
 }
 
 ::-moz-selection {
-  background: #ff7168;
+  background: #e44d53;
   color: #fff;
 }
 
 ::selection {
-  background: #ff7168;
+  background: #e44d53;
   color: #fff;
 }
 

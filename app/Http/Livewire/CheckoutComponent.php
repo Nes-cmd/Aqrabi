@@ -8,7 +8,6 @@ use Jantinnerezo\LivewireAlert\LivewireAlert;
 use App\Models\Order;
 use App\Models\OrderDetail;
 use App\Models\Product;
-use Faker\Core\Uuid;
 
 class CheckoutComponent extends Component
 {
@@ -26,10 +25,14 @@ class CheckoutComponent extends Component
     public function placeOrder()
     {
         $carts = Cart::with('product')->where('user_id', auth()->user()->id)->get();
+        $totalPrice = 0;
+        $totalItems = 0;
         $order = Order::create([
             'user_id' => auth()->user()->id,
             'orderId' => strtoupper(uniqid()),
-            'shippment_adress_id' => $this->shippmentAdress['id'],
+            'address_id' => $this->shippmentAdress['id'],
+            'total_item' => $totalItems,
+            'total_price' => $totalPrice,
         ]);
         foreach($carts as $cart){
             OrderDetail::create([
@@ -44,7 +47,12 @@ class CheckoutComponent extends Component
             $product->ordered_counter = $product->ordered_counter + $cart->quantity;
             $product->save();
             $cart->delete();
+            $totalPrice = $totalPrice + $cart->quantity * $product->price;
+            $totalItems = $totalItems + $cart->quantity;
         }
+        $order['total_item'] = $totalItems;
+        $order['total_price'] = $totalPrice;
+        $order->save();
         return redirect('/shop/order-success/'.$order->orderId);
     }
     public function pageSelector($page)

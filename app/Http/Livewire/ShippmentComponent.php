@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use App\Models\ShippmentAddress;
+use App\Models\Address;
 use DB;
 class ShippmentComponent extends Component
 {
@@ -33,27 +33,17 @@ class ShippmentComponent extends Component
         $this->countries = DB::table('countries')->get();
         $this->findSavedAdresses();
     }
-    public function setShippment($adress)
-    {
-        $dhlService = new DhlService;
-        $dhlProduct = $dhlService->getRate(['country_code' => $this->countries[$adress['country_id']]['country_code'], 'postal_code' =>$adress['postal_code']]);
-        if($dhlProduct->has('products')){
-            $this->shippmentMethod = objectToArray($dhlProduct['products']);
-        }
-        else{
-            $this->shippmentMethod = 'unavailable';
-        }
-    }
+    
     public function findSavedAdresses()
     {
-        $this->savedAdress = ShippmentAddress::where('user_id', auth()->user()->id )->get();
+        $this->savedAdress = Address::where('user_id', auth()->user()->id )->get();
     }
     public function continue()
     {
         $adress = null;
         if($this->newAdress){
             $this->validate();
-            $adress = ShippmentAddress::create([
+            $adress = Address::create([
                 'user_id' => auth()->user()->id,
                 'phone' => $this->adress['phone'],
                 'country_id' => $this->adress['country_id'],
@@ -73,7 +63,7 @@ class ShippmentComponent extends Component
             $this->validate([
                 'shippment.shippment_adress_id' => 'required',
             ]);
-            $adress = ShippmentAddress::where('id', $this->shippment['shippment_adress_id'])->first();
+            $adress = Address::where('id', $this->shippment['shippment_adress_id'])->first();
         }
         // $shipp = $this->shippment;
         $this->emit('shippmentAdded',$adress);

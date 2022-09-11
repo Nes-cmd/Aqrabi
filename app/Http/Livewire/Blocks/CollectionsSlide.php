@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Blocks;
 
+use App\Http\Livewire\Wishlist;
 use Livewire\Component;
 use App\Models\Product;
 class CollectionsSlide extends Component
@@ -13,6 +14,20 @@ class CollectionsSlide extends Component
             $this->values = Product::all()->take(6);
             $this->title = 'TOP COLLECTIONS';
         }
+    }
+    public function wishlist($id)
+    {
+        if(!auth()->check()){
+            return redirect('login');
+        }
+        Wishlist::create([
+            'user_id' => auth()->user()->id,
+            'product_id' => $id,
+        ]);
+        $this->alert('success', 'Item added to wish-list', [
+            'toast' => true,
+            'position' => 'top-end',
+        ]);
     }
     public function render()
     {
