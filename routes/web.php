@@ -12,6 +12,7 @@ Route::get('register-user/{type}', function($type){
 
 // Products route
 Route::get('/', [ShopController::class, 'index'])->name('shop.index');
+Route::get('/test', [ShopController::class, 'test'])->name('shop.index');
 Route::view('shop/contact', 'customer.contact')->name('shop.contact');
 Route::get('shop/single-product/{id}', App\Http\Livewire\SingleProduct::class)->name('shop.single-product');
 Route::get('shop/producs', App\Http\Livewire\ShopComponent::class)->name('shop.list');

@@ -11,6 +11,7 @@ use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class OrderResource extends Resource
@@ -21,6 +22,10 @@ class OrderResource extends Resource
     public static function canCreate(): bool
     {
         return false;
+    }
+    public static function canEdit(Model $record): bool
+    {
+        return auth()->user()->hasVerifiedRoles(['admin', 'operator']);
     }
     public static function form(Form $form): Form
     {
@@ -90,6 +95,6 @@ class OrderResource extends Resource
             
             return $order;
         }
-        return Order::where('id', '!=', 0); 
+        return Order::query(); 
     }
 }

@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\UserResource\Pages;
 use App\Filament\Resources\UserResource\RelationManagers;
+use App\Models\Country;
 use App\Models\User;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -27,13 +28,20 @@ class UserResource extends Resource
             ->schema([
                 Forms\Components\Card::make()->schema([
                     Forms\Components\TextInput::make('fullname')->label('Full name')->required(),
-                    Forms\Components\TextInput::make('phone')->required(),
+                    Forms\Components\Select::make('dial_code')
+                        ->options(Country::all()->map(fn ($value) => [$value->name . '(' . $value->dial_code . ')', $value->dial_code])->pluck(0, 1))
+                        ->required(),
+                    Forms\Components\TextInput::make('phone')->required()->minLength(9)->maxLength(10),
                     Forms\Components\TextInput::make('email')->required()->email(),
-                    Forms\Components\TextInput::make('password')->required()->password()->minLength(6),
+                    Forms\Components\TextInput::make('password')
+                        ->password()
+                        ->dehydrateStateUsing(fn ($state) => Hash::make($state))
+                        ->dehydrated(fn ($state) => filled($state))
+                        ->required(fn (string $context): bool => $context === 'create')
                 ])
             ]);
     }
-    public static function canViewAny():bool
+    public static function canViewAny(): bool
     {
         return auth()->user()->hasVerifiedRole('admin');
     }
@@ -64,25 +72,29 @@ class UserResource extends Resource
             RelationManagers\RolesRelationManager::class
         ];
     }
-    public static function getWidgets():array 
+    public static function getWidgets(): array
     {
         return [
             \App\Filament\Resources\UserResource\Widgets\StatsOverview::class,
         ];
     }
-    public static function getHeaderWidgets():array
+    public static function getHeaderWidgets(): array
     {
         return [
             \App\Filament\Resources\UserResource\Widgets\StatsOverview::class,
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
             'index' => Pages\ListUsers::route('/'),
-            // 'create' => Pages\CreateUser::route('/create'),
+            'create' => Pages\CreateUser::route('/create'),
             'edit' => Pages\EditUser::route('/{record}/edit'),
         ];
+    }
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
     }
 }

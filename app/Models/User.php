@@ -25,7 +25,8 @@ class User extends Authenticatable implements HasName, FilamentUser
         'profile_url',
         'password',
         'tin_number',
-        'document_url'
+        'document_url',
+        'dial_code',
     ];
 
     /**
@@ -72,6 +73,14 @@ class User extends Authenticatable implements HasName, FilamentUser
     public function hasVerifiedRole($role)
     {
         $data = $this->roles()->where('slug', $role)->first();
+        if($data && $data->pivot->status == 'approved'){
+            return true;
+        } 
+        return false;
+    }
+    public function hasVerifiedRoles($roles)
+    {
+        $data = $this->roles()->whereIn('slug', $roles)->first();
         if($data && $data->pivot->status == 'approved'){
             return true;
         } 

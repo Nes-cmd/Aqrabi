@@ -17,6 +17,6 @@ class Order extends Model
     }
     public function shippmentAdress()
     {
-        return $this->belongsTo(\App\Models\ShippmentAddress::class);
+        return $this->belongsTo(\App\Models\Address::class,'address_id');
     }
 }

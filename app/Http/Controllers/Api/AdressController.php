@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\ShippmentAddress;
+use App\Models\Address;
 use App\Models\SupplierAddress;
 use Exception;
 use App\Models\Country;
@@ -13,7 +13,7 @@ class AdressController extends Controller
 {
     public function getShippmentAdress()
     {
-        $address = ShippmentAddress::where('user_id', auth()->user()->id)->get();
+        $address = Address::where('user_id', auth()->user()->id)->get();
         return ['adresses' => $address];
     }
     public function getSupplierAdress()
@@ -41,7 +41,7 @@ class AdressController extends Controller
                 'addressLine1' => 'required'
             ]);
             
-            $address = ShippmentAddress::create([
+            $address = Address::create([
                 'user_id' => auth()->user()->id,
                 'fullname' => $request->fullname,
                 'phone' => $request->phone,

@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Helper\ProductFilters;
+use App\Models\Product;
 use App\Models\Slider;
 
 class ShopController extends Controller
@@ -14,7 +17,11 @@ class ShopController extends Controller
     }
     public function test()
     {
-        return '<h1 style="text-center">On development</h1>';
+        $filters = new ProductFilters();
+        $filters->userInputs = ['category_id' => null];
+        // dd($filters);
+
+        dd(Product::filter($filters)->get());
     }
     public function orderSuccess($id)
     {

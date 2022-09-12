@@ -47,5 +47,9 @@ class Product extends Model
     {
         return $this->belongsTo(\App\Models\User::class, 'supplier_id');
     }
+    public function scopeFilter($query, $filters)
+    {
+        return $filters->apply($query);
+    }
 }
 

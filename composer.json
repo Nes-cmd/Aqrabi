@@ -11,6 +11,7 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "jantinnerezo/livewire-alert": "^2.2",
+        "jantinnerezo/livewire-range-slider": "^1.0",
         "laravel/fortify": "^1.13",
         "laravel/framework": "^9.0",
         "laravel/sanctum": "^2.11",

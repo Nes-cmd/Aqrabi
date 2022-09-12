@@ -31,6 +31,7 @@
   <link rel="shortcut icon" href="" type="image/x-icon">
   <link rel="icon" href="" type="image/x-icon">
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
 </head>
 <body style="position: relative; min-height: 100vh;">
 
@@ -85,6 +86,7 @@
   <!-- /main wrapper -->
   @livewireScripts
   <x-livewire-alert::scripts />
+  <x-livewire-range-slider::scripts />
   <!-- jQuery -->
   <script src="{{ asset('customer/plugins/jQuery/jquery.min.js')}}"></script>
   <!-- Bootstracustomer/p JS -->

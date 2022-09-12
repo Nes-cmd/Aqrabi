@@ -61,7 +61,10 @@ class CategoryResource extends Resource
             //
         ];
     }
-    
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
     public static function getPages(): array
     {
         return [

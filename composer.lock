@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b590cce3749418065833d06c0d4d902d",
+    "content-hash": "3757c475e3a46f6f0d1cdb6b3e984bc7",
     "packages": [
         {
             "name": "akaunting/laravel-money",
@@ -1872,6 +1872,68 @@
                 }
             ],
             "time": "2022-03-15T17:39:01+00:00"
+        },
+        {
+            "name": "jantinnerezo/livewire-range-slider",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jantinnerezo/livewire-range-slider.git",
+                "reference": "e2c20e78a30ee399f8614df64c293a1a69c799b7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jantinnerezo/livewire-range-slider/zipball/e2c20e78a30ee399f8614df64c293a1a69c799b7",
+                "reference": "e2c20e78a30ee399f8614df64c293a1a69c799b7",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^8.67|^9.0",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "livewire/livewire": "^2.8",
+                "orchestra/testbench": "^6.0",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Jantinnerezo\\LivewireRangeSlider\\LivewireRangeSliderServiceProvider"
+                    ],
+                    "aliases": {
+                        "LivewireRangeSlider": "Jantinnerezo\\LivewireRangeSlider\\LivewireRangeSliderFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jantinnerezo\\LivewireRangeSlider\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jantinn Erezo",
+                    "email": "erezojantin@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Tall Stack wrapper for noUiSlider Range Slider",
+            "homepage": "https://github.com/jantinnerezo/livewire-range-slider",
+            "keywords": [
+                "jantinnerezo",
+                "livewire-range-slider"
+            ],
+            "support": {
+                "issues": "https://github.com/jantinnerezo/livewire-range-slider/issues",
+                "source": "https://github.com/jantinnerezo/livewire-range-slider/tree/1.0.1"
+            },
+            "time": "2022-06-11T14:39:05+00:00"
         },
         {
             "name": "laravel/fortify",

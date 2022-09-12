@@ -25,32 +25,32 @@ class ProductResource extends Resource
     protected static ?string $recordTitleAttribute = 'productname';
 
     public static function form(Form $form): Form
-    { 
+    {
         return $form
             ->schema([
                 Forms\Components\Card::make([
                     Forms\Components\TextInput::make('productname')->required(),
                     Forms\Components\TextInput::make('price')
-                                                ->required()
-                                                ->numeric(),
+                        ->required()
+                        ->numeric(),
                     Forms\Components\TextInput::make('count')
-                                                ->label('Stock amount')
-                                                ->numeric(),
+                        ->label('Stock amount')
+                        ->numeric(),
                     Forms\Components\Select::make('supplier_id')->label('Supplier')
-                                            ->options(Role::with('users')->where('slug', 'supplier')->first()['users']->pluck('fullname', 'id'))
-                                            ->required()
-                                            ->reactive(),
+                        ->options(Role::with('users')->where('slug', 'supplier')->first()['users']->pluck('fullname', 'id'))
+                        ->required()
+                        ->reactive(),
                     Forms\Components\Select::make('category_id')
-                                            ->required()
-                                            ->options(Category::all()->pluck('name', 'id'))
-                                            ->label('Category'),
+                        ->required()
+                        ->options(Category::all()->pluck('name', 'id'))
+                        ->label('Category'),
                     Forms\Components\FileUpload::make('main_photo')->image()->required(),
                     Forms\Components\FileUpload::make('photos')->image()->multiple()->maxFiles(5),
                     Forms\Components\Select::make('visiblity')
-                                            ->options(['1' => 'Public', '0' => 'Hidden'])
-                                            ->default('1')->required(),
+                        ->options(['1' => 'Public', '0' => 'Hidden'])
+                        ->default('1')->required(),
                     Forms\Components\Textarea::make('description')->required(),
-                    
+
                 ])->columns(2)
             ]);
     }
@@ -67,10 +67,6 @@ class ProductResource extends Resource
                 Tables\Columns\TextColumn::make('supplier.fullname')->label('Supplier'),
                 Tables\Columns\BooleanColumn::make('visiblity'),
             ])
-            ->filters([
-                // Tables\Filters\BaseFilter::make('count')->default()
-                // ->apply(Product::where('id', 1))
-            ])
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
@@ -81,37 +77,40 @@ class ProductResource extends Resource
     }
     public static function canCreate(): bool
     {
-        return auth()->user()->hasVerifiedRole('admin');   
+        return auth()->user()->hasVerifiedRole('admin');
+    }
+    public static function canEdit(Model $record): bool
+    {
+        return auth()->user()->hasVerifiedRole('admin');
     }
     public static function getEloquentQuery(): Builder
     {
-        if(auth()->user()->hasRole('supplier')){
+        if (auth()->user()->hasRole('supplier')) {
             return Product::where('supplier_id', auth()->user()->id);
         }
-
-        return Product::where('id', '!=', 0);
+        return Product::query();
     }
     public static function canDelete(Model $record): bool
     {
-        return auth()->user()->hasVerifiedRole('admin');  ;
+        return auth()->user()->hasVerifiedRole('admin');
     }
-    // public static function canEdit(Model $record): bool
-    // {
-    //     return auth()->user()->hasVerifiedRole('admin');  
-    // }
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
     public static function getPages(): array
     {
         return [
             'index' => Pages\ListProducts::route('/'),
             'create' => Pages\CreateProduct::route('/create'),
-            'edit' => Pages\EditProduct::route('/{record}/edit'),
+            // 'edit' => 9==3?Pages\EditProduct::route('/{record}/edit'):,
         ];
-    }    
+    }
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('create');
+    }
+
 }

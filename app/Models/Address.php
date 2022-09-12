@@ -11,6 +11,6 @@ class Address extends Model
     protected $guarded = [];
     public function country()
     {
-        return $this->belongsTo(\App\Models\Country::class, 'counrty_id');
+        return $this->belongsTo(\App\Models\Country::class, 'country_id');
     }
 }
