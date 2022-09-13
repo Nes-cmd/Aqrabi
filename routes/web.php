@@ -38,6 +38,7 @@ Route::controller(App\Http\Controllers\CustomerDashboardController::class)->pref
 Route::middleware('auth')->controller(App\Http\Controllers\Auth\PhoneVerificationController::class)->group(function(){
     Route::get('verify-phone', 'sendVerification')->name('verify-phone');
     Route::get('phone-verification', 'verifyPhone')->name('phone-verification');
+    Route::get('verification-resend', 'resend')->name('verification-resend');
     Route::post('check-verification', 'checkVerification')->name('check-verification');
 });
 

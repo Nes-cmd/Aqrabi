@@ -21,6 +21,9 @@
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
                         </form>
+                        <div class="flex text-center">
+                            <p class="mt-3">Don't received the code? <a href="{{ route('verification-resend')}}" style="color: blue;">Resend</a></p>
+                        </div>
                         <p class="mt-3"><a href="{{ route('login')}}">Back to log in</a></p>
                     </div>
                 </div>

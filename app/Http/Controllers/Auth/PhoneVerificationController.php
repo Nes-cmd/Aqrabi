@@ -21,6 +21,14 @@ class PhoneVerificationController extends Controller
         $twilio->sendVerificationCode($phone);
         return view('auth.confirm-phone');
     }
+    public function resend()
+    {
+        $user = auth()->user();
+        $phone = phoneMerge($user->dial_code, $user->phone);
+        $twilio = new TwilioSMS();
+        $twilio->sendVerificationCode($phone);
+        return back();
+    }
     public function checkVerification(Request $request)
     {
         $request->validate([
