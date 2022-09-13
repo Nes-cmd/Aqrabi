@@ -25,8 +25,7 @@
                             </div>
                         </form>
                         <div class="flex text-center">
-                            <p class="mt-3">Don't received the code?</p>
-                            <p class="mt-3 ml-3"><a href="{{ route('code-resend')}}" style="color: blue;">Resend</a></p>
+                            <p class="mt-3">Don't received the code? <a href="{{ route('code-resend')}}" style="color: blue;">Resend</a></p>
                         </div>
                     </div>
                 </div>
