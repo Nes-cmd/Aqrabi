@@ -23,7 +23,7 @@ class RegisterController extends Controller
             if (!($request->user_type == 'supplier' || $request->user_type == 'customer')) {
                 return response()->json(['error' => 'Field user_type should have either supplier or customer values']);
             }
-            $input = $request()->validated();
+            $input = $request->validated();
 
             $location = null;
 
