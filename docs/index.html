@@ -6484,6 +6484,193 @@
                     <vue-markdown></vue-markdown>
                 </div>
                 <br>
+                                <table class="table-fixed align-left text-sm mt-5">
+                    <thead class="border">
+                    <tr class="border">
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">No.</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Attributes</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Type</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Nullable</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Bail</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Rules</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">1</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            fullname
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-green-100 bg-green-500 rounded">String</span>
+                                                                                                                                								                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                                                                                                                                max:255
+                                                                                                                                                                                    </div>
+                        </td>
+                    </tr>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">2</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            phone
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-green-100 bg-green-500 rounded">String</span>
+                                                                                                                                								                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                                                                                                                                max:10
+                                                                                        <span class="text-gray-900 font-bold">|</span>
+                                                                                                                                                                                                            min:9
+                                                                                        <span class="text-gray-900 font-bold">|</span>
+                                                                                                                                                                                                            unique:users,phone,except,id
+                                                                                                                                                                                    </div>
+                        </td>
+                    </tr>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">3</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            email
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-green-100 bg-green-500 rounded">String</span>
+                                                                                                                                								                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                                                                                                                                email
+                                                                                        <span class="text-gray-900 font-bold">|</span>
+                                                                                                                                                                                                            max:255
+                                                                                        <span class="text-gray-900 font-bold">|</span>
+                                                                                                                                                                                                            unique:users,email
+                                                                                                                                                                                    </div>
+                        </td>
+                    </tr>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">4</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            password
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                                                                                            								                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                                                    confirmed
+                                                                                        <span class="text-gray-900 font-bold">|</span>
+                                                                                                                                                                                                            min:6
+                                                                                                                                                                                    </div>
+                        </td>
+                    </tr>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">5</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            password_confirmation
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                                                                                            								                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                            </div>
+                        </td>
+                    </tr>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">6</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            dial_code
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-green-100 bg-green-500 rounded">String</span>
+                                                                                                                                								                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                                                                                                        </div>
+                        </td>
+                    </tr>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">7</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            user_type
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                                                                                            								                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                            </div>
+                        </td>
+                    </tr>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">8</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            tin_number
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                                                                                            								                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none rounded">Nullable</span>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                                                    min:3
+                                                                                                                                                                                    </div>
+                        </td>
+                    </tr>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">9</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            document
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                                                                                            								                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-green-400 rounded">File</span>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none rounded">Nullable</span>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                                                                                                        </div>
+                        </td>
+                    </tr>
+                                        </tbody>
+                </table>
                                 <button
                     class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
                     v-if="!docs[21]['try']"
@@ -8859,7 +9046,7 @@
 
             return validations
         }
-        var docs = [{"uri":"api\/customer\/cart-list","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\CartController","method":"getCart","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/customer\/remove-cart\/{id}","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\CartController","method":"removeCart","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/customer\/remove-cart-all","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\CartController","method":"removeAllCart","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/shop\/categories","methods":["GET","HEAD"],"middlewares":["api"],"controller":"ShopController","controller_full_path":"App\\Http\\Controllers\\Api\\ShopController","method":"categories","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/shop\/all-products","methods":["GET","HEAD"],"middlewares":["api"],"controller":"ShopController","controller_full_path":"App\\Http\\Controllers\\Api\\ShopController","method":"products","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/shop\/product-by-category\/{id}","methods":["GET","HEAD"],"middlewares":["api"],"controller":"ShopController","controller_full_path":"App\\Http\\Controllers\\Api\\ShopController","method":"productByCategoryId","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/shop\/product-by-supplier\/{id}","methods":["GET","HEAD"],"middlewares":["api"],"controller":"ShopController","controller_full_path":"App\\Http\\Controllers\\Api\\ShopController","method":"productBySupplierId","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/shop\/product-group-category","methods":["GET","HEAD"],"middlewares":["api"],"controller":"ShopController","controller_full_path":"App\\Http\\Controllers\\Api\\ShopController","method":"productGroupByCategory","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/shop\/product-group-supplier","methods":["GET","HEAD"],"middlewares":["api"],"controller":"ShopController","controller_full_path":"App\\Http\\Controllers\\Api\\ShopController","method":"productGroupBySupplier","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/shop\/product-single\/{id}","methods":["GET","HEAD"],"middlewares":["api"],"controller":"ShopController","controller_full_path":"App\\Http\\Controllers\\Api\\ShopController","method":"singleProduct","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/shop\/get-sliders","methods":["GET","HEAD"],"middlewares":["api"],"controller":"ShopController","controller_full_path":"App\\Http\\Controllers\\Api\\ShopController","method":"getSliders","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/adress\/get-countries","methods":["GET","HEAD"],"middlewares":["api"],"controller":"AdressController","controller_full_path":"App\\Http\\Controllers\\Api\\AdressController","method":"getCountries","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/adress\/get-shippment-adress","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum"],"controller":"AdressController","controller_full_path":"App\\Http\\Controllers\\Api\\AdressController","method":"getShippmentAdress","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/adress\/get-supplier-adress","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum"],"controller":"AdressController","controller_full_path":"App\\Http\\Controllers\\Api\\AdressController","method":"getSupplierAdress","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/admin\/dashboard\/index","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum","admin"],"controller":"AdminDashboardController","controller_full_path":"App\\Http\\Controllers\\Api\\AdminDashboardController","method":"index","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/admin\/dashboard\/orders","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum","admin"],"controller":"AdminDashboardController","controller_full_path":"App\\Http\\Controllers\\Api\\AdminDashboardController","method":"order","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/admin\/dashboard\/users","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum","admin"],"controller":"AdminDashboardController","controller_full_path":"App\\Http\\Controllers\\Api\\AdminDashboardController","method":"user","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/supplier\/dashboard\/index","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum","supplier"],"controller":"SupplierDashboardController","controller_full_path":"App\\Http\\Controllers\\Api\\SupplierDashboardController","method":"index","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/supplier\/dashboard\/orders","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum","supplier"],"controller":"SupplierDashboardController","controller_full_path":"App\\Http\\Controllers\\Api\\SupplierDashboardController","method":"order","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/supplier\/dashboard\/customers","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum","supplier"],"controller":"SupplierDashboardController","controller_full_path":"App\\Http\\Controllers\\Api\\SupplierDashboardController","method":"customer","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/login","methods":["POST"],"middlewares":["api"],"controller":"LoginController","controller_full_path":"App\\Http\\Controllers\\Api\\Auth\\LoginController","method":"login","httpMethod":"POST","rules":{"phone":["required|string|max:10|min:9"],"password":["required|string"]},"docBlock":""},{"uri":"api\/register","methods":["POST"],"middlewares":["api"],"controller":"RegisterController","controller_full_path":"App\\Http\\Controllers\\Api\\Auth\\RegisterController","method":"register","httpMethod":"POST","rules":[],"docBlock":""},{"uri":"api\/send-verificaion-code","methods":["POST"],"middlewares":["api","auth:sanctum"],"controller":"RegisterController","controller_full_path":"App\\Http\\Controllers\\Api\\Auth\\RegisterController","method":"sendVerification","httpMethod":"POST","rules":[],"docBlock":""},{"uri":"api\/verify-phone","methods":["POST"],"middlewares":["api","auth:sanctum"],"controller":"RegisterController","controller_full_path":"App\\Http\\Controllers\\Api\\Auth\\RegisterController","method":"verifyPhone","httpMethod":"POST","rules":{"confirmation_code":["required|numeric|digits:4"]},"docBlock":""},{"uri":"api\/get-password-reset-code","methods":["POST"],"middlewares":["api","guest"],"controller":"PasswordResetController","controller_full_path":"App\\Http\\Controllers\\Api\\Auth\\PasswordResetController","method":"phoneConfirmation","httpMethod":"POST","rules":{"country_code":["required|string"],"phone":["required|string|max:10|min:9"]},"docBlock":""},{"uri":"api\/verify-password-reset-code","methods":["POST"],"middlewares":["api","guest"],"controller":"PasswordResetController","controller_full_path":"App\\Http\\Controllers\\Api\\Auth\\PasswordResetController","method":"codeVerification","httpMethod":"POST","rules":{"confirmation_code":["required|numeric|digits:4"]},"docBlock":""},{"uri":"api\/reset-password","methods":["POST"],"middlewares":["api","guest"],"controller":"PasswordResetController","controller_full_path":"App\\Http\\Controllers\\Api\\Auth\\PasswordResetController","method":"resetPassword","httpMethod":"POST","rules":{"password":["required|min:6|confirmed"],"password_confirmation":["required"]},"docBlock":""},{"uri":"api\/customer\/add-to-cart","methods":["POST"],"middlewares":["api","auth:sanctum"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\CartController","method":"addToCart","httpMethod":"POST","rules":{"product_id":["required|integer|min:1"],"quantity":["nullable|integer|min:1"],"specifications":["nullable|string|max:255"]},"docBlock":""},{"uri":"api\/adress\/store-shippment-adress","methods":["POST"],"middlewares":["api","auth:sanctum"],"controller":"AdressController","controller_full_path":"App\\Http\\Controllers\\Api\\AdressController","method":"storeShippmentAdress","httpMethod":"POST","rules":{"fullname":["required|string|max:60"],"phone":["required|max:14|string"],"email":["required|string|max:60"],"country_id":["required|integer"],"postal_code":["required|string"],"posta_number":["required"],"city_name":["required|string"],"addressLine1":["required|string"]},"docBlock":""}];
+        var docs = [{"uri":"api\/customer\/cart-list","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\CartController","method":"getCart","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/customer\/remove-cart\/{id}","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\CartController","method":"removeCart","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/customer\/remove-cart-all","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\CartController","method":"removeAllCart","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/shop\/categories","methods":["GET","HEAD"],"middlewares":["api"],"controller":"ShopController","controller_full_path":"App\\Http\\Controllers\\Api\\ShopController","method":"categories","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/shop\/all-products","methods":["GET","HEAD"],"middlewares":["api"],"controller":"ShopController","controller_full_path":"App\\Http\\Controllers\\Api\\ShopController","method":"products","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/shop\/product-by-category\/{id}","methods":["GET","HEAD"],"middlewares":["api"],"controller":"ShopController","controller_full_path":"App\\Http\\Controllers\\Api\\ShopController","method":"productByCategoryId","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/shop\/product-by-supplier\/{id}","methods":["GET","HEAD"],"middlewares":["api"],"controller":"ShopController","controller_full_path":"App\\Http\\Controllers\\Api\\ShopController","method":"productBySupplierId","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/shop\/product-group-category","methods":["GET","HEAD"],"middlewares":["api"],"controller":"ShopController","controller_full_path":"App\\Http\\Controllers\\Api\\ShopController","method":"productGroupByCategory","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/shop\/product-group-supplier","methods":["GET","HEAD"],"middlewares":["api"],"controller":"ShopController","controller_full_path":"App\\Http\\Controllers\\Api\\ShopController","method":"productGroupBySupplier","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/shop\/product-single\/{id}","methods":["GET","HEAD"],"middlewares":["api"],"controller":"ShopController","controller_full_path":"App\\Http\\Controllers\\Api\\ShopController","method":"singleProduct","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/shop\/get-sliders","methods":["GET","HEAD"],"middlewares":["api"],"controller":"ShopController","controller_full_path":"App\\Http\\Controllers\\Api\\ShopController","method":"getSliders","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/adress\/get-countries","methods":["GET","HEAD"],"middlewares":["api"],"controller":"AdressController","controller_full_path":"App\\Http\\Controllers\\Api\\AdressController","method":"getCountries","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/adress\/get-shippment-adress","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum"],"controller":"AdressController","controller_full_path":"App\\Http\\Controllers\\Api\\AdressController","method":"getShippmentAdress","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/adress\/get-supplier-adress","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum"],"controller":"AdressController","controller_full_path":"App\\Http\\Controllers\\Api\\AdressController","method":"getSupplierAdress","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/admin\/dashboard\/index","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum","admin"],"controller":"AdminDashboardController","controller_full_path":"App\\Http\\Controllers\\Api\\AdminDashboardController","method":"index","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/admin\/dashboard\/orders","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum","admin"],"controller":"AdminDashboardController","controller_full_path":"App\\Http\\Controllers\\Api\\AdminDashboardController","method":"order","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/admin\/dashboard\/users","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum","admin"],"controller":"AdminDashboardController","controller_full_path":"App\\Http\\Controllers\\Api\\AdminDashboardController","method":"user","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/supplier\/dashboard\/index","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum","supplier"],"controller":"SupplierDashboardController","controller_full_path":"App\\Http\\Controllers\\Api\\SupplierDashboardController","method":"index","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/supplier\/dashboard\/orders","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum","supplier"],"controller":"SupplierDashboardController","controller_full_path":"App\\Http\\Controllers\\Api\\SupplierDashboardController","method":"order","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/supplier\/dashboard\/customers","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum","supplier"],"controller":"SupplierDashboardController","controller_full_path":"App\\Http\\Controllers\\Api\\SupplierDashboardController","method":"customer","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/login","methods":["POST"],"middlewares":["api"],"controller":"LoginController","controller_full_path":"App\\Http\\Controllers\\Api\\Auth\\LoginController","method":"login","httpMethod":"POST","rules":{"phone":["required|string|max:10|min:9"],"password":["required|string"]},"docBlock":""},{"uri":"api\/register","methods":["POST"],"middlewares":["api"],"controller":"RegisterController","controller_full_path":"App\\Http\\Controllers\\Api\\Auth\\RegisterController","method":"register","httpMethod":"POST","rules":{"fullname":["required|string|max:255"],"phone":["required|string|max:10|min:9|unique:users,phone,except,id"],"email":["required|string|email|max:255|unique:users,email"],"password":["required|confirmed|min:6"],"password_confirmation":["required"],"dial_code":["required|string"],"user_type":["required"],"tin_number":["nullable|min:3"],"document":["nullable|file"]},"docBlock":""},{"uri":"api\/send-verificaion-code","methods":["POST"],"middlewares":["api","auth:sanctum"],"controller":"RegisterController","controller_full_path":"App\\Http\\Controllers\\Api\\Auth\\RegisterController","method":"sendVerification","httpMethod":"POST","rules":[],"docBlock":""},{"uri":"api\/verify-phone","methods":["POST"],"middlewares":["api","auth:sanctum"],"controller":"RegisterController","controller_full_path":"App\\Http\\Controllers\\Api\\Auth\\RegisterController","method":"verifyPhone","httpMethod":"POST","rules":{"confirmation_code":["required|numeric|digits:4"]},"docBlock":""},{"uri":"api\/get-password-reset-code","methods":["POST"],"middlewares":["api","guest"],"controller":"PasswordResetController","controller_full_path":"App\\Http\\Controllers\\Api\\Auth\\PasswordResetController","method":"phoneConfirmation","httpMethod":"POST","rules":{"country_code":["required|string"],"phone":["required|string|max:10|min:9"]},"docBlock":""},{"uri":"api\/verify-password-reset-code","methods":["POST"],"middlewares":["api","guest"],"controller":"PasswordResetController","controller_full_path":"App\\Http\\Controllers\\Api\\Auth\\PasswordResetController","method":"codeVerification","httpMethod":"POST","rules":{"confirmation_code":["required|numeric|digits:4"]},"docBlock":""},{"uri":"api\/reset-password","methods":["POST"],"middlewares":["api","guest"],"controller":"PasswordResetController","controller_full_path":"App\\Http\\Controllers\\Api\\Auth\\PasswordResetController","method":"resetPassword","httpMethod":"POST","rules":{"password":["required|min:6|confirmed"],"password_confirmation":["required"]},"docBlock":""},{"uri":"api\/customer\/add-to-cart","methods":["POST"],"middlewares":["api","auth:sanctum"],"controller":"CartController","controller_full_path":"App\\Http\\Controllers\\Api\\CartController","method":"addToCart","httpMethod":"POST","rules":{"product_id":["required|integer|min:1"],"quantity":["nullable|integer|min:1"],"specifications":["nullable|string|max:255"]},"docBlock":""},{"uri":"api\/adress\/store-shippment-adress","methods":["POST"],"middlewares":["api","auth:sanctum"],"controller":"AdressController","controller_full_path":"App\\Http\\Controllers\\Api\\AdressController","method":"storeShippmentAdress","httpMethod":"POST","rules":{"fullname":["required|string|max:60"],"phone":["required|max:14|string"],"email":["required|string|max:60"],"country_id":["required|integer"],"postal_code":["required|string"],"posta_number":["required"],"city_name":["required|string"],"addressLine1":["required|string"]},"docBlock":""}];
         var app_url = "http:\/\/localhost:8000";
 
         //remove trailing slash if any
