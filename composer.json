@@ -22,11 +22,11 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
-        "knuckleswtf/scribe": "^3.37",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.0",
         "phpunit/phpunit": "^9.5.10",
+        "rakutentech/laravel-request-docs": "^1.24",
         "spatie/laravel-ignition": "^1.0"
     },
     "autoload": {

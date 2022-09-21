@@ -5,17 +5,16 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Exception;
 use Illuminate\Http\Request;
+use App\Http\Requests\CartRequest;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Cart;
 
 class CartController extends Controller
 {
-    public function addToCart(Request $request)
+    public function addToCart(CartRequest $request)
     {
         try {
-            $request->validate([
-                'product_id' => 'required'
-            ]);
+            $request->validated();
             $cart = Cart::create([
                 'user_id' => auth()->user()->id,
                 'product_id' => $request->product_id,

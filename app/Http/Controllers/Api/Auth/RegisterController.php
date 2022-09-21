@@ -5,33 +5,25 @@ namespace App\Http\Controllers\Api\Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Rule;
+
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use App\Models\Role;
 use App\Http\Controllers\Controller;
 use Exception;
 use App\Helper\TwilioSMS;
-use Illuminate\Http\Request;
+use App\Http\Requests\ConfirmCodeRequest;
+use App\Http\Requests\RegisterRequest;
 
 class RegisterController extends Controller
 {
-    public function register(Request $request)
+    public function register(RegisterRequest $request)
     {
         $input = $request->all();
         try {
             if (!($request->user_type == 'supplier' || $request->user_type == 'customer')) {
                 return response()->json(['error' => 'Field user_type should have either supplier or customer values']);
             }
-            Validator::make($input, [
-                'fullname' => ['required', 'string', 'max:255'],
-                'phone' => ['required', 'string', 'max:10', 'min:9', Rule::unique(User::class)],
-                'email' => ['required', 'string', 'email', 'max:255', Rule::unique(User::class),],
-                'password' => ['required', 'confirmed', 'min:6'],
-                'dial_code' => ['required', 'string'],
-                'user_type' => 'required',
-                'tin_number' => ['nullable', 'min:3'],
-                'document' => ['nullable', 'file'],
-            ])->validate();
+            $input = $request()->validated();
 
             $location = null;
 
@@ -76,12 +68,10 @@ class RegisterController extends Controller
             return response()->json(['exception' => $e]);
         }
     }
-    public function verifyPhone(Request $request)
+    public function verifyPhone(ConfirmCodeRequest $request)
     {
         try {
-            $request->validate([
-                'confirmation_code' => 'required|numeric|digits:4',
-            ]);
+            $request->validated();
             if ($request->confirmation_code == session()->get('short_code')) {
                 $user = User::find(auth()->id());
                 $user->phone_verified_at = now()->toDateTimeString();

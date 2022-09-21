@@ -5,21 +5,20 @@ namespace App\Http\Controllers\Api\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Requests\ResetPasswordRequest;
 use App\Helper\TwilioSMS;
 use Exception;
+use App\Http\Requests\PasswordResetRequest;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\ConfirmCodeRequest;
 
 class PasswordResetController extends Controller
 {
-    public function phoneConfirmation(Request $request)
+    public function phoneConfirmation(PasswordResetRequest $request)
     {
         try {
-            $request->validate([
-                'country_code' => 'required',
-                'phone' => 'required|max:10|min:9'
-            ]);
+            $request->validated();
             $phone = phoneMerge($request->country_code, $request->phone);
-
             $user = User::where('phone', $request->phone)->first();
             if ($user) {
                 $code = rand(1000, 9999);
@@ -35,12 +34,10 @@ class PasswordResetController extends Controller
             return ['exception' => $e];
         }
     }
-    public function codeVerification(Request $request)
+    public function codeVerification(ConfirmCodeRequest $request)
     {
         try {
-            $request->validate([
-                'confirmation_code' => 'required|numeric|digits:4',
-            ]);
+            $request->validated();
             if ($request->confirmation_code == session()->get('password_reset_requester')['code']) {
                 $requester = session()->get('password_reset_requester');
                 $requester['confirmed'] = true;
@@ -52,12 +49,10 @@ class PasswordResetController extends Controller
             return ['exception' => $e];
         }
     }
-    public function resetPassword(Request $request)
+    public function resetPassword(ResetPasswordRequest $request)
     {
         try {
-            $request->validate([
-                'password' => 'required|min:6|confirmed'
-            ]);
+            $request->validated();
             $requester = session()->get('password_reset_requester');
             if ($requester['confirmed']) {
                 $user = User::where('phone', $requester['phone'])->first();

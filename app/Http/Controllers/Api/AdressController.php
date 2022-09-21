@@ -8,6 +8,7 @@ use App\Models\Address;
 use App\Models\SupplierAddress;
 use Exception;
 use App\Models\Country;
+use App\Http\Requests\AdressRequest;
 
 class AdressController extends Controller
 {
@@ -26,20 +27,11 @@ class AdressController extends Controller
         $countries = Country::all();
         return ['countries' => $countries];
     }
-    public function storeShippmentAdress(Request $request)
+    public function storeShippmentAdress(AdressRequest $request)
     {
         try {
             
-            $request->validate([
-                'fullname' => 'required',
-                'phone' => 'required',
-                'email' => 'required',
-                'country_id' => 'required',
-                'postal_code' => 'required',
-                'posta_number' => 'required',
-                'city_name' => 'required',
-                'addressLine1' => 'required'
-            ]);
+            $request->validated();
             
             $address = Address::create([
                 'user_id' => auth()->user()->id,

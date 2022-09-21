@@ -6,17 +6,15 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Exception;
+use App\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
-    public function login(Request $request)
+    public function login(LoginRequest $request)
     {
         try{
-            $request->validate([
-                'phone' => 'required',
-                'password' => 'required',
-            ]);  
+            $request->validated();  
             $user = User::where('phone', $request->phone)->first();
             if($user && Hash::check($request->password, $user->password)){
                 $token = $user->createToken('API TOKEN');
