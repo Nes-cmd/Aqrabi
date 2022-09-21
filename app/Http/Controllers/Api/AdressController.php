@@ -51,7 +51,7 @@ class AdressController extends Controller
             return ['adress' => $address];
         } 
         catch (Exception $e) { 
-            ['exception' => $e];
+            ['exception' => $e->getMessage()];
         }
     }
 }

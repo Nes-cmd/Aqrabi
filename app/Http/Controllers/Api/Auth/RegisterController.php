@@ -24,14 +24,12 @@ class RegisterController extends Controller
                 return response()->json(['error' => 'Field user_type should have either supplier or customer values']);
             }
             $input = $request->validated();
-
             $location = null;
 
             if ($input['document']) {
                 $location = $input['document']->store('public/documents');
                 $location = substr($location, 7);
             }
-
             $user =  User::create([
                 'fullname' => $input['fullname'],
                 'email' => $input['email'],
@@ -52,7 +50,7 @@ class RegisterController extends Controller
             $user = $user->with('roles')->where('id', $user->id)->first();
             return ['token' => $token->plainTextToken, 'user' => $user];
         } catch (Exception $e) {
-            return ['exception' => $e];
+            return ['exception' => $e->getMessage()];
         }
     }
     public function sendVerification()
@@ -65,7 +63,7 @@ class RegisterController extends Controller
             return response()->json(['status' => 'success']);
         } 
         catch (Exception $e) {
-            return response()->json(['exception' => $e]);
+            return response()->json(['exception' => $e->getMessage()]);
         }
     }
     public function verifyPhone(ConfirmCodeRequest $request)
@@ -82,7 +80,7 @@ class RegisterController extends Controller
             }
             return ['status' => 'error','message' => 'Phone number is not verified'];
         } catch (Exception $e) {
-            return ['exception' => $e];
+            return ['exception' => $e->getMessage()];
         }
     }
 }

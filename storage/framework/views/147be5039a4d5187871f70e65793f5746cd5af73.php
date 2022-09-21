@@ -63,6 +63,16 @@ unset($__errorArgs, $__bag); ?>
                                     </select>
                                     <input name="phone" value="<?php echo e(old('phone')); ?>" class="form-control" placeholder="09434..." type="text">
                                 </div>
+                                <?php $__errorArgs = ['country_code'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                                <span style="color:red;padding-left:3px"><?php echo e($message); ?></span>
+                                <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
                                 <?php $__errorArgs = ['phone'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :

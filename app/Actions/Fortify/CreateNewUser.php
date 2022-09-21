@@ -21,18 +21,17 @@ class CreateNewUser implements CreatesNewUsers
      */
     public function create(array $input)
     {
+
         Validator::make($input, [
             'fullname' => ['required', 'string', 'max:255'],
             'phone' => ['required', 'string', 'min:9','max:10', Rule::unique(User::class)],
             'email' => ['required','string', 'email','max:255',Rule::unique(User::class),],
             'password' => $this->passwordRules(),
             'tin_number' => ['nullable', 'min:3'],
-            'user_type' => 'required', 
             'country_code' => 'required',
             'document_url' => ['nullable', 'file'],
         ])->validate();
         $location = null;
-        
         if(array_key_exists('document_url', $input)){
             $location = $input['document_url']->store('public/documents');
             $location = substr($location, 7);

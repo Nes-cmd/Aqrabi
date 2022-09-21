@@ -24,7 +24,7 @@ class CartController extends Controller
             $cart = Cart::where('user_id', auth()->user()->id)->get();
             return ['cart' => $cart];
         } catch (Exception $e) {
-            return ['exception' => $e];
+            return ['exception' => $e->getMessage()];
         }
     }
     public function getCart()

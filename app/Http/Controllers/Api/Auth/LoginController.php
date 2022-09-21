@@ -27,7 +27,7 @@ class LoginController extends Controller
             }
         }
         catch (Exception $e){
-            return response()->json(['exception' => $e]);
+            return response()->json(['exception' => $e->getMessage()]);
         } 
     }
 }

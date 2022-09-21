@@ -41,6 +41,9 @@
                                     </select>
                                     <input name="phone" value="{{old('phone')}}" class="form-control" placeholder="09434..." type="text">
                                 </div>
+                                @error('country_code')
+                                <span style="color:red;padding-left:3px">{{ $message }}</span>
+                                @enderror
                                 @error('phone')
                                 <span style="color:red;padding-left:3px">{{ $message }}</span>
                                 @enderror

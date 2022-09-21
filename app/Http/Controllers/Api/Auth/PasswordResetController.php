@@ -31,7 +31,7 @@ class PasswordResetController extends Controller
                 return ['status' => 'error', 'message' => 'user not found'];
             }
         } catch (Exception $e) {
-            return ['exception' => $e];
+            return ['exception' => $e->getMessage()];
         }
     }
     public function codeVerification(ConfirmCodeRequest $request)
@@ -46,7 +46,7 @@ class PasswordResetController extends Controller
             }
             return ['status' => 'errorr', 'message' => 'Code doesn\'t mach our record'];
         } catch (Exception $e) {
-            return ['exception' => $e];
+            return ['exception' => $e->getMessage()];
         }
     }
     public function resetPassword(ResetPasswordRequest $request)
@@ -64,7 +64,7 @@ class PasswordResetController extends Controller
                 return ['status' => 'success', 'message' => 'You have successfully updated your password. Now you can login with new password!'];
             }
         } catch (Exception $e) {
-            return ['exception' => $e];
+            return ['exception' => $e->getMessage()];
         }
     }
 }
